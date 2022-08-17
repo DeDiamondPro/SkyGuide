@@ -2,6 +2,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import gg.essential.gradle.util.noServerRunConfigs
 
 plugins {
+    kotlin("jvm")
     id("gg.essential.multi-version")
     id("gg.essential.defaults.repo")
     id("gg.essential.defaults.java")
@@ -60,10 +61,12 @@ sourceSets {
 
 repositories {
     maven("https://repo.polyfrost.cc/releases")
+    maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
 }
 
 dependencies {
-    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.1.0-alpha+")
+    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.1.0-alpha83")
+    modRuntimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.0")
 
     if (platform.isLegacyForge) {
         compileOnly("org.spongepowered:mixin:0.7.11-SNAPSHOT")
@@ -107,14 +110,6 @@ tasks.processResources {
                 "mcVersionStr" to project.platform.mcVersionStr.substringBeforeLast(".") + ".x"
             )
         )
-    }
-}
-
-afterEvaluate {
-    if (rootProject.file("LICENSE-TEMPLATE").exists()) {
-        logger.error("-------------------------------------------------------")
-        logger.error("PLEASE REPLACE THE `LICENSE-TEMPLATE` FILE WITH YOUR OWN LICENSE")
-        logger.error("-------------------------------------------------------")
     }
 }
 

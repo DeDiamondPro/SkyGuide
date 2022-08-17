@@ -1,0 +1,9 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7",
+  "package": "cc.polyfrost.polyblock.mixin",
+  "refmap": "mixins.polyblock.refmap.json",
+  "verbose": true,
+  "client": [
+  ]
+}
