@@ -1,29 +1,17 @@
 package cc.polyfrost.polyblock.map
 
-import cc.polyfrost.oneconfig.renderer.Image
-import cc.polyfrost.polyblock.utils.MapPart
+import cc.polyfrost.polyblock.utils.Island
 
 object SkyblockMap {
-    val mapParts = mutableListOf(MapPart("hub", Image("/assets/polyblock/hub.png"), -298f, -258f, 201f, 241f))
-    val topX: Float
-    val topY: Float
-    val bottomX: Float
-    val bottomY: Float
-
-    init {
-        var topX = mapParts[0].topX
-        var topY = mapParts[0].topY
-        var bottomX = mapParts[0].bottomX
-        var bottomY = mapParts[0].bottomY
-        for (mapPart in mapParts) {
-            topX = topX.coerceAtMost(mapPart.topX)
-            topY = topY.coerceAtMost(mapPart.topY)
-            bottomX = bottomX.coerceAtLeast(mapPart.bottomX)
-            bottomY = bottomY.coerceAtLeast(mapPart.bottomY)
-        }
-        this.topX = topX
-        this.topY = topY
-        this.bottomX = bottomX
-        this.bottomY = bottomY
-    }
+    val mapParts = mutableMapOf(
+        Pair("hub", Island("/assets/polyblock/hub.png", -298f, -258f, 201f, 241f)),
+        Pair("combat_1", Island("/assets/polyblock/spiders_den.png", -408f, -408f, -106f, -106f)),
+        Pair("foraging_1", Island("/assets/polyblock/park.png", -500f, -148f, -253f, 99f)),
+        Pair("farming_1", Island("/assets/polyblock/farming_islands.png", 70f, -634f, 409f, -183f)), // 339x451
+        Pair("crimson_isle", Island("/assets/polyblock/crimson_isle.png", -772f, -1180f, 51f, -357f)), // 823x823
+        Pair("combat_3", Island("/assets/polyblock/end.png", -793f, -423f, -448f, -121f)), // 345x302
+        Pair("mining_1", Island("/assets/polyblock/gold_mine.png", -90f, -401f, 45f, -266f)), // 135x135
+        Pair("mining_2", Island("/assets/polyblock/deep_caverns.png", -86f, -68f, 80f, 98f)),  // 166x166
+        // TODO: needs special coord handling
+    )
 }

@@ -1,8 +1,12 @@
-# OneConfigExampleMod
-Example mod implementing OneConfig.
+# PolyBlock
 
-## How to use
+## How to render images
+Images are rendered using chunky
 
-- Copy the template either by using GitHub's "Use this template" feature or downloading the repo manually.
-- **Remove the license named "LICENSE-TEMPLATE" and choose a new one.**
-- Refactor the template (specifically, the modid, version and name in the gradle.properties and most of the class names) to a different name.
+In chunky make a scene of all chunks of an island and position the camera accordingly,
+set the camera type to parallel, then in the map tab get the top left and bottom right corner and calculate the size,
+this size should be inputted in the scene tab depending on the texture quality.
+- Low = 1 pixel per block
+- Medium = 2 pixels per block
+- High = 4 pixels per block
+Now enable transparent sky and set the SPP to 250 (this is plenty for our purpose and speeds up rendering)
