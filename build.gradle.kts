@@ -65,7 +65,7 @@ repositories {
 }
 
 dependencies {
-    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.1.0-alpha84")
+    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.1.0-alpha85")
     modRuntimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.0")
 
     if (platform.isLegacyForge) {

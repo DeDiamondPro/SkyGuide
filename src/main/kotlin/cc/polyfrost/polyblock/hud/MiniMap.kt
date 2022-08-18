@@ -12,6 +12,7 @@ import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.map.SkyblockMap
+import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
 import org.lwjgl.nanovg.NanoVG
 
@@ -35,6 +36,7 @@ class MiniMap : Hud() {
         RenderManager.setupAndDraw(true) { vg ->
             nanoVG(vg) {
                 val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
+                AssetHandler.loadAsset(vg, island.image)
                 drawImage(
                     island.image,
                     (x + (island.topX - UPlayer.getPosX()) * totalScale + 75f * scale).toFloat(),
@@ -47,6 +49,7 @@ class MiniMap : Hud() {
                     vg,
                     Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
                 )
+                AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
                 drawImage(
                     "/assets/polyblock/player.png",
                     -pointerSize * scale / 2,

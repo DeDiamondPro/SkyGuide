@@ -21,8 +21,9 @@ data class Island(
     val height = bottomY - topY
 
     fun draw(vg: Long) {
-        nanoVG (vg) {
-            drawImage( image, topX, topY, width, height)
+        nanoVG(vg) {
+            AssetHandler.loadAsset(vg, image)
+            drawImage(image, topX, topY, width, height)
         }
     }
 }

@@ -58,6 +58,7 @@ class MapGui : OneUIScreen() {
             }
             NanoVG.nvgTranslate(vg, (UPlayer.getPosX()).toFloat(), (UPlayer.getPosZ()).toFloat())
             NanoVG.nvgRotate(vg, Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat())
+            AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
             drawImage(
                 "/assets/polyblock/player.png",
                 -BlockConfig.pointerSize / 2f,
