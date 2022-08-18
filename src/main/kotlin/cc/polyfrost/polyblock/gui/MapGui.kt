@@ -13,6 +13,9 @@ import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
 import cc.polyfrost.polyblock.config.BlockConfig
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
+import cc.polyfrost.polyblock.utils.Island
+import cc.polyfrost.polyblock.utils.getX
+import cc.polyfrost.polyblock.utils.getY
 import org.lwjgl.input.Mouse
 import org.lwjgl.nanovg.NanoVG
 
@@ -20,17 +23,10 @@ class MapGui : OneUIScreen() {
     private var scale = BlockConfig.defaultScale
     private var x: Float = 0f
     private var y: Float = 0f
-    private var minScale = 0.25f
-    private var maxScale = 5f
 
     init {
-        x = (-UPlayer.getPosX() + (UResolution.windowWidth / 2f) / scale).toFloat()
-        y = (-UPlayer.getPosZ() + (UResolution.windowHeight / 2f) / scale).toFloat()
-    }
-
-    override fun initScreen(width: Int, height: Int) {
-        super.initScreen(width, height)
-
+        x = (-(UPlayer.getPosX() + Island.getXOffset() )+ (UResolution.windowWidth / 2f) / scale).toFloat()
+        y = (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.windowHeight / 2f) / scale).toFloat()
     }
 
     override fun draw(vg: Long, partialTicks: Float, inputHandler: InputHandler) {
@@ -53,10 +49,10 @@ class MapGui : OneUIScreen() {
             }
             NanoVG.nvgTranslate(vg, x, y)
 
-            for (mapPart in SkyblockMap.mapParts.values) {
+            for (mapPart in SkyblockMap.islands.values) {
                 mapPart.draw(vg)
             }
-            NanoVG.nvgTranslate(vg, (UPlayer.getPosX()).toFloat(), (UPlayer.getPosZ()).toFloat())
+            NanoVG.nvgTranslate(vg, UPlayer.getX() + Island.getXOffset(), UPlayer.getY() + Island.getYOffset())
             NanoVG.nvgRotate(vg, Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat())
             AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
             drawImage(

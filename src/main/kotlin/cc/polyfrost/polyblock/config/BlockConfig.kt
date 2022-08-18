@@ -10,9 +10,11 @@ import cc.polyfrost.oneconfig.config.core.OneKeyBind
 import cc.polyfrost.oneconfig.config.data.Mod
 import cc.polyfrost.oneconfig.config.data.ModType
 import cc.polyfrost.oneconfig.libs.universal.UKeyboard
+import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.gui.GuiUtils
 import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.hud.MiniMap
+import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
 
 object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json") {
@@ -23,6 +25,9 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
         category = "General"
     )
     var textureQuality = 1
+
+    @Switch(name = "Smooth Textures")
+    var smooth = false
 
     @Switch(name = "Keep In Memory")
     var keepAssetsLoaded = true
@@ -49,7 +54,7 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
 
     init {
         initialize()
-        //registerKeyBind(mapKeyBind) { if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui()) }
-        registerKeyBind(mapKeyBind) { GuiUtils.displayScreen(MapGui()) }
+        registerKeyBind(mapKeyBind) { if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui()) }
+        addListener("smooth") { RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) } }
     }
 }

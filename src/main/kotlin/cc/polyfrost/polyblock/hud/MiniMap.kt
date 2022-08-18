@@ -14,6 +14,8 @@ import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
+import cc.polyfrost.polyblock.utils.getX
+import cc.polyfrost.polyblock.utils.getY
 import org.lwjgl.nanovg.NanoVG
 
 class MiniMap : Hud() {
@@ -31,7 +33,7 @@ class MiniMap : Hud() {
     var pointerSize = 7f
 
     override fun draw(matrices: UMatrixStack?, x: Float, y: Float, scale: Float, example: Boolean) {
-        val island = SkyblockMap.mapParts[SBInfo.zone] ?: return
+        val island = SkyblockMap.islands[SBInfo.zone] ?: return
         val totalScale = scale * mapZoom
         RenderManager.setupAndDraw(true) { vg ->
             nanoVG(vg) {
@@ -39,8 +41,8 @@ class MiniMap : Hud() {
                 AssetHandler.loadAsset(vg, island.image)
                 drawImage(
                     island.image,
-                    (x + (island.topX - UPlayer.getPosX()) * totalScale + 75f * scale).toFloat(),
-                    (y + (island.topY - UPlayer.getPosZ()) * totalScale + 75f * scale).toFloat(),
+                    x + (island.topX - UPlayer.getX()) * totalScale + 75f * scale,
+                    y + (island.topY - UPlayer.getY()) * totalScale + 75f * scale,
                     island.width * totalScale,
                     island.height * totalScale
                 )

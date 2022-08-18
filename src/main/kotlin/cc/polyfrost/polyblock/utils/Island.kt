@@ -2,6 +2,7 @@ package cc.polyfrost.polyblock.utils
 
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
+import cc.polyfrost.polyblock.map.SkyblockMap
 
 /**
  * @param image The image of the map
@@ -15,7 +16,9 @@ data class Island(
     val topX: Float,
     val topY: Float,
     val bottomX: Float,
-    val bottomY: Float
+    val bottomY: Float,
+    val xOffset: Float = 0f, // The offset of the player coordinates
+    val yOffset: Float = 0f
 ) {
     val width = bottomX - topX
     val height = bottomY - topY
@@ -23,7 +26,17 @@ data class Island(
     fun draw(vg: Long) {
         nanoVG(vg) {
             AssetHandler.loadAsset(vg, image)
-            drawImage(image, topX, topY, width, height)
+            drawImage(image, topX + xOffset, topY + yOffset, width, height)
+        }
+    }
+
+    companion object {
+        fun getXOffset(): Float {
+            return SkyblockMap.islands[SBInfo.zone]?.xOffset ?: 0f
+        }
+
+        fun getYOffset(): Float {
+            return SkyblockMap.islands[SBInfo.zone]?.yOffset ?: 0f
         }
     }
 }
