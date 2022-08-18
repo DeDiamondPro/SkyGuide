@@ -8,6 +8,8 @@ import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
 import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.renderer.scissor.ScissorManager
+import cc.polyfrost.oneconfig.utils.dsl.drawImage
+import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.SBInfo
@@ -31,26 +33,29 @@ class MiniMap : Hud() {
         val island = SkyblockMap.mapParts[SBInfo.zone] ?: return
         val totalScale = scale * mapZoom
         RenderManager.setupAndDraw(true) { vg ->
-            val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
-            RenderManager.drawImage(
-                vg,
-                island.image,
-                (x + (island.topX - UPlayer.getPosX()) * totalScale + 75f * scale).toFloat(),
-                (y + (island.topY - UPlayer.getPosZ()) * totalScale + 75f * scale).toFloat(),
-                island.width * totalScale,
-                island.height * totalScale
-            )
-            NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
-            NanoVG.nvgRotate(vg, Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat())
-            RenderManager.drawImage(
-                vg,
-                "/assets/polyblock/player.png",
-                -pointerSize * scale / 2,
-                -pointerSize * scale / 2,
-                pointerSize * scale,
-                pointerSize * scale
-            )
-            ScissorManager.resetScissor(vg, scissor)
+            nanoVG(vg) {
+                val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
+                drawImage(
+                    island.image,
+                    (x + (island.topX - UPlayer.getPosX()) * totalScale + 75f * scale).toFloat(),
+                    (y + (island.topY - UPlayer.getPosZ()) * totalScale + 75f * scale).toFloat(),
+                    island.width * totalScale,
+                    island.height * totalScale
+                )
+                NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+                NanoVG.nvgRotate(
+                    vg,
+                    Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
+                )
+                drawImage(
+                    "/assets/polyblock/player.png",
+                    -pointerSize * scale / 2,
+                    -pointerSize * scale / 2,
+                    pointerSize * scale,
+                    pointerSize * scale
+                )
+                ScissorManager.resetScissor(vg, scissor)
+            }
         }
     }
 

@@ -6,6 +6,9 @@ import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
 import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.InputHandler
+import cc.polyfrost.oneconfig.utils.dsl.drawImage
+import cc.polyfrost.oneconfig.utils.dsl.nanoVG
+import cc.polyfrost.oneconfig.utils.dsl.scale
 import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
 import cc.polyfrost.polyblock.config.BlockConfig
 import cc.polyfrost.polyblock.map.SkyblockMap
@@ -31,37 +34,38 @@ class MapGui : OneUIScreen() {
     }
 
     override fun draw(vg: Long, partialTicks: Float, inputHandler: InputHandler) {
-        val scrollWheel = Platform.getMousePlatform().dWheel
+        nanoVG(vg) {
+            val scrollWheel = Platform.getMousePlatform().dWheel
 
-        if (scrollWheel != 0.0) { // TODO: make scale scale on mouse pos
-            val oldScale = scale
-            if (scrollWheel > 0) scale *= 1.5f
-            else scale /= 1.5f
-            inputHandler.resetScale()
-            x += (inputHandler.mouseX() / scale) - (inputHandler.mouseX() / oldScale)
-            y += (inputHandler.mouseY() / scale) - (inputHandler.mouseY() / oldScale)
-        }
-        RenderManager.scale(vg, scale, scale)
-        inputHandler.scale(scale.toDouble(), scale.toDouble())
-        if (Mouse.isButtonDown(0)) {
-            x += Mouse.getDX() / scale
-            y -= Mouse.getDY() / scale
-        }
-        NanoVG.nvgTranslate(vg, x, y)
+            if (scrollWheel != 0.0) {
+                val oldScale = scale
+                if (scrollWheel > 0) scale *= 1.5f
+                else scale /= 1.5f
+                inputHandler.resetScale()
+                x += (inputHandler.mouseX() / scale) - (inputHandler.mouseX() / oldScale)
+                y += (inputHandler.mouseY() / scale) - (inputHandler.mouseY() / oldScale)
+            }
+            scale(scale, scale)
+            inputHandler.scale(scale.toDouble(), scale.toDouble())
+            if (Mouse.isButtonDown(0)) {
+                x += Mouse.getDX() / scale
+                y -= Mouse.getDY() / scale
+            }
+            NanoVG.nvgTranslate(vg, x, y)
 
-        for (mapPart in SkyblockMap.mapParts.values) {
-            mapPart.draw(vg)
+            for (mapPart in SkyblockMap.mapParts.values) {
+                mapPart.draw(vg)
+            }
+            NanoVG.nvgTranslate(vg, (UPlayer.getPosX()).toFloat(), (UPlayer.getPosZ()).toFloat())
+            NanoVG.nvgRotate(vg, Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat())
+            drawImage(
+                "/assets/polyblock/player.png",
+                -BlockConfig.pointerSize / 2f,
+                -BlockConfig.pointerSize / 2f,
+                BlockConfig.pointerSize,
+                BlockConfig.pointerSize
+            )
         }
-        NanoVG.nvgTranslate(vg, (UPlayer.getPosX()).toFloat(), (UPlayer.getPosZ()).toFloat())
-        NanoVG.nvgRotate(vg, Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat())
-        RenderManager.drawImage(
-            vg,
-            "/assets/polyblock/player.png",
-            -BlockConfig.pointerSize / 2f,
-            -BlockConfig.pointerSize / 2f,
-            BlockConfig.pointerSize,
-            BlockConfig.pointerSize
-        )
     }
 
     override fun onScreenClose() {

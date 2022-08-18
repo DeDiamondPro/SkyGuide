@@ -1,6 +1,7 @@
 package cc.polyfrost.polyblock.utils
 
-import cc.polyfrost.oneconfig.renderer.RenderManager
+import cc.polyfrost.oneconfig.utils.dsl.drawImage
+import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 
 /**
  * @param image The image of the map
@@ -20,6 +21,8 @@ data class Island(
     val height = bottomY - topY
 
     fun draw(vg: Long) {
-        RenderManager.drawImage(vg, image, topX, topY, width, height)
+        nanoVG (vg) {
+            drawImage( image, topX, topY, width, height)
+        }
     }
 }
