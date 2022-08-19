@@ -11,11 +11,15 @@ object SkyblockMap {
      * format : <world id, <zone id, island data>>
      * Example of separate worlds: main (hub, ect...), winter (jerry's workshop)
      */
-    var islands = mutableMapOf<String, MutableMap<String, Island>>()
+    var worlds = mutableMapOf<String, MutableMap<String, Island>>()
     var zoneToWorld = mutableMapOf<String, MutableMap<String, Island>>()
 
     fun getCurrentIsland(): Island? {
         return zoneToWorld[SBInfo.zone]?.get(SBInfo.zone)
+    }
+
+    fun currentIslandAvailable(): Boolean {
+        return currentWorldAvailable() && getCurrentWorld()!!.containsKey(SBInfo.zone)
     }
 
     fun getCurrentWorld(): MutableMap<String, Island>? {
@@ -29,8 +33,8 @@ object SkyblockMap {
     fun initialize(file: File): Boolean {
         try {
             Files.newInputStream(file.toPath()).use {
-                islands = Json.decodeFromStream(it)
-                for (world in islands.values) {
+                worlds = Json.decodeFromStream(it)
+                for (world in worlds.values) {
                     for (zone in world.keys) {
                         zoneToWorld[zone] = world
                     }

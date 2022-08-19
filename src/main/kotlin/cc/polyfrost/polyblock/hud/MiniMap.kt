@@ -76,6 +76,9 @@ class MiniMap : Hud() {
     }
 
     override fun shouldShow(): Boolean {
-        return super.shouldShow() && SBInfo.inSkyblock && Platform.getGuiPlatform().currentScreen !is MapGui
+        return super.shouldShow()
+                && SBInfo.inSkyblock
+                && Platform.getGuiPlatform().currentScreen !is MapGui
+                && SkyblockMap.currentIslandAvailable()
     }
 }

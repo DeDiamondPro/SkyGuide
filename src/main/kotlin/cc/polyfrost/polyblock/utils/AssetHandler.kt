@@ -3,15 +3,11 @@ package cc.polyfrost.polyblock.utils
 import cc.polyfrost.oneconfig.renderer.AssetLoader
 import cc.polyfrost.oneconfig.utils.Multithreading
 import cc.polyfrost.oneconfig.utils.NetworkUtils
-import cc.polyfrost.polyblock.config.BlockConfig
-import cc.polyfrost.polyblock.map.ShaImage
 import cc.polyfrost.polyblock.map.SkyblockMap
-import cc.polyfrost.polyblock.map.Textures
 import org.lwjgl.nanovg.NanoVG
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
-import java.util.function.Consumer
 
 object AssetHandler {
     private val loadedAssets = mutableListOf<String>()
@@ -58,14 +54,16 @@ object AssetHandler {
 
     fun updateTextures() {
         val imagesToUpdate = mutableMapOf<WebAsset, File>()
-        for (island in SkyblockMap.islands.values) {
-            val image = island.image
-            val file = image.filePath.toFile()
-            if (!file.exists() || image.getSha256() != IOUtils.getSha256(file)) {
-                image.initialized = false
-                imagesToUpdate[image] = file
-            } else {
-                image.initialized = true
+        for (world in SkyblockMap.worlds.values) {
+            for (island in world.values) {
+                val image = island.image
+                val file = image.filePath.toFile()
+                if (!file.exists() || image.getSha256() != IOUtils.getSha256(file)) {
+                    image.initialized = false
+                    imagesToUpdate[image] = file
+                } else {
+                    image.initialized = true
+                }
             }
         }
         downloadAssets(imagesToUpdate)

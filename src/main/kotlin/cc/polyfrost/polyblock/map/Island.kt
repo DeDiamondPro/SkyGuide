@@ -31,11 +31,11 @@ data class Island(
 
     companion object {
         fun getXOffset(): Float {
-            return SkyblockMap.islands[SBInfo.zone]?.xOffset ?: 0f
+            return SkyblockMap.getCurrentIsland()?.xOffset ?: 0f
         }
 
         fun getYOffset(): Float {
-            return SkyblockMap.islands[SBInfo.zone]?.yOffset ?: 0f
+            return SkyblockMap.getCurrentIsland()?.yOffset ?: 0f
         }
     }
 }
