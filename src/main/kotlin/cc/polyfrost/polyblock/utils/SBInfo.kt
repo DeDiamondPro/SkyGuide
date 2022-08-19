@@ -12,7 +12,8 @@ class SBInfo {
             private set
         var zone: String = "hub"
             private set
-        private var hasJoinedSb = false
+        var hasJoinedSb = false
+            private set
     }
 
     @Subscribe

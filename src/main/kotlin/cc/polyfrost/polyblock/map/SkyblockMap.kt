@@ -8,13 +8,15 @@ import java.nio.file.Files
 object SkyblockMap {
     var islands = mutableMapOf<String, Island>()
 
-    fun initialize() {
+    fun initialize(file: File): Boolean {
         try {
-            Files.newInputStream(File("./config/PolyBlock/map.json").toPath()).use {
+            Files.newInputStream(file.toPath()).use {
                 islands = Json.decodeFromStream(it)
+                return true
             }
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        return false
     }
 }

@@ -61,8 +61,10 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
         registerKeyBind(mapKeyBind) { if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui()) }
         addListener("smooth") { RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) } }
         addListener("textureQuality") {
-            RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) }
-            AssetHandler.updateTextures()
+            if (SBInfo.hasJoinedSb) {
+                RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) }
+                AssetHandler.updateTextures()
+            }
         }
     }
 }

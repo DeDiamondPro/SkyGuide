@@ -9,6 +9,8 @@ import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.map.Textures
 import org.lwjgl.nanovg.NanoVG
 import java.io.File
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
 import java.util.function.Consumer
 
 object AssetHandler {
@@ -33,8 +35,21 @@ object AssetHandler {
     }
 
     fun initialize() {
-        // TODO: download json from server
-        updateTextures()
+        Multithreading.runAsync {
+            val mapFile = "config/PolyBlock/map.json".toFile()
+            val newMapFile = "config/PolyBlock/map-new.json".toFile()
+            mapFile.parentFile.mkdirs()
+            if (
+                NetworkUtils.downloadFile("https://mods.polyfrost.cc/assets/polyblock/map.json", newMapFile)
+                && SkyblockMap.initialize(newMapFile)
+            ) {
+                Files.move(newMapFile.toPath(), mapFile.toPath(), StandardCopyOption.REPLACE_EXISTING)
+            } else if (mapFile.exists()) {
+                SkyblockMap.initialize(mapFile)
+            }
+
+            updateTextures()
+        }
     }
 
     fun updateTextures() {

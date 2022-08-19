@@ -22,6 +22,5 @@ object PolyBlock {
     fun onInitialization(event: FMLInitializationEvent) {
         BlockConfig
         EventManager.INSTANCE.eventBus.register(SBInfo())
-        SkyblockMap.initialize()
     }
 }
