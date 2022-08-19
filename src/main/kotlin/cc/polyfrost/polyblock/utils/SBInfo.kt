@@ -12,6 +12,7 @@ class SBInfo {
             private set
         var zone: String = "hub"
             private set
+        private var hasJoinedSb = false
     }
 
     @Subscribe
@@ -23,6 +24,10 @@ class SBInfo {
                 AssetHandler.unloadAssets(
                     it
                 )
+            }
+            if (!hasJoinedSb) {
+                hasJoinedSb = true
+                AssetHandler.initialize()
             }
             zone = info.gameMode
         } else {

@@ -3,6 +3,7 @@ import gg.essential.gradle.util.noServerRunConfigs
 
 plugins {
     kotlin("jvm")
+    kotlin("plugin.serialization") version "1.4.21"
     id("gg.essential.multi-version")
     id("gg.essential.defaults.repo")
     id("gg.essential.defaults.java")

@@ -10,10 +10,11 @@ import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 import cc.polyfrost.oneconfig.utils.dsl.scale
 import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
+import cc.polyfrost.polyblock.PolyBlock
 import cc.polyfrost.polyblock.config.BlockConfig
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
-import cc.polyfrost.polyblock.utils.Island
+import cc.polyfrost.polyblock.map.Island
 import cc.polyfrost.polyblock.utils.getX
 import cc.polyfrost.polyblock.utils.getY
 import org.lwjgl.input.Mouse

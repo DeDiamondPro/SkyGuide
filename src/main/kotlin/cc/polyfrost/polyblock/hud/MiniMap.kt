@@ -4,6 +4,7 @@ import cc.polyfrost.oneconfig.config.annotations.Slider
 import cc.polyfrost.oneconfig.hud.Hud
 import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
+import cc.polyfrost.oneconfig.libs.universal.UResolution
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
 import cc.polyfrost.oneconfig.renderer.RenderManager
@@ -32,17 +33,19 @@ class MiniMap : Hud() {
     )
     var pointerSize = 7f
 
-    override fun draw(matrices: UMatrixStack?, x: Float, y: Float, scale: Float, example: Boolean) {
+    override fun draw(matrices: UMatrixStack?, xUnscaled: Float, yUnscaled: Float, s: Float, example: Boolean) {
         val island = SkyblockMap.islands[SBInfo.zone] ?: return
+        val scale = s * UResolution.scaleFactor.toFloat()
+        val x = xUnscaled * UResolution.scaleFactor.toFloat()
+        val y = yUnscaled * UResolution.scaleFactor.toFloat()
         val totalScale = scale * mapZoom
-        RenderManager.setupAndDraw(true) { vg ->
+        RenderManager.setupAndDraw { vg ->
             nanoVG(vg) {
                 val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
-                AssetHandler.loadAsset(vg, island.image)
-                drawImage(
-                    island.image,
-                    x + (island.topX - UPlayer.getX()) * totalScale + 75f * scale,
-                    y + (island.topY - UPlayer.getY()) * totalScale + 75f * scale,
+                island.image.draw(
+                    vg,
+                    (x + (island.topX - UPlayer.getX()) * totalScale + 75f * scale).toInt(),
+                    (y + (island.topY - UPlayer.getY()) * totalScale + 75f * scale).toInt(),
                     island.width * totalScale,
                     island.height * totalScale
                 )

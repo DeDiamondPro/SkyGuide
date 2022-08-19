@@ -1,8 +1,15 @@
 package cc.polyfrost.polyblock.utils
 
 import cc.polyfrost.oneconfig.renderer.AssetLoader
+import cc.polyfrost.oneconfig.utils.Multithreading
+import cc.polyfrost.oneconfig.utils.NetworkUtils
 import cc.polyfrost.polyblock.config.BlockConfig
+import cc.polyfrost.polyblock.map.ShaImage
+import cc.polyfrost.polyblock.map.SkyblockMap
+import cc.polyfrost.polyblock.map.Textures
 import org.lwjgl.nanovg.NanoVG
+import java.io.File
+import java.util.function.Consumer
 
 object AssetHandler {
     private val loadedAssets = mutableListOf<String>()
@@ -23,5 +30,36 @@ object AssetHandler {
             AssetLoader.INSTANCE.removeImage(vg, image)
         }
         loadedAssets.clear()
+    }
+
+    fun initialize() {
+        // TODO: download json from server
+        updateTextures()
+    }
+
+    fun updateTextures() {
+        val imagesToUpdate = mutableMapOf<WebAsset, File>()
+        for (island in SkyblockMap.islands.values) {
+            val image = island.image
+            val file = image.filePath.toFile()
+            if (!file.exists() || image.getSha256() != IOUtils.getSha256(file)) {
+                image.initialized = false
+                imagesToUpdate[image] = file
+            } else {
+                image.initialized = true
+            }
+        }
+        downloadAssets(imagesToUpdate)
+    }
+
+    private fun downloadAssets(assets: MutableMap<WebAsset, File>) {
+        Multithreading.runAsync {
+            for ((asset, file) in assets) {
+                if (file.exists() && !file.delete()) continue
+                file.parentFile.mkdirs()
+                NetworkUtils.downloadFile(asset.getUrl(), file)
+                if (file.exists()) asset.initialized = true
+            }
+        }
     }
 }

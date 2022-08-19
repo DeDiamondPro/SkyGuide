@@ -4,6 +4,7 @@ import cc.polyfrost.oneconfig.config.Config
 import cc.polyfrost.oneconfig.config.annotations.Dropdown
 import cc.polyfrost.oneconfig.config.annotations.HUD
 import cc.polyfrost.oneconfig.config.annotations.KeyBind
+import cc.polyfrost.oneconfig.config.annotations.NonProfileSpecific
 import cc.polyfrost.oneconfig.config.annotations.Slider
 import cc.polyfrost.oneconfig.config.annotations.Switch
 import cc.polyfrost.oneconfig.config.core.OneKeyBind
@@ -24,12 +25,15 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
         options = ["low", "medium", "high"],
         category = "General"
     )
+    @NonProfileSpecific
     var textureQuality = 1
 
     @Switch(name = "Smooth Textures")
+    @NonProfileSpecific
     var smooth = false
 
     @Switch(name = "Keep In Memory")
+    @NonProfileSpecific
     var keepAssetsLoaded = true
 
     @KeyBind(name = "Map Keybind", category = "Map")
@@ -56,5 +60,9 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
         initialize()
         registerKeyBind(mapKeyBind) { if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui()) }
         addListener("smooth") { RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) } }
+        addListener("textureQuality") {
+            RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) }
+            AssetHandler.updateTextures()
+        }
     }
 }
