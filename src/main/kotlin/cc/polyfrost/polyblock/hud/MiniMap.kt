@@ -34,7 +34,7 @@ class MiniMap : Hud() {
     var pointerSize = 7f
 
     override fun draw(matrices: UMatrixStack?, xUnscaled: Float, yUnscaled: Float, s: Float, example: Boolean) {
-        val island = SkyblockMap.islands[SBInfo.zone] ?: return
+        val island = SkyblockMap.getCurrentIsland() ?: return
         val scale = s * UResolution.scaleFactor.toFloat()
         val x = xUnscaled * UResolution.scaleFactor.toFloat()
         val y = yUnscaled * UResolution.scaleFactor.toFloat()

@@ -18,9 +18,12 @@ object AssetHandler {
 
     fun loadAsset(vg: Long, fileName: String): Boolean {
         if (loadedAssets.contains(fileName)) return true
-        var flags = NanoVG.NVG_IMAGE_GENERATE_MIPMAPS
-        if (!BlockConfig.smooth || fileName == "/assets/polyblock/player.png") flags = flags or NanoVG.NVG_IMAGE_NEAREST
-        if (AssetLoader.INSTANCE.loadImage(vg, fileName, flags)) {
+        if (AssetLoader.INSTANCE.loadImage(
+                vg,
+                fileName,
+                NanoVG.NVG_IMAGE_GENERATE_MIPMAPS or NanoVG.NVG_IMAGE_NEAREST
+            )
+        ) {
             loadedAssets.add(fileName)
             return true
         }
@@ -39,12 +42,13 @@ object AssetHandler {
             val mapFile = "config/PolyBlock/map.json".toFile()
             val newMapFile = "config/PolyBlock/map-new.json".toFile()
             mapFile.parentFile.mkdirs()
-            if (
+            if ( // try to download and parse new data
                 NetworkUtils.downloadFile("https://mods.polyfrost.cc/assets/polyblock/map.json", newMapFile)
                 && SkyblockMap.initialize(newMapFile)
             ) {
                 Files.move(newMapFile.toPath(), mapFile.toPath(), StandardCopyOption.REPLACE_EXISTING)
-            } else if (mapFile.exists()) {
+            } else if (mapFile.exists()) { // if downloading or parsing failed use old data
+                if (newMapFile.exists()) newMapFile.delete()
                 SkyblockMap.initialize(mapFile)
             }
 

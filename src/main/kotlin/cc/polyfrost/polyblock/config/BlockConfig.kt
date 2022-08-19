@@ -28,10 +28,6 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
     @NonProfileSpecific
     var textureQuality = 1
 
-    @Switch(name = "Smooth Textures")
-    @NonProfileSpecific
-    var smooth = false
-
     @Switch(name = "Keep In Memory")
     @NonProfileSpecific
     var keepAssetsLoaded = true

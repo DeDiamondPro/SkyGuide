@@ -2,6 +2,7 @@ package cc.polyfrost.polyblock.gui
 
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.libs.universal.UResolution
+import cc.polyfrost.oneconfig.libs.universal.UScreen
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
 import cc.polyfrost.oneconfig.renderer.RenderManager
@@ -26,11 +27,15 @@ class MapGui : OneUIScreen() {
     private var y: Float = 0f
 
     init {
-        x = (-(UPlayer.getPosX() + Island.getXOffset() )+ (UResolution.windowWidth / 2f) / scale).toFloat()
+        x = (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.windowWidth / 2f) / scale).toFloat()
         y = (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.windowHeight / 2f) / scale).toFloat()
     }
 
     override fun draw(vg: Long, partialTicks: Float, inputHandler: InputHandler) {
+        if (!SkyblockMap.currentWorldAvailable()) {
+            displayScreen(null)
+            return
+        }
         nanoVG(vg) {
             val scrollWheel = Platform.getMousePlatform().dWheel
 
@@ -50,7 +55,7 @@ class MapGui : OneUIScreen() {
             }
             NanoVG.nvgTranslate(vg, x, y)
 
-            for (mapPart in SkyblockMap.islands.values) {
+            for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
                 mapPart.draw(vg)
             }
             NanoVG.nvgTranslate(vg, UPlayer.getX() + Island.getXOffset(), UPlayer.getY() + Island.getYOffset())

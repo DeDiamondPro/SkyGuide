@@ -30,8 +30,7 @@ data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage)
     }
 
     fun draw(vg: Long, x: Number, y: Number, width: Number, height: Number) {
-        if (!initialized) return
-        AssetHandler.loadAsset(vg, filePath)
+        if (!initialized || !AssetHandler.loadAsset(vg, filePath)) return
         nanoVG(vg) {
             drawImage(filePath, x, y, width, height)
         }
