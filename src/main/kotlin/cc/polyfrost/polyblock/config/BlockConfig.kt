@@ -15,6 +15,7 @@ import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.gui.GuiUtils
 import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.hud.MiniMap
+import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
 
@@ -54,7 +55,11 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
 
     init {
         initialize()
-        registerKeyBind(mapKeyBind) { if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui()) }
+        registerKeyBind(mapKeyBind) {
+            if (SBInfo.inSkyblock && SkyblockMap.currentWorldAvailable()) GuiUtils.displayScreen(
+                MapGui()
+            )
+        }
         addListener("smooth") { RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) } }
         addListener("textureQuality") {
             if (SBInfo.hasJoinedSb) {

@@ -34,15 +34,15 @@ class DownloadWindow {
     @Subscribe
     fun onHudRender(event: HudRenderEvent) {
         if (!downloading) return
-        val progress = (currentFile.toFloat() + currentPercent) / totalFiles.toFloat();
+        val progress = (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
         nanoVG {
             val x = UResolution.windowWidth - 300f
-            val y = UResolution.windowHeight - 80f
-            drawRoundedRectVaried(x, y, 300f, 80f, gray900, 12, 0, 0, 0)
+            val y = UResolution.windowHeight - 78f
+            drawRoundedRectVaried(x, y, 300f, 78f, gray900, 12, 0, 0, 0)
             drawText("Downloading assets", x + 12, y + 21, white, 18f, Fonts.SEMIBOLD)
-            drawText("PolyBlock by Polyfrost", x + 12, y + 39, white80, 14f, Fonts.REGULAR)
-            drawRoundedRect(x + 12.5f, y + 54, 275, 12, 6, gray700)
-            drawRoundedRect(x + 12.5f, y + 54, 275 * progress, 12, 6, primary500)
+            drawText("PolyBlock by Polyfrost", x + 12, y + 41, white80, 14f, Fonts.REGULAR)
+            drawRoundedRect(x + 12f, y + 60, 275, 6, 3, gray700)
+            drawRoundedRect(x + 12f, y + 60, 275 * progress, 6, 3, primary500)
         }
     }
 }
