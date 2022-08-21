@@ -39,31 +39,30 @@ class MiniMap : Hud() {
         val x = xUnscaled * UResolution.scaleFactor.toFloat()
         val y = yUnscaled * UResolution.scaleFactor.toFloat()
         val totalScale = scale * mapZoom
-        RenderManager.setupAndDraw { vg ->
-            nanoVG(vg) {
-                val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
-                island.image.draw(
-                    vg,
-                    (x + (island.topX - UPlayer.getX()) * totalScale + 75f * scale).toInt(),
-                    (y + (island.topY - UPlayer.getY()) * totalScale + 75f * scale).toInt(),
-                    island.width * totalScale,
-                    island.height * totalScale
-                )
-                NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
-                NanoVG.nvgRotate(
-                    vg,
-                    Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
-                )
-                AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
-                drawImage(
-                    "/assets/polyblock/player.png",
-                    -pointerSize * scale / 2,
-                    -pointerSize * scale / 2,
-                    pointerSize * scale,
-                    pointerSize * scale
-                )
-                ScissorManager.resetScissor(vg, scissor)
-            }
+        nanoVG {
+            val vg = this.instance
+            val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
+            island.image.draw(
+                vg,
+                (x + (island.topX - UPlayer.getX()) * totalScale + 75f * scale).toInt(),
+                (y + (island.topY - UPlayer.getY()) * totalScale + 75f * scale).toInt(),
+                island.width * totalScale,
+                island.height * totalScale
+            )
+            NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+            NanoVG.nvgRotate(
+                vg,
+                Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
+            )
+            AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
+            drawImage(
+                "/assets/polyblock/player.png",
+                -pointerSize * scale / 2,
+                -pointerSize * scale / 2,
+                pointerSize * scale,
+                pointerSize * scale
+            )
+            ScissorManager.resetScissor(vg, scissor)
         }
     }
 

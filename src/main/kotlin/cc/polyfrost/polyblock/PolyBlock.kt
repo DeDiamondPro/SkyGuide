@@ -2,6 +2,7 @@ package cc.polyfrost.polyblock
 
 import cc.polyfrost.oneconfig.events.EventManager
 import cc.polyfrost.polyblock.config.BlockConfig
+import cc.polyfrost.polyblock.gui.DownloadWindow
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.SBInfo
 import net.minecraftforge.fml.common.Mod
@@ -22,5 +23,6 @@ object PolyBlock {
     fun onInitialization(event: FMLInitializationEvent) {
         BlockConfig
         EventManager.INSTANCE.eventBus.register(SBInfo())
+        EventManager.INSTANCE.eventBus.register(DownloadWindow())
     }
 }
