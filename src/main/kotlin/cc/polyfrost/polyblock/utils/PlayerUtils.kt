@@ -2,10 +2,10 @@ package cc.polyfrost.polyblock.utils
 
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 
-fun UPlayer.getX(): Float {
+fun UPlayer.getOffsetX(): Float {
     return this.getPosX().toFloat()
 }
 
-fun UPlayer.getY(): Float {
+fun UPlayer.getOffsetY(): Float {
     return this.getPosZ().toFloat()
 }

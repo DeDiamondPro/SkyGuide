@@ -2,6 +2,7 @@ package cc.polyfrost.polyblock.config
 
 import cc.polyfrost.oneconfig.config.Config
 import cc.polyfrost.oneconfig.config.annotations.Dropdown
+import cc.polyfrost.oneconfig.config.annotations.Exclude
 import cc.polyfrost.oneconfig.config.annotations.HUD
 import cc.polyfrost.oneconfig.config.annotations.KeyBind
 import cc.polyfrost.oneconfig.config.annotations.NonProfileSpecific
@@ -18,6 +19,7 @@ import cc.polyfrost.polyblock.hud.MiniMap
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
+import cc.polyfrost.polyblock.utils.Waypoint
 
 object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json") {
 
@@ -53,10 +55,13 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
     @HUD(name = "Mini Map", category = "Mini Map")
     var miniMap = MiniMap()
 
+    @Exclude
+    var waypoints = mutableListOf<Waypoint>()
+
     init {
         initialize()
         registerKeyBind(mapKeyBind) {
-            if (SBInfo.inSkyblock && SkyblockMap.currentWorldAvailable()) GuiUtils.displayScreen(
+            if (enabled && SBInfo.inSkyblock && SkyblockMap.currentWorldAvailable()) GuiUtils.displayScreen(
                 MapGui()
             )
         }

@@ -15,8 +15,8 @@ import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
-import cc.polyfrost.polyblock.utils.getX
-import cc.polyfrost.polyblock.utils.getY
+import cc.polyfrost.polyblock.utils.getOffsetX
+import cc.polyfrost.polyblock.utils.getOffsetY
 import org.lwjgl.nanovg.NanoVG
 
 class MiniMap : Hud(true) {
@@ -54,8 +54,8 @@ class MiniMap : Hud(true) {
             }
             island.image.draw(
                 vg,
-                ((island.topX - UPlayer.getX()) * totalScale).toInt(),
-                ((island.topY - UPlayer.getY()) * totalScale).toInt(),
+                ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
+                ((island.topY - UPlayer.getOffsetY()) * totalScale).toInt(),
                 island.width * totalScale,
                 island.height * totalScale
             )
