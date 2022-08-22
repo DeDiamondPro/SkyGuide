@@ -162,5 +162,27 @@
       "xOffset": -12,
       "yOffset": -579
     }
+  },
+  "jerry_workshop": {
+    "winter": {
+      "image": {
+        "low": {
+          "url": "https://mods.polyfrost.cc/assets/polyblock/low/jerry_workshop.png",
+          "sha256": "717ff07ea98631837d4671da8681f0edbe6bd2f283ab7528b11ac312589321d4"
+        },
+        "medium": {
+          "url": "https://mods.polyfrost.cc/assets/polyblock/medium/jerry_workshop.png",
+          "sha256": "0fae7c318161feb1a7863f1b121e5c69fa0e82f1d3bf9d5e3c6153431150eed5"
+        },
+        "high": {
+          "url": "https://mods.polyfrost.cc/assets/polyblock/high/jerry_workshop.png",
+          "sha256": "a7def643edbd5638fc641039e7d4084cee8a4b88d52e64d8982ebf7d7629ddd0"
+        }
+      },
+      "topX": -116,
+      "topY": -116,
+      "bottomX": 131,
+      "bottomY": 131
+    }
   }
 }
