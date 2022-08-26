@@ -27,7 +27,7 @@ object RenderUtils {
         val x = block.x - viewerX
         val y = block.y - viewerY
         val z = block.z - viewerZ
-        renderBeaconBeam(x, y, z, rgb, partialTicks, )
+        renderBeaconBeam(x, y, z, rgb, partialTicks)
     }
 
 

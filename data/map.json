@@ -172,11 +172,11 @@
         },
         "medium": {
           "url": "https://mods.polyfrost.cc/assets/polyblock/medium/jerry_workshop.png",
-          "sha256": "0fae7c318161feb1a7863f1b121e5c69fa0e82f1d3bf9d5e3c6153431150eed5"
+          "sha256": "9c960e3785dbe8e8c2aef16f126e9acf89794901ca06d3d71ff78b9c3f5443dc"
         },
         "high": {
           "url": "https://mods.polyfrost.cc/assets/polyblock/high/jerry_workshop.png",
-          "sha256": "a7def643edbd5638fc641039e7d4084cee8a4b88d52e64d8982ebf7d7629ddd0"
+          "sha256": "3558da6629190d1db2c30dd18f0491d335f9b39506eec0a260e12d347960957a"
         }
       },
       "topX": -116,

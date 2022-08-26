@@ -1,10 +1,12 @@
 package cc.polyfrost.polyblock.utils
 
 import cc.polyfrost.oneconfig.renderer.AssetLoader
+import cc.polyfrost.oneconfig.renderer.Icon
+import cc.polyfrost.oneconfig.renderer.SVG
 import cc.polyfrost.oneconfig.utils.Multithreading
 import cc.polyfrost.oneconfig.utils.NetworkUtils
+import cc.polyfrost.oneconfig.utils.Notifications
 import cc.polyfrost.polyblock.PolyBlock
-import cc.polyfrost.polyblock.gui.DownloadWindow
 import cc.polyfrost.polyblock.map.SkyblockMap
 import org.lwjgl.nanovg.NanoVG
 import java.io.File
@@ -12,9 +14,27 @@ import java.io.IOException
 import java.net.URL
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
+import java.util.concurrent.Callable
 
 object AssetHandler {
     private val loadedAssets = mutableListOf<String>()
+    var totalFiles = 0
+    var currentFile = 0
+    var currentPercent = 0f
+
+    private fun setupDownload(assets: Int) {
+        totalFiles = assets
+        currentFile = 0
+        currentPercent = 0f
+        Notifications.INSTANCE.send(
+            "Downloading assets",
+            "PolyBlock by Polyfrost",
+            Icon("/assets/polyblock/downloading.svg"),
+            Callable {
+                (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
+            }
+        )
+    }
 
     fun loadAsset(vg: Long, fileName: String): Boolean {
         if (loadedAssets.contains(fileName)) return true
@@ -74,11 +94,12 @@ object AssetHandler {
     }
 
     private fun downloadAssets(assets: MutableMap<WebAsset, File>) {
+        if (assets.isEmpty()) return
         Multithreading.runAsync {
-            DownloadWindow.setupDownload(assets.size)
+            setupDownload(assets.size)
             for ((asset, file) in assets) {
                 if (file.exists() && !file.delete()) {
-                    DownloadWindow.currentFile++
+                    currentFile++
                     continue
                 }
                 file.parentFile.mkdirs()
@@ -104,12 +125,11 @@ object AssetHandler {
                     downloadDone = true
                 }
                 while (!downloadDone) {
-                    DownloadWindow.currentPercent = (file.length().toDouble() / length.toDouble()).toFloat()
+                    currentPercent = (file.length().toDouble() / length.toDouble()).toFloat()
                 }
-                DownloadWindow.currentPercent = 0f
-                DownloadWindow.currentFile++
+                currentPercent = 0f
+                currentFile++
             }
-            DownloadWindow.downloading = false
         }
     }
 }

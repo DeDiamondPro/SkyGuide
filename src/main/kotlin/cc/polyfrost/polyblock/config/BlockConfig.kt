@@ -55,8 +55,7 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
     @HUD(name = "Mini Map", category = "Mini Map")
     var miniMap = MiniMap()
 
-    @Exclude
-    var waypoints = mutableListOf<Waypoint>()
+    var waypoints: ArrayList<Waypoint> = ArrayList()
 
     init {
         initialize()
@@ -72,5 +71,6 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
                 AssetHandler.updateTextures()
             }
         }
+        println(gson.getAdapter(Waypoint::class.java))
     }
 }

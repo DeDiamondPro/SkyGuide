@@ -70,11 +70,11 @@ class MapGui : OneUIScreen() {
                 for (zone in SkyblockMap.getCurrentWorld()!!.keys.reversed()) {
                     val island = SkyblockMap.getCurrentWorld()!![zone]!!
                     if (!island.isInIsland(xCoordinate, yCoordinate)) continue
-                    println(zone)
                     BlockConfig.waypoints.add(Waypoint(zone, xCoordinate, yCoordinate))
+                    BlockConfig.save()
                     break
                 }
-            }
+            } else BlockConfig.save()
         }
         nanoVG(vg) {
             scale(scale, scale)
