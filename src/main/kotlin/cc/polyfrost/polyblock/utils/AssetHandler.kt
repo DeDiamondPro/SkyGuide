@@ -39,7 +39,7 @@ object AssetHandler {
             val newMapFile = "config/PolyBlock/map-new.json".toFile()
             mapFile.parentFile.mkdirs()
             if ( // try to download and parse new data
-                NetworkUtils.downloadFile("https://mods.polyfrost.cc/assets/polyblock/map.json", newMapFile)
+                NetworkUtils.downloadFile("https://api.dediamondpro.dev/assets/polyblock/map.json", newMapFile)
                 && SkyblockMap.initialize(newMapFile)
             ) {
                 Files.move(newMapFile.toPath(), mapFile.toPath(), StandardCopyOption.REPLACE_EXISTING)

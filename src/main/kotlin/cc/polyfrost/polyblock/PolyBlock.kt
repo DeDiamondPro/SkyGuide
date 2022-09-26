@@ -3,6 +3,7 @@ package cc.polyfrost.polyblock
 import cc.polyfrost.oneconfig.events.EventManager
 import cc.polyfrost.polyblock.config.BlockConfig
 import cc.polyfrost.polyblock.map.SkyblockMap
+import cc.polyfrost.polyblock.utils.NetworkUtils
 import cc.polyfrost.polyblock.utils.SBInfo
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -21,6 +22,7 @@ object PolyBlock {
     @Mod.EventHandler
     fun onInitialization(event: FMLInitializationEvent) {
         BlockConfig
+        //NetworkUtils.loadCertificate()
         EventManager.INSTANCE.eventBus.register(SBInfo())
     }
 }
