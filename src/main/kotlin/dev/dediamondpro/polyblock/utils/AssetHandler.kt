@@ -1,13 +1,13 @@
-package cc.polyfrost.polyblock.utils
+package dev.dediamondpro.polyblock.utils
 
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.renderer.AssetLoader
 import cc.polyfrost.oneconfig.renderer.Icon
-import cc.polyfrost.oneconfig.renderer.SVG
 import cc.polyfrost.oneconfig.utils.Multithreading
 import cc.polyfrost.oneconfig.utils.NetworkUtils
 import cc.polyfrost.oneconfig.utils.Notifications
-import cc.polyfrost.polyblock.PolyBlock
-import cc.polyfrost.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.PolyBlock
+import dev.dediamondpro.polyblock.map.SkyblockMap
 import org.lwjgl.nanovg.NanoVG
 import java.io.File
 import java.io.IOException
@@ -18,6 +18,7 @@ import java.util.concurrent.Callable
 
 object AssetHandler {
     private val loadedAssets = mutableListOf<String>()
+    var downloadedAssets = false
     var totalFiles = 0
     var currentFile = 0
     var currentPercent = 0f
@@ -26,6 +27,7 @@ object AssetHandler {
         totalFiles = assets
         currentFile = 0
         currentPercent = 0f
+        if (UMinecraft.getWorld() == null) return
         Notifications.INSTANCE.send(
             "Downloading assets",
             "PolyBlock by DeDiamondPro",
@@ -58,6 +60,7 @@ object AssetHandler {
     }
 
     fun initialize() {
+        downloadedAssets = true
         Multithreading.runAsync {
             val mapFile = "config/PolyBlock/map.json".toFile()
             val newMapFile = "config/PolyBlock/map-new.json".toFile()

@@ -1,8 +1,8 @@
-package cc.polyfrost.polyblock.map
+package dev.dediamondpro.polyblock.map
 
 import cc.polyfrost.oneconfig.utils.dsl.drawCircle
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
-import cc.polyfrost.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.config.BlockConfig
 
 /**
  * @param image The image of the map

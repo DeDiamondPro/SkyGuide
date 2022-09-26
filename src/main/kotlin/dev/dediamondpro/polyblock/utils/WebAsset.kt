@@ -1,4 +1,4 @@
-package cc.polyfrost.polyblock.utils
+package dev.dediamondpro.polyblock.utils
 
 interface WebAsset {
 

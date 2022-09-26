@@ -1,10 +1,10 @@
-package cc.polyfrost.polyblock.map
+package dev.dediamondpro.polyblock.map
 
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
-import cc.polyfrost.polyblock.config.BlockConfig
-import cc.polyfrost.polyblock.utils.AssetHandler
-import cc.polyfrost.polyblock.utils.WebAsset
+import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.utils.WebAsset
 
 @kotlinx.serialization.Serializable
 data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage) : WebAsset {

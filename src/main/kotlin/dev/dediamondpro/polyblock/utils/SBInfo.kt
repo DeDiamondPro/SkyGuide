@@ -1,18 +1,16 @@
-package cc.polyfrost.polyblock.utils
+package dev.dediamondpro.polyblock.utils
 
 import cc.polyfrost.oneconfig.events.event.LocrawEvent
 import cc.polyfrost.oneconfig.libs.eventbus.Subscribe
 import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.hypixel.LocrawInfo.GameType
-import cc.polyfrost.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.config.BlockConfig
 
 class SBInfo {
     companion object {
         var inSkyblock = false
             private set
         var zone: String = "hub"
-            private set
-        var hasJoinedSb = false
             private set
     }
 
@@ -22,14 +20,9 @@ class SBInfo {
         if (info.gameType.equals(GameType.SKYBLOCK)) {
             inSkyblock = true
             if (zone != info.gameMode && !BlockConfig.keepAssetsLoaded) RenderManager.setupAndDraw {
-                AssetHandler.unloadAssets(
-                    it
-                )
+                AssetHandler.unloadAssets(it)
             }
-            if (!hasJoinedSb) {
-                hasJoinedSb = true
-                AssetHandler.initialize()
-            }
+            if (AssetHandler.downloadedAssets) AssetHandler.initialize()
             zone = info.gameMode
         } else {
             inSkyblock = false

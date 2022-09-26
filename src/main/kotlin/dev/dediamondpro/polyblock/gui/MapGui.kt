@@ -1,4 +1,4 @@
-package cc.polyfrost.polyblock.gui
+package dev.dediamondpro.polyblock.gui
 
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.libs.universal.UResolution
@@ -10,13 +10,13 @@ import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 import cc.polyfrost.oneconfig.utils.dsl.scale
 import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
-import cc.polyfrost.polyblock.config.BlockConfig
-import cc.polyfrost.polyblock.map.SkyblockMap
-import cc.polyfrost.polyblock.utils.AssetHandler
-import cc.polyfrost.polyblock.map.Island
-import cc.polyfrost.polyblock.utils.Waypoint
-import cc.polyfrost.polyblock.utils.getOffsetX
-import cc.polyfrost.polyblock.utils.getOffsetY
+import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.map.Island
+import dev.dediamondpro.polyblock.utils.Waypoint
+import dev.dediamondpro.polyblock.utils.getOffsetX
+import dev.dediamondpro.polyblock.utils.getOffsetY
 import org.lwjgl.input.Mouse
 import org.lwjgl.nanovg.NanoVG
 import kotlin.math.pow

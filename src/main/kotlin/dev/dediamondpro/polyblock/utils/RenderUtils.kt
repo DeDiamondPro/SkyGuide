@@ -1,4 +1,4 @@
-package cc.polyfrost.polyblock.utils
+package dev.dediamondpro.polyblock.utils
 
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.GlStateManager

@@ -1,4 +1,4 @@
-package cc.polyfrost.polyblock.hud
+package dev.dediamondpro.polyblock.hud
 
 import cc.polyfrost.oneconfig.config.annotations.Slider
 import cc.polyfrost.oneconfig.config.annotations.Switch
@@ -11,12 +11,12 @@ import cc.polyfrost.oneconfig.platform.Platform
 import cc.polyfrost.oneconfig.renderer.scissor.ScissorManager
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
-import cc.polyfrost.polyblock.gui.MapGui
-import cc.polyfrost.polyblock.map.SkyblockMap
-import cc.polyfrost.polyblock.utils.AssetHandler
-import cc.polyfrost.polyblock.utils.SBInfo
-import cc.polyfrost.polyblock.utils.getOffsetX
-import cc.polyfrost.polyblock.utils.getOffsetY
+import dev.dediamondpro.polyblock.gui.MapGui
+import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.utils.SBInfo
+import dev.dediamondpro.polyblock.utils.getOffsetX
+import dev.dediamondpro.polyblock.utils.getOffsetY
 import org.lwjgl.nanovg.NanoVG
 
 class MiniMap : Hud(true) {

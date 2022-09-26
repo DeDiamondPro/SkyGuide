@@ -1,9 +1,10 @@
-package cc.polyfrost.polyblock
+package dev.dediamondpro.polyblock
 
 import cc.polyfrost.oneconfig.events.EventManager
-import cc.polyfrost.polyblock.config.BlockConfig
-import cc.polyfrost.polyblock.handlers.WaypointHandler
-import cc.polyfrost.polyblock.utils.SBInfo
+import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.handlers.WaypointHandler
+import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.utils.SBInfo
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -21,7 +22,7 @@ object PolyBlock {
 
     @Mod.EventHandler
     fun onInitialization(event: FMLInitializationEvent) {
-        BlockConfig
+        if (BlockConfig.downloadAtLaunch) AssetHandler.initialize()
         EventManager.INSTANCE.eventBus.register(SBInfo())
         MinecraftForge.EVENT_BUS.register(WaypointHandler())
     }

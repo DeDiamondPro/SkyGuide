@@ -1,7 +1,7 @@
-package cc.polyfrost.polyblock.handlers
+package dev.dediamondpro.polyblock.handlers
 
-import cc.polyfrost.polyblock.config.BlockConfig
-import cc.polyfrost.polyblock.utils.SBInfo
+import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.utils.SBInfo
 import net.minecraftforge.client.event.RenderWorldLastEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 

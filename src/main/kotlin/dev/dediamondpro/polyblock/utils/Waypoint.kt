@@ -1,7 +1,7 @@
-package cc.polyfrost.polyblock.utils
+package dev.dediamondpro.polyblock.utils
 
 import cc.polyfrost.oneconfig.config.core.OneColor
-import cc.polyfrost.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.map.SkyblockMap
 import net.minecraft.util.BlockPos
 
 data class Waypoint(

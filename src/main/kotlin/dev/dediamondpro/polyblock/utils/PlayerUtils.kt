@@ -1,4 +1,4 @@
-package cc.polyfrost.polyblock.utils
+package dev.dediamondpro.polyblock.utils
 
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 

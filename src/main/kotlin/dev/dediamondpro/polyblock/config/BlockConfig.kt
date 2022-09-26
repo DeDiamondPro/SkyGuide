@@ -1,8 +1,7 @@
-package cc.polyfrost.polyblock.config
+package dev.dediamondpro.polyblock.config
 
 import cc.polyfrost.oneconfig.config.Config
 import cc.polyfrost.oneconfig.config.annotations.Dropdown
-import cc.polyfrost.oneconfig.config.annotations.Exclude
 import cc.polyfrost.oneconfig.config.annotations.HUD
 import cc.polyfrost.oneconfig.config.annotations.KeyBind
 import cc.polyfrost.oneconfig.config.annotations.NonProfileSpecific
@@ -14,26 +13,37 @@ import cc.polyfrost.oneconfig.config.data.ModType
 import cc.polyfrost.oneconfig.libs.universal.UKeyboard
 import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.gui.GuiUtils
-import cc.polyfrost.polyblock.gui.MapGui
-import cc.polyfrost.polyblock.hud.MiniMap
-import cc.polyfrost.polyblock.map.SkyblockMap
-import cc.polyfrost.polyblock.utils.AssetHandler
-import cc.polyfrost.polyblock.utils.SBInfo
-import cc.polyfrost.polyblock.utils.Waypoint
+import dev.dediamondpro.polyblock.gui.MapGui
+import dev.dediamondpro.polyblock.hud.MiniMap
+import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.utils.SBInfo
+import dev.dediamondpro.polyblock.utils.Waypoint
 
 object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json") {
 
     @Dropdown(
         name = "Texture Quality",
+        description = "The quality of the textures.",
         options = ["low", "medium", "high"],
         category = "General"
     )
     @NonProfileSpecific
     var textureQuality = 1
 
-    @Switch(name = "Keep In Memory")
+    @Switch(
+        name = "Keep In Memory",
+        description = "Keep all assets in memory."
+    )
     @NonProfileSpecific
     var keepAssetsLoaded = true
+
+    @Switch(
+        name = "Download at launch",
+        description = "Download all assets at launch."
+    )
+    @NonProfileSpecific
+    var downloadAtLaunch = false
 
     @KeyBind(name = "Map Keybind", category = "Map")
     var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)
@@ -66,11 +76,10 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
         }
         addListener("smooth") { RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) } }
         addListener("textureQuality") {
-            if (SBInfo.hasJoinedSb) {
+            if (AssetHandler.downloadedAssets) {
                 RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) }
                 AssetHandler.updateTextures()
             }
         }
-        println(gson.getAdapter(Waypoint::class.java))
     }
 }

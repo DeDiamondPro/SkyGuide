@@ -1,6 +1,6 @@
-package cc.polyfrost.polyblock.map
+package dev.dediamondpro.polyblock.map
 
-import cc.polyfrost.polyblock.utils.SBInfo
+import dev.dediamondpro.polyblock.utils.SBInfo
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
 import java.io.File
