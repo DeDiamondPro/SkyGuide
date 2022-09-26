@@ -1,13 +1,13 @@
 package cc.polyfrost.polyblock.hud
 
 import cc.polyfrost.oneconfig.config.annotations.Slider
+import cc.polyfrost.oneconfig.config.annotations.Switch
 import cc.polyfrost.oneconfig.hud.Hud
 import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.libs.universal.UResolution
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
-import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.renderer.scissor.ScissorManager
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
@@ -15,11 +15,14 @@ import cc.polyfrost.polyblock.gui.MapGui
 import cc.polyfrost.polyblock.map.SkyblockMap
 import cc.polyfrost.polyblock.utils.AssetHandler
 import cc.polyfrost.polyblock.utils.SBInfo
-import cc.polyfrost.polyblock.utils.getX
-import cc.polyfrost.polyblock.utils.getY
+import cc.polyfrost.polyblock.utils.getOffsetX
+import cc.polyfrost.polyblock.utils.getOffsetY
 import org.lwjgl.nanovg.NanoVG
 
-class MiniMap : Hud() {
+class MiniMap : Hud(true) {
+
+    @Switch(name = "Rotate With Player")
+    var rotateWithPlayer = true
 
     @Slider(
         name = "Zoom Factor",
@@ -39,31 +42,40 @@ class MiniMap : Hud() {
         val x = xUnscaled * UResolution.scaleFactor.toFloat()
         val y = yUnscaled * UResolution.scaleFactor.toFloat()
         val totalScale = scale * mapZoom
-        RenderManager.setupAndDraw { vg ->
-            nanoVG(vg) {
-                val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
-                island.image.draw(
+        nanoVG {
+            val vg = this.instance
+            val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
+            NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+            if (rotateWithPlayer) {
+                NanoVG.nvgRotate(
                     vg,
-                    (x + (island.topX - UPlayer.getX()) * totalScale + 75f * scale).toInt(),
-                    (y + (island.topY - UPlayer.getY()) * totalScale + 75f * scale).toInt(),
-                    island.width * totalScale,
-                    island.height * totalScale
+                    Math.toRadians(180.0 - UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
                 )
-                NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+            }
+            island.image.draw(
+                vg,
+                ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
+                ((island.topY - UPlayer.getOffsetY()) * totalScale).toInt(),
+                island.width * totalScale,
+                island.height * totalScale
+            )
+            NanoVG.nvgResetTransform(vg)
+            NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+            if (!rotateWithPlayer) {
                 NanoVG.nvgRotate(
                     vg,
                     Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
                 )
-                AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
-                drawImage(
-                    "/assets/polyblock/player.png",
-                    -pointerSize * scale / 2,
-                    -pointerSize * scale / 2,
-                    pointerSize * scale,
-                    pointerSize * scale
-                )
-                ScissorManager.resetScissor(vg, scissor)
             }
+            AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
+            drawImage(
+                "/assets/polyblock/player.png",
+                -pointerSize * scale / 2,
+                -pointerSize * scale / 2,
+                pointerSize * scale,
+                pointerSize * scale
+            )
+            ScissorManager.resetScissor(vg, scissor)
         }
     }
 

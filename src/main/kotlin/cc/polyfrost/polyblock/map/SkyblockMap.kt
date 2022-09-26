@@ -30,6 +30,20 @@ object SkyblockMap {
         return zoneToWorld.containsKey(SBInfo.zone)
     }
 
+    fun isZoneInWorld(zone: String): Boolean {
+        return currentWorldAvailable() && getCurrentWorld()!!.containsKey(zone)
+    }
+
+    fun getZoneByIsland(island: Island): String? {
+        for (world in worlds.values) {
+            if (!world.containsValue(island)) continue
+            for ((zone, island2) in world) {
+                if (island == island2) return zone
+            }
+        }
+        return null
+    }
+
     fun initialize(file: File): Boolean {
         try {
             Files.newInputStream(file.toPath()).use {
