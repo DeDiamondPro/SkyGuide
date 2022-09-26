@@ -28,7 +28,7 @@ object AssetHandler {
         currentPercent = 0f
         Notifications.INSTANCE.send(
             "Downloading assets",
-            "PolyBlock by Polyfrost",
+            "PolyBlock by DeDiamondPro",
             Icon("/assets/polyblock/downloading.svg"),
             Callable {
                 (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
