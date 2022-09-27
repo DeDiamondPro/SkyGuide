@@ -2,7 +2,7 @@
   "main": {
     "hub": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/hub.png",
             "sha256": "fd85bc3899bd7ec62290dcfb3696bc425e795be040d9a5c40b26c7cfa38b2a9d"
@@ -24,7 +24,7 @@
     },
     "combat_1": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/spiders_den.png",
             "sha256": "98bfba96246b6588fda5aea90d8b73366b466653dcf60d134318850c7ef28b65"
@@ -46,7 +46,7 @@
     },
     "foraging_1": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/park.png",
             "sha256": "ba70be86262e05cc6184f77c83abad3906e05f50bfffd2fa8d194238d201fb16"
@@ -68,7 +68,7 @@
     },
     "farming_1": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/farming_islands.png",
             "sha256": "c79cc61d5b70505f9f2e766b58f70b77863a5c09439233bfd624ac0f47df059e"
@@ -90,7 +90,7 @@
     },
     "crimson_isle": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/crimson_isle.png",
             "sha256": "6712c03879d912eb7e07a9878e179d1b3d58f18406b3d61340ff8ae9b0d7a45f"
@@ -112,7 +112,7 @@
     },
     "combat_3": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/end.png",
             "sha256": "211c9e62ed6e9f38a582dbd233030d92daf16dba5e087d74dfb823520d3724c9"
@@ -134,7 +134,7 @@
     },
     "mining_1": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/gold_mine.png",
             "sha256": "9989303c9dd5aee4d2bbd8aa68d871180f1e956c9f126c85a4c653314aff8ccc"
@@ -196,7 +196,7 @@
   "jerry_workshop": {
     "winter": {
       "images": {
-        "0": {
+        "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/jerry_workshop.png",
             "sha256": "717ff07ea98631837d4671da8681f0edbe6bd2f283ab7528b11ac312589321d4"
