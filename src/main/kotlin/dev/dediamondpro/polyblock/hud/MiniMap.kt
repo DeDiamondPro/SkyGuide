@@ -52,7 +52,7 @@ class MiniMap : Hud(true) {
                     Math.toRadians(180.0 - UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
                 )
             }
-            island.image.draw(
+            island.getImage(UPlayer.getPosY().toInt()).draw(
                 vg,
                 ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
                 ((island.topY - UPlayer.getOffsetY()) * totalScale).toInt(),

@@ -12,11 +12,8 @@ import cc.polyfrost.oneconfig.utils.dsl.scale
 import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.map.SkyblockMap
-import dev.dediamondpro.polyblock.utils.AssetHandler
 import dev.dediamondpro.polyblock.map.Island
-import dev.dediamondpro.polyblock.utils.Waypoint
-import dev.dediamondpro.polyblock.utils.getOffsetX
-import dev.dediamondpro.polyblock.utils.getOffsetY
+import dev.dediamondpro.polyblock.utils.*
 import org.lwjgl.input.Mouse
 import org.lwjgl.nanovg.NanoVG
 import kotlin.math.pow
@@ -85,7 +82,8 @@ class MapGui : OneUIScreen() {
             NanoVG.nvgTranslate(vg, x, y)
 
             for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
-                mapPart.draw(vg)
+                if (mapPart.zone == SBInfo.zone) mapPart.draw(vg, UPlayer.getPosY().toInt())
+                else mapPart.draw(vg, 255)
             }
             NanoVG.nvgTranslate(
                 vg,

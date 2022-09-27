@@ -13,7 +13,7 @@ import dev.dediamondpro.polyblock.config.BlockConfig
  */
 @kotlinx.serialization.Serializable
 data class Island(
-    val image: Textures,
+    var images: MutableMap<Int, Textures>,
     val topX: Float,
     val topY: Float,
     val bottomX: Float,
@@ -23,10 +23,15 @@ data class Island(
 ) {
     val width = bottomX - topX
     val height = bottomY - topY
-    private var zone: String? = null
+    var zone: String? = null
+        private set
 
-    fun draw(vg: Long) {
-        image.draw(vg, topX + xOffset, topY + yOffset, width, height)
+    init {
+        images = images.toSortedMap()
+    }
+
+    fun draw(vg: Long, y: Int) {
+        getImage(y).draw(vg, topX + xOffset, topY + yOffset, width, height)
         if (zone == null) zone = SkyblockMap.getZoneByIsland(this)
         nanoVG(vg) {
             for (waypoint in BlockConfig.waypoints) {
@@ -34,6 +39,13 @@ data class Island(
                 drawCircle(waypoint.x, waypoint.y, 3, waypoint.color)
             }
         }
+    }
+
+    fun getImage(y: Int): Textures {
+        for ((height, image) in images) {
+            if (height >= y) return image
+        }
+        return images[0]!!
     }
 
     fun isInIsland(x: Float, y: Float): Boolean {
