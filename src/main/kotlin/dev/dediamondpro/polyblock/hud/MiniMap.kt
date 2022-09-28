@@ -1,18 +1,26 @@
 package dev.dediamondpro.polyblock.hud
 
+import cc.polyfrost.oneconfig.config.annotations.Exclude
 import cc.polyfrost.oneconfig.config.annotations.Slider
 import cc.polyfrost.oneconfig.config.annotations.Switch
+import cc.polyfrost.oneconfig.gui.animations.Animation
+import cc.polyfrost.oneconfig.gui.animations.DummyAnimation
+import cc.polyfrost.oneconfig.gui.animations.EaseInOutQuad
 import cc.polyfrost.oneconfig.hud.Hud
 import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.libs.universal.UResolution
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
+import cc.polyfrost.oneconfig.renderer.Image
 import cc.polyfrost.oneconfig.renderer.scissor.ScissorManager
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
+import cc.polyfrost.oneconfig.utils.dsl.setAlpha
 import dev.dediamondpro.polyblock.gui.MapGui
+import dev.dediamondpro.polyblock.map.Island
 import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.map.Textures
 import dev.dediamondpro.polyblock.utils.AssetHandler
 import dev.dediamondpro.polyblock.utils.SBInfo
 import dev.dediamondpro.polyblock.utils.getOffsetX
@@ -36,12 +44,31 @@ class MiniMap : Hud(true) {
     )
     var pointerSize = 7f
 
+    @Exclude
+    var zoomAnimation: Animation = DummyAnimation(1f)
+
+    @Exclude
+    var fadeAnimation: Animation = DummyAnimation(1f)
+
+    @Exclude
+    var prevIsland: Island? = null
+
+    @Exclude
+    var prevImage: Textures? = null
+
     override fun draw(matrices: UMatrixStack?, xUnscaled: Float, yUnscaled: Float, s: Float, example: Boolean) {
         val island = SkyblockMap.getCurrentIsland() ?: return
         val scale = s * UResolution.scaleFactor.toFloat()
         val x = xUnscaled * UResolution.scaleFactor.toFloat()
         val y = yUnscaled * UResolution.scaleFactor.toFloat()
-        val totalScale = scale * mapZoom
+        val image = island.getImage(UPlayer.getPosY().toInt())
+        if (image.zoom != zoomAnimation.end) {
+            zoomAnimation = if (prevIsland != island) DummyAnimation(image.zoom)
+            else EaseInOutQuad(350, zoomAnimation.get(), image.zoom, false)
+        }
+        val totalScale = scale * mapZoom * zoomAnimation.get()
+        if (island == prevIsland && prevImage != image && fadeAnimation.isFinished)
+            fadeAnimation = EaseInOutQuad(350, 0f, 1f, false)
         nanoVG {
             val vg = this.instance
             val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
@@ -52,13 +79,24 @@ class MiniMap : Hud(true) {
                     Math.toRadians(180.0 - UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
                 )
             }
-            island.getImage(UPlayer.getPosY().toInt()).draw(
+            if (!fadeAnimation.isFinished && prevImage != null) {
+                prevImage!!.draw(
+                    vg,
+                    ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
+                    ((island.topY - UPlayer.getOffsetY()) * totalScale).toInt(),
+                    island.width * totalScale,
+                    island.height * totalScale
+                )
+            }
+            setAlpha(fadeAnimation.get())
+            image.draw(
                 vg,
                 ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
                 ((island.topY - UPlayer.getOffsetY()) * totalScale).toInt(),
                 island.width * totalScale,
                 island.height * totalScale
             )
+            setAlpha(1f)
             NanoVG.nvgResetTransform(vg)
             NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
             if (!rotateWithPlayer) {
@@ -76,6 +114,10 @@ class MiniMap : Hud(true) {
                 pointerSize * scale
             )
             ScissorManager.resetScissor(vg, scissor)
+        }
+        if (fadeAnimation.isFinished) {
+            if (island != prevIsland) prevIsland = island
+            if (image != prevImage) prevImage = image
         }
     }
 

@@ -7,7 +7,7 @@ import dev.dediamondpro.polyblock.utils.AssetHandler
 import dev.dediamondpro.polyblock.utils.WebAsset
 
 @kotlinx.serialization.Serializable
-data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage) : WebAsset {
+data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage, val zoom: Float = 1f) : WebAsset {
     val filePath: String = "config/PolyBlock/assets/" + getUrl().split("/")[getUrl().split("/").size - 1]
     override var initialized: Boolean = false
 

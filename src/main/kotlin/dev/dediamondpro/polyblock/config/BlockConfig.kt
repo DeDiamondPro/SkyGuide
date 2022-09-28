@@ -67,6 +67,10 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
 
     var waypoints: ArrayList<Waypoint> = ArrayList()
 
+    // Hidden field only meant for dev testing
+    @NonProfileSpecific
+    var downloadAssets = true
+
     init {
         initialize()
         registerKeyBind(mapKeyBind) {

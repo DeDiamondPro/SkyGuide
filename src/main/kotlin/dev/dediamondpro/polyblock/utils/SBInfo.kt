@@ -22,7 +22,7 @@ class SBInfo {
             if (zone != info.gameMode && !BlockConfig.keepAssetsLoaded) RenderManager.setupAndDraw {
                 AssetHandler.unloadAssets(it)
             }
-            if (AssetHandler.downloadedAssets) AssetHandler.initialize()
+            if (!AssetHandler.downloadedAssets) AssetHandler.initialize()
             zone = info.gameMode
         } else {
             inSkyblock = false

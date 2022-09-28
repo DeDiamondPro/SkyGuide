@@ -7,6 +7,7 @@ import cc.polyfrost.oneconfig.utils.Multithreading
 import cc.polyfrost.oneconfig.utils.NetworkUtils
 import cc.polyfrost.oneconfig.utils.Notifications
 import dev.dediamondpro.polyblock.PolyBlock
+import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.map.SkyblockMap
 import org.lwjgl.nanovg.NanoVG
 import java.io.File
@@ -66,7 +67,8 @@ object AssetHandler {
             val newMapFile = "config/PolyBlock/map-new.json".toFile()
             mapFile.parentFile.mkdirs()
             if ( // try to download and parse new data
-                NetworkUtils.downloadFile("https://api.dediamondpro.dev/assets/polyblock/map.json", newMapFile)
+                BlockConfig.downloadAssets
+                && NetworkUtils.downloadFile("https://api.dediamondpro.dev/assets/polyblock/map.json", newMapFile)
                 && SkyblockMap.initialize(newMapFile)
             ) {
                 Files.move(newMapFile.toPath(), mapFile.toPath(), StandardCopyOption.REPLACE_EXISTING)
@@ -85,7 +87,7 @@ object AssetHandler {
             for (island in world.values) {
                 for (image in island.images.values) {
                     val file = image.filePath.toFile()
-                    if (!file.exists() || image.getSha256() != IOUtils.getSha256(file)) {
+                    if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && BlockConfig.downloadAssets) {
                         image.initialized = false
                         imagesToUpdate[image] = file
                     } else {

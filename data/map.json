@@ -182,7 +182,83 @@
           "high": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_gunpowder_mines.png",
             "sha256": "5c36006c5c93c7cafdcd65f27062813596d343c0e409e245bd4f96b87d01a88f"
-          }
+          },
+          "zoom": 2
+        },
+        "130": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_lapis_quarry.png",
+            "sha256": "53cf39e0b2fced0122e4e8152ad0cd8991cfa3a11fbae8f297e891a7d704b408"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_lapis_quarry.png",
+            "sha256": "a5ec2d9792d4b93dc0f9ff0384d1a50cf329ebaf63a78fef578491337c44b2a6"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_lapis_quarry.png",
+            "sha256": "5875169480b6328f3ae14d813a3c008250c33ee62988fe253be0277f1fc5b864"
+          },
+          "zoom": 2
+        },
+        "109": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_pigmen_den.png",
+            "sha256": "ef5b77e202fb4e3496029dde1a39eee831492965d2bdb371390050d42c019d8d"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_pigmen_den.png",
+            "sha256": "7a0ec7cac18aee3355431ba6c49bc74f61af09f9e142750f2e2867f25b4de481"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_pigmen_den.png",
+            "sha256": "e0cc856ee43fe2295ae19bcbbc167613ff531f33ac0ea149facac6911c406f86"
+          },
+          "zoom": 2
+        },
+        "72": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_slimehill.png",
+            "sha256": "58043a21f560a4986eaac602c0a863a87ef98fe6ed7755005c8fbc2fe3e61ac4"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_slimehill.png",
+            "sha256": "1f8dcc1066f3a4b5bac253866967c82874934cb1b7cbda5b59cbeb50e80528f2"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_slimehill.png",
+            "sha256": "7d2370d451e61d7f36312408f168883130d863c56cb7f8dffc0fda955ef46e65"
+          },
+          "zoom": 2
+        },
+        "42": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_diamond_reserve.png",
+            "sha256": "bbceb0f42e624adf87c570e62dafcdf0e66a4ef8c8ae740b6752a2bc411066e9"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_diamond_reserve.png",
+            "sha256": "167f9bff84e59c2d1967a1823fbd6dda9bd064de1fd1b7649be2b30c2c4c4cd6"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_diamond_reserve.png",
+            "sha256": "3293e4615e2bcf96a454a579c9b99436e9ad9c1a07c87bf1a9ed9d08617b747f"
+          },
+          "zoom": 2
+        },
+        "20": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_obsidian_sanctuary.png",
+            "sha256": "bbceb0f42e624adf87c570e62dafcdf0e66a4ef8c8ae740b6752a2bc411066e9"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_obsidian_sanctuary.png",
+            "sha256": "167f9bff84e59c2d1967a1823fbd6dda9bd064de1fd1b7649be2b30c2c4c4cd6"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_obsidian_sanctuary.png",
+            "sha256": "3293e4615e2bcf96a454a579c9b99436e9ad9c1a07c87bf1a9ed9d08617b747f"
+          },
+          "zoom": 2
         }
       },
       "topX": -86,
