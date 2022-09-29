@@ -9,18 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses:  actions/checkout@v2
+        uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
+          fetch-depth: 0
       - name: setup node
         uses: actions/setup-node@v2
         with:
           node-version: 16
       - name: update checksums
         run: node update-checksums.js
+      - name: Check if there are changes
+        id: changes
+        uses: UnicornGlobal/has-changes-action@v1.0.11
       - name: push changes
+        if: steps.changes.outputs.changed == 1
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -am "update checksums"
-          git push
+          git commit --amend --no-edit -a
+          git push --force
