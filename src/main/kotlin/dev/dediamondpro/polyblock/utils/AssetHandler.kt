@@ -90,7 +90,6 @@ object AssetHandler {
                 for (image in island.images.values) {
                     val file = image.filePath.toFile()
                     if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && BlockConfig.downloadAssets) {
-                        println("${image.filePath} ${image.getSha256()} ${IOUtils.getSha256(file)}")
                         image.initialized = false
                         imagesToUpdate[image] = file
                     } else {
