@@ -1,0 +1,23 @@
+name: Update Checksums
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  update-checksums:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses:  actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: update checksums
+        run: node update-checksums.js
+      - name: push changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit --ammend -am "Update Checksums"

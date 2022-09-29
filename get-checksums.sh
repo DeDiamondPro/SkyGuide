@@ -1,1 +1,0 @@
-find data/ -type f -exec sha256sum {} \;
