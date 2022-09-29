@@ -16,7 +16,7 @@ import cc.polyfrost.oneconfig.utils.gui.GuiUtils
 import dev.dediamondpro.polyblock.gui.MapGui
 import dev.dediamondpro.polyblock.hud.MiniMap
 import dev.dediamondpro.polyblock.map.SkyblockMap
-import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.handlers.AssetHandler
 import dev.dediamondpro.polyblock.utils.SBInfo
 import dev.dediamondpro.polyblock.utils.Waypoint
 

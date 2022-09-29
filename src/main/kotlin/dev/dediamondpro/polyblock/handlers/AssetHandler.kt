@@ -1,4 +1,4 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.polyblock.handlers
 
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.renderer.AssetLoader
@@ -11,6 +11,9 @@ import cc.polyfrost.oneconfig.utils.TickDelay
 import dev.dediamondpro.polyblock.PolyBlock
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.utils.IOUtils
+import dev.dediamondpro.polyblock.utils.WebAsset
+import dev.dediamondpro.polyblock.utils.toFile
 import org.lwjgl.nanovg.NanoVG
 import java.io.File
 import java.io.IOException

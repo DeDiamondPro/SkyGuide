@@ -12,6 +12,7 @@ import cc.polyfrost.oneconfig.utils.dsl.scale
 import cc.polyfrost.oneconfig.utils.dsl.translate
 import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
 import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.handlers.AssetHandler
 import dev.dediamondpro.polyblock.map.SkyblockMap
 import dev.dediamondpro.polyblock.map.Island
 import dev.dediamondpro.polyblock.utils.*

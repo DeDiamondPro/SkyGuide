@@ -5,6 +5,7 @@ import cc.polyfrost.oneconfig.libs.eventbus.Subscribe
 import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.hypixel.LocrawInfo.GameType
 import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.polyblock.handlers.AssetHandler
 
 class SBInfo {
     companion object {

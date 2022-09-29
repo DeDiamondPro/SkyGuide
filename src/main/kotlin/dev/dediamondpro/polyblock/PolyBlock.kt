@@ -3,7 +3,8 @@ package dev.dediamondpro.polyblock
 import cc.polyfrost.oneconfig.events.EventManager
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.handlers.WaypointHandler
-import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.handlers.AssetHandler
+import dev.dediamondpro.polyblock.utils.HudDeltaTime
 import dev.dediamondpro.polyblock.utils.SBInfo
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
@@ -24,6 +25,7 @@ object PolyBlock {
     fun onInitialization(event: FMLInitializationEvent) {
         if (BlockConfig.downloadAtLaunch) AssetHandler.initialize()
         EventManager.INSTANCE.eventBus.register(SBInfo())
+        EventManager.INSTANCE.eventBus.register(HudDeltaTime())
         MinecraftForge.EVENT_BUS.register(WaypointHandler())
     }
 }

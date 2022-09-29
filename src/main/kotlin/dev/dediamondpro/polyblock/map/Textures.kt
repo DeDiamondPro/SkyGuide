@@ -3,7 +3,7 @@ package dev.dediamondpro.polyblock.map
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.utils.AssetHandler
+import dev.dediamondpro.polyblock.handlers.AssetHandler
 import dev.dediamondpro.polyblock.utils.WebAsset
 
 @kotlinx.serialization.Serializable
