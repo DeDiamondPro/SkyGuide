@@ -3,9 +3,11 @@ package dev.dediamondpro.polyblock.utils
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.renderer.AssetLoader
 import cc.polyfrost.oneconfig.renderer.Icon
+import cc.polyfrost.oneconfig.renderer.RenderManager
 import cc.polyfrost.oneconfig.utils.Multithreading
 import cc.polyfrost.oneconfig.utils.NetworkUtils
 import cc.polyfrost.oneconfig.utils.Notifications
+import cc.polyfrost.oneconfig.utils.TickDelay
 import dev.dediamondpro.polyblock.PolyBlock
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.map.SkyblockMap
@@ -88,6 +90,7 @@ object AssetHandler {
                 for (image in island.images.values) {
                     val file = image.filePath.toFile()
                     if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && BlockConfig.downloadAssets) {
+                        println("${image.filePath} ${image.getSha256()} ${IOUtils.getSha256(file)}")
                         image.initialized = false
                         imagesToUpdate[image] = file
                     } else {
@@ -135,6 +138,11 @@ object AssetHandler {
                 }
                 currentPercent = 0f
                 currentFile++
+            }
+            if (!BlockConfig.lazyLoading && BlockConfig.keepAssetsLoaded) {
+                TickDelay({
+                    RenderManager.setupAndDraw { for (file in assets.values) loadAsset(it, file.path) }
+                }, 1)
             }
         }
     }

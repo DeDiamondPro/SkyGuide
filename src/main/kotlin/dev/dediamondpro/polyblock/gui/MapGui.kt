@@ -9,6 +9,7 @@ import cc.polyfrost.oneconfig.utils.InputHandler
 import cc.polyfrost.oneconfig.utils.dsl.drawImage
 import cc.polyfrost.oneconfig.utils.dsl.nanoVG
 import cc.polyfrost.oneconfig.utils.dsl.scale
+import cc.polyfrost.oneconfig.utils.dsl.translate
 import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.map.SkyblockMap
@@ -79,14 +80,13 @@ class MapGui : OneUIScreen() {
                 x += Mouse.getDX() / scale
                 y -= Mouse.getDY() / scale
             }
-            NanoVG.nvgTranslate(vg, x, y)
+            translate(x, y)
 
             for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
                 if (mapPart.zone == SBInfo.zone) mapPart.draw(vg, UPlayer.getPosY().toInt())
                 else mapPart.draw(vg, 255)
             }
-            NanoVG.nvgTranslate(
-                vg,
+            translate(
                 UPlayer.getOffsetX() + Island.getXOffset(),
                 UPlayer.getOffsetY() + Island.getYOffset()
             )

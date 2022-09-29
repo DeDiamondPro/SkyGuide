@@ -12,11 +12,8 @@ import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.libs.universal.UResolution
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import cc.polyfrost.oneconfig.platform.Platform
-import cc.polyfrost.oneconfig.renderer.Image
 import cc.polyfrost.oneconfig.renderer.scissor.ScissorManager
-import cc.polyfrost.oneconfig.utils.dsl.drawImage
-import cc.polyfrost.oneconfig.utils.dsl.nanoVG
-import cc.polyfrost.oneconfig.utils.dsl.setAlpha
+import cc.polyfrost.oneconfig.utils.dsl.*
 import dev.dediamondpro.polyblock.gui.MapGui
 import dev.dediamondpro.polyblock.map.Island
 import dev.dediamondpro.polyblock.map.SkyblockMap
@@ -29,17 +26,22 @@ import org.lwjgl.nanovg.NanoVG
 
 class MiniMap : Hud(true) {
 
-    @Switch(name = "Rotate With Player")
+    @Switch(
+        name = "Rotate With Player",
+        description = "Rotate the map with the player."
+    )
     var rotateWithPlayer = true
 
     @Slider(
         name = "Zoom Factor",
+        description = "The zoom factor of the map.",
         min = 0.25f, max = 5f
     )
     var mapZoom = 1f
 
     @Slider(
         name = "Player Pointer Size",
+        description = "The size of the player pointer.",
         min = 3.5f, max = 35f
     )
     var pointerSize = 7f
@@ -72,7 +74,7 @@ class MiniMap : Hud(true) {
         nanoVG {
             val vg = this.instance
             val scissor = ScissorManager.scissor(vg, x, y, 150f * scale, 150f * scale)
-            NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+            translate(x + 75f * scale, y + 75f * scale)
             if (rotateWithPlayer) {
                 NanoVG.nvgRotate(
                     vg,
@@ -97,8 +99,8 @@ class MiniMap : Hud(true) {
                 island.height * totalScale
             )
             setAlpha(1f)
-            NanoVG.nvgResetTransform(vg)
-            NanoVG.nvgTranslate(vg, x + 75f * scale, y + 75f * scale)
+            resetTransform()
+            translate(x + 75f * scale, y + 75f * scale)
             if (!rotateWithPlayer) {
                 NanoVG.nvgRotate(
                     vg,

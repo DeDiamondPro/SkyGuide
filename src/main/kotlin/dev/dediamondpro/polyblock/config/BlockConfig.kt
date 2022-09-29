@@ -45,11 +45,23 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
     @NonProfileSpecific
     var downloadAtLaunch = false
 
-    @KeyBind(name = "Map Keybind", category = "Map")
+    @Switch(
+        name = "Lazy Loading",
+        description = "Load assets as they are needed."
+    )
+    @NonProfileSpecific
+    var lazyLoading = true
+
+    @KeyBind(
+        name = "Map Keybind",
+        description = "The keybind to open the map.",
+        category = "Map"
+    )
     var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)
 
     @Slider(
         name = "Default Scale",
+        description = "The default scale of the map.",
         category = "Map",
         min = 0.25f, max = 5f
     )
@@ -57,6 +69,7 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
 
     @Slider(
         name = "Player Pointer Size",
+        description = "The size of the player pointer.",
         category = "Map",
         min = 7f, max = 49f
     )
@@ -85,5 +98,6 @@ object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json"
                 AssetHandler.updateTextures()
             }
         }
+        addDependency("lazyLoading", "keepAssetsLoaded")
     }
 }

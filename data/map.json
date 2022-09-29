@@ -137,15 +137,15 @@
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/gold_mine.png",
-            "sha256": "9989303c9dd5aee4d2bbd8aa68d871180f1e956c9f126c85a4c653314aff8ccc"
+            "sha256": "649d28a40b5247e599afe736038c948e3e27794a0ef9f5845848658817aff9c7"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/medium/gold_mine.png",
-            "sha256": "5f62d62f38cf57f6745e39e50c43c74f89c48f94e54326d644bedc2ab5b80914"
+            "sha256": "14e6c1d0f9c0bda8491caf362db913ad6b9c81b7221005df1050683766c6448d"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/high/gold_mine.png",
-            "sha256": "c086ddb3c06363823b32470fb5b89ed9a613391fc4e4dd5252b86f55dea7c814"
+            "sha256": "96fd0dccefed069c15a0091b32c053dba58b6d947e5255b37444d0783d786c49"
           }
         }
       },
@@ -173,15 +173,15 @@
         "155": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_gunpowder_mines.png",
-            "sha256": "3c8104a9462b5f5fe7a9c2252a4f307bc1c3b18d80bd778c0756bd6171a58b62"
+            "sha256": "9989303c9dd5aee4d2bbd8aa68d871180f1e956c9f126c85a4c653314aff8ccc"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_gunpowder_mines.png",
-            "sha256": "de271b46dc9c72eb0308a73a6b71e32d58e68ad2f250154816c7bbb32c81b14c"
+            "sha256": "5f62d62f38cf57f6745e39e50c43c74f89c48f94e54326d644bedc2ab5b80914"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_gunpowder_mines.png",
-            "sha256": "5c36006c5c93c7cafdcd65f27062813596d343c0e409e245bd4f96b87d01a88f"
+            "sha256": "c086ddb3c06363823b32470fb5b89ed9a613391fc4e4dd5252b86f55dea7c814"
           },
           "zoom": 2
         },
@@ -248,15 +248,15 @@
         "20": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/deep_caverns_obsidian_sanctuary.png",
-            "sha256": "bbceb0f42e624adf87c570e62dafcdf0e66a4ef8c8ae740b6752a2bc411066e9"
+            "sha256": "576c505a06321c4cc95d92b1a3ae496c6d5308fabd45868927f4af79faeb38c8"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/medium/deep_caverns_obsidian_sanctuary.png",
-            "sha256": "167f9bff84e59c2d1967a1823fbd6dda9bd064de1fd1b7649be2b30c2c4c4cd6"
+            "sha256": "00549a1c2d7f7118007fd58f554ba35c1a72b4dc10421be4468376db01623774"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/high/deep_caverns_obsidian_sanctuary.png",
-            "sha256": "3293e4615e2bcf96a454a579c9b99436e9ad9c1a07c87bf1a9ed9d08617b747f"
+            "sha256": "d6f926ec42a54d985a881567007030ac530d6d9b1ff4cb8eddb12da50491e52e"
           },
           "zoom": 2
         }
