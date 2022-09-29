@@ -21,6 +21,9 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v31
+        with:
+          files: |
+            data/**
       - name: push changes
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
