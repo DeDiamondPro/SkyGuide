@@ -5,15 +5,15 @@
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/hub.png",
-            "sha256": "fd85bc3899bd7ec62290dcfb3696bc425e795be040d9a5c40b26c7cfa38b2a9d"
+            "sha256": "b4ab3d5d4f026b60ea6162cfcf88d52b605219dcb5b45392c96287b367564558"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/medium/hub.png",
-            "sha256": "d5bcc4d73442ad0916e11e1b269ab7b13c9ce54524829e06047c3f1f9a8d3265"
+            "sha256": "73d5600958ed3c068f4a0395bb2724ae9b52dbd3df10a97afae7f986987286cb"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/high/hub.png",
-            "sha256": "459e3e5ed23c41e78037df5bf4b7753b79aaaa37397ae27b000e25666851781c"
+            "sha256": "7755fcbac66b7d37c28e92e60b74db0acda5f9c13c960b8297232a23b302d400"
           }
         }
       },
