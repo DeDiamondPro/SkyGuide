@@ -1,101 +1,95 @@
 package dev.dediamondpro.polyblock.config
 
-import cc.polyfrost.oneconfig.config.Config
-import cc.polyfrost.oneconfig.config.annotations.Dropdown
-import cc.polyfrost.oneconfig.config.annotations.HUD
-import cc.polyfrost.oneconfig.config.annotations.KeyBind
-import cc.polyfrost.oneconfig.config.annotations.NonProfileSpecific
-import cc.polyfrost.oneconfig.config.annotations.Slider
-import cc.polyfrost.oneconfig.config.annotations.Switch
-import cc.polyfrost.oneconfig.config.core.OneKeyBind
-import cc.polyfrost.oneconfig.config.data.Mod
-import cc.polyfrost.oneconfig.config.data.ModType
-import cc.polyfrost.oneconfig.libs.universal.UKeyboard
-import cc.polyfrost.oneconfig.renderer.RenderManager
-import cc.polyfrost.oneconfig.utils.gui.GuiUtils
-import dev.dediamondpro.polyblock.gui.MapGui
-import dev.dediamondpro.polyblock.hud.MiniMap
-import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.polyblock.PolyBlock
 import dev.dediamondpro.polyblock.handlers.AssetHandler
-import dev.dediamondpro.polyblock.utils.SBInfo
+import dev.dediamondpro.polyblock.utils.TickDelay
 import dev.dediamondpro.polyblock.utils.Waypoint
+import dev.dediamondpro.polyblock.utils.toFile
+import gg.essential.vigilance.Vigilant
+import gg.essential.vigilance.data.Property
+import gg.essential.vigilance.data.PropertyType
 
-object BlockConfig : Config(Mod("PolyBlock", ModType.SKYBLOCK), "polyblock.json") {
+object BlockConfig : Vigilant("./config/${PolyBlock.ID}/config.toml".toFile(), PolyBlock.NAME) {
 
-    @Dropdown(
+    @Property(
+        type = PropertyType.SELECTOR,
         name = "Texture Quality",
         description = "The quality of the textures.",
         options = ["low", "medium", "high"],
         category = "General"
     )
-    @NonProfileSpecific
     var textureQuality = 1
 
-    @Switch(
+    @Property(
+        type = PropertyType.SWITCH,
         name = "Keep In Memory",
-        description = "Keep all assets in memory."
+        description = "Keep all assets in memory.",
+        category = "General"
     )
-    @NonProfileSpecific
     var keepAssetsLoaded = true
 
-    @Switch(
+    @Property(
+        type = PropertyType.SWITCH,
         name = "Download at launch",
-        description = "Download all assets at launch."
+        description = "Download all assets at launch.",
+        category = "General"
     )
-    @NonProfileSpecific
     var downloadAtLaunch = false
 
-    @Switch(
+    @Property(
+        type = PropertyType.SWITCH,
         name = "Lazy Loading",
-        description = "Load assets as they are needed."
+        description = "Load assets as they are needed.",
+        category = "General"
     )
-    @NonProfileSpecific
     var lazyLoading = true
 
-    @KeyBind(
+    /*@KeyBind(
         name = "Map Keybind",
         description = "The keybind to open the map.",
         category = "Map"
     )
-    var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)
+    var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)*/
 
-    @Slider(
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
         name = "Default Scale",
         description = "The default scale of the map.",
         category = "Map",
-        min = 0.25f, max = 5f
+        minF = 0.25f, maxF = 5f
     )
     var defaultScale = 2f
 
-    @Slider(
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
         name = "Player Pointer Size",
         description = "The size of the player pointer.",
         category = "Map",
-        min = 7f, max = 49f
+        minF = 7f, maxF = 49f
     )
     var pointerSize = 14f
 
-    @HUD(name = "Mini Map", category = "Mini Map")
-    var miniMap = MiniMap()
+    /*@HUD(name = "Mini Map", category = "Mini Map")
+    var miniMap = MiniMap()*/
 
     var waypoints: ArrayList<Waypoint> = ArrayList()
 
     // Hidden field only meant for dev testing
-    @NonProfileSpecific
+    @Property(
+        type = PropertyType.SWITCH,
+        category = "General",
+        name = "Disable asset downloading",
+        hidden = true
+    )
     var downloadAssets = true
 
     init {
         initialize()
-        registerKeyBind(mapKeyBind) {
-            if (enabled && SBInfo.inSkyblock && SkyblockMap.currentWorldAvailable()) GuiUtils.displayScreen(
-                MapGui()
-            )
-        }
-        addListener("smooth") { RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) } }
-        addListener("textureQuality") {
-            if (AssetHandler.downloadedAssets) {
-                RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) }
-                AssetHandler.updateTextures()
+        registerListener("textureQuality") { _: Any ->
+            TickDelay(1) {
+                if (AssetHandler.downloadedAssets) {
+                    AssetHandler.updateTextures()
+                }
             }
         }
         addDependency("lazyLoading", "keepAssetsLoaded")

@@ -1,75 +1,86 @@
 package dev.dediamondpro.polyblock.handlers
 
-import cc.polyfrost.oneconfig.libs.universal.UMinecraft
-import cc.polyfrost.oneconfig.renderer.AssetLoader
-import cc.polyfrost.oneconfig.renderer.Icon
-import cc.polyfrost.oneconfig.renderer.RenderManager
-import cc.polyfrost.oneconfig.utils.Multithreading
-import cc.polyfrost.oneconfig.utils.NetworkUtils
-import cc.polyfrost.oneconfig.utils.Notifications
-import cc.polyfrost.oneconfig.utils.TickDelay
 import dev.dediamondpro.polyblock.PolyBlock
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.map.SkyblockMap
-import dev.dediamondpro.polyblock.utils.IOUtils
-import dev.dediamondpro.polyblock.utils.WebAsset
-import dev.dediamondpro.polyblock.utils.toFile
-import org.lwjgl.nanovg.NanoVG
+import dev.dediamondpro.polyblock.utils.*
+import gg.essential.api.utils.Multithreading
+import gg.essential.universal.UChat
+import gg.essential.universal.UGraphics
+import gg.essential.universal.UMinecraft
+import gg.essential.universal.utils.ReleasedDynamicTexture
 import java.io.File
 import java.io.IOException
 import java.net.URL
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
-import java.util.concurrent.Callable
+import javax.imageio.ImageIO
+
 
 object AssetHandler {
-    private val loadedAssets = mutableListOf<String>()
+    private val loadedAssets = mutableMapOf<String, ReleasedDynamicTexture>()
+    private var currentPercent = 0f
+    private var currentFile = 0
+    private var totalFiles = 0
+    private var ticks = 0
     var downloadedAssets = false
-    var totalFiles = 0
-    var currentFile = 0
-    var currentPercent = 0f
 
     private fun setupDownload(assets: Int) {
         totalFiles = assets
         currentFile = 0
         currentPercent = 0f
         if (UMinecraft.getWorld() == null) return
-        Notifications.INSTANCE.send(
-            "Downloading assets",
-            "PolyBlock by DeDiamondPro",
-            Icon("/assets/polyblock/downloading.svg"),
-            Callable {
-                (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
-            }
-        )
+        postMessage()
     }
 
-    fun loadAsset(vg: Long, fileName: String): Boolean {
-        if (loadedAssets.contains(fileName)) return true
-        if (AssetLoader.INSTANCE.loadImage(
-                vg,
-                fileName,
-                NanoVG.NVG_IMAGE_GENERATE_MIPMAPS or NanoVG.NVG_IMAGE_NEAREST
-            )
-        ) {
-            loadedAssets.add(fileName)
+    private fun postMessage() {
+        val percent = (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
+        if (percent == 1f) {
+            UChat.chat("${PolyBlock.NAME} > Finished downloading assets!")
+            downloadedAssets = true
+        } else {
+            UChat.chat("${PolyBlock.NAME} > Downloading assets... ${(percent * 100).toInt()}% ($currentFile/$totalFiles)")
+            TickDelay(20, AssetHandler::postMessage)
+        }
+    }
+
+    fun loadAsset(fileName: String): Boolean {
+        if (loadedAssets.containsKey(fileName)) return true
+        try {
+            val texture =
+                if (fileName.startsWith("/assets/"))
+                    UGraphics.getTexture(this.javaClass.getResourceAsStream(fileName)) ?: return false
+                else UGraphics.getTexture(ImageIO.read(fileName.toFile())) ?: return false
+            texture.uploadTexture()
+            loadedAssets[fileName] = texture
             return true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return false
         }
-        return false
     }
 
-    fun unloadAssets(vg: Long) {
-        for (image in loadedAssets) {
-            AssetLoader.INSTANCE.removeImage(vg, image)
+    fun unloadAsset(fileName: String) {
+        loadedAssets[fileName]?.deleteGlTexture()
+        loadedAssets.remove(fileName)
+    }
+
+    fun unloadAssets() {
+        loadedAssets.keys.removeIf {
+            unloadAsset(it)
+            true
         }
-        loadedAssets.clear()
+    }
+
+    fun getAsset(fileName: String): Int {
+        return loadedAssets[fileName]!!.glTextureId
     }
 
     fun initialize() {
         downloadedAssets = true
         Multithreading.runAsync {
-            val mapFile = "config/PolyBlock/map.json".toFile()
-            val newMapFile = "config/PolyBlock/map-new.json".toFile()
+            val mapFile = "config/${PolyBlock.ID}/map.json".toFile()
+            val newMapFile = "config/${PolyBlock.ID}/map-new.json".toFile()
             mapFile.parentFile.mkdirs()
             if ( // try to download and parse new data
                 BlockConfig.downloadAssets
@@ -95,6 +106,7 @@ object AssetHandler {
                     if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && BlockConfig.downloadAssets) {
                         image.initialized = false
                         imagesToUpdate[image] = file
+                        unloadAsset(image.filePath)
                     } else {
                         image.initialized = true
                     }
@@ -114,10 +126,7 @@ object AssetHandler {
                     continue
                 }
                 file.parentFile.mkdirs()
-                val con = URL(asset.getUrl()).openConnection()
-                con.setRequestProperty("User-Agent", "PolyBlock-" + PolyBlock.VER)
-                con.connectTimeout = 5000
-                con.readTimeout = 5000
+                val con = NetworkUtils.setupConnection(URL(asset.getUrl()))
                 val length = con.contentLength
                 var downloadDone = false
                 Multithreading.runAsync {
@@ -142,9 +151,9 @@ object AssetHandler {
                 currentFile++
             }
             if (!BlockConfig.lazyLoading && BlockConfig.keepAssetsLoaded) {
-                TickDelay({
-                    RenderManager.setupAndDraw { for (file in assets.values) loadAsset(it, file.path) }
-                }, 1)
+                TickDelay(0) {
+                    for (file in assets.values) loadAsset(file.path)
+                }
             }
         }
     }

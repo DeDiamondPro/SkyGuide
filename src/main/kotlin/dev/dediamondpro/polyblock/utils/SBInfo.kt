@@ -1,32 +1,92 @@
 package dev.dediamondpro.polyblock.utils
 
-import cc.polyfrost.oneconfig.events.event.LocrawEvent
-import cc.polyfrost.oneconfig.libs.eventbus.Subscribe
-import cc.polyfrost.oneconfig.renderer.RenderManager
-import cc.polyfrost.oneconfig.utils.hypixel.LocrawInfo.GameType
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.handlers.AssetHandler
+import gg.essential.universal.UMinecraft
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
+import net.minecraftforge.client.event.ClientChatReceivedEvent
+import net.minecraftforge.event.world.WorldEvent
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent
+import java.util.*
 
 class SBInfo {
     companion object {
         var inSkyblock = false
             private set
-        var zone: String = "hub"
+        var locraw: LocrawObject? = null
             private set
+        var zone: String = "unknown"
+            private set
+
+        fun onHypixel(): Boolean {
+            return if (UMinecraft.getMinecraft().theWorld != null && UMinecraft.getMinecraft().thePlayer != null
+                && UMinecraft.getMinecraft().thePlayer.clientBrand != null
+            ) {
+                UMinecraft.getMinecraft().thePlayer.clientBrand.lowercase(Locale.getDefault()).contains("hypixel")
+            } else false
+        }
     }
 
-    @Subscribe
-    fun onLocraw(locrawEvent: LocrawEvent) {
-        val info = locrawEvent.info
-        if (info.gameType.equals(GameType.SKYBLOCK)) {
-            inSkyblock = true
-            if (zone != info.gameMode && !BlockConfig.keepAssetsLoaded) RenderManager.setupAndDraw {
-                AssetHandler.unloadAssets(it)
+    private var lastSwap = -1L
+    private var lastLocraw = -1L
+
+    @SubscribeEvent(receiveCanceled = true)
+    fun onMessage(event: ClientChatReceivedEvent) {
+        if (!onHypixel()) return
+        val message = event.message.unformattedText
+        if (message.startsWith("{") && message.endsWith("}")) {
+            try {
+                locraw = Json { ignoreUnknownKeys = true }.decodeFromString<LocrawObject>(message)
+                if (lastLocraw != -1L && !event.isCanceled) {
+                    event.isCanceled = true
+                    lastLocraw = -1L
+                }
+                if (locraw!!.gametype == "SKYBLOCK") {
+                    inSkyblock = true
+                    if (!AssetHandler.downloadedAssets) AssetHandler.initialize()
+                    zone = locraw!!.mode
+                } else {
+                    inSkyblock = false
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
-            if (!AssetHandler.downloadedAssets) AssetHandler.initialize()
-            zone = info.gameMode
-        } else {
+
+        }
+    }
+
+    @SubscribeEvent
+    fun onWorldChange(event: WorldEvent.Load) {
+        if (!onHypixel()) {
             inSkyblock = false
+            return
+        }
+        if (!BlockConfig.keepAssetsLoaded) AssetHandler.unloadAssets()
+        inSkyblock = false
+        zone = "unknown"
+        lastSwap = UMinecraft.getTime()
+        lastLocraw = -1L
+        locraw = null
+    }
+
+    @SubscribeEvent
+    fun onTick(event: TickEvent.ClientTickEvent) {
+        if (!onHypixel() || event.phase != TickEvent.Phase.START) return
+        val currentTime = UMinecraft.getTime()
+        if (locraw == null && currentTime - lastSwap > 1500 && currentTime - lastLocraw > 20000) {
+            UMinecraft.getMinecraft().thePlayer.sendChatMessage("/locraw")
+            lastLocraw = currentTime
         }
     }
 }
+
+@Serializable
+data class LocrawObject(
+    val server: String,
+    val gametype: String = "unknown",
+    val mode: String = "unknown",
+    val map: String = "unknown"
+)

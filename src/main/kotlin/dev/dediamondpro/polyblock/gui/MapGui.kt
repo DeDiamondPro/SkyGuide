@@ -1,27 +1,21 @@
 package dev.dediamondpro.polyblock.gui
 
-import cc.polyfrost.oneconfig.libs.universal.UMinecraft
-import cc.polyfrost.oneconfig.libs.universal.UResolution
-import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
-import cc.polyfrost.oneconfig.platform.Platform
-import cc.polyfrost.oneconfig.renderer.RenderManager
-import cc.polyfrost.oneconfig.utils.InputHandler
-import cc.polyfrost.oneconfig.utils.dsl.drawImage
-import cc.polyfrost.oneconfig.utils.dsl.nanoVG
-import cc.polyfrost.oneconfig.utils.dsl.scale
-import cc.polyfrost.oneconfig.utils.dsl.translate
-import cc.polyfrost.oneconfig.utils.gui.OneUIScreen
 import dev.dediamondpro.polyblock.config.BlockConfig
 import dev.dediamondpro.polyblock.handlers.AssetHandler
-import dev.dediamondpro.polyblock.map.SkyblockMap
 import dev.dediamondpro.polyblock.map.Island
+import dev.dediamondpro.polyblock.map.SkyblockMap
 import dev.dediamondpro.polyblock.utils.*
+import gg.essential.universal.UGraphics
+import gg.essential.universal.UMatrixStack
+import gg.essential.universal.UMinecraft
+import gg.essential.universal.UResolution
+import gg.essential.universal.UScreen
+import gg.essential.universal.wrappers.UPlayer
 import org.lwjgl.input.Mouse
-import org.lwjgl.nanovg.NanoVG
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-class MapGui : OneUIScreen() {
+class MapGui : UScreen() {
     private var scale = BlockConfig.defaultScale
     private var x: Float = 0f
     private var y: Float = 0f
@@ -30,8 +24,8 @@ class MapGui : OneUIScreen() {
     private var wasRightMouseDown = false
 
     init {
-        x = (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.windowWidth / 2f) / scale).toFloat()
-        y = (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.windowHeight / 2f) / scale).toFloat()
+        x = (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
+        y = (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.scaledHeight / 2f) / scale).toFloat()
         if (!SkyblockMap.currentWorldAvailable()) {
             displayScreen(null)
         } else {
@@ -42,23 +36,21 @@ class MapGui : OneUIScreen() {
         }
     }
 
-    override fun draw(vg: Long, partialTicks: Float, inputHandler: InputHandler) {
+    override fun onDrawScreen(matrixStack: UMatrixStack, mouseX: Int, mouseY: Int, partialTicks: Float) {
         if (!SkyblockMap.currentWorldAvailable()) return
-        val scrollWheel = Platform.getMousePlatform().dWheel
-        if (scrollWheel != 0.0) {
+        val scrollWheel = Mouse.getDWheel()
+        if (scrollWheel != 0) {
             val oldScale = scale
             if (scrollWheel > 0) scale *= 1.5f
             else scale /= 1.5f
-            inputHandler.resetScale()
-            x += (inputHandler.mouseX() / scale) - (inputHandler.mouseX() / oldScale)
-            y += (inputHandler.mouseY() / scale) - (inputHandler.mouseY() / oldScale)
+            x += (mouseX / scale) - (mouseX / oldScale)
+            y += (mouseY / scale) - (mouseY / oldScale)
         }
-        inputHandler.scale(scale.toDouble(), scale.toDouble())
 
-        val rightMouseDown = Platform.getMousePlatform().isButtonDown(1)
+        val rightMouseDown = Mouse.isButtonDown(1)
         if (rightMouseDown && !wasRightMouseDown) {
-            val xCoordinate = inputHandler.mouseX() - x
-            val yCoordinate = inputHandler.mouseY() - y
+            val xCoordinate = (mouseX / scale / UResolution.scaleFactor - x).toFloat()
+            val yCoordinate = (mouseX / scale / UResolution.scaleFactor - y).toFloat()
             var done = false
             BlockConfig.waypoints.removeIf {
                 val dist = sqrt((xCoordinate - it.x).pow(2) + (yCoordinate - it.y).pow(2))
@@ -70,48 +62,43 @@ class MapGui : OneUIScreen() {
                     val island = SkyblockMap.getCurrentWorld()!![zone]!!
                     if (!island.isInIsland(xCoordinate, yCoordinate)) continue
                     BlockConfig.waypoints.add(Waypoint(zone, xCoordinate, yCoordinate))
-                    BlockConfig.save()
                     break
                 }
-            } else BlockConfig.save()
-        }
-        nanoVG(vg) {
-            scale(scale, scale)
-            if (Mouse.isButtonDown(0)) {
-                x += Mouse.getDX() / scale
-                y -= Mouse.getDY() / scale
             }
-            translate(x, y)
+        }
+        UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
+        if (Mouse.isButtonDown(0)) {
+            x += (Mouse.getDX() / scale / UResolution.scaleFactor).toFloat()
+            y -= (Mouse.getDY() / scale / UResolution.scaleFactor).toFloat()
+        }
+        UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
 
-            for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
-                if (mapPart.zone == SBInfo.zone) mapPart.draw(vg, UPlayer.getPosY().toInt())
-                else mapPart.draw(vg, 255)
-            }
-            translate(
-                UPlayer.getOffsetX() + Island.getXOffset(),
-                UPlayer.getOffsetY() + Island.getYOffset()
-            )
-            NanoVG.nvgRotate(
-                vg,
-                Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat()
-            )
-            AssetHandler.loadAsset(vg, "/assets/polyblock/player.png")
-            drawImage(
-                "/assets/polyblock/player.png",
-                -BlockConfig.pointerSize / 2f,
-                -BlockConfig.pointerSize / 2f,
-                BlockConfig.pointerSize,
-                BlockConfig.pointerSize
-            )
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
+            if (mapPart.zone == SBInfo.zone) mapPart.draw(UPlayer.getPosY().toInt())
+            else mapPart.draw(255)
         }
+        UGraphics.GL.translate(
+            (UPlayer.getOffsetX() + Island.getXOffset()).toDouble(),
+            (UPlayer.getOffsetY() + Island.getYOffset()).toDouble(),
+            0.0
+        )
+        UGraphics.GL.rotate(
+            Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat(),
+            0.0f,
+            0.0f,
+            0.0f
+        )
+        RenderUtils.drawImage(
+            "/assets/polyblock/player.png",
+            -BlockConfig.pointerSize / 2f,
+            -BlockConfig.pointerSize / 2f,
+            BlockConfig.pointerSize,
+            BlockConfig.pointerSize
+        )
         wasRightMouseDown = rightMouseDown
     }
 
     override fun onScreenClose() {
-        if (!BlockConfig.keepAssetsLoaded) RenderManager.setupAndDraw { AssetHandler.unloadAssets(it) }
-    }
-
-    override fun hasBackgroundBlur(): Boolean {
-        return true
+        if (!BlockConfig.keepAssetsLoaded) AssetHandler.unloadAssets()
     }
 }

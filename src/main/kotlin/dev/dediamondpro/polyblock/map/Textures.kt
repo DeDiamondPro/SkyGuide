@@ -1,14 +1,13 @@
 package dev.dediamondpro.polyblock.map
 
-import cc.polyfrost.oneconfig.utils.dsl.drawImage
-import cc.polyfrost.oneconfig.utils.dsl.nanoVG
+import dev.dediamondpro.polyblock.PolyBlock
 import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.handlers.AssetHandler
+import dev.dediamondpro.polyblock.utils.RenderUtils
 import dev.dediamondpro.polyblock.utils.WebAsset
 
 @kotlinx.serialization.Serializable
 data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage, val zoom: Float = 1f) : WebAsset {
-    val filePath: String = "config/PolyBlock/assets/" + getUrl().split("/")[getUrl().split("/").size - 1]
+    val filePath: String = "config/${PolyBlock.ID}/assets/" + getUrl().split("/")[getUrl().split("/").size - 1]
     override var initialized: Boolean = false
 
     override fun getUrl(): String {
@@ -29,10 +28,8 @@ data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage,
         }
     }
 
-    fun draw(vg: Long, x: Number, y: Number, width: Number, height: Number) {
-        if (!initialized || !AssetHandler.loadAsset(vg, filePath)) return
-        nanoVG(vg) {
-            drawImage(filePath, x, y, width, height)
-        }
+    fun draw(x: Number, y: Number, width: Number, height: Number) {
+        if (!initialized) return
+        RenderUtils.drawImage(filePath, x, y, width, height)
     }
 }

@@ -1,5 +1,5 @@
 package dev.dediamondpro.polyblock.hud
-
+/*
 import cc.polyfrost.oneconfig.config.annotations.Exclude
 import cc.polyfrost.oneconfig.config.annotations.Slider
 import cc.polyfrost.oneconfig.config.annotations.Switch
@@ -19,7 +19,7 @@ import dev.dediamondpro.polyblock.map.Island
 import dev.dediamondpro.polyblock.map.SkyblockMap
 import dev.dediamondpro.polyblock.map.Textures
 import dev.dediamondpro.polyblock.handlers.AssetHandler
-import dev.dediamondpro.polyblock.utils.HudDeltaTime
+import dev.dediamondpro.polyblock.utils.GuiUtils
 import dev.dediamondpro.polyblock.utils.SBInfo
 import dev.dediamondpro.polyblock.utils.getOffsetX
 import dev.dediamondpro.polyblock.utils.getOffsetY
@@ -67,9 +67,9 @@ class MiniMap : Hud(true) {
         val image = island.getImage(UPlayer.getPosY().toInt())
         if (image.zoom != zoomAnimation.end) {
             zoomAnimation = if (prevIsland != island) DummyAnimation(image.zoom)
-            else EaseInOutQuad(350, zoomAnimation.get(HudDeltaTime.get()), image.zoom, false)
+            else EaseInOutQuad(350, zoomAnimation.get(GuiUtils.get()), image.zoom, false)
         }
-        val totalScale = scale * mapZoom * zoomAnimation.get(HudDeltaTime.get())
+        val totalScale = scale * mapZoom * zoomAnimation.get(GuiUtils.get())
         if (island == prevIsland && prevImage != image && fadeAnimation.isFinished)
             fadeAnimation = EaseInOutQuad(350, 0f, 1f, false)
         nanoVG {
@@ -91,7 +91,7 @@ class MiniMap : Hud(true) {
                     island.height * totalScale
                 )
             }
-            setAlpha(fadeAnimation.get(HudDeltaTime.get()))
+            setAlpha(fadeAnimation.get(GuiUtils.get()))
             image.draw(
                 vg,
                 ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
@@ -138,4 +138,4 @@ class MiniMap : Hud(true) {
                 && Platform.getGuiPlatform().currentScreen !is MapGui
                 && SkyblockMap.currentIslandAvailable()
     }
-}
+}*/

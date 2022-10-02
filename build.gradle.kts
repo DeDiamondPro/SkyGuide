@@ -36,13 +36,11 @@ base {
 }
 loom {
     noServerRunConfigs()
-    if (project.platform.isLegacyForge) {
+    if (project.platform.isForge) {
         launchConfigs.named("client") {
-            arg("--tweakClass", "cc.polyfrost.oneconfigwrapper.OneConfigWrapper")
+            arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
             property("mixin.debug.export", "true")
         }
-    }
-    if (project.platform.isForge) {
         forge {
             mixinConfig("mixins.${mod_id}.json")
         }
@@ -66,13 +64,20 @@ repositories {
 }
 
 dependencies {
-    modCompileOnly("cc.polyfrost:oneconfig-$platform:0.1.0-alpha102")
     modRuntimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.0")
 
-    if (platform.isLegacyForge) {
-        compileOnly("org.spongepowered:mixin:0.7.11-SNAPSHOT")
-        shade("cc.polyfrost:oneconfig-wrapper-launchwrapper:1.0.0-alpha+")
+    shade("gg.essential:loader-launchwrapper:1.1.3")
+    modCompileOnly("gg.essential:essential-1.8.9-forge:3760")
+
+    shade("org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2") {
+        exclude(module = "*")
     }
+    shade("org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2") {
+        exclude(module = "*")
+    }
+
+    annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
+    compileOnly("org.spongepowered:mixin:0.8.5")
 }
 
 tasks.processResources {

@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 class WaypointHandler {
     @SubscribeEvent
     fun onRender(event: RenderWorldLastEvent) {
-        if (!BlockConfig.enabled || !SBInfo.inSkyblock) return
+        if (!SBInfo.inSkyblock) return
         for (waypoint in BlockConfig.waypoints) {
             waypoint.draw(event.partialTicks)
         }

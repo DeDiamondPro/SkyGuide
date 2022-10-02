@@ -47,7 +47,7 @@ object SkyblockMap {
     fun initialize(file: File): Boolean {
         try {
             Files.newInputStream(file.toPath()).use {
-                worlds = Json.decodeFromStream(it)
+                worlds = Json { ignoreUnknownKeys = true }.decodeFromStream(it)
                 for (world in worlds.values) {
                     for (zone in world.keys) {
                         zoneToWorld[zone] = world
