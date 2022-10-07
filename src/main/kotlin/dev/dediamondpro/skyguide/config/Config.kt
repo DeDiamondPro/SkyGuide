@@ -11,6 +11,8 @@ import gg.essential.vigilance.data.PropertyType
 
 object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuide.NAME) {
 
+    // General
+
     @Property(
         type = PropertyType.SELECTOR,
         name = "Texture Quality",
@@ -44,12 +46,7 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
     )
     var lazyLoading = true
 
-    /*@KeyBind(
-        name = "Map Keybind",
-        description = "The keybind to open the map.",
-        category = "Map"
-    )
-    var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)*/
+    // Map
 
     @Property(
         type = PropertyType.DECIMAL_SLIDER,
@@ -67,14 +64,90 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
         category = "Map",
         minF = 7f, maxF = 49f
     )
-    var pointerSize = 14f
+    var mapPointerSize = 14f
 
-    /*@HUD(name = "Mini Map", category = "Mini Map")
-    var miniMap = MiniMap()*/
+    // Mini-Map
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Enable Mini-Map",
+        description = "Enable the mini-map.",
+        category = "Mini-Map"
+    )
+    var miniMapEnabled = true
+
+    @Property(
+        type = PropertyType.SELECTOR,
+        name = "Mini-Map Location",
+        description = "The location of the mini-map.",
+        options = ["Top Left", "Top Right", "Bottom Left", "Bottom Right"],
+        category = "Mini-Map"
+    )
+    var miniMapLocation = 1
+
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
+        name = "Scale",
+        description = "The scale of the mini-map.",
+        category = "Mini-Map",
+        minF = 0.25f, maxF = 5f
+    )
+    var miniMapScale = 1f
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Rotate With Player",
+        description = "Rotate the map with the player.",
+        category = "Mini-Map"
+    )
+    var rotateWithPlayer = true
+
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
+        name = "Zoom Factor",
+        description = "The zoom factor of the map.",
+        minF = 0.25f, maxF = 5f,
+        category = "Mini-Map"
+    )
+    var mapZoom = 1f
+
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
+        name = "Player Pointer Size",
+        description = "The size of the player pointer.",
+        minF = 3.5f, maxF = 35f,
+        category = "Mini-Map"
+    )
+    var miniMapPointerSize = 7f
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show in GUIs",
+        description = "Show the mini-map in GUIs.",
+        category = "Mini-Map"
+    )
+    var showInGUIs = false
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show in F3",
+        description = "Show the mini-map in the F3 screen.",
+        category = "Mini-Map"
+    )
+    var showInF3 = false
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show in Chat",
+        description = "Show the mini-map while the chat is opened.",
+        category = "Mini-Map"
+    )
+    var showInChat = true
+
+    // Hidden
 
     var waypoints: ArrayList<Waypoint> = ArrayList()
 
-    // Hidden field only meant for dev testing
     @Property(
         type = PropertyType.SWITCH,
         category = "General",

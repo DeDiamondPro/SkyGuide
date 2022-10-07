@@ -17,7 +17,7 @@ class GuiUtils {
             return
         }
         val currentTime = UMinecraft.getTime()
-        deltaTime += time - currentTime
+        deltaTime += currentTime - time
         time = currentTime
     }
 

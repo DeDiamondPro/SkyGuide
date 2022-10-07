@@ -66,6 +66,7 @@ class MapGui : UScreen() {
                 }
             }
         }
+        UGraphics.GL.pushMatrix()
         UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
         if (Mouse.isButtonDown(0)) {
             x += (Mouse.getDX() / scale / UResolution.scaleFactor).toFloat()
@@ -83,19 +84,20 @@ class MapGui : UScreen() {
             0.0
         )
         UGraphics.GL.rotate(
-            Math.toRadians(180.0 + UMinecraft.getMinecraft().thePlayer.rotationYawHead).toFloat(),
+            180f + UMinecraft.getMinecraft().thePlayer.rotationYawHead,
             0.0f,
             0.0f,
-            0.0f
+            1.0f
         )
         RenderUtils.drawImage(
             "/assets/skyguide/player.png",
-            -Config.pointerSize / 2f,
-            -Config.pointerSize / 2f,
-            Config.pointerSize,
-            Config.pointerSize
+            -Config.mapPointerSize / 2f,
+            -Config.mapPointerSize / 2f,
+            Config.mapPointerSize,
+            Config.mapPointerSize
         )
         wasRightMouseDown = rightMouseDown
+        UGraphics.GL.popMatrix()
     }
 
     override fun onScreenClose() {
