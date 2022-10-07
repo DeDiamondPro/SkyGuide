@@ -1,14 +1,14 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
-import cc.polyfrost.oneconfig.config.core.OneColor
-import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.skyguide.map.SkyblockMap
 import net.minecraft.util.BlockPos
+import java.awt.Color
 
 data class Waypoint(
     val zone: String,
     val x: Float,
     val y: Float,
-    var color: Int = OneColor.HSBAtoARGB((Math.random() * 360f).toFloat(), 100f, 100f, 255)
+    var color: Int = Color.getHSBColor((Math.random() * 360f).toFloat(), 100f, 100f).rgb
 ) {
 
     fun draw(partialTicks: Float) {

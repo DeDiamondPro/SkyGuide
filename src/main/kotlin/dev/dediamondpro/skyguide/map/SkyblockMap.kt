@@ -1,6 +1,6 @@
-package dev.dediamondpro.polyblock.map
+package dev.dediamondpro.skyguide.map
 
-import dev.dediamondpro.polyblock.utils.SBInfo
+import dev.dediamondpro.skyguide.utils.SBInfo
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
 import java.io.File
@@ -11,6 +11,7 @@ object SkyblockMap {
      * format : <world id, <zone id, island data>>
      * Example of separate worlds: main (hub, ect...), winter (jerry's workshop)
      */
+    private val json = Json { ignoreUnknownKeys = true }
     var worlds = mutableMapOf<String, MutableMap<String, Island>>()
     var zoneToWorld = mutableMapOf<String, MutableMap<String, Island>>()
 
@@ -47,7 +48,7 @@ object SkyblockMap {
     fun initialize(file: File): Boolean {
         try {
             Files.newInputStream(file.toPath()).use {
-                worlds = Json.decodeFromStream(it)
+                worlds = json.decodeFromStream(it)
                 for (world in worlds.values) {
                     for (zone in world.keys) {
                         zoneToWorld[zone] = world

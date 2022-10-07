@@ -1,15 +1,15 @@
-package dev.dediamondpro.polyblock.handlers
+package dev.dediamondpro.skyguide.handlers
 
-import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.utils.SBInfo
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.utils.SBInfo
 import net.minecraftforge.client.event.RenderWorldLastEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 
 class WaypointHandler {
     @SubscribeEvent
     fun onRender(event: RenderWorldLastEvent) {
-        if (!BlockConfig.enabled || !SBInfo.inSkyblock) return
-        for (waypoint in BlockConfig.waypoints) {
+        if (!SBInfo.inSkyblock) return
+        for (waypoint in Config.waypoints) {
             waypoint.draw(event.partialTicks)
         }
     }

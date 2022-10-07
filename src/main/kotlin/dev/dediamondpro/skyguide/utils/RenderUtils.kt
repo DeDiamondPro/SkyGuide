@@ -1,6 +1,9 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
+import dev.dediamondpro.skyguide.handlers.AssetHandler
+import gg.essential.universal.UGraphics
 import net.minecraft.client.Minecraft
+import net.minecraft.client.gui.Gui
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.client.renderer.Tessellator
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats
@@ -115,5 +118,24 @@ object RenderUtils {
         if (disableDepth) {
             GlStateManager.enableDepth()
         }
+    }
+
+    fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number) {
+        if (!AssetHandler.loadAsset(fileName)) return
+        UGraphics.bindTexture(AssetHandler.getAsset(fileName))
+        Gui.drawModalRectWithCustomSizedTexture(
+            x.toInt(),
+            y.toInt(),
+            0f,
+            0f,
+            width.toInt(),
+            height.toInt(),
+            width.toFloat(),
+            height.toFloat()
+        )
+    }
+
+    fun drawRect(x: Number, y: Number, width: Number, height: Number, color: Int) {
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(), y.toInt() + height.toInt(), color)
     }
 }

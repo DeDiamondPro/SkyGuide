@@ -1,6 +1,6 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
-import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
+import gg.essential.universal.wrappers.UPlayer
 
 fun UPlayer.getOffsetX(): Float {
     return this.getPosX().toFloat()

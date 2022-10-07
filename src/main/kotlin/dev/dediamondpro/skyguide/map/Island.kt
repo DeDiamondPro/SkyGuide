@@ -1,8 +1,7 @@
-package dev.dediamondpro.polyblock.map
+package dev.dediamondpro.skyguide.map
 
-import cc.polyfrost.oneconfig.utils.dsl.drawCircle
-import cc.polyfrost.oneconfig.utils.dsl.nanoVG
-import dev.dediamondpro.polyblock.config.BlockConfig
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.utils.RenderUtils
 
 /**
  * @param image The image of the map
@@ -30,14 +29,12 @@ data class Island(
         images = images.toSortedMap()
     }
 
-    fun draw(vg: Long, y: Int) {
-        getImage(y).draw(vg, topX + xOffset, topY + yOffset, width, height)
+    fun draw(y: Int) {
+        getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
         if (zone == null) zone = SkyblockMap.getZoneByIsland(this)
-        nanoVG(vg) {
-            for (waypoint in BlockConfig.waypoints) {
-                if (waypoint.zone != zone) continue
-                drawCircle(waypoint.x, waypoint.y, 3, waypoint.color)
-            }
+        for (waypoint in Config.waypoints) {
+            if (waypoint.zone != zone) continue
+            RenderUtils.drawRect(waypoint.x - 2, waypoint.y - 2, 4, 4, waypoint.color)
         }
     }
 
