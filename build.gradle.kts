@@ -67,14 +67,7 @@ dependencies {
     modRuntimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.0")
 
     shade("gg.essential:loader-launchwrapper:1.1.3")
-    modCompileOnly("gg.essential:essential-1.8.9-forge:3760")
-
-    shade("org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.3.2") {
-        exclude(module = "*")
-    }
-    shade("org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.3.2") {
-        exclude(module = "*")
-    }
+    modCompileOnly("gg.essential:essential-1.8.9-forge:4804+g97db1f45b")
 
     annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     compileOnly("org.spongepowered:mixin:0.8.5")
