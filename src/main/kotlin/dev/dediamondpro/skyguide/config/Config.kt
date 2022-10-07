@@ -85,6 +85,7 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
 
     init {
         initialize()
+        InternalConfig.initialize()
         registerListener("textureQuality") { _: Any ->
             TickDelay(1) {
                 if (AssetHandler.downloadedAssets) {

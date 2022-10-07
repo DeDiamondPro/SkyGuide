@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.hud
 
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import gg.essential.universal.UResolution.scaledWidth
 import gg.essential.universal.UResolution.scaledHeight
@@ -15,7 +16,9 @@ class Position
  * @param screenWidth  The width of the screen to initialize the position width
  * @param screenHeight The height of the screen to initialize the position width
  */(
+    @Expose
     private var x: Float,
+    @Expose
     private var y: Float,
     private var width: Float,
     private var height: Float,
