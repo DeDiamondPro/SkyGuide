@@ -1,8 +1,8 @@
 {
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.7",
-  "package": "dev.dediamondpro.polyblock.mixin",
-  "refmap": "mixins.polyblock.refmap.json",
+  "package": "dev.dediamondpro.skyguide.mixin",
+  "refmap": "mixins.skyguide.refmap.json",
   "verbose": true,
   "client": [
   ]
