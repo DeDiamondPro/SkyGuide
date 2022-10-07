@@ -1,15 +1,15 @@
-package dev.dediamondpro.polyblock.config
+package dev.dediamondpro.skyguide.config
 
-import dev.dediamondpro.polyblock.PolyBlock
-import dev.dediamondpro.polyblock.handlers.AssetHandler
-import dev.dediamondpro.polyblock.utils.TickDelay
-import dev.dediamondpro.polyblock.utils.Waypoint
-import dev.dediamondpro.polyblock.utils.toFile
+import dev.dediamondpro.skyguide.SkyGuide
+import dev.dediamondpro.skyguide.handlers.AssetHandler
+import dev.dediamondpro.skyguide.utils.TickDelay
+import dev.dediamondpro.skyguide.utils.Waypoint
+import dev.dediamondpro.skyguide.utils.toFile
 import gg.essential.vigilance.Vigilant
 import gg.essential.vigilance.data.Property
 import gg.essential.vigilance.data.PropertyType
 
-object BlockConfig : Vigilant("./config/${PolyBlock.ID}/config.toml".toFile(), PolyBlock.NAME) {
+object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuide.NAME) {
 
     @Property(
         type = PropertyType.SELECTOR,

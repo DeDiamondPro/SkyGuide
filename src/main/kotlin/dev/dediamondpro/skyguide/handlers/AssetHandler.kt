@@ -1,9 +1,9 @@
-package dev.dediamondpro.polyblock.handlers
+package dev.dediamondpro.skyguide.handlers
 
-import dev.dediamondpro.polyblock.PolyBlock
-import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.map.SkyblockMap
-import dev.dediamondpro.polyblock.utils.*
+import dev.dediamondpro.skyguide.SkyGuide
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.map.SkyblockMap
+import dev.dediamondpro.skyguide.utils.*
 import gg.essential.api.utils.Multithreading
 import gg.essential.universal.UChat
 import gg.essential.universal.UGraphics
@@ -36,10 +36,10 @@ object AssetHandler {
     private fun postMessage() {
         val percent = (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
         if (percent == 1f) {
-            UChat.chat("${PolyBlock.NAME} > Finished downloading assets!")
+            UChat.chat("${SkyGuide.NAME} > Finished downloading assets!")
             downloadedAssets = true
         } else {
-            UChat.chat("${PolyBlock.NAME} > Downloading assets... ${(percent * 100).toInt()}% ($currentFile/$totalFiles)")
+            UChat.chat("${SkyGuide.NAME} > Downloading assets... ${(percent * 100).toInt()}% ($currentFile/$totalFiles)")
             TickDelay(20, AssetHandler::postMessage)
         }
     }
@@ -79,11 +79,11 @@ object AssetHandler {
     fun initialize() {
         downloadedAssets = true
         Multithreading.runAsync {
-            val mapFile = "config/${PolyBlock.ID}/map.json".toFile()
-            val newMapFile = "config/${PolyBlock.ID}/map-new.json".toFile()
+            val mapFile = "config/${SkyGuide.ID}/map.json".toFile()
+            val newMapFile = "config/${SkyGuide.ID}/map-new.json".toFile()
             mapFile.parentFile.mkdirs()
             if ( // try to download and parse new data
-                BlockConfig.downloadAssets
+                Config.downloadAssets
                 && NetworkUtils.downloadFile("https://api.dediamondpro.dev/assets/polyblock/map.json", newMapFile)
                 && SkyblockMap.initialize(newMapFile)
             ) {
@@ -103,7 +103,7 @@ object AssetHandler {
             for (island in world.values) {
                 for (image in island.images.values) {
                     val file = image.filePath.toFile()
-                    if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && BlockConfig.downloadAssets) {
+                    if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && Config.downloadAssets) {
                         image.initialized = false
                         imagesToUpdate[image] = file
                         unloadAsset(image.filePath)
@@ -150,7 +150,7 @@ object AssetHandler {
                 currentPercent = 0f
                 currentFile++
             }
-            if (!BlockConfig.lazyLoading && BlockConfig.keepAssetsLoaded) {
+            if (!Config.lazyLoading && Config.keepAssetsLoaded) {
                 TickDelay(0) {
                     for (file in assets.values) loadAsset(file.path)
                 }

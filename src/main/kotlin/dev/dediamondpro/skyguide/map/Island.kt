@@ -1,8 +1,7 @@
-package dev.dediamondpro.polyblock.map
+package dev.dediamondpro.skyguide.map
 
-import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.utils.RenderUtils
-import net.minecraft.client.gui.Gui
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.utils.RenderUtils
 
 /**
  * @param image The image of the map
@@ -33,7 +32,7 @@ data class Island(
     fun draw(y: Int) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
         if (zone == null) zone = SkyblockMap.getZoneByIsland(this)
-        for (waypoint in BlockConfig.waypoints) {
+        for (waypoint in Config.waypoints) {
             if (waypoint.zone != zone) continue
             RenderUtils.drawRect(waypoint.x - 2, waypoint.y - 2, 4, 4, waypoint.color)
         }

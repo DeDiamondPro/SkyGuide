@@ -1,6 +1,6 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
-import dev.dediamondpro.polyblock.handlers.AssetHandler
+import dev.dediamondpro.skyguide.handlers.AssetHandler
 import gg.essential.universal.UGraphics
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Gui

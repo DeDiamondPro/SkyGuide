@@ -30,7 +30,7 @@ blossom {
 }
 
 version = mod_version
-group = "cc.polyfrost"
+group = "dev.dediamondpro"
 base {
     archivesName.set("$mod_name ($platform)")
 }
@@ -143,15 +143,12 @@ tasks {
     }
     jar {
         manifest {
-            attributes(
-                mapOf(
-                    "ModSide" to "CLIENT",
-                    "ForceLoadAsMod" to true,
-                    "TweakOrder" to "0",
-                    "MixinConfigs" to "mixins.${mod_id}.json",
-                    "TweakClass" to "cc.polyfrost.oneconfigwrapper.OneConfigWrapper"
-                )
-            )
+            attributes(mapOf(
+                "ModSide" to "CLIENT",
+                "TweakOrder" to "0",
+                "TweakClass" to "gg.essential.loader.stage0.EssentialSetupTweaker",
+                "ForceLoadAsMod" to true
+            ))
         }
         dependsOn(shadowJar)
         archiveClassifier.set("")

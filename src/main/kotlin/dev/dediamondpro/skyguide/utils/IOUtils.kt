@@ -1,4 +1,4 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
 import java.io.File
 import java.io.FileInputStream

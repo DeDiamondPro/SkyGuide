@@ -1,10 +1,10 @@
-package dev.dediamondpro.polyblock.gui
+package dev.dediamondpro.skyguide.gui
 
-import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.handlers.AssetHandler
-import dev.dediamondpro.polyblock.map.Island
-import dev.dediamondpro.polyblock.map.SkyblockMap
-import dev.dediamondpro.polyblock.utils.*
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.handlers.AssetHandler
+import dev.dediamondpro.skyguide.map.Island
+import dev.dediamondpro.skyguide.map.SkyblockMap
+import dev.dediamondpro.skyguide.utils.*
 import gg.essential.universal.UGraphics
 import gg.essential.universal.UMatrixStack
 import gg.essential.universal.UMinecraft
@@ -16,7 +16,7 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 class MapGui : UScreen() {
-    private var scale = BlockConfig.defaultScale
+    private var scale = Config.defaultScale
     private var x: Float = 0f
     private var y: Float = 0f
     private var topX: Float = Float.MAX_VALUE
@@ -52,7 +52,7 @@ class MapGui : UScreen() {
             val xCoordinate = (mouseX / scale / UResolution.scaleFactor - x).toFloat()
             val yCoordinate = (mouseX / scale / UResolution.scaleFactor - y).toFloat()
             var done = false
-            BlockConfig.waypoints.removeIf {
+            Config.waypoints.removeIf {
                 val dist = sqrt((xCoordinate - it.x).pow(2) + (yCoordinate - it.y).pow(2))
                 if (dist <= 3) done = true
                 dist <= 3
@@ -61,7 +61,7 @@ class MapGui : UScreen() {
                 for (zone in SkyblockMap.getCurrentWorld()!!.keys.reversed()) {
                     val island = SkyblockMap.getCurrentWorld()!![zone]!!
                     if (!island.isInIsland(xCoordinate, yCoordinate)) continue
-                    BlockConfig.waypoints.add(Waypoint(zone, xCoordinate, yCoordinate))
+                    Config.waypoints.add(Waypoint(zone, xCoordinate, yCoordinate))
                     break
                 }
             }
@@ -89,16 +89,16 @@ class MapGui : UScreen() {
             0.0f
         )
         RenderUtils.drawImage(
-            "/assets/polyblock/player.png",
-            -BlockConfig.pointerSize / 2f,
-            -BlockConfig.pointerSize / 2f,
-            BlockConfig.pointerSize,
-            BlockConfig.pointerSize
+            "/assets/skyguide/player.png",
+            -Config.pointerSize / 2f,
+            -Config.pointerSize / 2f,
+            Config.pointerSize,
+            Config.pointerSize
         )
         wasRightMouseDown = rightMouseDown
     }
 
     override fun onScreenClose() {
-        if (!BlockConfig.keepAssetsLoaded) AssetHandler.unloadAssets()
+        if (!Config.keepAssetsLoaded) AssetHandler.unloadAssets()
     }
 }

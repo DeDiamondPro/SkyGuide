@@ -1,6 +1,5 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
-import dev.dediamondpro.polyblock.PolyBlock
 import java.io.File
 import java.io.IOException
 import java.net.URL
@@ -24,7 +23,7 @@ object NetworkUtils {
 
     fun setupConnection(url: URL): URLConnection {
         val con = url.openConnection()
-        con.setRequestProperty("User-Agent", "${PolyBlock.ID}-${PolyBlock.VER}")
+        con.setRequestProperty("User-Agent", "${dev.dediamondpro.skyguide.SkyGuide.ID}-${dev.dediamondpro.skyguide.SkyGuide.VER}")
         con.connectTimeout = 5000
         con.readTimeout = 5000
         return con

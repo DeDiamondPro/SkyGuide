@@ -1,10 +1,10 @@
-package dev.dediamondpro.polyblock.handlers
+package dev.dediamondpro.skyguide.handlers
 
-import dev.dediamondpro.polyblock.PolyBlock
-import dev.dediamondpro.polyblock.gui.MapGui
-import dev.dediamondpro.polyblock.map.SkyblockMap
-import dev.dediamondpro.polyblock.utils.GuiUtils
-import dev.dediamondpro.polyblock.utils.SBInfo
+import dev.dediamondpro.skyguide.SkyGuide
+import dev.dediamondpro.skyguide.gui.MapGui
+import dev.dediamondpro.skyguide.map.SkyblockMap
+import dev.dediamondpro.skyguide.utils.GuiUtils
+import dev.dediamondpro.skyguide.utils.SBInfo
 import gg.essential.universal.UKeyboard
 import net.minecraft.client.settings.KeyBinding
 import net.minecraftforge.common.MinecraftForge
@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
 
 object KeyBindHandler {
     private val keybindings = mapOf(
-        KeyBinding("Open Map", UKeyboard.KEY_M, PolyBlock.NAME) to {
+        KeyBinding("Open Map", UKeyboard.KEY_M, SkyGuide.NAME) to {
             if (SBInfo.inSkyblock && SkyblockMap.currentWorldAvailable()) GuiUtils.displayScreen(MapGui())
         }
     )

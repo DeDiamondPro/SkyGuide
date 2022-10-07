@@ -1,4 +1,4 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
 interface WebAsset {
 

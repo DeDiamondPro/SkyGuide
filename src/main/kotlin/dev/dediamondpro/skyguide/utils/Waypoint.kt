@@ -1,6 +1,6 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
-import dev.dediamondpro.polyblock.map.SkyblockMap
+import dev.dediamondpro.skyguide.map.SkyblockMap
 import net.minecraft.util.BlockPos
 import java.awt.Color
 

@@ -1,4 +1,4 @@
-package dev.dediamondpro.polyblock.hud
+package dev.dediamondpro.skyguide.hud
 /*
 import cc.polyfrost.oneconfig.config.annotations.Exclude
 import cc.polyfrost.oneconfig.config.annotations.Slider

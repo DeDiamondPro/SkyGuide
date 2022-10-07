@@ -1,18 +1,18 @@
-package dev.dediamondpro.polyblock.command
+package dev.dediamondpro.skyguide.command
 
-import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.gui.MapGui
-import dev.dediamondpro.polyblock.utils.GuiUtils
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.gui.MapGui
+import dev.dediamondpro.skyguide.utils.GuiUtils
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
 
-class PolyCommand : CommandBase() {
+class SkyGuideCommand : CommandBase() {
     override fun getCommandName(): String {
-        return "polyblock"
+        return "skyguide"
     }
 
     override fun getCommandUsage(sender: ICommandSender): String {
-        return "/polyblock"
+        return "/skyguide"
     }
 
     override fun canCommandSenderUseCommand(sender: ICommandSender?): Boolean {
@@ -21,7 +21,7 @@ class PolyCommand : CommandBase() {
 
     override fun processCommand(sender: ICommandSender, args: Array<String>) {
         if (args.isEmpty()) {
-            GuiUtils.displayScreen(BlockConfig.gui()!!)
+            GuiUtils.displayScreen(Config.gui()!!)
             return
         }
         when (args[0]) {

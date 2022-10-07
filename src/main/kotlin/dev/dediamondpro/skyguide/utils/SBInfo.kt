@@ -1,7 +1,7 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
-import dev.dediamondpro.polyblock.config.BlockConfig
-import dev.dediamondpro.polyblock.handlers.AssetHandler
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.handlers.AssetHandler
 import gg.essential.universal.UMinecraft
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
@@ -30,6 +30,7 @@ class SBInfo {
         }
     }
 
+    private val json = Json { ignoreUnknownKeys = true }
     private var lastSwap = -1L
     private var lastLocraw = -1L
 
@@ -39,7 +40,7 @@ class SBInfo {
         val message = event.message.unformattedText
         if (message.startsWith("{") && message.endsWith("}")) {
             try {
-                locraw = Json { ignoreUnknownKeys = true }.decodeFromString<LocrawObject>(message)
+                locraw = json.decodeFromString<LocrawObject>(message)
                 if (lastLocraw != -1L && !event.isCanceled) {
                     event.isCanceled = true
                     lastLocraw = -1L
@@ -64,7 +65,7 @@ class SBInfo {
             inSkyblock = false
             return
         }
-        if (!BlockConfig.keepAssetsLoaded) AssetHandler.unloadAssets()
+        if (!Config.keepAssetsLoaded) AssetHandler.unloadAssets()
         inSkyblock = false
         zone = "unknown"
         lastSwap = UMinecraft.getTime()

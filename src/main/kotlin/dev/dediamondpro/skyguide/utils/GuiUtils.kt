@@ -1,4 +1,4 @@
-package dev.dediamondpro.polyblock.utils
+package dev.dediamondpro.skyguide.utils
 
 import gg.essential.universal.UMinecraft
 import net.minecraft.client.gui.GuiScreen

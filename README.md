@@ -1,4 +1,4 @@
-# PolyBlock
+# SkyGuide
 
 ## How to render images
 Images are rendered using chunky
