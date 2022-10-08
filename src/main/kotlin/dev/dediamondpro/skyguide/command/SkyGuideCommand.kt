@@ -2,6 +2,7 @@ package dev.dediamondpro.skyguide.command
 
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.gui.MapGui
+import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
@@ -26,6 +27,9 @@ class SkyGuideCommand : CommandBase() {
         }
         when (args[0]) {
             "map" -> GuiUtils.displayScreen(MapGui())
+            "route" -> {
+                SkyblockMap.getCurrentWorld()?.get(args[1])?.routeTo(args[2])
+            }
         }
     }
 }

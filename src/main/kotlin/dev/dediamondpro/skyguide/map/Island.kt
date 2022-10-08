@@ -1,29 +1,34 @@
 package dev.dediamondpro.skyguide.map
 
-import dev.dediamondpro.skyguide.config.Config
-import dev.dediamondpro.skyguide.utils.RenderUtils
-
 /**
- * @param image The image of the map
+ * @param images The images of the map
+ * @param portals The portals on the map
  * @param topX The top left X coordinate in mc
  * @param topY The top left Y coordinate in mc
  * @param bottomX The bottom right X coordinate in mc
  * @param bottomY The bottom right Y coordinate in mc
+ * @param xOffset The X offset of the player coordinates
+ * @param yOffset The Y offset of the player coordinates
  */
 @kotlinx.serialization.Serializable
 data class Island(
     var images: MutableMap<Int, Textures>,
+    val portals: MutableList<Portal> = mutableListOf(),
     val topX: Float,
     val topY: Float,
     val bottomX: Float,
     val bottomY: Float,
-    val xOffset: Float = 0f, // The offset of the player coordinates
+    val xOffset: Float = 0f,
     val yOffset: Float = 0f
 ) {
     val width = bottomX - topX
     val height = bottomY - topY
     var zone: String? = null
         private set
+        get() {
+            if (field == null) field = SkyblockMap.getZoneByIsland(this)
+            return field
+        }
 
     init {
         images = images.toSortedMap()
@@ -31,11 +36,6 @@ data class Island(
 
     fun draw(y: Int) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
-        if (zone == null) zone = SkyblockMap.getZoneByIsland(this)
-        for (waypoint in Config.waypoints) {
-            if (waypoint.zone != zone) continue
-            RenderUtils.drawRect(waypoint.x - 2, waypoint.y - 2, 4, 4, waypoint.color)
-        }
     }
 
     fun getImage(y: Int): Textures {
@@ -48,6 +48,28 @@ data class Island(
     fun isInIsland(x: Float, y: Float): Boolean {
         return x >= topX + xOffset && y >= topY + yOffset
                 && x <= bottomX + xOffset && y <= bottomY + yOffset
+    }
+
+    fun routeTo(island: String) {
+        println(discoverPortals(island, this, mutableListOf()))
+    }
+
+    private fun discoverPortals(
+        destination: String,
+        currentIsland: Island,
+        visitedIslands: MutableList<String>
+    ): MutableList<Portal>? {
+        visitedIslands.add(currentIsland.zone!!)
+        for (portal in currentIsland.portals) {
+            if (portal.destination == null || visitedIslands.contains(portal.destination)) continue
+            if (portal.destination == destination) return mutableListOf(portal)
+            val currentWorld = SkyblockMap.getCurrentWorld() ?: continue
+            val destinationIsland = currentWorld[portal.destination] ?: continue
+            val path = discoverPortals(destination, destinationIsland, visitedIslands) ?: continue
+            path.add(0, portal)
+            return path
+        }
+        return null
     }
 
     companion object {

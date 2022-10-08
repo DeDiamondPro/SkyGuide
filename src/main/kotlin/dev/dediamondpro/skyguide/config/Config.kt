@@ -146,19 +146,16 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
 
     // Hidden
 
-    var waypoints: ArrayList<Waypoint> = ArrayList()
-
     @Property(
         type = PropertyType.SWITCH,
         category = "General",
-        name = "Disable asset downloading",
+        name = "Download Assets",
         hidden = true
     )
     var downloadAssets = true
 
     init {
         initialize()
-        InternalConfig.initialize()
         registerListener("textureQuality") { _: Any ->
             TickDelay(1) {
                 if (AssetHandler.downloadedAssets) {

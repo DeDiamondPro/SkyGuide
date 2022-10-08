@@ -12,8 +12,6 @@ import gg.essential.universal.UResolution
 import gg.essential.universal.UScreen
 import gg.essential.universal.wrappers.UPlayer
 import org.lwjgl.input.Mouse
-import kotlin.math.pow
-import kotlin.math.sqrt
 
 class MapGui : UScreen() {
     private var scale = Config.defaultScale
@@ -21,7 +19,6 @@ class MapGui : UScreen() {
     private var y: Float = 0f
     private var topX: Float = Float.MAX_VALUE
     private var topY: Float = Float.MAX_VALUE
-    private var wasRightMouseDown = false
 
     init {
         x = (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
@@ -47,25 +44,6 @@ class MapGui : UScreen() {
             y += (mouseY / scale) - (mouseY / oldScale)
         }
 
-        val rightMouseDown = Mouse.isButtonDown(1)
-        if (rightMouseDown && !wasRightMouseDown) {
-            val xCoordinate = (mouseX / scale / UResolution.scaleFactor - x).toFloat()
-            val yCoordinate = (mouseX / scale / UResolution.scaleFactor - y).toFloat()
-            var done = false
-            Config.waypoints.removeIf {
-                val dist = sqrt((xCoordinate - it.x).pow(2) + (yCoordinate - it.y).pow(2))
-                if (dist <= 3) done = true
-                dist <= 3
-            }
-            if (!done) {
-                for (zone in SkyblockMap.getCurrentWorld()!!.keys.reversed()) {
-                    val island = SkyblockMap.getCurrentWorld()!![zone]!!
-                    if (!island.isInIsland(xCoordinate, yCoordinate)) continue
-                    Config.waypoints.add(Waypoint(zone, xCoordinate, yCoordinate))
-                    break
-                }
-            }
-        }
         UGraphics.GL.pushMatrix()
         UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
         if (Mouse.isButtonDown(0)) {
@@ -96,7 +74,6 @@ class MapGui : UScreen() {
             Config.mapPointerSize,
             Config.mapPointerSize
         )
-        wasRightMouseDown = rightMouseDown
         UGraphics.GL.popMatrix()
     }
 

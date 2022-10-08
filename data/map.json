@@ -20,7 +20,33 @@
       "topX": -298,
       "topY": -258,
       "bottomX": 201,
-      "bottomY": 241
+      "bottomY": 241,
+      "portals": [
+        {
+          "x": -162,
+          "y": -73,
+          "z": -161,
+          "destination": "combat_1"
+        },
+        {
+          "x": 78,
+          "y": -72,
+          "z": -183,
+          "destination": "farming_1"
+        },
+        {
+          "x": -9,
+          "y": 64,
+          "z": -230,
+          "destination": "mining_1"
+        },
+        {
+          "x": -223,
+          "y": 73,
+          "z": -15,
+          "destination": "foraging_1"
+        }
+      ]
     },
     "combat_1": {
       "images": {
@@ -42,7 +68,28 @@
       "topX": -408,
       "topY": -408,
       "bottomX": -106,
-      "bottomY": -106
+      "bottomY": -106,
+      "portals": [
+        {
+          "x": -196,
+          "y": 83,
+          "z": -227,
+          "destination": "hub",
+          "command": "warp spider"
+        },
+        {
+          "x": -383,
+          "y": 119,
+          "z": -261,
+          "destination": "combat_3"
+        },
+        {
+          "x": -356,
+          "y": 87,
+          "z": -352,
+          "destination": "crimson_isle"
+        }
+      ]
     },
     "foraging_1": {
       "images": {
@@ -64,7 +111,16 @@
       "topX": -500,
       "topY": -148,
       "bottomX": -253,
-      "bottomY": 99
+      "bottomY": 99,
+      "portals": [
+        {
+          "x": -273,
+          "y": 82,
+          "z": -13,
+          "destination": "hub",
+          "command": "warp park"
+        }
+      ]
     },
     "farming_1": {
       "images": {
@@ -86,7 +142,16 @@
       "topX": 70,
       "topY": -643,
       "bottomX": 409,
-      "bottomY": -183
+      "bottomY": -183,
+      "portals": [
+        {
+          "x": 112,
+          "y": 70,
+          "z": -203,
+          "destination": "hub",
+          "command": "warp barn"
+        }
+      ]
     },
     "crimson_isle": {
       "images": {
@@ -108,7 +173,16 @@
       "topX": -772,
       "topY": -1180,
       "bottomX": 51,
-      "bottomY": -357
+      "bottomY": -357,
+      "portals": [
+        {
+          "x": -360,
+          "y": 80,
+          "z": -420,
+          "destination": "combat_1",
+          "command": "warp nether"
+        }
+      ]
     },
     "combat_3": {
       "images": {
@@ -130,7 +204,16 @@
       "topX": -783,
       "topY": -423,
       "bottomX": -448,
-      "bottomY": -121
+      "bottomY": -121,
+      "portals": [
+        {
+          "x": -495,
+          "y": 101,
+          "z": -275,
+          "destination": "combat_1",
+          "command": "warp end"
+        }
+      ]
     },
     "mining_1": {
       "images": {
@@ -152,7 +235,22 @@
       "topX": -90,
       "topY": -401,
       "bottomX": 45,
-      "bottomY": -266
+      "bottomY": -266,
+      "portals": [
+        {
+          "x": -4,
+          "y": 83,
+          "z": -269,
+          "destination": "hub",
+          "command": "warp gold"
+        },
+        {
+          "x": -6,
+          "y": 68,
+          "z": -395,
+          "destination": "mining_2"
+        }
+      ]
     },
     "mining_2": {
       "images": {
@@ -266,7 +364,16 @@
       "bottomX": 80,
       "bottomY": 98,
       "xOffset": -12,
-      "yOffset": -579
+      "yOffset": -579,
+      "portals": [
+        {
+          "x": 3,
+          "y": 157,
+          "z": 87,
+          "destination": "mining_1",
+          "command": "warp deep"
+        }
+      ]
     }
   },
   "jerry_workshop": {
