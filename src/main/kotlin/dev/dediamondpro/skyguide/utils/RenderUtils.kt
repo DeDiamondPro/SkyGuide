@@ -123,16 +123,19 @@ object RenderUtils {
     fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number) {
         if (!AssetHandler.loadAsset(fileName)) return
         UGraphics.bindTexture(AssetHandler.getAsset(fileName))
-        Gui.drawModalRectWithCustomSizedTexture(
-            x.toInt(),
-            y.toInt(),
-            0f,
-            0f,
-            width.toInt(),
-            height.toInt(),
-            width.toFloat(),
-            height.toFloat()
-        )
+        val f: Float = 1.0f / width.toFloat()
+        val g: Float = 1.0f / height.toFloat()
+        val tessellator = Tessellator.getInstance()
+        val worldRenderer = tessellator.worldRenderer
+        worldRenderer.begin(7, DefaultVertexFormats.POSITION_TEX)
+        worldRenderer.pos(x.toDouble(), y.toDouble() + height.toDouble(), 0.0)
+            .tex(0.0, height.toDouble() * g).endVertex()
+        worldRenderer.pos(x.toDouble() + width.toDouble(), y.toDouble() + height.toDouble(), 0.0)
+            .tex(width.toDouble() * f, height.toDouble() * g).endVertex()
+        worldRenderer.pos(x.toDouble() + width.toDouble(), y.toDouble(), 0.0)
+            .tex(width.toDouble() * f, 0.0).endVertex()
+        worldRenderer.pos(x.toDouble(), y.toDouble(), 0.0).tex(0.0, 0.0).endVertex()
+        tessellator.draw()
     }
 
     fun drawRect(x: Number, y: Number, width: Number, height: Number, color: Int) {

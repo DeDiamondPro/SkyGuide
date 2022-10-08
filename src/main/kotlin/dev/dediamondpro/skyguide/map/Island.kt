@@ -1,5 +1,7 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.utils.RenderUtils
+
 /**
  * @param images The images of the map
  * @param portals The portals on the map
@@ -34,8 +36,25 @@ data class Island(
         images = images.toSortedMap()
     }
 
-    fun draw(y: Int) {
+    fun draw(y: Int, mouseX: Int, mouseY: Int, scale: Float) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
+        for (portal in portals) {
+            if (portal.command == null) continue
+            RenderUtils.drawImage(
+                "/assets/skyguide/map_location.png",
+                portal.x + xOffset - 16f / scale,
+                portal.z + yOffset - 16f / scale,
+                32f / scale,
+                32f / scale
+            )
+            RenderUtils.drawImage(
+                "/assets/skyguide/portal.png",
+                portal.x + xOffset - 6f / scale,
+                portal.z + yOffset - 9f / scale,
+                12f / scale,
+                18f / scale
+            )
+        }
     }
 
     fun getImage(y: Int): Textures {

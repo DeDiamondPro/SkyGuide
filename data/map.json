@@ -75,7 +75,8 @@
           "y": 83,
           "z": -227,
           "destination": "hub",
-          "command": "warp spider"
+          "command": "warp spider",
+          "name": "Warm to Spider's Den"
         },
         {
           "x": -383,
@@ -118,7 +119,8 @@
           "y": 82,
           "z": -13,
           "destination": "hub",
-          "command": "warp park"
+          "command": "warp park",
+          "name": "Warp to the Park"
         }
       ]
     },
@@ -149,7 +151,8 @@
           "y": 70,
           "z": -203,
           "destination": "hub",
-          "command": "warp barn"
+          "command": "warp barn",
+          "name": "Warp to the Barn"
         }
       ]
     },
@@ -180,7 +183,8 @@
           "y": 80,
           "z": -420,
           "destination": "combat_1",
-          "command": "warp nether"
+          "command": "warp nether",
+          "name": "Warp to Crimson Isle"
         }
       ]
     },
@@ -211,7 +215,8 @@
           "y": 101,
           "z": -275,
           "destination": "combat_1",
-          "command": "warp end"
+          "command": "warp end",
+          "name": "Warp to the End"
         }
       ]
     },
@@ -242,7 +247,8 @@
           "y": 83,
           "z": -269,
           "destination": "hub",
-          "command": "warp gold"
+          "command": "warp gold",
+          "name": "Warm to the gold mine."
         },
         {
           "x": -6,
@@ -371,7 +377,8 @@
           "y": 157,
           "z": 87,
           "destination": "mining_1",
-          "command": "warp deep"
+          "command": "warp deep",
+          "name": "Warp to the Deep Caverns"
         }
       ]
     }

@@ -3,6 +3,7 @@ package dev.dediamondpro.skyguide.map
 import kotlinx.serialization.Serializable
 
 /**
+ * @param name The name of the portal
  * @param destination The destination of the portal, null if the portal is command only
  * @param command The command to teleport to the portal, null if no command available
  * @param x The X coordinate of the portal
@@ -10,4 +11,11 @@ import kotlinx.serialization.Serializable
  * @param z The Z coordinate of the portal
  */
 @Serializable
-data class Portal(val destination: String? = null, val command: String? = null, val x: Float, val y: Float, val z: Float)
+data class Portal(
+    val name: String = "",
+    val destination: String? = null,
+    val command: String? = null,
+    val x: Float,
+    val y: Float,
+    val z: Float
+)
