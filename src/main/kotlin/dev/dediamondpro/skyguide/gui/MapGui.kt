@@ -55,10 +55,17 @@ class MapGui : UScreen() {
         for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.draw(
             if (mapPart.zone == SBInfo.zone) UPlayer.getPosY().toInt()
             else 255,
-            mouseX,
-            mouseY,
             scale
         )
+        UGraphics.GL.popMatrix()
+        UGraphics.GL.pushMatrix()
+        UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(
+            mouseX - x,
+            mouseY - y
+        )
+        UGraphics.GL.popMatrix()
+        UGraphics.GL.pushMatrix()
         UGraphics.GL.translate(
             (UPlayer.getOffsetX() + Island.getXOffset()).toDouble(),
             (UPlayer.getOffsetY() + Island.getYOffset()).toDouble(),

@@ -1,6 +1,12 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
+import gg.essential.universal.UGraphics
+import gg.essential.universal.UMinecraft
+import gg.essential.universal.UMouse
+import gg.essential.universal.UResolution
+import org.lwjgl.input.Mouse
 
 /**
  * @param images The images of the map
@@ -36,7 +42,7 @@ data class Island(
         images = images.toSortedMap()
     }
 
-    fun draw(y: Int, mouseX: Int, mouseY: Int, scale: Float) {
+    fun draw(y: Int, scale: Float) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
         for (portal in portals) {
             if (portal.command == null) continue
@@ -54,6 +60,29 @@ data class Island(
                 12f / scale,
                 18f / scale
             )
+        }
+    }
+
+    fun drawLast(mouseX: Float, mouseY: Float) {
+        for (portal in portals) {
+            if (portal.command == null) continue
+            if (mouseX >= (portal.x + xOffset - 16f) && mouseX <= (portal.x + xOffset + 16f)
+                && mouseY >= (portal.z + yOffset - 16f) && mouseY <= (portal.z + yOffset + 16f)
+            ) {
+                val text = portal.name.split("\n").toMutableList()
+                text.add("Left Click to teleport")
+                text.add("Right Click to navigate")
+                RenderUtils.drawToolTip(
+                    text,
+                    (mouseX.toInt()),
+                    (mouseY.toInt()),
+                    UResolution.windowWidth,
+                    UResolution.windowHeight,
+                    400,
+                    UMinecraft.getFontRenderer()
+                )
+                if (GuiUtils.isClicked) UMinecraft.getMinecraft().thePlayer.sendChatMessage("/${portal.command}")
+            }
         }
     }
 

@@ -76,7 +76,7 @@
           "z": -227,
           "destination": "hub",
           "command": "warp spider",
-          "name": "Warm to Spider's Den"
+          "name": "Warp to Spider's Den"
         },
         {
           "x": -383,

@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
+import org.lwjgl.input.Mouse
 
 class GuiUtils {
     @SubscribeEvent
@@ -19,6 +20,10 @@ class GuiUtils {
         val currentTime = UMinecraft.getTime()
         deltaTime += currentTime - time
         time = currentTime
+
+        val clicked = Mouse.isButtonDown(0)
+        isClicked = wasClicked && !clicked
+        wasClicked = clicked
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
@@ -30,6 +35,9 @@ class GuiUtils {
     companion object {
         private var deltaTime: Long = 0L
         private var time = -1L
+        private var wasClicked = false
+        var isClicked = false
+            private set
 
         fun getDeltaTime(): Long {
             return deltaTime
