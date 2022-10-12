@@ -81,7 +81,11 @@ data class Island(
                     400,
                     UMinecraft.getFontRenderer()
                 )
-                if (GuiUtils.isClicked) UMinecraft.getMinecraft().thePlayer.sendChatMessage("/${portal.command}")
+                if (GuiUtils.isClicked) {
+                    UMinecraft.getMinecraft().thePlayer.sendChatMessage("/${portal.command}")
+                    GuiUtils.displayScreen(null)
+                }
+                break
             }
         }
     }

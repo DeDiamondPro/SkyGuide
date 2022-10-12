@@ -218,9 +218,9 @@
           "name": "Warp to the Barn"
         },
         {
-          "x": 112,
-          "y": 70,
-          "z": -203,
+          "x": 160.5,
+          "y": 77,
+          "z": -370,
           "command": "warp desert",
           "name": "Warp to the Mushroom Desert"
         }

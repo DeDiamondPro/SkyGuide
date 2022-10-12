@@ -43,7 +43,7 @@ class GuiUtils {
             return deltaTime
         }
 
-        fun displayScreen(gui: GuiScreen) {
+        fun displayScreen(gui: GuiScreen?) {
             TickDelay(0) {
                 UMinecraft.getMinecraft().displayGuiScreen(gui)
             }
