@@ -38,15 +38,18 @@ data class Island(
         images = images.toSortedMap()
     }
 
-    fun draw(y: Int, scale: Float) {
+    fun draw(y: Int) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
+    }
+
+    fun drawLast(scale: Float) {
         for (poi in getPointsOfInterest()) {
             if (!poi.shouldDraw()) continue
             poi.draw(xOffset, yOffset, scale)
         }
     }
 
-    fun drawLast(x: Float, y: Float, mouseX: Int, mouseY: Int, scale: Float) {
+    fun drawUnscaled(x: Float, y: Float, mouseX: Int, mouseY: Int, scale: Float) {
         val xScaled = mouseX / scale - x
         val yScaled = mouseY / scale - y
         for (poi in getPointsOfInterest()) {

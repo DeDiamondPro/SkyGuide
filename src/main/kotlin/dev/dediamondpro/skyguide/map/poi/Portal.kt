@@ -25,7 +25,7 @@ data class Portal(
     override val z: Float,
 ) : PointOfInterest() {
     override fun shouldDraw(): Boolean {
-        return command != null && !mvp || Config.showMVPWarps
+        return command != null && (!mvp || Config.showMVPWarps)
     }
 
     override fun drawIcon(x: Float, y: Float, scale: Float) {

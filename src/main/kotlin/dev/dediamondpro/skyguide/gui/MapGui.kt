@@ -54,12 +54,8 @@ class MapGui : UScreen() {
 
         for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.draw(
             if (mapPart.zone == SBInfo.zone) UPlayer.getPosY().toInt()
-            else 255,
-            scale
+            else 255
         )
-        UGraphics.GL.popMatrix()
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(x, y, mouseX, mouseY, scale)
-        UGraphics.GL.pushMatrix()
         UGraphics.GL.translate(
             (UPlayer.getOffsetX() + Island.getXOffset()).toDouble(),
             (UPlayer.getOffsetY() + Island.getYOffset()).toDouble(),
@@ -79,6 +75,12 @@ class MapGui : UScreen() {
             Config.mapPointerSize
         )
         UGraphics.GL.popMatrix()
+        UGraphics.GL.pushMatrix()
+        UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
+        UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(scale)
+        UGraphics.GL.popMatrix()
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawUnscaled(x, y, mouseX, mouseY, scale)
     }
 
     override fun onScreenClose() {
