@@ -15,6 +15,7 @@ data class Portal(
     val name: String = "",
     val destination: String? = null,
     val command: String? = null,
+    val mvp: Boolean = false,
     val x: Float,
     val y: Float,
     val z: Float

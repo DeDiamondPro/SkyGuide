@@ -66,6 +66,14 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
     )
     var mapPointerSize = 14f
 
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show MVP warps",
+        description = "Show MVP warps on the map.",
+        category = "Map",
+    )
+    var showMVPWarps = true
+
     // Mini-Map
 
     @Property(

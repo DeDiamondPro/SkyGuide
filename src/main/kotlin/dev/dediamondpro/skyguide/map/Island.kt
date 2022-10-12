@@ -1,12 +1,10 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
-import gg.essential.universal.UGraphics
 import gg.essential.universal.UMinecraft
-import gg.essential.universal.UMouse
 import gg.essential.universal.UResolution
-import org.lwjgl.input.Mouse
 
 /**
  * @param images The images of the map
@@ -45,7 +43,7 @@ data class Island(
     fun draw(y: Int, scale: Float) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
         for (portal in portals) {
-            if (portal.command == null) continue
+            if (portal.command == null || !Config.showMVPWarps && portal.mvp) continue
             RenderUtils.drawImage(
                 "/assets/skyguide/map_location.png",
                 portal.x + xOffset - 16f / scale,
@@ -63,19 +61,21 @@ data class Island(
         }
     }
 
-    fun drawLast(mouseX: Float, mouseY: Float) {
+    fun drawLast(x: Float, y: Float, mouseX: Int, mouseY: Int, scale: Float) {
+        val xScaled = mouseX / scale - x
+        val yScaled = mouseY / scale - y
         for (portal in portals) {
-            if (portal.command == null) continue
-            if (mouseX >= (portal.x + xOffset - 16f) && mouseX <= (portal.x + xOffset + 16f)
-                && mouseY >= (portal.z + yOffset - 16f) && mouseY <= (portal.z + yOffset + 16f)
+            if (portal.command == null || !Config.showMVPWarps && portal.mvp) continue
+            if (xScaled >= (portal.x + xOffset - 16f / scale) && xScaled <= (portal.x + xOffset + 16f / scale)
+                && yScaled >= (portal.z + yOffset - 16f / scale) && yScaled <= (portal.z + yOffset + 16f / scale)
             ) {
                 val text = portal.name.split("\n").toMutableList()
                 text.add("Left Click to teleport")
                 text.add("Right Click to navigate")
                 RenderUtils.drawToolTip(
                     text,
-                    (mouseX.toInt()),
-                    (mouseY.toInt()),
+                    mouseX,
+                    mouseY,
                     UResolution.windowWidth,
                     UResolution.windowHeight,
                     400,
