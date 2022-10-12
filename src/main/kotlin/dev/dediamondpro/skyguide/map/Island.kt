@@ -1,10 +1,8 @@
 package dev.dediamondpro.skyguide.map
 
-import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.map.poi.PointOfInterest
+import dev.dediamondpro.skyguide.map.poi.Portal
 import dev.dediamondpro.skyguide.utils.GuiUtils
-import dev.dediamondpro.skyguide.utils.RenderUtils
-import gg.essential.universal.UMinecraft
-import gg.essential.universal.UResolution
 
 /**
  * @param images The images of the map
@@ -42,51 +40,21 @@ data class Island(
 
     fun draw(y: Int, scale: Float) {
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
-        for (portal in portals) {
-            if (portal.command == null || !Config.showMVPWarps && portal.mvp) continue
-            RenderUtils.drawImage(
-                "/assets/skyguide/map_location.png",
-                portal.x + xOffset - 16f / scale,
-                portal.z + yOffset - 16f / scale,
-                32f / scale,
-                32f / scale
-            )
-            RenderUtils.drawImage(
-                "/assets/skyguide/portal.png",
-                portal.x + xOffset - 6f / scale,
-                portal.z + yOffset - 9f / scale,
-                12f / scale,
-                18f / scale
-            )
+        for (poi in getPointsOfInterest()) {
+            if (!poi.shouldDraw()) continue
+            poi.draw(xOffset, yOffset, scale)
         }
     }
 
     fun drawLast(x: Float, y: Float, mouseX: Int, mouseY: Int, scale: Float) {
         val xScaled = mouseX / scale - x
         val yScaled = mouseY / scale - y
-        for (portal in portals) {
-            if (portal.command == null || !Config.showMVPWarps && portal.mvp) continue
-            if (xScaled >= (portal.x + xOffset - 16f / scale) && xScaled <= (portal.x + xOffset + 16f / scale)
-                && yScaled >= (portal.z + yOffset - 16f / scale) && yScaled <= (portal.z + yOffset + 16f / scale)
-            ) {
-                val text = portal.name.split("\n").toMutableList()
-                text.add("Left Click to teleport")
-                text.add("Right Click to navigate")
-                RenderUtils.drawToolTip(
-                    text,
-                    mouseX,
-                    mouseY,
-                    UResolution.windowWidth,
-                    UResolution.windowHeight,
-                    400,
-                    UMinecraft.getFontRenderer()
-                )
-                if (GuiUtils.isClicked) {
-                    UMinecraft.getMinecraft().thePlayer.sendChatMessage("/${portal.command}")
-                    GuiUtils.displayScreen(null)
-                }
-                break
-            }
+        for (poi in getPointsOfInterest()) {
+            if (!poi.shouldDrawTooltip(xScaled, yScaled, xOffset, yOffset, scale)) continue
+            poi.drawTooltip(mouseX, mouseY)
+            if (GuiUtils.leftClicked) poi.onLeftClick()
+            if (GuiUtils.rightClicked) poi.onRightClick()
+            break
         }
     }
 
@@ -97,9 +65,10 @@ data class Island(
         return images[0]!!
     }
 
-    fun isInIsland(x: Float, y: Float): Boolean {
-        return x >= topX + xOffset && y >= topY + yOffset
-                && x <= bottomX + xOffset && y <= bottomY + yOffset
+    private fun getPointsOfInterest(): List<PointOfInterest> {
+        val list = mutableListOf<PointOfInterest>()
+        list.addAll(portals)
+        return list
     }
 
     fun routeTo(island: String) {

@@ -21,9 +21,13 @@ class GuiUtils {
         deltaTime += currentTime - time
         time = currentTime
 
-        val clicked = Mouse.isButtonDown(0)
-        isClicked = wasClicked && !clicked
-        wasClicked = clicked
+        val leftClickedTemp = Mouse.isButtonDown(0)
+        leftClicked = wasLeftClicked && !leftClickedTemp
+        wasLeftClicked = leftClickedTemp
+
+        val rightClickedTemp = Mouse.isButtonDown(1)
+        rightClicked = wasRightClicked && !rightClickedTemp
+        wasRightClicked = rightClickedTemp
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
@@ -35,8 +39,11 @@ class GuiUtils {
     companion object {
         private var deltaTime: Long = 0L
         private var time = -1L
-        private var wasClicked = false
-        var isClicked = false
+        private var wasLeftClicked = false
+        private var wasRightClicked = false
+        var leftClicked = false
+            private set
+        var rightClicked = false
             private set
 
         fun getDeltaTime(): Long {
