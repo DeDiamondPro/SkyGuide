@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.UResolution
@@ -12,6 +13,7 @@ abstract class PointOfInterest {
     abstract val x: Float
     abstract val y: Float
     abstract val z: Float
+    var island: Island? = null
 
     protected abstract fun shouldDraw(): Boolean
 

@@ -1,6 +1,9 @@
 package dev.dediamondpro.skyguide.map.poi
 
 import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.map.Island
+import dev.dediamondpro.skyguide.map.navigation.Destination
+import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UMinecraft
@@ -51,6 +54,7 @@ data class Portal(
     }
 
     override fun onRightClick() {
-        TODO("Add navigation system")
+        NavigationHandler.navigateTo(Destination(island!!, x, y, z))
+        GuiUtils.displayScreen(null)
     }
 }

@@ -4,6 +4,7 @@ import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.handlers.KeyBindHandler
 import dev.dediamondpro.skyguide.hud.MiniMap
+import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.SBInfo
 import net.minecraftforge.client.ClientCommandHandler
@@ -32,6 +33,7 @@ object SkyGuide {
         MinecraftForge.EVENT_BUS.register(SBInfo())
         MinecraftForge.EVENT_BUS.register(GuiUtils())
         MinecraftForge.EVENT_BUS.register(MiniMap())
+        MinecraftForge.EVENT_BUS.register(NavigationHandler())
         ClientCommandHandler.instance.registerCommand(dev.dediamondpro.skyguide.command.SkyGuideCommand())
     }
 }

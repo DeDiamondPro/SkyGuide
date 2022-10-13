@@ -27,9 +27,6 @@ class SkyGuideCommand : CommandBase() {
         }
         when (args[0]) {
             "map" -> GuiUtils.displayScreen(MapGui())
-            "route" -> {
-                SkyblockMap.getCurrentWorld()?.get(args[1])?.routeTo(args[2])
-            }
         }
     }
 }

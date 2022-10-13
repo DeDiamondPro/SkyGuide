@@ -36,6 +36,7 @@ data class Island(
 
     init {
         images = images.toSortedMap()
+        for (poi in getPointsOfInterest()) poi.island = this
     }
 
     fun draw(y: Int) {
@@ -87,28 +88,6 @@ data class Island(
         val list = mutableListOf<PointOfInterest>()
         list.addAll(portals)
         return list
-    }
-
-    fun routeTo(island: String) {
-        println(discoverPortals(island, this, mutableListOf()))
-    }
-
-    private fun discoverPortals(
-        destination: String,
-        currentIsland: Island,
-        visitedIslands: MutableList<String>
-    ): MutableList<Portal>? {
-        visitedIslands.add(currentIsland.zone!!)
-        for (portal in currentIsland.portals) {
-            if (portal.destination == null || visitedIslands.contains(portal.destination)) continue
-            if (portal.destination == destination) return mutableListOf(portal)
-            val currentWorld = SkyblockMap.getCurrentWorld() ?: continue
-            val destinationIsland = currentWorld[portal.destination] ?: continue
-            val path = discoverPortals(destination, destinationIsland, visitedIslands) ?: continue
-            path.add(0, portal)
-            return path
-        }
-        return null
     }
 
     companion object {

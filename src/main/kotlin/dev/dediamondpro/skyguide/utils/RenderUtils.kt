@@ -11,11 +11,15 @@ import net.minecraft.client.renderer.Tessellator
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats
 import net.minecraft.entity.Entity
 import net.minecraft.util.BlockPos
+import net.minecraft.util.EnumChatFormatting
 import net.minecraft.util.MathHelper
 import net.minecraft.util.ResourceLocation
 import org.lwjgl.opengl.GL11
+import javax.vecmath.Vector3f
 import kotlin.math.cos
+import kotlin.math.roundToInt
 import kotlin.math.sin
+import kotlin.math.sqrt
 
 
 object RenderUtils {
@@ -120,6 +124,77 @@ object RenderUtils {
         if (disableDepth) {
             GlStateManager.enableDepth()
         }
+    }
+
+    /**
+     * Adapted from NotEnoughUpdates under LGPL license https://github.com/NotEnoughUpdates/NotEnoughUpdates/blob/master/COPYING.LESSER
+     */
+    fun renderWayPoint(text: MutableList<String?>, loc: Vector3f, partialTicks: Float) {
+        var lines = text
+        GlStateManager.alphaFunc(516, 0.1f)
+        GlStateManager.pushMatrix()
+        val viewer = Minecraft.getMinecraft().renderViewEntity
+        val viewerX = viewer.lastTickPosX + (viewer.posX - viewer.lastTickPosX) * partialTicks
+        val viewerY = viewer.lastTickPosY + (viewer.posY - viewer.lastTickPosY) * partialTicks
+        val viewerZ = viewer.lastTickPosZ + (viewer.posZ - viewer.lastTickPosZ) * partialTicks
+        var x: Double = loc.x - viewerX + 0.5f
+        var y: Double = loc.y - viewerY - viewer.eyeHeight
+        var z: Double = loc.z - viewerZ + 0.5f
+        val distSq = x * x + y * y + z * z
+        val dist = sqrt(distSq)
+        if (distSq > 144) {
+            x *= 12 / dist
+            y *= 12 / dist
+            z *= 12 / dist
+        }
+        GlStateManager.translate(x, y, z)
+        GlStateManager.translate(0f, viewer.eyeHeight, 0f)
+        lines = ArrayList(lines)
+        lines.add(EnumChatFormatting.YELLOW.toString() + dist.roundToInt() + "m")
+        renderNametag(lines)
+        GlStateManager.popMatrix()
+        GlStateManager.disableLighting()
+    }
+
+    /**
+     * Adapted from NotEnoughUpdates under LGPL license https://github.com/NotEnoughUpdates/NotEnoughUpdates/blob/master/COPYING.LESSER
+     */
+    fun renderNametag(lines: List<String?>) {
+        val fontrenderer = Minecraft.getMinecraft().fontRendererObj
+        val f = 1.6f
+        val f1 = 0.016666668f * f
+        GlStateManager.pushMatrix()
+        GL11.glNormal3f(0.0f, 1.0f, 0.0f)
+        GlStateManager.rotate(-Minecraft.getMinecraft().renderManager.playerViewY, 0.0f, 1.0f, 0.0f)
+        GlStateManager.rotate(Minecraft.getMinecraft().renderManager.playerViewX, 1.0f, 0.0f, 0.0f)
+        GlStateManager.scale(-f1, -f1, f1)
+        GlStateManager.disableLighting()
+        GlStateManager.depthMask(false)
+        GlStateManager.disableDepth()
+        GlStateManager.enableBlend()
+        GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0)
+        val tessellator = Tessellator.getInstance()
+        val worldrenderer = tessellator.worldRenderer
+        val i = 0
+        for (str in lines) {
+            val j = fontrenderer.getStringWidth(str) / 2
+            GlStateManager.disableTexture2D()
+            worldrenderer.begin(7, DefaultVertexFormats.POSITION_COLOR)
+            worldrenderer.pos((-j - 1).toDouble(), (-1 + i).toDouble(), 0.0).color(0.0f, 0.0f, 0.0f, 0.25f).endVertex()
+            worldrenderer.pos((-j - 1).toDouble(), (8 + i).toDouble(), 0.0).color(0.0f, 0.0f, 0.0f, 0.25f).endVertex()
+            worldrenderer.pos((j + 1).toDouble(), (8 + i).toDouble(), 0.0).color(0.0f, 0.0f, 0.0f, 0.25f).endVertex()
+            worldrenderer.pos((j + 1).toDouble(), (-1 + i).toDouble(), 0.0).color(0.0f, 0.0f, 0.0f, 0.25f).endVertex()
+            tessellator.draw()
+            GlStateManager.enableTexture2D()
+            fontrenderer.drawString(str, -fontrenderer.getStringWidth(str) / 2, i, 553648127)
+            GlStateManager.depthMask(true)
+            fontrenderer.drawString(str, -fontrenderer.getStringWidth(str) / 2, i, -1)
+            GlStateManager.translate(0f, 10f, 0f)
+        }
+        GlStateManager.enableDepth()
+        GlStateManager.enableBlend()
+        GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f)
+        GlStateManager.popMatrix()
     }
 
     fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number) {
