@@ -4,6 +4,8 @@ import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.UResolution
 import kotlinx.serialization.Serializable
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 @Serializable
 abstract class PointOfInterest {
@@ -11,7 +13,18 @@ abstract class PointOfInterest {
     abstract val y: Float
     abstract val z: Float
 
-    abstract fun shouldDraw(): Boolean
+    protected abstract fun shouldDraw(): Boolean
+
+    fun shouldDraw(locations: MutableList<Pair<Float, Float>>, scale: Float): Boolean {
+        for (location in locations) {
+            val dist = sqrt(
+                (location.first * scale - x * scale).toDouble()
+                    .pow(2.0) + (location.second * scale - z * scale).toDouble().pow(2.0)
+            )
+            if (dist < 48) return false
+        }
+        return shouldDraw()
+    }
 
     fun draw(xOffset: Float, yOffset: Float, scale: Float) {
         drawBackground(x + xOffset, z + yOffset, scale)

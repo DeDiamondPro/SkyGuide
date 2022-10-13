@@ -78,9 +78,17 @@ class MapGui : UScreen() {
         UGraphics.GL.pushMatrix()
         UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
         UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(scale)
+        val locations = mutableListOf<Pair<Float, Float>>()
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(scale, locations)
         UGraphics.GL.popMatrix()
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawUnscaled(x, y, mouseX, mouseY, scale)
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawUnscaled(
+            x,
+            y,
+            mouseX,
+            mouseY,
+            scale,
+            locations
+        )
     }
 
     override fun onScreenClose() {

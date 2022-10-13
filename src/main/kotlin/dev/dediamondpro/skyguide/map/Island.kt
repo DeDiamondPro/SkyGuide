@@ -42,18 +42,33 @@ data class Island(
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
     }
 
-    fun drawLast(scale: Float) {
+    fun drawLast(scale: Float, locations: MutableList<Pair<Float, Float>>) {
         for (poi in getPointsOfInterest()) {
-            if (!poi.shouldDraw()) continue
+            if (!poi.shouldDraw(locations, scale)) continue
             poi.draw(xOffset, yOffset, scale)
+            locations.add(poi.x to poi.z)
         }
     }
 
-    fun drawUnscaled(x: Float, y: Float, mouseX: Int, mouseY: Int, scale: Float) {
+    fun drawUnscaled(
+        x: Float,
+        y: Float,
+        mouseX: Int,
+        mouseY: Int,
+        scale: Float,
+        locations: MutableList<Pair<Float, Float>>
+    ) {
         val xScaled = mouseX / scale - x
         val yScaled = mouseY / scale - y
         for (poi in getPointsOfInterest()) {
-            if (!poi.shouldDrawTooltip(xScaled, yScaled, xOffset, yOffset, scale)) continue
+            if (!locations.contains(poi.x to poi.z) || !poi.shouldDrawTooltip(
+                    xScaled,
+                    yScaled,
+                    xOffset,
+                    yOffset,
+                    scale
+                )
+            ) continue
             poi.drawTooltip(mouseX, mouseY)
             if (GuiUtils.leftClicked) poi.onLeftClick()
             if (GuiUtils.rightClicked) poi.onRightClick()
