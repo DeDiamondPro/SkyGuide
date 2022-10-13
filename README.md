@@ -9,6 +9,7 @@ this size should be inputted in the scene tab depending on the texture quality.
 - Low = 1 pixel per block
 - Medium = 2 pixels per block
 - High = 4 pixels per block
+
 Now enable transparent sky and set the SPP to 250 (this is plenty for our purpose and speeds up rendering)
 
 ### For multilayered images
