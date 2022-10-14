@@ -23,7 +23,7 @@ abstract class PointOfInterest {
                 (location.first * scale - x * scale).toDouble()
                     .pow(2.0) + (location.second * scale - z * scale).toDouble().pow(2.0)
             )
-            if (dist < 48) return false
+            if (dist < 32) return false
         }
         return shouldDraw()
     }
@@ -33,7 +33,7 @@ abstract class PointOfInterest {
         drawIcon(x + xOffset, z + yOffset, scale)
     }
 
-    private fun drawBackground(x: Float, y: Float, scale: Float) {
+    protected open fun drawBackground(x: Float, y: Float, scale: Float) {
         RenderUtils.drawImage(
             "/assets/skyguide/map_location.png",
             x - 16f / scale,

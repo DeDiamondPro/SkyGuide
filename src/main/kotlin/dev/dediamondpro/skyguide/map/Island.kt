@@ -18,6 +18,7 @@ import dev.dediamondpro.skyguide.utils.GuiUtils
 data class Island(
     var images: MutableMap<Int, Textures>,
     val portals: MutableList<Portal> = mutableListOf(),
+    val name: String,
     val topX: Float,
     val topY: Float,
     val bottomX: Float,

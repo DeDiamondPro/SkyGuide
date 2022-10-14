@@ -17,6 +17,7 @@
           }
         }
       },
+      "name": "the Hub",
       "topX": -298,
       "topY": -258,
       "bottomX": 201,
@@ -27,14 +28,14 @@
           "y": 70,
           "z": -69.5,
           "command": "warp hub",
-          "name": "Warp to the Hub"
+          "name": "the Hub"
         },
         {
           "x": -250,
           "y": 130,
           "z": 45,
           "command": "warp castle",
-          "name": "Warp to the Castle",
+          "name": "the Castle",
           "mvp": true
         },
         {
@@ -42,7 +43,7 @@
           "y": 61,
           "z": -99.5,
           "command": "warp crypt",
-          "name": "Warp to the Crypts",
+          "name": "the Crypts",
           "mvp": true
         },
         {
@@ -50,7 +51,7 @@
           "y": 76,
           "z": 80.5,
           "command": "warp museum",
-          "name": "Warp to the Museum",
+          "name": "the Museum",
           "mvp": true
         },
         {
@@ -58,7 +59,7 @@
           "y": 74,
           "z": 173.5,
           "command": "warp da",
-          "name": "Warp to Sirius' Shack",
+          "name": "Sirius' Shack",
           "mvp": true
         },
         {
@@ -104,6 +105,7 @@
           }
         }
       },
+      "name": "Spider's Den",
       "topX": -408,
       "topY": -408,
       "bottomX": -106,
@@ -115,14 +117,14 @@
           "z": -227,
           "destination": "hub",
           "command": "warp spider",
-          "name": "Warp to Spider's Den"
+          "name": "Spider's Den"
         },
         {
           "x": -189,
           "y": 176,
           "z": -310,
           "command": "warp nest",
-          "name": "Warp to Top of Nest",
+          "name": "Top of Nest",
           "mvp": true
         },
         {
@@ -156,6 +158,7 @@
           }
         }
       },
+      "name": "the Park",
       "topX": -500,
       "topY": -148,
       "bottomX": -253,
@@ -167,14 +170,14 @@
           "z": -13,
           "destination": "hub",
           "command": "warp park",
-          "name": "Warp to the Park"
+          "name": "the Park"
         },
         {
           "x": -462.6,
           "y": 133,
           "z": -128.5,
           "command": "warp jungle",
-          "name": "Warp to the Jungle",
+          "name": "the Jungle",
           "mvp": true
         },
         {
@@ -182,7 +185,7 @@
           "y": 90,
           "z": -55,
           "command": "warp howl",
-          "name": "Warp to the Howling Cave",
+          "name": "the Howling Cave",
           "mvp": true
         }
       ]
@@ -204,6 +207,7 @@
           }
         }
       },
+      "name": "the Farming Islands",
       "topX": 70,
       "topY": -643,
       "bottomX": 409,
@@ -215,14 +219,14 @@
           "z": -203,
           "destination": "hub",
           "command": "warp barn",
-          "name": "Warp to the Barn"
+          "name": "the Barn"
         },
         {
           "x": 160.5,
           "y": 77,
           "z": -370,
           "command": "warp desert",
-          "name": "Warp to the Mushroom Desert"
+          "name": "the Mushroom Desert"
         }
       ]
     },
@@ -243,6 +247,7 @@
           }
         }
       },
+      "name": "Crimson Isle",
       "topX": -772,
       "topY": -1180,
       "bottomX": 51,
@@ -254,14 +259,14 @@
           "z": -420,
           "destination": "combat_1",
           "command": "warp nether",
-          "name": "Warp to Crimson Isle"
+          "name": "Crimson Isle"
         },
         {
           "x": -372.5,
           "y": 114,
           "z": -1033.5,
           "command": "warp kuudra",
-          "name": "Warp to Forgotten Skull",
+          "name": "Forgotten Skull",
           "mvp": true
         }
       ]
@@ -283,6 +288,7 @@
           }
         }
       },
+      "name": "the End",
       "topX": -783,
       "topY": -423,
       "bottomX": -448,
@@ -294,14 +300,14 @@
           "z": -275,
           "destination": "combat_1",
           "command": "warp end",
-          "name": "Warp to the End"
+          "name": "the End"
         },
         {
           "x": -605.5,
           "y": 22,
           "z": -285,
           "command": "warp drag",
-          "name": "Warp to Dragon's Nest",
+          "name": "Dragon's Nest",
           "mvp": true
         },
         {
@@ -309,7 +315,7 @@
           "y": 7,
           "z": -318,
           "command": "warp void",
-          "name": "Warp to the Void Sepulture",
+          "name": "the Void Sepulture",
           "mvp": true
         }
       ]
@@ -331,6 +337,7 @@
           }
         }
       },
+      "name": "the Gold Mine",
       "topX": -90,
       "topY": -401,
       "bottomX": 45,
@@ -338,11 +345,11 @@
       "portals": [
         {
           "x": -4,
-          "y": 83,
+          "y": 74,
           "z": -269,
           "destination": "hub",
           "command": "warp gold",
-          "name": "Warp to the Gold Mine"
+          "name": "the Gold Mine"
         },
         {
           "x": -6,
@@ -459,6 +466,7 @@
           }
         }
       },
+      "name": "the Deep Caverns",
       "topX": -86,
       "topY": -68,
       "bottomX": 80,
@@ -472,7 +480,7 @@
           "z": 87,
           "destination": "mining_1",
           "command": "warp deep",
-          "name": "Warp to the Deep Caverns"
+          "name": "the Deep Caverns"
         }
       ]
     }
@@ -495,6 +503,7 @@
           }
         }
       },
+      "name": "Jerry's Workshop",
       "topX": -116,
       "topY": -116,
       "bottomX": 131,

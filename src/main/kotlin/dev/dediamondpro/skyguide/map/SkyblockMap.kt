@@ -45,6 +45,11 @@ object SkyblockMap {
         return null
     }
 
+    fun getIslandByZone(zone: String): Island? {
+        val world = zoneToWorld[zone] ?: return null
+        return world[zone]
+    }
+
     fun initialize(file: File): Boolean {
         try {
             Files.newInputStream(file.toPath()).use {

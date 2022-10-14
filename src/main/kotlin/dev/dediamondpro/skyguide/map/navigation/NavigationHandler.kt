@@ -2,7 +2,9 @@ package dev.dediamondpro.skyguide.map.navigation
 
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
+import dev.dediamondpro.skyguide.map.poi.DestinationPoi
 import dev.dediamondpro.skyguide.map.poi.Portal
+import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UChat
 import gg.essential.universal.wrappers.UPlayer
 import net.minecraftforge.client.event.RenderWorldLastEvent
@@ -17,13 +19,11 @@ class NavigationHandler {
     @SubscribeEvent
     fun onTick(event: ClientTickEvent) {
         if (event.phase != TickEvent.Phase.START) return
-        val currentAction = actions[SkyblockMap.getCurrentIsland()] ?: return
-        if (currentAction !is DestinationAction) return
-        val destination = currentAction.destination
+        val dest = destinationPio.destination ?: return
         val distance = sqrt(
-            (destination.x - UPlayer.getPosX()).pow(2.0) + if (destination.y == null) 0.0 else (destination.y - UPlayer.getPosY()).pow(
+            (dest.x - UPlayer.getPosX()).pow(2.0) + if (dest.y == null) 0.0 else (dest.y - UPlayer.getPosY()).pow(
                 2.0
-            ) + (destination.z - UPlayer.getPosZ()).pow(2.0)
+            ) + (dest.z - UPlayer.getPosZ()).pow(2.0)
         )
         if (distance <= 5) actions.clear()
     }
@@ -35,6 +35,7 @@ class NavigationHandler {
 
     companion object {
         private val actions = mutableMapOf<Island, NavigationAction>()
+        private var destinationPio = DestinationPoi(null)
 
         fun navigateTo(destination: Destination) {
             actions.clear()
@@ -49,9 +50,10 @@ class NavigationHandler {
                     UChat.chat("Could not find a route!")
                     return
                 }
-                for (step in route) actions[step.key] = PortalAction(step.value)
+                for (step in route) actions[step.key] = PortalAction(step.value, destination)
             }
             actions[destination.island] = DestinationAction(destination)
+            destinationPio.destination = destination
         }
 
         private fun findRouteToIsland(

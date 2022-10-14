@@ -1,7 +1,6 @@
 package dev.dediamondpro.skyguide.map.poi
 
 import dev.dediamondpro.skyguide.config.Config
-import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
@@ -42,10 +41,7 @@ data class Portal(
     }
 
     override fun getTooltip(): List<String> {
-        val text = name.split("\n").toMutableList()
-        text.add("Left Click to teleport")
-        text.add("Right Click to navigate")
-        return text
+        return mutableListOf("Warp to $name", "Left Click to teleport", "Right Click to navigate")
     }
 
     override fun onLeftClick() {
@@ -54,7 +50,7 @@ data class Portal(
     }
 
     override fun onRightClick() {
-        NavigationHandler.navigateTo(Destination(island!!, x, y, z))
+        NavigationHandler.navigateTo(Destination(island!!, x, y, z, name))
         GuiUtils.displayScreen(null)
     }
 }
