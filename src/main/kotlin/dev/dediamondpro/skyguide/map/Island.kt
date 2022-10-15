@@ -1,5 +1,7 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
+import dev.dediamondpro.skyguide.map.poi.DestinationPoi
 import dev.dediamondpro.skyguide.map.poi.PointOfInterest
 import dev.dediamondpro.skyguide.map.poi.Portal
 import dev.dediamondpro.skyguide.utils.GuiUtils
@@ -45,25 +47,32 @@ data class Island(
     }
 
     fun drawLast(scale: Float, locations: MutableList<Pair<Float, Float>>) {
+        var lastPoi: PointOfInterest? = null
         for (poi in getPointsOfInterest()) {
+            if (poi is DestinationPoi) {
+                lastPoi = poi
+                continue
+            }
             if (!poi.shouldDraw(locations, scale)) continue
             poi.draw(xOffset, yOffset, scale)
             locations.add(poi.x to poi.z)
         }
+        // draw destination last since it always has to be on top
+        lastPoi?.draw(xOffset, yOffset, scale)
     }
 
-    fun drawUnscaled(
+    fun drawTooltips(
         x: Float,
         y: Float,
         mouseX: Int,
         mouseY: Int,
         scale: Float,
         locations: MutableList<Pair<Float, Float>>
-    ) {
+    ): Boolean {
         val xScaled = mouseX / scale - x
         val yScaled = mouseY / scale - y
         for (poi in getPointsOfInterest()) {
-            if (!locations.contains(poi.x to poi.z) || !poi.shouldDrawTooltip(
+            if ((!locations.contains(poi.x to poi.z) && poi !is DestinationPoi) || !poi.shouldDrawTooltip(
                     xScaled,
                     yScaled,
                     xOffset,
@@ -74,8 +83,9 @@ data class Island(
             poi.drawTooltip(mouseX, mouseY)
             if (GuiUtils.leftClicked) poi.onLeftClick()
             if (GuiUtils.rightClicked) poi.onRightClick()
-            break
+            return true
         }
+        return false
     }
 
     fun getImage(y: Int): Textures {
@@ -88,7 +98,16 @@ data class Island(
     private fun getPointsOfInterest(): List<PointOfInterest> {
         val list = mutableListOf<PointOfInterest>()
         list.addAll(portals)
+        val dest = NavigationHandler.destinationPio
+        if (dest.destination != null && dest.destination!!.island == this) list.add(
+            0, NavigationHandler.destinationPio
+        )
         return list
+    }
+
+    fun isInIsland(x: Float, y: Float): Boolean {
+        return x >= topX + xOffset && y >= topY + yOffset
+                && x <= bottomX + xOffset && y <= bottomY + yOffset
     }
 
     companion object {

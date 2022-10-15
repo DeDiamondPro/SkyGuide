@@ -6,7 +6,7 @@ import net.minecraft.util.EnumChatFormatting
 import java.awt.Color
 import javax.vecmath.Vector3f
 
-class DestinationAction(val destination: Destination) : NavigationAction {
+class DestinationAction(private val destination: Destination) : NavigationAction {
     override fun drawAction(partialTicks: Float) {
         RenderUtils.renderBeaconBeam(
             BlockPos(
@@ -16,7 +16,7 @@ class DestinationAction(val destination: Destination) : NavigationAction {
             ), Color.RED.rgb, partialTicks
         )
         if (destination.y != null) RenderUtils.renderWayPoint(
-            mutableListOf("${EnumChatFormatting.BLUE}${destination.name}"),
+            mutableListOf("${EnumChatFormatting.BLUE}${destination.name.replaceFirstChar { it.uppercase() }}"),
             Vector3f(destination.x, destination.y + 2f, destination.z),
             partialTicks
         )

@@ -137,9 +137,9 @@ object RenderUtils {
         val viewerX = viewer.lastTickPosX + (viewer.posX - viewer.lastTickPosX) * partialTicks
         val viewerY = viewer.lastTickPosY + (viewer.posY - viewer.lastTickPosY) * partialTicks
         val viewerZ = viewer.lastTickPosZ + (viewer.posZ - viewer.lastTickPosZ) * partialTicks
-        var x: Double = loc.x - viewerX + 0.5f
+        var x: Double = loc.x - viewerX
         var y: Double = loc.y - viewerY - viewer.eyeHeight
-        var z: Double = loc.z - viewerZ + 0.5f
+        var z: Double = loc.z - viewerZ
         val distSq = x * x + y * y + z * z
         val dist = sqrt(distSq)
         if (distSq > 144) {

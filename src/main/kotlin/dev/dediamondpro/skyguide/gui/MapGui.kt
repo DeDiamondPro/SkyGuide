@@ -4,6 +4,8 @@ import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
+import dev.dediamondpro.skyguide.map.navigation.Destination
+import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.*
 import gg.essential.universal.UGraphics
 import gg.essential.universal.UMatrixStack
@@ -81,14 +83,34 @@ class MapGui : UScreen() {
         val locations = mutableListOf<Pair<Float, Float>>()
         for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(scale, locations)
         UGraphics.GL.popMatrix()
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawUnscaled(
-            x,
-            y,
-            mouseX,
-            mouseY,
-            scale,
-            locations
-        )
+        var hovering = false
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) if (mapPart.drawTooltips(
+                x,
+                y,
+                mouseX,
+                mouseY,
+                scale,
+                locations
+            )
+        ) {
+            hovering = true
+            break
+        }
+        if (!hovering && GuiUtils.rightClicked) {
+            val xScaled = mouseX / scale - x
+            val yScaled = mouseY / scale - y
+            for (island in SkyblockMap.getCurrentWorld()!!.values) {
+                if (!island.isInIsland(xScaled, yScaled)) continue
+                NavigationHandler.navigateTo(
+                    Destination(
+                        island,
+                        xScaled - island.xOffset,
+                        null,
+                        yScaled - island.yOffset
+                    )
+                )
+            }
+        }
     }
 
     override fun onScreenClose() {

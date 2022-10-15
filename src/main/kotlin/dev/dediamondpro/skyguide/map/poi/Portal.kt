@@ -51,6 +51,5 @@ data class Portal(
 
     override fun onRightClick() {
         NavigationHandler.navigateTo(Destination(island!!, x, y, z, name))
-        GuiUtils.displayScreen(null)
     }
 }
