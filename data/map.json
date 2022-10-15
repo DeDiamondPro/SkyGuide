@@ -413,6 +413,15 @@
           "z": -112.5
         },
         {
+          "name": "Blacksmith",
+          "wiki": "https://wiki.hypixel.net/Blacksmith",
+          "owner": "460684e6-763a-4652-a218-c01a8239068b",
+          "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODdkMWMzNDVlYjQwOTk0NDBmNzE0Y2NmNmY3ODM2NGVlODViZDBiMDFjMWMxODZkODQ4MTUxYmEwMWY3ZGM4NiJ9fX0=",
+          "x": -28.5,
+          "y": 69,
+          "z": -125.5
+        },
+        {
           "name": "Alchemist",
           "wiki": "https://wiki.hypixel.net/Alchemist",
           "owner": "7f92b3d6-5ee0-4ab6-afae-2206b9514a63",
@@ -576,6 +585,98 @@
           "command": "warp howl",
           "name": "the Howling Cave",
           "mvp": true
+        }
+      ],
+      "npcs": [
+        {
+          "name": "Charlie",
+          "wiki": "https://wiki.hypixel.net/Charlie",
+          "owner": "07358c3d-5cb8-2cb1-8655-be1d391a7c47",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NjAxOTQxOTU3NzMsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU3NjZlYjA5N2JiNDg2YjNlYTcwN2FjMTMxM2ExYmZmZjg4NDZhMmY1NTQ2MDA4MmNlZjIxMmYxODkxMzBmMWMifX19",
+          "x": -286.0,
+          "y": 82.0,
+          "z": -17.0
+        },
+        {
+          "name": "Vanessa",
+          "wiki": "https://wiki.hypixel.net/Vanessa",
+          "owner": "2617fd79-7677-2ac3-92c4-5d6743744b0b",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzEzNjIwMDAwMTgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ5ZTI5NzljOGUyYzU4ODk4YzI3NzRiMzY2OWVhNGExYjI5NzY3ZmNkYzJkZDU5MzdlYzBjZjBkYTNhOGZiNjcifX19",
+          "x": -312.0,
+          "y": 83.0,
+          "z": -70.5
+        },
+        {
+          "name": "Melancholic Viking",
+          "wiki": "https://wiki.hypixel.net/Melancholic_Viking",
+          "owner": "5fcd71f7-c210-2cca-a239-63e349b9f8c9",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzIzMTkwMDQ5OTQsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NkNTEwNDNkNmExOGZjMDE0ZjI2NGIxZTdkN2ZjMTgzM2FmYThjZjZjYTI5ZjJiOGY2OTFmZGY1NGRhZmVmZGEifX19",
+          "x": -359.5,
+          "y": 91.5,
+          "z": 76.5
+        },
+        {
+          "name": "Melody",
+          "wiki": "https://wiki.hypixel.net/Melody",
+          "owner": "b8b146b1-1f7f-2693-969b-296797c38479",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzI0OTg3MzU2MjMsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzRkMjM4Y2NjODE4YWIwYzBmZGViZDA3ZDRhNTZjMzUzZmY1ZWI1NDFjODVkMzg2MzYyMTYxNzgxZDFkZDc0Y2MiLCJtZXRhZGF0YSI6eyJtb2RlbCI6InNsaW0ifX19fQ==",
+          "x": -398.5,
+          "y": 110.0,
+          "z": 34.5
+        },
+        {
+          "name": "Master Tactician Funk",
+          "wiki": "https://wiki.hypixel.net/Master_Tactician_Funk",
+          "owner": "0241d8da-99fe-2aae-a109-02d3b3fdb6a7",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzI0MDk2NzY0OTIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzkyYjdhY2JmYTkzMDhhMjJlNzUwNmEzNmJjY2FmZDAxNjBhZmEwZDUwMDgxOGVmZWU5ZmE5ODM1MjE0YzE0ZmEifX19",
+          "x": -462.5,
+          "y": 110.0,
+          "z": -15.5
+        },
+        {
+          "name": "Juliette",
+          "wiki": "https://wiki.hypixel.net/Juliette",
+          "owner": "64d49d05-5153-2472-ab04-99157328e995",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzI4NzgzNDY2MDIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzYyMWFhYmVkM2JhOGI4OGI4ZGUzNDNiMjY3YmM0OWIyZGYwNDY4YzBiYTRmMjBmZWI5ODUyYjc0YzIyZjMwMjAifX19",
+          "x": -476.5,
+          "y": 134.0,
+          "z": -117.0
+        },
+        {
+          "name": "Romero",
+          "wiki": "https://wiki.hypixel.net/Romero",
+          "owner": "a772d231-f384-21cc-9c16-ae9ada85681c",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwNTM1NjQwODEsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IzMzUxZjIyZjYzYjQzZjQwZmE4ZTI4ZGVmNjZiNzNiMTdiYTI2NTc3M2ZlOTk4MDk3MWRhMmYxNTE1MDMyZDkifX19",
+          "x": -476.5,
+          "y": 134.0,
+          "z": -116.0
+        },
+        {
+          "name": "Old Shaman Nyko",
+          "wiki": "https://wiki.hypixel.net/Old_Shaman_Nyko",
+          "owner": "5cce2e6a-ce46-2ddf-a904-585db2e63ec9",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwODI0NjQ3MTYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU3YTUxNzg2NWI4MjBhNDQ1MWNkM2NjNjc2NWYzNzBmZDA1MjJiNjQ4OWM5Yzk0ZmIzNDVmZGVlMjY4OTQ1MWEifX19",
+          "x": -379.5,
+          "y": 60.0,
+          "z": 36.5
+        },
+        {
+          "name": "Ryan",
+          "wiki": "https://wiki.hypixel.net/Ryan",
+          "owner": "674c02d7-ed65-2db9-a77a-9f0800d91382",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzE4ODIwNjYxNzUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzUxNzZjYjEzYTQ0MzYzMThhZTRjMmJjMzFkZjA5ZDU1NjE5MmRhZWJiNzBhM2IyODAyMGY3YWI5Y2ExNzA5YmIifX19",
+          "x": -330.5,
+          "y": 103.5,
+          "z": -103.5
+        },
+        {
+          "name": "Gustave",
+          "wiki": "https://wiki.hypixel.net/Gustave",
+          "owner": "13448485-2c51-2c38-8085-398fc051ef53",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzE3ODEyODc2OTQsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NmYWZlNmY1MDE0YzUyYzBlOTczNTkyOTg0OTA2YWUxZDE5ZTgxMDVlMmRjZmQ3ZWFjYmUwMWVmODdjZTMyMGMifX19",
+          "x": -385.5,
+          "y": 89.0,
+          "z": 55.5
         }
       ]
     },
@@ -746,6 +847,53 @@
           "z": -395,
           "destination": "mining_2"
         }
+      ],
+      "npcs": [
+        {
+          "name": "Rusty",
+          "wiki": "https://wiki.hypixel.net/Rusty",
+          "owner": "4df8080c-dcb8-4aee-8c1e-3e8d02aa6c4d",
+          "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTY2YTUzZmM3MDdjZTFmZjg4YTU3NmVmNDAyMDBjZThkNDlmYWU0YWNhZDFlM2IzNzg5YzdkMWNjMWNjNTQxYSJ9fX0=",
+          "x": -20,
+          "y": 69,
+          "z": -325.5
+        },
+        {
+          "name": "Blacksmith",
+          "wiki": "https://wiki.hypixel.net/Blacksmith",
+          "owner": "460684e6-763a-4652-a218-c01a8239068b",
+          "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODdkMWMzNDVlYjQwOTk0NDBmNzE0Y2NmNmY3ODM2NGVlODViZDBiMDFjMWMxODZkODQ4MTUxYmEwMWY3ZGM4NiJ9fX0=",
+          "x": -39.5,
+          "y": 77,
+          "z": -299.5
+        },
+        {
+          "name": "Gold Forger",
+          "wiki": "https://wiki.hypixel.net/Gold_Forger",
+          "owner": "676da122-579b-21da-a6ba-4365271e2123",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NTk1OTMyMDkzMzIsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM3Y2EwZmYxNzkzNmJlMzNlYWEzMTc2MjRkYjQ3NDRmYzNmMjkyZTYxMjM1Nzg1ODQ1MzI1OGU0ZjllN2NhNzkifX19",
+          "x": -27.5,
+          "y": 74.0,
+          "z": -294.5
+        },
+        {
+          "name": "Iron Forger",
+          "wiki": "https://wiki.hypixel.net/Iron_Forger",
+          "owner": "d7d8c412-e733-2968-9d6a-44c5127257ed",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NTk1OTU4NzUyNDgsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY2MWUxYTNhOTRiZjIyY2FmMjgyNWIyZjE2NzZjYWQzN2ExNjRlNDc3NGYyNzgzNzZmNzI5M2I0MzE0MzRmMTgifX19",
+          "x": -1.5,
+          "y": 75.0,
+          "z": -307.5
+        },
+        {
+          "name": "Lazy Miner",
+          "wiki": "https://wiki.hypixel.net/Lazy_Miner",
+          "owner": "34f2e729-db20-27e7-930f-576b42a9e42d",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NjAxOTM2MzQxNTQsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q5M2Q5NjM2YWE5NTU2YWNmNGJlMmNjNThkOTNmZjBiNTMyZTY4MDk4ZjgwYTdkYzE1MWEwZjFkMTZiOGU1ZjgifX19",
+          "x": -11.5,
+          "y": 78.0,
+          "z": -337.5
+        }
       ]
     },
     "mining_2": {
@@ -870,6 +1018,44 @@
           "destination": "mining_1",
           "command": "warp deep",
           "name": "the Deep Caverns"
+        }
+      ],
+      "npcs": [
+        {
+          "name": "Lift Operator",
+          "wiki": "https://wiki.hypixel.net/Lift_Operator",
+          "owner": "1efb5950-a0ec-229c-9aba-098c6d8258f5",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NTQ1NzE2OTkxOTAsInByb2ZpbGVJZCI6IjNmYzdmZGY5Mzk2MzRjNDE5MTE5OWJhM2Y3Y2MzZmVkIiwicHJvZmlsZU5hbWUiOiJZZWxlaGEiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg2NTJhMDZmN2I5OWU0ODIyYjQ5NWJhOWI2MDg5ZDRkNTE1MWU4M2JlZDk1NmE3Y2NjYjg0N2VhNDZhMjU3MjUifX19",
+          "x": 45.5,
+          "y": 150.0,
+          "z": 15.5
+        },
+        {
+          "name": "Rhys",
+          "wiki": "https://wiki.hypixel.net/Rhys",
+          "owner": "0fde99c9-73ef-2bee-b9f5-99ff10c9f6f3",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNDY5NDY2OSwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmIyMGIyM2MxYWEyYmUwMjcwZjAxNmI0YzkwZDZlZTZiODMzMGExN2NmZWY4Nzg2OWQ2YWQ2MGIyZmZiZjNiNSIKICAgIH0KICB9Cn0=",
+          "x": 31.5,
+          "y": 12.0,
+          "z": 14.5
+        },
+        {
+          "name": "Walter",
+          "wiki": "https://wiki.hypixel.net/Walter",
+          "owner": "10db2d70-4c55-247f-bf48-5d1de7e6b387",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwNzYxOTA1OTcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQzYWMyMWI2NTNhMjc2MzJkYmM4MzczYzZlNmZiYTViOGM5N2I3ZWNiZmVmMmQ3OTM2MzBkMTQ5YjExNmJhODEifX19",
+          "x": 19.0,
+          "y": 156.0,
+          "z": -36.0
+        },
+        {
+          "name": "Lapis Miner",
+          "wiki": "https://wiki.hypixel.net/Lapis_Miner",
+          "owner": "7a17c796-ad2b-2c58-85fa-d61a33a222e4",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NjAxOTQ2OTg4MzMsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMzZTQyNzRjOTE3ZjRhMzhlZGYyNzYxZDdhODE0MGE0ZjQxMmI1ZjQ1M2NhN2ZjMmIyNDc0MWMzMGZjYTcwMGUifX19",
+          "x": -55.5,
+          "y": 121.0,
+          "z": 41.5
         }
       ]
     }
