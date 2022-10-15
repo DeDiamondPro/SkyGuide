@@ -74,6 +74,14 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
     )
     var showMVPWarps = true
 
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show npcs",
+        description = "Show npcs on the map.",
+        category = "Map",
+    )
+    var showNpcs = true
+
     // Mini-Map
 
     @Property(

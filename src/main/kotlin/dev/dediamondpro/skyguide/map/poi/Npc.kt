@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.ItemUtils
@@ -23,7 +24,7 @@ class Npc(
     private val skull = ItemUtils.createSkull(owner, texture)
 
     override fun shouldDraw(): Boolean {
-        return true
+        return Config.showNpcs
     }
 
     override fun drawIcon(x: Float, y: Float) {
