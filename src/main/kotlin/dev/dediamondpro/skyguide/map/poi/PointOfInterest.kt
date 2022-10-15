@@ -5,6 +5,7 @@ import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.UResolution
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -13,6 +14,8 @@ abstract class PointOfInterest {
     abstract val x: Float
     abstract val y: Float
     abstract val z: Float
+
+    @Transient
     var island: Island? = null
 
     protected abstract fun shouldDraw(): Boolean
@@ -28,22 +31,22 @@ abstract class PointOfInterest {
         return shouldDraw()
     }
 
-    fun draw(xOffset: Float, yOffset: Float, scale: Float) {
-        drawBackground(x + xOffset, z + yOffset, scale)
-        drawIcon(x + xOffset, z + yOffset, scale)
+    fun draw(xMove: Float, yMove: Float, xOffset: Float, yOffset: Float, scale: Float) {
+        drawBackground((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale)
+        drawIcon((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale)
     }
 
-    protected open fun drawBackground(x: Float, y: Float, scale: Float) {
+    protected open fun drawBackground(x: Float, y: Float) {
         RenderUtils.drawImage(
             "/assets/skyguide/map_location.png",
-            x - 16f / scale,
-            y - 16f / scale,
-            32f / scale,
-            32f / scale
+            x - 16f,
+            y - 16,
+            32f,
+            32f
         )
     }
 
-    protected abstract fun drawIcon(x: Float, y: Float, scale: Float)
+    protected abstract fun drawIcon(x: Float, y: Float)
 
     fun shouldDrawTooltip(
         mouseXScaled: Float,

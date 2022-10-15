@@ -1,5 +1,7 @@
 package dev.dediamondpro.skyguide
 
+import com.mojang.authlib.GameProfile
+import com.mojang.authlib.minecraft.MinecraftProfileTexture
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.handlers.KeyBindHandler
@@ -7,6 +9,7 @@ import dev.dediamondpro.skyguide.hud.MiniMap
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.SBInfo
+import net.minecraft.client.Minecraft
 import net.minecraftforge.client.ClientCommandHandler
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod

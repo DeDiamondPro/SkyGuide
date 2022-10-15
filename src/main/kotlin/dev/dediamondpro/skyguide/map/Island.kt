@@ -2,9 +2,11 @@ package dev.dediamondpro.skyguide.map
 
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.DestinationPoi
+import dev.dediamondpro.skyguide.map.poi.Npc
 import dev.dediamondpro.skyguide.map.poi.PointOfInterest
 import dev.dediamondpro.skyguide.map.poi.Portal
 import dev.dediamondpro.skyguide.utils.GuiUtils
+import gg.essential.universal.UGraphics
 
 /**
  * @param images The images of the map
@@ -20,6 +22,7 @@ import dev.dediamondpro.skyguide.utils.GuiUtils
 data class Island(
     var images: MutableMap<Int, Textures>,
     val portals: MutableList<Portal> = mutableListOf(),
+    val npcs: MutableList<Npc> = mutableListOf(),
     val name: String,
     val topX: Float,
     val topY: Float,
@@ -46,7 +49,7 @@ data class Island(
         getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
     }
 
-    fun drawLast(scale: Float, locations: MutableList<Pair<Float, Float>>) {
+    fun drawLast(x: Float, y: Float, scale: Float, locations: MutableList<Pair<Float, Float>>) {
         var lastPoi: PointOfInterest? = null
         for (poi in getPointsOfInterest()) {
             if (poi is DestinationPoi) {
@@ -54,11 +57,13 @@ data class Island(
                 continue
             }
             if (!poi.shouldDraw(locations, scale)) continue
-            poi.draw(xOffset, yOffset, scale)
+            poi.draw(x, y, xOffset, yOffset, scale)
             locations.add(poi.x to poi.z)
         }
         // draw destination last since it always has to be on top
-        lastPoi?.draw(xOffset, yOffset, scale)
+        UGraphics.disableDepth()
+        lastPoi?.draw(x, y, xOffset, yOffset, scale)
+        UGraphics.enableDepth()
     }
 
     fun drawTooltips(
@@ -98,6 +103,7 @@ data class Island(
     private fun getPointsOfInterest(): List<PointOfInterest> {
         val list = mutableListOf<PointOfInterest>()
         list.addAll(portals)
+        list.addAll(npcs)
         val dest = NavigationHandler.destinationPio
         if (dest.destination != null && dest.destination!!.island == this) list.add(
             0, NavigationHandler.destinationPio

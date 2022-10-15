@@ -22,13 +22,13 @@ class DestinationPoi(var destination: Destination?) : PointOfInterest() {
         return destination != null
     }
 
-    override fun drawIcon(x: Float, y: Float, scale: Float) {
+    override fun drawIcon(x: Float, y: Float) {
         RenderUtils.drawImage(
             "/assets/skyguide/pin.png",
-            x - 8f / scale,
-            y - 8f / scale,
-            16f / scale,
-            16f / scale
+            x - 8f,
+            y - 8f,
+            16f,
+            16f
         )
     }
 
@@ -66,5 +66,5 @@ class DestinationPoi(var destination: Destination?) : PointOfInterest() {
         NavigationHandler.clearNavigation()
     }
 
-    override fun drawBackground(x: Float, y: Float, scale: Float) {}
+    override fun drawBackground(x: Float, y: Float) {}
 }

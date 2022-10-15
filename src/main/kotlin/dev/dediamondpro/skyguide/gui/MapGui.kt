@@ -47,7 +47,7 @@ class MapGui : UScreen() {
         }
 
         UGraphics.GL.pushMatrix()
-        UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
+        UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 1.0)
         if (Mouse.isButtonDown(0)) {
             x += (Mouse.getDX() / scale / UResolution.scaleFactor).toFloat()
             y -= (Mouse.getDY() / scale / UResolution.scaleFactor).toFloat()
@@ -77,12 +77,8 @@ class MapGui : UScreen() {
             Config.mapPointerSize
         )
         UGraphics.GL.popMatrix()
-        UGraphics.GL.pushMatrix()
-        UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 0.0)
-        UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
         val locations = mutableListOf<Pair<Float, Float>>()
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(scale, locations)
-        UGraphics.GL.popMatrix()
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(x, y, scale, locations)
         var hovering = false
         for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) if (mapPart.drawTooltips(
                 x,
