@@ -2,9 +2,11 @@ package dev.dediamondpro.skyguide.command
 
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.gui.MapGui
+import dev.dediamondpro.skyguide.gui.NpcGui
 import dev.dediamondpro.skyguide.map.poi.Npc
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.roundTo
+import gg.essential.universal.UChat
 import gg.essential.universal.UDesktop
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.wrappers.UPlayer
@@ -13,10 +15,12 @@ import kotlinx.serialization.serializer
 import net.minecraft.client.entity.AbstractClientPlayer
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
+import net.minecraft.entity.item.EntityArmorStand
 import net.minecraft.entity.player.EntityPlayer
+import java.util.regex.Pattern
 
 class SkyGuideCommand : CommandBase() {
-    private val json = Json { prettyPrint = true; encodeDefaults = true }
+    private val json = Json { prettyPrint = true }
 
     override fun getCommandName(): String {
         return "skyguide"
@@ -37,6 +41,12 @@ class SkyGuideCommand : CommandBase() {
         }
         when (args[0]) {
             "map" -> GuiUtils.displayScreen(MapGui())
+            "getnpcs" -> {
+                NpcGui.collectingNpcs = !NpcGui.collectingNpcs
+                if (!NpcGui.collectingNpcs) GuiUtils.displayScreen(NpcGui())
+                else UChat.chat("Started collection of npcs")
+            }
+
             "getnpc" -> {
                 val players = UMinecraft.getWorld()!!.playerEntities
                 var lowestDistPlayer: EntityPlayer? = null
@@ -50,27 +60,12 @@ class SkyGuideCommand : CommandBase() {
                     }
                 }
                 if (lowestDistPlayer == null) return
-                for (string in lowestDistPlayer.gameProfile.properties.keySet()) {
-                    for (property in lowestDistPlayer.gameProfile.properties.get(string)) {
-                        if (property.name == "textures") {
-                            UDesktop.setClipboardString(
-                                json.encodeToString(
-                                    Json.serializersModule.serializer(),
-                                    Npc(
-                                        "",
-                                        null,
-                                        lowestDistPlayer.uniqueID.toString(),
-                                        property.value,
-                                        lowestDistPlayer.posX.roundTo(1).toFloat(),
-                                        lowestDistPlayer.posY.roundTo(1).toFloat(),
-                                        lowestDistPlayer.posZ.roundTo(1).toFloat()
-                                    )
-                                )
-                            )
-                            return
-                        }
-                    }
-                }
+                UDesktop.setClipboardString(
+                    json.encodeToString(
+                        Json.serializersModule.serializer(),
+                        NpcGui.getNpc(lowestDistPlayer)
+                    )
+                )
             }
         }
     }

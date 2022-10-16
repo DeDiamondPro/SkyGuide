@@ -12,10 +12,10 @@ import java.net.URI
 
 @Serializable
 class Npc(
-    private val name: String,
-    private val wiki: String? = null,
-    private val owner: String,
-    private val texture: String,
+    val name: String,
+    val wiki: String? = null,
+    val owner: String,
+    val texture: String,
     override val x: Float,
     override val y: Float,
     override val z: Float

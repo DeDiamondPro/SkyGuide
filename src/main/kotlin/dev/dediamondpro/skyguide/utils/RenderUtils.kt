@@ -441,4 +441,12 @@ object RenderUtils {
         GlStateManager.enableAlpha()
         GlStateManager.enableTexture2D()
     }
+
+    fun drawRectBorder(x: Number, y: Number, width: Number, height: Number, color: Int, borderColor: Int) {
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(),  y.toInt() + height.toInt(), color)
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(),  y.toInt() + 1, borderColor)
+        Gui.drawRect(x.toInt(), y.toInt() + height.toInt() - 1, x.toInt() + width.toInt(),  y.toInt() + height.toInt(), borderColor)
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + 1,  y.toInt() + height.toInt(), borderColor)
+        Gui.drawRect(x.toInt() + width.toInt() - 1, y.toInt(), x.toInt() + width.toInt(),  y.toInt() + height.toInt(), borderColor)
+    }
 }
