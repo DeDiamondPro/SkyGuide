@@ -52,6 +52,11 @@ val shade: Configuration by configurations.creating {
     configurations.implementation.get().extendsFrom(this)
 }
 
+val devenvMod by configurations.creating {
+    isTransitive = false
+    isVisible = false
+}
+
 sourceSets {
     main {
         output.setResourcesDir(java.classesDirectory)
@@ -61,6 +66,11 @@ sourceSets {
 repositories {
     maven("https://repo.polyfrost.cc/releases")
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
+    maven("https://jitpack.io") {
+        content {
+            includeGroupByRegex("com\\.github\\..*")
+        }
+    }
 }
 
 dependencies {
@@ -71,6 +81,8 @@ dependencies {
 
     annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     compileOnly("org.spongepowered:mixin:0.8.5")
+
+    devenvMod("com.github.romangraef:notenoughupdates:b3e3583:all")
 }
 
 tasks.processResources {
