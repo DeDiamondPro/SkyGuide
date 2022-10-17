@@ -19,9 +19,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
 import java.awt.Color
 import java.net.URI
 
-class NpcGui : UScreen() {
+class NpcGui(private val npcs: MutableList<Npc> = collectedNpcs.toMutableList()) : UScreen() {
     private val json = Json { prettyPrint = true }
-    private val npcs = collectedNpcs.toMutableList()
     private val finishedNpcs = mutableListOf<Npc>()
     private var npc: Npc? = null
     private val nameTextBox = GuiTextField(0, UMinecraft.getFontRenderer(), 10, 30, 400, 20)
@@ -42,12 +41,7 @@ class NpcGui : UScreen() {
         Gui.drawRect(0, 0, UResolution.scaledWidth, UResolution.scaledHeight, Color(0, 0, 0, 150).rgb)
         if (npc == null) {
             if (npcs.isEmpty()) {
-                UDesktop.setClipboardString(
-                    json.encodeToString(
-                        Json.serializersModule.serializer(),
-                        finishedNpcs
-                    )
-                )
+                copyToClipboard()
                 GuiUtils.displayScreen(null)
                 return
             }
@@ -113,11 +107,22 @@ class NpcGui : UScreen() {
 
     override fun onScreenClose() {
         if (finishedNpcs.isEmpty()) return
+        copyToClipboard()
+    }
+
+    private fun copyToClipboard() {
         UDesktop.setClipboardString(
-            json.encodeToString(
-                Json.serializersModule.serializer(),
-                finishedNpcs
-            )
+            if (finishedNpcs.size == 1) {
+                json.encodeToString(
+                    Json.serializersModule.serializer(),
+                    finishedNpcs[0]
+                )
+            } else {
+                json.encodeToString(
+                    Json.serializersModule.serializer(),
+                    finishedNpcs
+                )
+            }
         )
     }
 

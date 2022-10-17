@@ -34,25 +34,12 @@ group = "dev.dediamondpro"
 base {
     archivesName.set("$mod_name ($platform)")
 }
-loom {
-    noServerRunConfigs()
-    if (project.platform.isForge) {
-        launchConfigs.named("client") {
-            arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
-            property("mixin.debug.export", "true")
-        }
-        forge {
-            mixinConfig("mixins.${mod_id}.json")
-        }
-    }
-    mixin.defaultRefmapName.set("mixins.${mod_id}.refmap.json")
-}
 
 val shade: Configuration by configurations.creating {
     configurations.implementation.get().extendsFrom(this)
 }
 
-val devenvMod by configurations.creating {
+val runtimeMod by configurations.creating {
     isTransitive = false
     isVisible = false
 }
@@ -82,7 +69,23 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     compileOnly("org.spongepowered:mixin:0.8.5")
 
-    devenvMod("com.github.romangraef:notenoughupdates:b3e3583:all")
+    modCompileOnly(runtimeMod("com.github.romangraef:notenoughupdates:30f7cf9e:all")!!)
+}
+
+loom {
+    noServerRunConfigs()
+    if (project.platform.isForge) {
+        launchConfigs.named("client") {
+            arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
+            property("mixin.debug.export", "true")
+            val modFiles = runtimeMod.files
+            arg("--mods", modFiles.joinToString(",") { it.relativeTo(file("run")).path })
+        }
+        forge {
+            mixinConfig("mixins.${mod_id}.json")
+        }
+    }
+    mixin.defaultRefmapName.set("mixins.${mod_id}.refmap.json")
 }
 
 tasks.processResources {
