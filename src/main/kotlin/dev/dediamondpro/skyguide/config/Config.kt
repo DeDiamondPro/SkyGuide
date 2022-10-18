@@ -3,13 +3,20 @@ package dev.dediamondpro.skyguide.config
 import dev.dediamondpro.skyguide.SkyGuide
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.utils.TickDelay
-import dev.dediamondpro.skyguide.utils.Waypoint
-import dev.dediamondpro.skyguide.utils.toFile
 import gg.essential.vigilance.Vigilant
 import gg.essential.vigilance.data.Property
 import gg.essential.vigilance.data.PropertyType
+import java.io.File
 
-object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuide.NAME) {
+private val configFile by lazy {
+    val parent = File("config", "skyguide")
+    if (!parent.exists() && !parent.mkdirs())
+        throw IllegalStateException("Could not create config directory.")
+
+    File(parent, "skyguide.toml")
+}
+
+object Config : Vigilant(configFile, SkyGuide.NAME) {
 
     // General
 

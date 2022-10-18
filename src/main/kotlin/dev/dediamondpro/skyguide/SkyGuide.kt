@@ -13,7 +13,6 @@ import net.minecraftforge.client.ClientCommandHandler
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
-import java.io.File
 
 @Mod(
     modid = SkyGuide.ID,
@@ -28,7 +27,6 @@ object SkyGuide {
 
     @Mod.EventHandler
     fun onInitialization(event: FMLInitializationEvent) {
-        File("./config/$ID").mkdirs()
         Config.preload()
         if (Config.downloadAtLaunch) AssetHandler.initialize()
         KeyBindHandler.init()
