@@ -7,9 +7,7 @@ import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
-import dev.dediamondpro.skyguide.map.poi.Npc
 import dev.dediamondpro.skyguide.utils.GuiUtils
-import dev.dediamondpro.skyguide.utils.roundTo
 import gg.essential.universal.UChat
 import gg.essential.universal.UDesktop
 import gg.essential.universal.UMinecraft
@@ -19,10 +17,8 @@ import kotlinx.serialization.serializer
 import net.minecraft.client.entity.AbstractClientPlayer
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
-import net.minecraft.entity.item.EntityArmorStand
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.util.EnumChatFormatting
-import java.util.regex.Pattern
 
 class SkyGuideCommand : CommandBase() {
     private val json = Json { prettyPrint = true }
