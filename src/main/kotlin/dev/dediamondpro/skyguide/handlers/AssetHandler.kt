@@ -131,7 +131,7 @@ object AssetHandler {
                 var downloadDone = false
                 Multithreading.runAsync {
                     try {
-                        con.getInputStream().use {
+                        con.inputStream.use {
                             Files.copy(
                                 it,
                                 file.toPath(),
