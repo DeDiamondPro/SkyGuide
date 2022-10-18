@@ -7,6 +7,7 @@ import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UChat
 import gg.essential.universal.wrappers.UPlayer
+import net.minecraft.util.EnumChatFormatting
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -58,7 +59,7 @@ class DestinationPoi(var destination: Destination?) : PointOfInterest() {
             }
         }
         if (closestPortal != null) UChat.say("/${closestPortal.command}")
-        else UChat.chat("Could not find a warp!")
+        else UChat.chat("${EnumChatFormatting.RED}Could not find a warp!")
         GuiUtils.displayScreen(null)
     }
 

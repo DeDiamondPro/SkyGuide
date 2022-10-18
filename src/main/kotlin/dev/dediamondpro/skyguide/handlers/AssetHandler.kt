@@ -9,6 +9,7 @@ import gg.essential.universal.UChat
 import gg.essential.universal.UGraphics
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.utils.ReleasedDynamicTexture
+import net.minecraft.util.EnumChatFormatting
 import java.io.File
 import java.io.IOException
 import java.net.URL
@@ -36,10 +37,10 @@ object AssetHandler {
     private fun postMessage() {
         val percent = (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
         if (percent == 1f) {
-            UChat.chat("${SkyGuide.NAME} > Finished downloading assets!")
+            UChat.chat("${EnumChatFormatting.DARK_AQUA}${SkyGuide.NAME} > ${EnumChatFormatting.YELLOW}Finished downloading assets!")
             downloadedAssets = true
         } else {
-            UChat.chat("${SkyGuide.NAME} > Downloading assets... ${(percent * 100).toInt()}% ($currentFile/$totalFiles)")
+            UChat.chat("${EnumChatFormatting.DARK_AQUA}${SkyGuide.NAME} > ${EnumChatFormatting.YELLOW}Downloading assets... ${(percent * 100).toInt()}% ($currentFile/$totalFiles)")
             TickDelay(20, AssetHandler::postMessage)
         }
     }

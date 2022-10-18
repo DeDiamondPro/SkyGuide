@@ -5,6 +5,7 @@ import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.poi.DestinationPoi
 import dev.dediamondpro.skyguide.map.poi.Portal
 import gg.essential.universal.UChat
+import net.minecraft.util.EnumChatFormatting
 import net.minecraftforge.client.event.RenderWorldLastEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 
@@ -32,7 +33,7 @@ class NavigationHandler {
                     mutableListOf()
                 )
                 if (route == null) {
-                    UChat.chat("Could not find a route!")
+                    UChat.chat("${EnumChatFormatting.RED}Could not find a route!")
                     return
                 }
                 for (step in route) actions[step.key] = PortalAction(step.value, destination)

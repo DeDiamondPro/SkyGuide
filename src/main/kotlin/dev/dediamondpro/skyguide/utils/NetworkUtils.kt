@@ -16,8 +16,8 @@ object NetworkUtils {
         try {
             val skyGuideKeyStore = KeyStore.getInstance("JKS")
             skyGuideKeyStore.load(
-                this::class.java.getResourceAsStream("/assets/resources/skyguidekeystore.jks"),
-                "skyguide".toCharArray()
+                this::class.java.getResourceAsStream("/assets/skyguide/skyguidekeystore.jks"),
+                "neuneu".toCharArray()
             )
             sslContext = SSLContext.getInstance("TLS")
             val keyManager = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm())

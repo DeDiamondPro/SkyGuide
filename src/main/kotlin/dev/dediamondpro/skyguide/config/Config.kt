@@ -90,7 +90,7 @@ object Config : Vigilant("./config/${SkyGuide.ID}/config.toml".toFile(), SkyGuid
         description = "Enable the mini-map.",
         category = "Mini-Map"
     )
-    var miniMapEnabled = true
+    var miniMapEnabled = false
 
     @Property(
         type = PropertyType.SELECTOR,
