@@ -25,7 +25,4 @@ jobs:
       - name: push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: ${{ steps.last-commit-message.outputs.msg }}
-          commit_options: '--amend --no-edit'
-          push_options: '--force'
-          skip_fetch: true
+          commit_message: "Update checksums"
