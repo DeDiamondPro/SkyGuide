@@ -5,15 +5,15 @@
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/low/hub.png",
-            "sha256": "cabd872cc912f48c16ce40c828e1fa8cd999243a864324120535b67f2864d589"
+            "sha256": "2381eb2d4b2a30e106bfb440cc12e8a157e863a0953252ccec32521f03f1eeea"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/medium/hub.png",
-            "sha256": "b9b8a15415183a00fdf1dea34867531d7ab0f85a25de29f1b7c656843a8fd4df"
+            "sha256": "72c85e522f01a10c20557623b86cc18d087d0e598886a51c1ba295477d89c68d"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/assets/polyblock/high/hub.png",
-            "sha256": "ae12c9fc2dd2285e13890da892ed95f695f75f250f9032ef8d8310c46a020e73"
+            "sha256": "4313d635297b8bd0724f40b513c4e477f13e46e6677c2bc0839cc80aa630f713"
           }
         }
       },
@@ -310,7 +310,7 @@
           "owner": "71e76210-cbb2-4ec3-9375-c96e51600c95",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzNTE2OTQwMTIwOSwKICAicHJvZmlsZUlkIiA6ICIxNzhmMTJkYWMzNTQ0ZjRhYjExNzkyZDc1MDkzY2JmYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJzaWxlbnRkZXRydWN0aW9uIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZmMjJiMDM0ZDM3MjFkMWZhZDcwODI4ZTM3NTkyNWJhNDFiNWY5NTI4NzNjZDlmYzZkYmJlMWU4MGJlN2JlYjUiCiAgICB9CiAgfQp9",
           "x": -62.5,
-          "y": 77.0,
+          "y": 77,
           "z": 84.5
         },
         {
@@ -436,7 +436,7 @@
           "owner": "64302be1-cfcd-25ab-afe9-5eb7dbf16b85",
           "texture": "eyJ0aW1lc3RhbXAiOjE1MzY3NTkzMzY3NjQsInByb2ZpbGVJZCI6IjQ2N2NmOTRkY2UyYjQ1ZTY4YmRhNTJlNTUwMmU3M2U4IiwicHJvZmlsZU5hbWUiOiJMaWxpeWFfIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jYzJlODE5OTA2ZWIxNzk0MzliOGRkNTU1MTEzMmU1NGViNDcxNzNlMGY0NTg4NjFhZDJhOGM5Mzc5MTgzODkxIn19fQ==",
           "x": 51.5,
-          "y": 71.0,
+          "y": 71,
           "z": -136.5
         },
         {
@@ -445,7 +445,7 @@
           "owner": "b2f0eeed-2514-24ca-99a9-1a94f199aa0b",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NTkxMzM3MTY3MTEsInByb2ZpbGVJZCI6IjkxZjA0ZmU5MGYzNjQzYjU4ZjIwZTMzNzVmODZkMzllIiwicHJvZmlsZU5hbWUiOiJTdG9ybVN0b3JteSIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDUyMzJhOGU4NWE2NzUwODM2YzVkZmJjMzQwNGMzYWIzMTQ1MzQ5NjIwZjBiYzUyMDhkZWRiMTZiYjRjNDgzMCJ9fX0=",
           "x": 44.5,
-          "y": 72.0,
+          "y": 72,
           "z": -162.5
         },
         {
@@ -454,7 +454,7 @@
           "owner": "129307a6-8e2f-272e-99b0-b7d208d8a1e6",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjAyNjIyNTU5MDksInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzkyMzk2YjBhZDM1MmIyNTMxMTM5YzlkYzRjZWY5YTMyMzUwYzdjYzE0ZWQ3YmNmYzUxODVjZTE1YTdhN2Q1ZWIifX19",
           "x": -134.5,
-          "y": 73.0,
+          "y": 73,
           "z": -97.5
         },
         {
@@ -463,7 +463,7 @@
           "owner": "3e18435b-4556-2100-a427-b20cb53b8c09",
           "texture": "eyJ0aW1lc3RhbXAiOjE1Nzg0MDkwNTYzODYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FkMjY1YjAwNGI0MTAwNTJmZjE1YmMwOWFjOGM0OGU4ZWYwY2E5YWE2NmYzN2I0NDY0NDE3NTY2N2YxNGY2MDYifX19",
           "x": -80.5,
-          "y": 56.0,
+          "y": 56,
           "z": -119.5
         },
         {
@@ -472,7 +472,7 @@
           "owner": "c36d45ff-8748-24a1-8935-6cfb36c03678",
           "texture": "eyJ0aW1lc3RhbXAiOjE1Nzg0MDk0MTMxNjksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzliNTY4OTViOTY1OTg5NmFkNjQ3ZjU4NTk5MjM4YWY1MzJkNDZkYjljMWIwMzg5YjhiYmViNzA5OTlkYWIzM2QiLCJtZXRhZGF0YSI6eyJtb2RlbCI6InNsaW0ifX19fQ==",
           "x": -88.5,
-          "y": 55.0,
+          "y": 55,
           "z": -128.5
         },
         {
@@ -481,7 +481,7 @@
           "owner": "35bd0a87-7d60-2acb-ac5c-3c7184473765",
           "texture": "eyJ0aW1lc3RhbXAiOjE1Nzg0MDgwNzIwNzIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZjNTdlMzM5OGRhZWIzMmQ4ZDgyYTMzOTRmOTM4MWRlMmE1N2Y2NDM4OTZlZGUwZGI5YTY1NmE3MDY4Yzc4OSIsIm1ldGFkYXRhIjp7Im1vZGVsIjoic2xpbSJ9fX19",
           "x": -85.5,
-          "y": 55.0,
+          "y": 55,
           "z": -139.5
         }
       ]
@@ -545,7 +545,7 @@
           "owner": "8e59e1f9-aa1f-22de-8719-0fb13d822c32",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NTk2ODMzNDU1NTksInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg2YjlmNTZiODE3Njc2ZDUxMzU1NjU4NGIzMmJiOWM2YWEwZGRkNTEyZDFkMWFhZGZlNmE1OGEyOTA1MmZlZjgifX19",
           "x": -202.5,
-          "y": 83.0,
+          "y": 83,
           "z": -236.5
         },
         {
@@ -554,7 +554,7 @@
           "owner": "633e6dc6-75a7-293c-be0f-a446fea3bd80",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMzQ4Nzk3NTIzMywKICAicHJvZmlsZUlkIiA6ICJhMjk1ODZmYmU1ZDk0Nzk2OWZjOGQ4ZGE0NzlhNDNlZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJWaWVydGVsdG9hc3RpaWUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFlZjUxNzk5OGI5ZDkzZjYyZDAwNTY3Y2Y2YmM2ODg1MWEzNGJkOTlmMzcwNjk4ZjhiNmQ2MmQ5ZGU0YzNlNCIKICAgIH0KICB9Cn0=",
           "x": -271.5,
-          "y": 113.0,
+          "y": 113,
           "z": -196.5
         },
         {
@@ -563,7 +563,7 @@
           "owner": "c8fa83f8-9c2c-2dd4-884c-ecb64a7547dc",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNDg3MTAxNDQ5OCwKICAicHJvZmlsZUlkIiA6ICJmMTA0NzMxZjljYTU0NmI0OTkzNjM4NTlkZWY5N2NjNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJ6aWFkODciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM5MTkzYzA5YmNhZDlkMWY5MDFhZmVmNGUyYzBjYWQ4M2FhZTFhNTcwMzM1YzNlY2JjN2QwNWZkZTE5ODc5NSIKICAgIH0KICB9Cn0=",
           "x": -281.5,
-          "y": 122.0,
+          "y": 122,
           "z": -190.5
         },
         {
@@ -572,7 +572,7 @@
           "owner": "83872c4e-48ee-2d96-8364-8cfeda1f9fc8",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMzA5NTQ2OTc1NSwKICAicHJvZmlsZUlkIiA6ICJhYTZhNDA5NjU4YTk0MDIwYmU3OGQwN2JkMzVlNTg5MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJiejE0IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI1OGY4OGRjYmQyYWYxMTBjNzdjZmZhYTAwZWFiN2E0OTljMDAxMzNlNjE1NzU1OTlkOWUwNmU2MWI4YTI0YTYiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": -278.5,
-          "y": 121.0,
+          "y": 121,
           "z": -182.5
         },
         {
@@ -581,8 +581,8 @@
           "owner": "2ed074fe-45ba-2391-a52b-9d6c5cd79e09",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMjgwOTU0ODAzMCwKICAicHJvZmlsZUlkIiA6ICIzOTg5OGFiODFmMjU0NmQxOGIyY2ExMTE1MDRkZGU1MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNeVV1aWRJcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82ODVlODNhMDk5NTFhMmMyZGI3ODM2MGJjOTU0NmJiMGQ0NTQ5NzViNWU1YTM0NGNhMWRhZmY0MDhhNjdlOWYxIgogICAgfQogIH0KfQ==",
           "x": -360.5,
-          "y": 111.0,
-          "z": -290.0
+          "y": 111,
+          "z": -290
         },
         {
           "name": "Rick",
@@ -590,7 +590,7 @@
           "owner": "03da4f7a-9882-2f3a-a6e3-8aca6038ad02",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjAyNjIyNTU5MDksInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzkyMzk2YjBhZDM1MmIyNTMxMTM5YzlkYzRjZWY5YTMyMzUwYzdjYzE0ZWQ3YmNmYzUxODVjZTE1YTdhN2Q1ZWIifX19",
           "x": -250.5,
-          "y": 70.0,
+          "y": 70,
           "z": -324.5
         }
       ]
@@ -649,17 +649,17 @@
           "wiki": "https://wiki.hypixel.net/Charlie",
           "owner": "07358c3d-5cb8-2cb1-8655-be1d391a7c47",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjAxOTQxOTU3NzMsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU3NjZlYjA5N2JiNDg2YjNlYTcwN2FjMTMxM2ExYmZmZjg4NDZhMmY1NTQ2MDA4MmNlZjIxMmYxODkxMzBmMWMifX19",
-          "x": -286.0,
-          "y": 82.0,
-          "z": -17.0
+          "x": -286,
+          "y": 82,
+          "z": -17
         },
         {
           "name": "Vanessa",
           "wiki": "https://wiki.hypixel.net/Vanessa",
           "owner": "2617fd79-7677-2ac3-92c4-5d6743744b0b",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzEzNjIwMDAwMTgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ5ZTI5NzljOGUyYzU4ODk4YzI3NzRiMzY2OWVhNGExYjI5NzY3ZmNkYzJkZDU5MzdlYzBjZjBkYTNhOGZiNjcifX19",
-          "x": -312.0,
-          "y": 83.0,
+          "x": -312,
+          "y": 83,
           "z": -70.5
         },
         {
@@ -677,7 +677,7 @@
           "owner": "b8b146b1-1f7f-2693-969b-296797c38479",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzI0OTg3MzU2MjMsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzRkMjM4Y2NjODE4YWIwYzBmZGViZDA3ZDRhNTZjMzUzZmY1ZWI1NDFjODVkMzg2MzYyMTYxNzgxZDFkZDc0Y2MiLCJtZXRhZGF0YSI6eyJtb2RlbCI6InNsaW0ifX19fQ==",
           "x": -398.5,
-          "y": 110.0,
+          "y": 110,
           "z": 34.5
         },
         {
@@ -686,7 +686,7 @@
           "owner": "0241d8da-99fe-2aae-a109-02d3b3fdb6a7",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzI0MDk2NzY0OTIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzkyYjdhY2JmYTkzMDhhMjJlNzUwNmEzNmJjY2FmZDAxNjBhZmEwZDUwMDgxOGVmZWU5ZmE5ODM1MjE0YzE0ZmEifX19",
           "x": -462.5,
-          "y": 110.0,
+          "y": 110,
           "z": -15.5
         },
         {
@@ -695,8 +695,8 @@
           "owner": "64d49d05-5153-2472-ab04-99157328e995",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzI4NzgzNDY2MDIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzYyMWFhYmVkM2JhOGI4OGI4ZGUzNDNiMjY3YmM0OWIyZGYwNDY4YzBiYTRmMjBmZWI5ODUyYjc0YzIyZjMwMjAifX19",
           "x": -476.5,
-          "y": 134.0,
-          "z": -117.0
+          "y": 134,
+          "z": -117
         },
         {
           "name": "Romero",
@@ -704,8 +704,8 @@
           "owner": "a772d231-f384-21cc-9c16-ae9ada85681c",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwNTM1NjQwODEsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IzMzUxZjIyZjYzYjQzZjQwZmE4ZTI4ZGVmNjZiNzNiMTdiYTI2NTc3M2ZlOTk4MDk3MWRhMmYxNTE1MDMyZDkifX19",
           "x": -476.5,
-          "y": 134.0,
-          "z": -116.0
+          "y": 134,
+          "z": -116
         },
         {
           "name": "Old Shaman Nyko",
@@ -713,7 +713,7 @@
           "owner": "5cce2e6a-ce46-2ddf-a904-585db2e63ec9",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwODI0NjQ3MTYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU3YTUxNzg2NWI4MjBhNDQ1MWNkM2NjNjc2NWYzNzBmZDA1MjJiNjQ4OWM5Yzk0ZmIzNDVmZGVlMjY4OTQ1MWEifX19",
           "x": -379.5,
-          "y": 60.0,
+          "y": 60,
           "z": 36.5
         },
         {
@@ -731,7 +731,7 @@
           "owner": "13448485-2c51-2c38-8085-398fc051ef53",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzE3ODEyODc2OTQsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NmYWZlNmY1MDE0YzUyYzBlOTczNTkyOTg0OTA2YWUxZDE5ZTgxMDVlMmRjZmQ3ZWFjYmUwMWVmODdjZTMyMGMifX19",
           "x": -385.5,
-          "y": 89.0,
+          "y": 89,
           "z": 55.5
         }
       ]
@@ -782,8 +782,8 @@
           "owner": "9d6cf6d1-2fae-2779-8bc4-be85f9c9b130",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNzEyNjQwMzM4NCwKICAicHJvZmlsZUlkIiA6ICIyMWUzNjdkNzI1Y2Y0ZTNiYjI2OTJjNGEzMDBhNGRlYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJHZXlzZXJNQyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jYWJiMmMwNDYzNWEyOWIwOGUxNjFkODU5YjExYmRhZGI3NWEyOWQzYzY0ZGY3ZTg0YTEwOGMzN2Y3ZjgzYzAiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": 163.5,
-          "y": 77.0,
-          "z": -359.0
+          "y": 77,
+          "z": -359
         },
         {
           "name": "Mason",
@@ -791,8 +791,8 @@
           "owner": "6f0b0999-f0eb-2eb5-a593-9e55dc753f0c",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNzg5OTY1NjAyMiwKICAicHJvZmlsZUlkIiA6ICJjNjc3MGJjZWMzZjE0ODA3ODc4MTU0NWRhMGFmMDI1NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJDVUNGTDE2IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzNmY2I0Mjk2Mjg1ZTMzMWE5MzYwMzAwNzJiZTcxNmZjYjRiN2JhM2UzZjU0NDc3OTMyOTRjMDNlZWUxYzkyN2MiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": 177.5,
-          "y": 77.0,
-          "z": -356.0
+          "y": 77,
+          "z": -356
         },
         {
           "name": "Friendly Hiker",
@@ -800,8 +800,8 @@
           "owner": "7f9d10a7-2019-22f7-9d45-f55db086a978",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNzg5OTEzNTk2MSwKICAicHJvZmlsZUlkIiA6ICJkODAwZDI4MDlmNTE0ZjkxODk4YTU4MWYzODE0Yzc5OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ0aGVCTFJ4eCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMzVhMjBmNTc4MGM2NjdjNWY1NzZiYTYzMDdkYjYxYjM1YTNjOWYzYWRjNmE4NjU0NTQ3MjVmNGU3N2ExMTIiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": 181.5,
-          "y": 77.0,
-          "z": -381.0
+          "y": 77,
+          "z": -381
         },
         {
           "name": "Farmer Jon",
@@ -809,7 +809,7 @@
           "owner": "a7150a5a-d791-2dac-8d33-2b256bacf436",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5MzI4Njc3OTUxMiwKICAicHJvZmlsZUlkIiA6ICI4ODQ0ZDJiMWM2YjY0MmVkYTYxNTNjNGEyY2I3YTU5NiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUYW52dmVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI4MjkwNGQzYzRmY2U4MjkxNzE4ZGFlOTA5OTVlMTM3Mzg3MWNiNjllMjI4Y2MyMDQ0OTU2MjBhMWEwZWM1MGEiCiAgICB9CiAgfQp9",
           "x": 167.5,
-          "y": 91.0,
+          "y": 91,
           "z": -598.5
         },
         {
@@ -818,7 +818,7 @@
           "owner": "d3d4803b-b333-2fbf-8cee-9b2c0b826e5f",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5NjA3ODI4NjQ3MywKICAicHJvZmlsZUlkIiA6ICJkODAwZDI4MDlmNTE0ZjkxODk4YTU4MWYzODE0Yzc5OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ0aGVCTFJ4eCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kNTFjYzdjMWQxMWFhMGEwOGE3M2NiYzE4NDU0NzA1MWFlYmQwN2IzYmI1MGQ4NmYxMTg4ZmQ3YTdkYWQyZWQzIgogICAgfQogIH0KfQ==",
           "x": 261.5,
-          "y": 184.0,
+          "y": 184,
           "z": -565.5
         },
         {
@@ -827,7 +827,7 @@
           "owner": "b3ff7bdc-b39d-2013-bbf4-e4e5033ccaee",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxODI2MjUyODE1OCwKICAicHJvZmlsZUlkIiA6ICJkZTU3MWExMDJjYjg0ODgwOGZlN2M5ZjQ0OTZlY2RhZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfTWluZXNraW4iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQzNGZjZjc3MjYzMWI4MThkMmM2YWZiODc4ZTM5MzM3NjcwN2EyYjU3MDE5YjVmZjg3MGQ2OTUyZmRkZDExYSIKICAgIH0KICB9Cn0=",
           "x": 278.5,
-          "y": 104.0,
+          "y": 104,
           "z": -544.5
         },
         {
@@ -836,7 +836,7 @@
           "owner": "dd5ada63-84f3-2322-a02b-5594f07a90c7",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxODI2MjU5NzI4MywKICAicHJvZmlsZUlkIiA6ICIzOTg5OGFiODFmMjU0NmQxOGIyY2ExMTE1MDRkZGU1MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNeVV1aWRJcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jZWRjNmU3NzJkNTBlNjM1NTZiZmRlOTE0ZTc4NWM3NTQ4OTM2MWZjYzc5ODUxNjRjNDBiMzAwZTdmOTFiYzA4IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
           "x": 284.5,
-          "y": 104.0,
+          "y": 104,
           "z": -544.5
         },
         {
@@ -845,7 +845,7 @@
           "owner": "820eb817-421e-2d10-93af-14610cfdcda3",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxODI2MzEwNDI4NywKICAicHJvZmlsZUlkIiA6ICI3NTE0NDQ4MTkxZTY0NTQ2OGM5NzM5YTZlMzk1N2JlYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGFua3NNb2phbmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEwMmY4MjE0ODQ2MWNlZDFmN2I2MmUzMjZlYjJkYjNhOTRhMzNjYmE4MWQ0MjgxNDUyYWY0ZDhhZWNhNDk5MSIKICAgIH0KICB9Cn0=",
           "x": 281.5,
-          "y": 104.0,
+          "y": 104,
           "z": -542.5
         },
         {
@@ -854,7 +854,7 @@
           "owner": "3b0d45ba-055b-2a9b-8ba6-f39876aad789",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNzAzNjc3MTUyOSwKICAicHJvZmlsZUlkIiA6ICJiMGQ3MzJmZTAwZjc0MDdlOWU3Zjc0NjMwMWNkOThjYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJPUHBscyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kNmY5YjliNjI0MDRjNWNmOTRjMzg1YzdmMWM4NmFkZGUwZDlhZWY5YTljZDI5ZTJhYjU4M2ZhMWRlNjNmNDI2IgogICAgfQogIH0KfQ==",
           "x": 269.5,
-          "y": 48.0,
+          "y": 48,
           "z": -480.5
         },
         {
@@ -863,7 +863,7 @@
           "owner": "7a40d602-52a0-20f2-857c-0a7c085fc397",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxODc2MTk3MDM2NCwKICAicHJvZmlsZUlkIiA6ICIzOTg5OGFiODFmMjU0NmQxOGIyY2ExMTE1MDRkZGU1MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNeVV1aWRJcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9hN2RjOTRmYjcxNjVmNzQ3MGZmMjU1N2JkM2JjZGE1Nzk4ZGQzZmFmYjk5OTE1MDRmY2NmYWQ3MjFjYzQyMjYyIgogICAgfQogIH0KfQ==",
           "x": 319.5,
-          "y": 102.0,
+          "y": 102,
           "z": -470.5
         },
         {
@@ -872,8 +872,8 @@
           "owner": "e601b6f6-553a-28d1-a682-b131294bf741",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMTg3OTY1ODUxNSwKICAicHJvZmlsZUlkIiA6ICJkZGVkNTZlMWVmOGI0MGZlOGFkMTYyOTIwZjdhZWNkYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJEaXNjb3JkQXBwIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2VlYWY0M2M3NDc0OTdlMjBmZTA2NjdkNjc4MTBhYTFmM2NiMGFlYjk2ZmNjOTRiN2NlMThmNWQxNjVjODI4NGQiCiAgICB9CiAgfQp9",
           "x": 200.5,
-          "y": 92.0,
-          "z": -437.0
+          "y": 92,
+          "z": -437
         },
         {
           "name": "Shepherd",
@@ -881,7 +881,7 @@
           "owner": "f6168d48-5b4c-258a-96e5-97a11347d7f9",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5OTEwMzEzNDE0MiwKICAicHJvZmlsZUlkIiA6ICJiZWNkZGIyOGEyYzg0OWI0YTliMDkyMmE1ODA1MTQyMCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdFR2IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdhOGFiMjI2N2FlNDQzZTgzYjA1ZTNhOGQ2N2I4Yjc2MGFkZmFhZDMzNWM5MDQ3MzM4YzBlMTc3NGE2NWMzNzIiCiAgICB9CiAgfQp9",
           "x": 388.5,
-          "y": 85.0,
+          "y": 85,
           "z": -372.5
         },
         {
@@ -890,7 +890,7 @@
           "owner": "c4535166-1945-45e8-b579-d932007138ec",
           "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDAxZTAzNWEzZDhkNjEyNjA3MmJjYmU1MmE5NzkxM2FjZTkzNTUyYTk5OTk1YjVkNDA3MGQ2NzgzYTMxZTkwOSJ9fX0=",
           "x": 144.5,
-          "y": 73.0,
+          "y": 73,
           "z": -240.5
         },
         {
@@ -899,7 +899,7 @@
           "owner": "c4535166-1945-45e8-b579-d932007138ec",
           "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDAxZTAzNWEzZDhkNjEyNjA3MmJjYmU1MmE5NzkxM2FjZTkzNTUyYTk5OTk1YjVkNDA3MGQ2NzgzYTMxZTkwOSJ9fX0=",
           "x": 98.5,
-          "y": 89.0,
+          "y": 89,
           "z": -282.5
         }
       ]
@@ -951,7 +951,7 @@
           "owner": "e996c848-b041-2bdf-9031-cd018c50c1e3",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzcwODM3MTAxNywKICAicHJvZmlsZUlkIiA6ICI0MjEwNTYxMWQxZjM0NzAyOTQ4NjE3OTYzMDY3NjY2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJUcmlraXRyYWthdGVsYXp6IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzk3M2VjMmFkMzgxZmM4ODMxYThhNmEyMzhmMzhkODAwNmNhNTFkNTY1NDJkZDk5MTllNDk1NWI5YWM4OWFmNGQiCiAgICB9CiAgfQp9",
           "x": -373.5,
-          "y": 207.0,
+          "y": 207,
           "z": -810.5
         },
         {
@@ -959,18 +959,18 @@
           "wiki": "https://wiki.hypixel.net/Aura",
           "owner": "e57a3b5d-fa34-2d95-9f2e-84b8222580ba",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5MDEyNzQ4NDU4OCwKICAicHJvZmlsZUlkIiA6ICJhOTY5MTZkZmI1MTI0ODk4OGY5MjRhN2I5Njg4MDk3MiIsCiAgInByb2ZpbGVOYW1lIiA6ICJEb2N0b3JTdHJhbmdlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JlZDA5OTQxNjMyMzE3MmM5ZDFmZjgzMmUxYWUxN2U0YmE1NWZlMDBmYmQwZWViMDMyNmY5Y2ZiYzZkNTk0OSIKICAgIH0KICB9Cn0=",
-          "x": -396.0,
-          "y": 69.0,
-          "z": -887.0
+          "x": -396,
+          "y": 69,
+          "z": -887
         },
         {
           "name": "Master Tao",
           "wiki": "https://wiki.hypixel.net/Master_Tao",
           "owner": "2ccfd710-f8a3-2458-a055-049c4ccca8a3",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MjU0NzI0Mzk1NiwKICAicHJvZmlsZUlkIiA6ICJmMTkyZGU3MDUzMTQ0ODcxOTAwMjQ1MmIzZWE3MzA3NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJOZVhvU2V0IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzZhODI2YjU5YzQzZmYwMjA2NzRlZmFkOTc5M2E0NDhiMGIwMTA3ODY2NTJkMzYxMTRlNjE2NmYzYWNiYmU2OGIiCiAgICB9CiAgfQp9",
-          "x": -234.0,
-          "y": 108.0,
-          "z": -602.0
+          "x": -234,
+          "y": 108,
+          "z": -602
         },
         {
           "name": "Bruto",
@@ -978,7 +978,7 @@
           "owner": "3e9460f0-3e51-2146-a12a-637ef9debb4d",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDQyNTkwMiwKICAicHJvZmlsZUlkIiA6ICJkMWY2OTc0YzE2ZmI0ZjdhYjI1NjU4NzExNjM3M2U2NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJGaW9saWVzdGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjljMDc1YWM3ZDkzOTM2YTQ5ZmIwZmIyNTViMzhlODM3ZWYwN2Y5ODcxODMwNjEzYTQyMTg5MGU0NTY4NjYyZCIKICAgIH0KICB9Cn0=",
           "x": -612.5,
-          "y": 100.0,
+          "y": 100,
           "z": -786.5
         },
         {
@@ -987,7 +987,7 @@
           "owner": "f5739dc3-da47-2ed1-beec-5101b5f3dd77",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDQ3MzY1MiwKICAicHJvZmlsZUlkIiA6ICJkZTE0MGFmM2NmMjM0ZmM0OTJiZTE3M2Y2NjA3MzViYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJTUlRlYW0iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzEwNjEyN2I1ZDRjMjU0MzI4MzdjMjFkOGNkZjEzNWQxODc2MWI1NjI3YWUyODY0Y2ZhMzBkMzc3ODA0MTY4ZSIKICAgIH0KICB9Cn0",
           "x": -624.5,
-          "y": 101.0,
+          "y": 101,
           "z": -794.5
         },
         {
@@ -996,7 +996,7 @@
           "owner": "47bad43b-46ae-27b4-9bf6-000f425d1dad",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDQwNzc3MywKICAicHJvZmlsZUlkIiA6ICJlZDUzZGQ4MTRmOWQ0YTNjYjRlYjY1MWRjYmE3N2U2NiIsCiAgInByb2ZpbGVOYW1lIiA6ICI0MTQxNDE0MWgiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3MTNkMTg1MmMwODc1MDc1OWZiOTg4ZGQ0ZmY2OTcyY2YzZDY4Y2Y2MTViOTk1YmJlZjk2YmU0YTEyM2I5NSIKICAgIH0KICB9Cn0",
           "x": -636.5,
-          "y": 103.0,
+          "y": 103,
           "z": -784.5
         },
         {
@@ -1005,7 +1005,7 @@
           "owner": "d4b7cc14-823d-21ad-80d5-4308db5ee2a1",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzODg5NDUxNjQ3NywKICAicHJvZmlsZUlkIiA6ICJjZGM5MzQ0NDAzODM0ZDdkYmRmOWUyMmVjZmM5MzBiZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYXdMb2JzdGVycyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81OTUxZDc0MjhjZDVmNGE3M2Y5NDI4ZThiMzA3NWY3MTdkYmZkZDI4Njc5YzRlYzg0MmJmZjhhMGQ1MTI5OWRmIgogICAgfQogIH0KfQ==",
           "x": -644.5,
-          "y": 101.0,
+          "y": 101,
           "z": -825.5
         },
         {
@@ -1013,9 +1013,9 @@
           "wiki": "https://wiki.hypixel.net/Baar",
           "owner": "df42761c-7e7e-2038-83bb-badbf4a44541",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzODg5NDQzNTkwNSwKICAicHJvZmlsZUlkIiA6ICI2NDU4Mjc0MjEyNDg0MDY0YTRkMDBlNDdjZWM4ZjcyZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaDNtMXMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZmOTY2NDYxYjRiZDY4ZGYzZmY3YzZhZGFlMGNkYTVmMjdhYzg1M2ExNmUyYTJjNzg0OWIzYzAyNjEwMTM5MCIKICAgIH0KICB9Cn0=",
-          "x": -638.0,
-          "y": 123.0,
-          "z": -791.0
+          "x": -638,
+          "y": 123,
+          "z": -791
         },
         {
           "name": "Yoink",
@@ -1023,7 +1023,7 @@
           "owner": "7206c2ee-1eec-2eb9-b5ff-291dc379d3dc",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDMzMjIzMywKICAicHJvZmlsZUlkIiA6ICJjNzQ1Mzc4MDY5MzY0ODg2ODkwNzRkOTQ3ZjBlOTlmNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJjdWN1bWkwNyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yY2M5MDNlMjQzY2I1ZDE1ZmFmY2MwNGRmM2ZlNmQxMTRmMWRiNjNkZjNmYWJmZGFhMTkxMGU3ODA5OTE0ZjU3IgogICAgfQogIH0KfQ==",
           "x": -613.5,
-          "y": 123.0,
+          "y": 123,
           "z": -786.5
         },
         {
@@ -1032,7 +1032,7 @@
           "owner": "c359e834-c15d-292c-b8eb-ad4c6f4c120f",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDM1NDEwNSwKICAicHJvZmlsZUlkIiA6ICIzNzNiZmY5NzQwMmY0N2IzOTViOTZlNzc3NmNmOGFhMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJjdXRlcGluazczIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzljYzVjNWQyOTg1NDM1N2EzOTllZTY1Zjg2ZjJmZmRiYTNhZGQwYjAzNTdjNWJmMTE1NjJiZmU5NzgyMzQ0MjYiCiAgICB9CiAgfQp9",
           "x": -569.5,
-          "y": 120.0,
+          "y": 120,
           "z": -775.5
         },
         {
@@ -1041,7 +1041,7 @@
           "owner": "cef0b153-201e-2aa8-88ef-0eaa693d0838",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTU1OTU2OCwKICAicHJvZmlsZUlkIiA6ICI5ZWEyMTQ0NGFiNjI0MWZkYjg5YjE2NDFhNDg2MGZiZiIsCiAgInByb2ZpbGVOYW1lIiA6ICI3QUJDSE9VTiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mM2IzZDRjZmJjZDRhZDBmYzNmMDM0Mjg5MWQ5NGU4ODNhODJiNWI2NWY5ZGYyOWE4ZDk5Y2EwYzQ0ZGNjZWNiIgogICAgfQogIH0KfQ==",
           "x": -572.5,
-          "y": 118.0,
+          "y": 118,
           "z": -739.5
         },
         {
@@ -1050,7 +1050,7 @@
           "owner": "e0938380-1808-2ec0-b1ae-f329135126bd",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTYwNDcwNiwKICAicHJvZmlsZUlkIiA6ICI0OTVlYTMyM2E0N2U0ODk0OWRjZmJmNDQxZmFhODM4YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJDb29sZVZlbnQxNjgiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA0YjIyNTNjMjRkODE0YmVmMzE5OWYwYTg2MTFlZWFiNTRmN2NlMmViZjcxYTRiYmUwMDI4ZWIxYTdiYjA4ZiIKICAgIH0KICB9Cn0=",
           "x": -592.5,
-          "y": 107.0,
+          "y": 107,
           "z": -723.5
         },
         {
@@ -1059,7 +1059,7 @@
           "owner": "a5a2600d-e8aa-20e8-93f8-19e8fe4d5882",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzODg5NDQzNTkwNSwKICAicHJvZmlsZUlkIiA6ICI2NDU4Mjc0MjEyNDg0MDY0YTRkMDBlNDdjZWM4ZjcyZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaDNtMXMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZmOTY2NDYxYjRiZDY4ZGYzZmY3YzZhZGFlMGNkYTVmMjdhYzg1M2ExNmUyYTJjNzg0OWIzYzAyNjEwMTM5MCIKICAgIH0KICB9Cn0=",
           "x": -549.5,
-          "y": 98.0,
+          "y": 98,
           "z": -707.5
         },
         {
@@ -1068,7 +1068,7 @@
           "owner": "c115443d-1e98-2147-a10e-68ef5a3ec9fe",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTU4MjA4NiwKICAicHJvZmlsZUlkIiA6ICJjYmFkZmRmNTRkZTM0N2UwODQ3MjUyMDIyYTFkNGRkZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJmaXdpcGVlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE3ZjdiZDEwMjYzMTExMWFhYTQyMjNjMmE3ZTY0MjhkMmE4YTk0YjBkODE0MDhlYzM1ZmMzZDVhZGQ3NWQwYjkiCiAgICB9CiAgfQp9",
           "x": -561.5,
-          "y": 98.0,
+          "y": 98,
           "z": -687.5
         },
         {
@@ -1077,7 +1077,7 @@
           "owner": "598e9238-33f5-2c85-8c3d-7f0ff390637a",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NjU4NDg4NiwKICAicHJvZmlsZUlkIiA6ICIwMGZiNTRiOWI4NDA0YTA0YTViMmJhMzBlYzBlYTAxMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJrbGxveWQ3MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yYTYzMzgzMGRiNDU2MzdlMDk5MGQ3NDZjNTQwOWIxYmE2N2UyOGY1NjU4N2Q3ODNjYzIzMDJhMDNkZDU2OTRiIgogICAgfQogIH0KfQ==",
           "x": -561.5,
-          "y": 98.0,
+          "y": 98,
           "z": -689.5
         },
         {
@@ -1085,9 +1085,9 @@
           "wiki": "https://wiki.hypixel.net/Kaus",
           "owner": "21a337ac-a634-2c19-856a-13d5b4041d2f",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzODg5NDQzNTkwNSwKICAicHJvZmlsZUlkIiA6ICI2NDU4Mjc0MjEyNDg0MDY0YTRkMDBlNDdjZWM4ZjcyZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaDNtMXMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZmOTY2NDYxYjRiZDY4ZGYzZmY3YzZhZGFlMGNkYTVmMjdhYzg1M2ExNmUyYTJjNzg0OWIzYzAyNjEwMTM5MCIKICAgIH0KICB9Cn0=",
-          "x": -596.0,
-          "y": 113.0,
-          "z": -640.0
+          "x": -596,
+          "y": 113,
+          "z": -640
         },
         {
           "name": "Bruuh",
@@ -1095,7 +1095,7 @@
           "owner": "de623672-0cde-2774-a6a1-984029a0fa7e",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzODg5NDQzNTkwNSwKICAicHJvZmlsZUlkIiA6ICI2NDU4Mjc0MjEyNDg0MDY0YTRkMDBlNDdjZWM4ZjcyZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaDNtMXMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZmOTY2NDYxYjRiZDY4ZGYzZmY3YzZhZGFlMGNkYTVmMjdhYzg1M2ExNmUyYTJjNzg0OWIzYzAyNjEwMTM5MCIKICAgIH0KICB9Cn0=",
           "x": -635.5,
-          "y": 124.0,
+          "y": 124,
           "z": -688.5
         },
         {
@@ -1104,7 +1104,7 @@
           "owner": "02a4249e-a1b3-22b2-a0ac-89578c14f9ef",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTU1OTU2OCwKICAicHJvZmlsZUlkIiA6ICI5ZWEyMTQ0NGFiNjI0MWZkYjg5YjE2NDFhNDg2MGZiZiIsCiAgInByb2ZpbGVOYW1lIiA6ICI3QUJDSE9VTiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mM2IzZDRjZmJjZDRhZDBmYzNmMDM0Mjg5MWQ5NGU4ODNhODJiNWI2NWY5ZGYyOWE4ZDk5Y2EwYzQ0ZGNjZWNiIgogICAgfQogIH0KfQ==",
           "x": -658.5,
-          "y": 107.0,
+          "y": 107,
           "z": -741.5
         },
         {
@@ -1113,7 +1113,7 @@
           "owner": "69a35bb0-731b-2956-a7b9-1e0426de808d",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzODg5NDQzNTkwNSwKICAicHJvZmlsZUlkIiA6ICI2NDU4Mjc0MjEyNDg0MDY0YTRkMDBlNDdjZWM4ZjcyZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaDNtMXMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmZmOTY2NDYxYjRiZDY4ZGYzZmY3YzZhZGFlMGNkYTVmMjdhYzg1M2ExNmUyYTJjNzg0OWIzYzAyNjEwMTM5MCIKICAgIH0KICB9Cn0=",
           "x": -657.5,
-          "y": 107.0,
+          "y": 107,
           "z": -738.5
         },
         {
@@ -1122,7 +1122,7 @@
           "owner": "eb85e539-39d0-2516-93d1-5cca9a1be777",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUyMTE3OTAxNCwKICAicHJvZmlsZUlkIiA6ICI0ZGU4MjQxNjJkZTU0MzU5YWFlMDBmMzQ1ZmMyZTY0MSIsCiAgInByb2ZpbGVOYW1lIiA6ICJOYXRoYW5fS2luZyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82NjZjYjFiNjZlYzU4MTFiZThkYjQzODExNjFjNjE1YmE3Yzk2ZGIzNTQxNzIwZjBmYzU0M2E4MTBjNWMwZThhIgogICAgfQogIH0KfQ==",
           "x": -663.5,
-          "y": 107.0,
+          "y": 107,
           "z": -736.5
         },
         {
@@ -1131,7 +1131,7 @@
           "owner": "556606a5-3991-2754-b2cf-b3fe5aeab8a9",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDM1NDEwNSwKICAicHJvZmlsZUlkIiA6ICIzNzNiZmY5NzQwMmY0N2IzOTViOTZlNzc3NmNmOGFhMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJjdXRlcGluazczIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzljYzVjNWQyOTg1NDM1N2EzOTllZTY1Zjg2ZjJmZmRiYTNhZGQwYjAzNTdjNWJmMTE1NjJiZmU5NzgyMzQ0MjYiCiAgICB9CiAgfQp9",
           "x": -686.4,
-          "y": 102.0,
+          "y": 102,
           "z": -766.2
         },
         {
@@ -1140,7 +1140,7 @@
           "owner": "56380a6d-bd7a-2cf2-89a2-89c1ee45492c",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTU4MjA4NiwKICAicHJvZmlsZUlkIiA6ICJjYmFkZmRmNTRkZTM0N2UwODQ3MjUyMDIyYTFkNGRkZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJmaXdpcGVlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE3ZjdiZDEwMjYzMTExMWFhYTQyMjNjMmE3ZTY0MjhkMmE4YTk0YjBkODE0MDhlYzM1ZmMzZDVhZGQ3NWQwYjkiCiAgICB9CiAgfQp9",
           "x": -604.5,
-          "y": 107.0,
+          "y": 107,
           "z": -861.5
         },
         {
@@ -1149,7 +1149,7 @@
           "owner": "5b2a0d4e-cc83-2d79-af95-63984e9b1c13",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxMjYxNzc5MywKICAicHJvZmlsZUlkIiA6ICIwZjczMDA3NjEyNGU0NGM3YWYxMTE1NDY5YzQ5OTY3OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJPcmVfTWluZXIxMjMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM2MzBkOWIwMjA4OGVhMTkyNGE4NzIyNDJhYmM3NWI2MjYyYzJhY2E5MmFlY2Y4NzE0YTU3YTQxZWVhMGI5ZCIKICAgIH0KICB9Cn0=",
           "x": -596.5,
-          "y": 123.0,
+          "y": 123,
           "z": -845.5
         },
         {
@@ -1158,7 +1158,7 @@
           "owner": "2f72a703-eb6e-222c-8bc5-ffeb63aac871",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTU4MjA4NiwKICAicHJvZmlsZUlkIiA6ICJjYmFkZmRmNTRkZTM0N2UwODQ3MjUyMDIyYTFkNGRkZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJmaXdpcGVlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE3ZjdiZDEwMjYzMTExMWFhYTQyMjNjMmE3ZTY0MjhkMmE4YTk0YjBkODE0MDhlYzM1ZmMzZDVhZGQ3NWQwYjkiCiAgICB9CiAgfQp9",
           "x": -621.5,
-          "y": 108.0,
+          "y": 108,
           "z": -741.5
         },
         {
@@ -1167,7 +1167,7 @@
           "owner": "598e9238-33f5-2c85-8c3d-7f0ff390637a",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NjU4NDg4NiwKICAicHJvZmlsZUlkIiA6ICIwMGZiNTRiOWI4NDA0YTA0YTViMmJhMzBlYzBlYTAxMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJrbGxveWQ3MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yYTYzMzgzMGRiNDU2MzdlMDk5MGQ3NDZjNTQwOWIxYmE2N2UyOGY1NjU4N2Q3ODNjYzIzMDJhMDNkZDU2OTRiIgogICAgfQogIH0KfQ==",
           "x": -612.6,
-          "y": 108.0,
+          "y": 108,
           "z": -661.5
         },
         {
@@ -1176,7 +1176,7 @@
           "owner": "c115443d-1e98-2147-a10e-68ef5a3ec9fe",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTU4MjA4NiwKICAicHJvZmlsZUlkIiA6ICJjYmFkZmRmNTRkZTM0N2UwODQ3MjUyMDIyYTFkNGRkZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJmaXdpcGVlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE3ZjdiZDEwMjYzMTExMWFhYTQyMjNjMmE3ZTY0MjhkMmE4YTk0YjBkODE0MDhlYzM1ZmMzZDVhZGQ3NWQwYjkiCiAgICB9CiAgfQp9",
           "x": -612.6,
-          "y": 108.0,
+          "y": 108,
           "z": -669.5
         },
         {
@@ -1184,9 +1184,9 @@
           "wiki": "https://wiki.hypixel.net/Lasea",
           "owner": "71516e46-f628-25ef-9423-a954b11191a1",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDMzMjIzMywKICAicHJvZmlsZUlkIiA6ICJjNzQ1Mzc4MDY5MzY0ODg2ODkwNzRkOTQ3ZjBlOTlmNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJjdWN1bWkwNyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yY2M5MDNlMjQzY2I1ZDE1ZmFmY2MwNGRmM2ZlNmQxMTRmMWRiNjNkZjNmYWJmZGFhMTkxMGU3ODA5OTE0ZjU3IgogICAgfQogIH0KfQ==",
-          "x": -566.0,
-          "y": 108.0,
-          "z": -657.0
+          "x": -566,
+          "y": 108,
+          "z": -657
         },
         {
           "name": "Chief Scorn",
@@ -1203,7 +1203,7 @@
           "owner": "57c89187-120d-2b16-b698-56db85d24c4d",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDMzMjIzMywKICAicHJvZmlsZUlkIiA6ICJjNzQ1Mzc4MDY5MzY0ODg2ODkwNzRkOTQ3ZjBlOTlmNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJjdWN1bWkwNyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yY2M5MDNlMjQzY2I1ZDE1ZmFmY2MwNGRmM2ZlNmQxMTRmMWRiNjNkZjNmYWJmZGFhMTkxMGU3ODA5OTE0ZjU3IgogICAgfQogIH0KfQ==",
           "x": -684.5,
-          "y": 124.0,
+          "y": 124,
           "z": -828.5
         },
         {
@@ -1211,9 +1211,9 @@
           "wiki": "https://wiki.hypixel.net/Porc",
           "owner": "074fd7d9-40f5-204c-b273-4d3ab8490793",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDM3MDUyNiwKICAicHJvZmlsZUlkIiA6ICI1YjY2YzNkZWZhYTI0NWMzYTcwNjM3OTA3NTQ0Yjg3MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZWFuX1JhaWNvMDgxNiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8xYjg5NWRlMjAxZDk3MjA1YzFjYmJjYWYyOGNkMTkxYzhmYzRkYzhlZTg5NmJmZDZmMjc0Njk3YWVhOGM5ZTNmIgogICAgfQogIH0KfQ==",
-          "x": -577.0,
-          "y": 118.0,
-          "z": -857.0
+          "x": -577,
+          "y": 118,
+          "z": -857
         },
         {
           "name": "Jine",
@@ -1221,7 +1221,7 @@
           "owner": "34a1924a-de3f-23d5-b016-75b90781da6f",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTUzMjg3MSwKICAicHJvZmlsZUlkIiA6ICI1NTZjNDNmOWJmZjU0MjI1OTI0NDU5M2EwN2QyYzE1MSIsCiAgInByb2ZpbGVOYW1lIiA6ICJHaW50b2tsIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzk1ZmExM2NjMjY1Mzk4NTNmZWE1OTU1MmIyZTVlOTAxNmRjNDE0ZGRhMmY4MzdiNzJhYTk1OWY3ZjE3M2NmMyIKICAgIH0KICB9Cn0=",
           "x": -545.5,
-          "y": 119.0,
+          "y": 119,
           "z": -854.5
         },
         {
@@ -1230,7 +1230,7 @@
           "owner": "e697c542-8771-2611-9e9d-8a34f7293a0c",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Njc0NTUwNjk2NiwKICAicHJvZmlsZUlkIiA6ICI0ZTMwZjUwZTdiYWU0M2YzYWZkMmE3NDUyY2ViZTI5YyIsCiAgInByb2ZpbGVOYW1lIiA6ICJfdG9tYXRvel8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGFmYWJiYWUyNGMxOTQ1MTg4ZjcyZjg1OTJhZTFhMzUwMzg2OThlNjc4NDU1ODU1OWUyYzA1ZjAxMmIzMzU5OSIKICAgIH0KICB9Cn0=",
           "x": -615.5,
-          "y": 115.0,
+          "y": 115,
           "z": -706.5
         },
         {
@@ -1239,7 +1239,7 @@
           "owner": "72c21be1-da59-2693-9451-b1037bc490aa",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NDM5MDczMCwKICAicHJvZmlsZUlkIiA6ICIzOWEzOTMzZWE4MjU0OGU3ODQwNzQ1YzBjNGY3MjU2ZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJkZW1pbmVjcmFmdGVybG9sIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2QyYWQzM2Q2Njc0NDlhN2UxMDQ4MGQzMjJiMGIyNzY2ZjFhMWZmZjllNWMwMTliMDBjNTI1N2MyNWVlMmFkNDEiCiAgICB9CiAgfQp9",
           "x": -613.5,
-          "y": 122.0,
+          "y": 122,
           "z": -765.5
         },
         {
@@ -1248,7 +1248,7 @@
           "owner": "4a97ce17-2047-27c1-bf5d-67aefde29486",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NTAzNzM3NjU1MywKICAicHJvZmlsZUlkIiA6ICIzYTdhMDVjMDc0MTI0N2Q2YWVmMDMzMDNkOWNlMjMzNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJzcXJ0IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdmYjY3MjU3MTYyM2ZjNDI3NDc3YWY1ODRlZDFmNmIwYTZhNTcxNGM4NzJlNDIzNDExOWUwMmI1YTM0YmJjIgogICAgfQogIH0KfQ==",
           "x": -668.5,
-          "y": 126.0,
+          "y": 126,
           "z": -924.5
         },
         {
@@ -1257,7 +1257,7 @@
           "owner": "dcf32921-b29a-25c9-b5d5-f9eb4936d94c",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTA1OTg4NywKICAicHJvZmlsZUlkIiA6ICI3MzY0ODFkZmY2ZGY0NWUwOTA0ODg0ZjNiMWExMjY1NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd2lsaWdodFFBUSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kOGVkOGFlYTI0YTU4ZDllMmMwZThkNzRkNzA0OTJmZjkwODQ5MTYzMTUxNDUzM2VjODE0ZDUxZGViNzdiN2M3IgogICAgfQogIH0KfQ==",
           "x": -83.5,
-          "y": 108.0,
+          "y": 108,
           "z": -775.5
         },
         {
@@ -1265,9 +1265,9 @@
           "wiki": "https://wiki.hypixel.net/Alchemage",
           "owner": "251450b6-ccaf-2974-8b3c-6575693b48b6",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NTkzNTA4NSwKICAicHJvZmlsZUlkIiA6ICJkMWY2OTc0YzE2ZmI0ZjdhYjI1NjU4NzExNjM3M2U2NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJGaW9saWVzdGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY3YTRkZGRlMmJmNjgxZWQ5YmZiOWY4OWU5YTQzOTdkMWVjOWUzYjdkMTA5ZTZmNTZiNmVkNTIyMmJhYTAxMyIKICAgIH0KICB9Cn0=",
-          "x": -86.0,
-          "y": 118.0,
-          "z": -771.0
+          "x": -86,
+          "y": 118,
+          "z": -771
         },
         {
           "name": "Kheharad",
@@ -1275,7 +1275,7 @@
           "owner": "2e5b3977-32a9-27d4-a777-d2eb784dec64",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MjM1NDA1MDAwNywKICAicHJvZmlsZUlkIiA6ICIwMGZiNTRiOWI4NDA0YTA0YTViMmJhMzBlYzBlYTAxMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJrbGxveWQ3MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMGNkNjI2YmFmMTYzY2ZkNGZlNzY4ZjQ3NTNmODBkNTBkZDExOTc3MDBlNGMzYTJkNTg1MGNmNzliZWIwOTQ3IgogICAgfQogIH0KfQ==",
           "x": -111.5,
-          "y": 99.0,
+          "y": 99,
           "z": -827.5
         },
         {
@@ -1284,7 +1284,7 @@
           "owner": "c6ca73a8-e2a3-20ac-88fd-afdb507e3023",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NTkwMjY5MywKICAicHJvZmlsZUlkIiA6ICJjNTBhZmE4YWJlYjk0ZTQ1OTRiZjFiNDI1YTk4MGYwMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdlBUaGlldmVzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVkMGMyNWZkOWQzMmUxMjA0YTFkMzJlNWQ5NWEyZjFjZmEwOTUyNWE4Zjk4ZTFkZWVmNWIyYTNjNzdmOThhOGMiCiAgICB9CiAgfQp9",
           "x": -112.5,
-          "y": 99.0,
+          "y": 99,
           "z": -844.5
         },
         {
@@ -1293,7 +1293,7 @@
           "owner": "ab484e3f-a9df-2a4d-85dd-d2ad8ae02bd8",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjAyODMxNywKICAicHJvZmlsZUlkIiA6ICI0MzE4YzBjMzY2ZGU0Y2NlOTIwMzlhZTJiODQ5NWNmYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJCbGFja1RoZUN1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2I1NjBiNmVlMmFmYWI3OGQ1NjdmMGYxZDE1MTA0ZTFmYmJhNTczNGRmNzNkZWM0OWU3ZjNlZDhiOWNlZjYwNmQiCiAgICB9CiAgfQp9",
           "x": -108.5,
-          "y": 99.0,
+          "y": 99,
           "z": -803.5
         },
         {
@@ -1302,7 +1302,7 @@
           "owner": "c2d5d2e6-6288-2db6-987a-e4785e7954d2",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTE0NDQwNywKICAicHJvZmlsZUlkIiA6ICJiYjdjY2E3MTA0MzQ0NDEyOGQzMDg5ZTEzYmRmYWI1OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJsYXVyZW5jaW8zMDMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRlNTA3OTVjYTQyOGFhYmMzZjM4MDI2Y2RjZjc0NDQ5OGM5ODEwZDkyMjAyNmI4YmFlYmExN2Q0ZmUyNjM1NiIKICAgIH0KICB9Cn0=",
           "x": -125.5,
-          "y": 99.0,
+          "y": 99,
           "z": -783.5
         },
         {
@@ -1311,7 +1311,7 @@
           "owner": "8ed272c4-a0ff-2dd0-9590-b2b8d842d30b",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjAyODMxNywKICAicHJvZmlsZUlkIiA6ICI0MzE4YzBjMzY2ZGU0Y2NlOTIwMzlhZTJiODQ5NWNmYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJCbGFja1RoZUN1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2I1NjBiNmVlMmFmYWI3OGQ1NjdmMGYxZDE1MTA0ZTFmYmJhNTczNGRmNzNkZWM0OWU3ZjNlZDhiOWNlZjYwNmQiCiAgICB9CiAgfQp9",
           "x": -132.5,
-          "y": 100.0,
+          "y": 100,
           "z": -789.5
         },
         {
@@ -1320,7 +1320,7 @@
           "owner": "b5c24275-daae-28bf-8753-679600a0bc56",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjA0NDczNSwKICAicHJvZmlsZUlkIiA6ICJiNjM2OWQ0MzMwNTU0NGIzOWE5OTBhODYyNWY5MmEwNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJCb2JpbmhvXyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81YjVhM2I5NjE4MjNiZWM0N2U0ZThhYzIzZTdhM2IyYWU3MzZjOWM4MTM0N2ZhMmIxYmUwM2M2OGM0MWZhYTFlIgogICAgfQogIH0KfQ==",
           "x": -143.5,
-          "y": 100.0,
+          "y": 100,
           "z": -828.5
         },
         {
@@ -1337,9 +1337,9 @@
           "wiki": "https://wiki.hypixel.net/Rollim",
           "owner": "dcf32921-b29a-25c9-b5d5-f9eb4936d94c",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTA1OTg4NywKICAicHJvZmlsZUlkIiA6ICI3MzY0ODFkZmY2ZGY0NWUwOTA0ODg0ZjNiMWExMjY1NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd2lsaWdodFFBUSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kOGVkOGFlYTI0YTU4ZDllMmMwZThkNzRkNzA0OTJmZjkwODQ5MTYzMTUxNDUzM2VjODE0ZDUxZGViNzdiN2M3IgogICAgfQogIH0KfQ==",
-          "x": -147.0,
-          "y": 106.0,
-          "z": -854.0
+          "x": -147,
+          "y": 106,
+          "z": -854
         },
         {
           "name": "Queen Nyx",
@@ -1347,7 +1347,7 @@
           "owner": "0e78e4e0-1394-2ae2-88c4-8f98b22d3a82",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjEzNDMyNCwKICAicHJvZmlsZUlkIiA6ICI5NTE3OTkxNjljYzE0MGY1OGM2MmRjOGZmZTU3NjBiZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJPcmRpbmFsQ2FyZGluYWwiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWIzYmNlMDM5MThlNGJhZWY3MzNjZTQ3ODA3OTZhOTI3ODkzNWFkYTBjMDFhYWY1YjE3N2RmY2VkNmU4N2I4IgogICAgfQogIH0KfQ==",
           "x": -117.5,
-          "y": 105.0,
+          "y": 105,
           "z": -754.5
         },
         {
@@ -1356,7 +1356,7 @@
           "owner": "cf5691dd-59e6-2ac9-9709-a4187ca3c5a8",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxODU0NjM3OSwKICAicHJvZmlsZUlkIiA6ICJjNTBhZmE4YWJlYjk0ZTQ1OTRiZjFiNDI1YTk4MGYwMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd29FQmFlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YyMjY1MzgzMDJmODc5NmRkOTZiMzUyNWRmMmYwNjBjYjY1ZmEwOWYyOWMzY2I2MDczYWU5MmUwMDdlMGQzOGYiCiAgICB9CiAgfQp9",
           "x": -131.5,
-          "y": 89.0,
+          "y": 89,
           "z": -722.5
         },
         {
@@ -1364,9 +1364,9 @@
           "wiki": "https://wiki.hypixel.net/Colore",
           "owner": "008b36a7-f18b-20b5-8352-1aa2b4afafb4",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjA5MTg5NywKICAicHJvZmlsZUlkIiA6ICJiYzRlZGZiNWYzNmM0OGE3YWM5ZjFhMzlkYzIzZjRmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICI4YWNhNjgwYjIyNDYxMzQwIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdhZWFlNzFlMzQ1ODA4ODdhMGI3ZTM4MTY0YjRhMjE1OWFiZTIxOWQ0Y2FiOTQ1NGQ5NzliMWM2MDNjYzBiNzYiCiAgICB9CiAgfQp9",
-          "x": -131.0,
-          "y": 89.0,
-          "z": -711.0
+          "x": -131,
+          "y": 89,
+          "z": -711
         },
         {
           "name": "Alwin",
@@ -1374,7 +1374,7 @@
           "owner": "597c6041-b1a5-2f20-83bd-dab33af035f1",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTA1OTg4NywKICAicHJvZmlsZUlkIiA6ICI3MzY0ODFkZmY2ZGY0NWUwOTA0ODg0ZjNiMWExMjY1NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd2lsaWdodFFBUSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kOGVkOGFlYTI0YTU4ZDllMmMwZThkNzRkNzA0OTJmZjkwODQ5MTYzMTUxNDUzM2VjODE0ZDUxZGViNzdiN2M3IgogICAgfQogIH0KfQ==",
           "x": -82.5,
-          "y": 92.0,
+          "y": 92,
           "z": -734.5
         },
         {
@@ -1383,7 +1383,7 @@
           "owner": "652bf913-9419-2f9b-b334-0b2b90aafbe5",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTE0NDQwNywKICAicHJvZmlsZUlkIiA6ICJiYjdjY2E3MTA0MzQ0NDEyOGQzMDg5ZTEzYmRmYWI1OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJsYXVyZW5jaW8zMDMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRlNTA3OTVjYTQyOGFhYmMzZjM4MDI2Y2RjZjc0NDQ5OGM5ODEwZDkyMjAyNmI4YmFlYmExN2Q0ZmUyNjM1NiIKICAgIH0KICB9Cn0=",
           "x": -87.5,
-          "y": 93.0,
+          "y": 93,
           "z": -743.6
         },
         {
@@ -1392,7 +1392,7 @@
           "owner": "9e1ca924-d67e-29ac-8056-7498f00e847b",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTE0NDQwNywKICAicHJvZmlsZUlkIiA6ICJiYjdjY2E3MTA0MzQ0NDEyOGQzMDg5ZTEzYmRmYWI1OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJsYXVyZW5jaW8zMDMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRlNTA3OTVjYTQyOGFhYmMzZjM4MDI2Y2RjZjc0NDQ5OGM5ODEwZDkyMjAyNmI4YmFlYmExN2Q0ZmUyNjM1NiIKICAgIH0KICB9Cn0=",
           "x": -46.5,
-          "y": 107.0,
+          "y": 107,
           "z": -779.5
         },
         {
@@ -1401,7 +1401,7 @@
           "owner": "616e8596-e9c5-26d3-a85f-3585718debf5",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTAzNjU2MCwKICAicHJvZmlsZUlkIiA6ICI5MWYwNGZlOTBmMzY0M2I1OGYyMGUzMzc1Zjg2ZDM5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdG9ybVN0b3JteSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84MWE3MDQxNThmZGEzMzdkY2VjZjVlYzE5ZDY3MjNkMTdjY2FlM2EzMTA2Njc5MjRmMzdkZDk2MjAyZWRiZDBhIgogICAgfQogIH0KfQ==",
           "x": -27.5,
-          "y": 107.0,
+          "y": 107,
           "z": -770.5
         },
         {
@@ -1410,7 +1410,7 @@
           "owner": "60f77b79-1f26-20cb-8c54-07758725d470",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxODc2NzIwMCwKICAicHJvZmlsZUlkIiA6ICJjNTlkMDFlMDI4MWI0MGNhOTczNjc5ODc4NmRmN2FmNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJvWm9va3hQYXJjY2VyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzUyODU4MTYzMDYyODQwOWY4NGRmMjBjNTAyYzY4N2Y2ZTI0ZmE3NGMxY2I3YTlhNDFkNzdiZTE3ZWY2M2NlMmUiCiAgICB9CiAgfQp9",
           "x": -60.5,
-          "y": 108.0,
+          "y": 108,
           "z": -746.5
         },
         {
@@ -1418,9 +1418,9 @@
           "wiki": "https://wiki.hypixel.net/Selenar",
           "owner": "29ea1d0e-1cca-2f3c-86a5-b4080fe75513",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxODc0NjQ5OSwKICAicHJvZmlsZUlkIiA6ICJmMTYwZTMxMzJjYWM0YjRiOWM5OTk2NDQ1OGIxOWM0ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUb255S3VuIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IwZGFjMzEzMWFmYTgzZWM1MGE5ZDY1M2I4NGY3YzA4Nzk2NmVlNjE0ZDVjNTBlNjNlYmEwOGI0MzNlZmJkOCIKICAgIH0KICB9Cn0=",
-          "x": -71.0,
-          "y": 107.0,
-          "z": -757.0
+          "x": -71,
+          "y": 107,
+          "z": -757
         },
         {
           "name": "Edelis",
@@ -1428,7 +1428,7 @@
           "owner": "3e07e1e2-b0cb-2995-9245-ea09435b2b12",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjExNTYzOSwKICAicHJvZmlsZUlkIiA6ICI0ZjU2ZTg2ODk2OGU0ZWEwYmNjM2M2NzRlNzQ3ODdjOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJDVUNGTDE1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQwNWRiNDFhMzU1NTU2MGJlMGQ0NDdmMWMyZWRiYzU3ZGFlNWFkZGNjYWZiZjkwYjNkMGE4MDI3NjZkYjAxYmIiCiAgICB9CiAgfQp9",
           "x": -61.5,
-          "y": 107.0,
+          "y": 107,
           "z": -812.5
         },
         {
@@ -1437,7 +1437,7 @@
           "owner": "fbdfedab-cce5-2ceb-a5f3-25bcd1d060ea",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjExNTYzOSwKICAicHJvZmlsZUlkIiA6ICI0ZjU2ZTg2ODk2OGU0ZWEwYmNjM2M2NzRlNzQ3ODdjOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJDVUNGTDE1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQwNWRiNDFhMzU1NTU2MGJlMGQ0NDdmMWMyZWRiYzU3ZGFlNWFkZGNjYWZiZjkwYjNkMGE4MDI3NjZkYjAxYmIiCiAgICB9CiAgfQp9",
           "x": -3.5,
-          "y": 93.0,
+          "y": 93,
           "z": -820.5
         },
         {
@@ -1446,7 +1446,7 @@
           "owner": "6bb17333-9cbb-28d3-9a41-7ff08e966b00",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NTkwMjY5MywKICAicHJvZmlsZUlkIiA6ICJjNTBhZmE4YWJlYjk0ZTQ1OTRiZjFiNDI1YTk4MGYwMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdlBUaGlldmVzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVkMGMyNWZkOWQzMmUxMjA0YTFkMzJlNWQ5NWEyZjFjZmEwOTUyNWE4Zjk4ZTFkZWVmNWIyYTNjNzdmOThhOGMiCiAgICB9CiAgfQp9",
           "x": -3.5,
-          "y": 93.0,
+          "y": 93,
           "z": -825.5
         },
         {
@@ -1455,7 +1455,7 @@
           "owner": "c971e451-f0f0-2198-b970-7b3492a8df47",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTA1OTg4NywKICAicHJvZmlsZUlkIiA6ICI3MzY0ODFkZmY2ZGY0NWUwOTA0ODg0ZjNiMWExMjY1NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd2lsaWdodFFBUSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kOGVkOGFlYTI0YTU4ZDllMmMwZThkNzRkNzA0OTJmZjkwODQ5MTYzMTUxNDUzM2VjODE0ZDUxZGViNzdiN2M3IgogICAgfQogIH0KfQ==",
           "x": -0.5,
-          "y": 93.0,
+          "y": 93,
           "z": -824.5
         },
         {
@@ -1464,7 +1464,7 @@
           "owner": "116bac2d-36fe-2994-b887-b0a9c88c2cc0",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxODU0NjM3OSwKICAicHJvZmlsZUlkIiA6ICJjNTBhZmE4YWJlYjk0ZTQ1OTRiZjFiNDI1YTk4MGYwMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd29FQmFlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YyMjY1MzgzMDJmODc5NmRkOTZiMzUyNWRmMmYwNjBjYjY1ZmEwOWYyOWMzY2I2MDczYWU5MmUwMDdlMGQzOGYiCiAgICB9CiAgfQp9",
           "x": -101.5,
-          "y": 91.0,
+          "y": 91,
           "z": -872.5
         },
         {
@@ -1472,9 +1472,9 @@
           "wiki": "https://wiki.hypixel.net/Igrupan",
           "owner": "44458d31-4adb-232a-bb84-e41019b8229b",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NTkwMjY5MywKICAicHJvZmlsZUlkIiA6ICJjNTBhZmE4YWJlYjk0ZTQ1OTRiZjFiNDI1YTk4MGYwMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdlBUaGlldmVzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVkMGMyNWZkOWQzMmUxMjA0YTFkMzJlNWQ5NWEyZjFjZmEwOTUyNWE4Zjk4ZTFkZWVmNWIyYTNjNzdmOThhOGMiCiAgICB9CiAgfQp9",
-          "x": -31.0,
-          "y": 93.0,
-          "z": -824.0
+          "x": -31,
+          "y": 93,
+          "z": -824
         },
         {
           "name": "Krevius",
@@ -1482,7 +1482,7 @@
           "owner": "7d2f34f1-dcbc-25be-b01d-4c461cf5acf7",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjE1NjA3NSwKICAicHJvZmlsZUlkIiA6ICI0MjEwNTYxMWQxZjM0NzAyOTQ4NjE3OTYzMDY3NjY2NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJUcmlraXRyYWthdGVsYXp6IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UyMWFiNGFjMmZlNWI0NDlmMzJkYjRlYTU2MDlhZWU3OTY3OTRlMTE1Nzc2NGM1NzkyOGY4ODYxMGNhMzE4ODQiCiAgICB9CiAgfQp9",
           "x": -131.5,
-          "y": 101.0,
+          "y": 101,
           "z": -753.5
         },
         {
@@ -1490,7 +1490,7 @@
           "wiki": "https://wiki.hypixel.net/Pablo",
           "owner": "696b8daf-f01c-23fa-8457-b57d7e5dab34",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzOTUxOTAzNjU2MCwKICAicHJvZmlsZUlkIiA6ICI5MWYwNGZlOTBmMzY0M2I1OGYyMGUzMzc1Zjg2ZDM5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdG9ybVN0b3JteSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84MWE3MDQxNThmZGEzMzdkY2VjZjVlYzE5ZDY3MjNkMTdjY2FlM2EzMTA2Njc5MjRmMzdkZDk2MjAyZWRiZDBhIgogICAgfQogIH0KfQ",
-          "x": -130.0,
+          "x": -130,
           "y": 127.5,
           "z": -815.5
         },
@@ -1500,7 +1500,7 @@
           "owner": "afbc14e2-e742-2d1d-8504-55c43e2b4d48",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NTkxOTE1NywKICAicHJvZmlsZUlkIiA6ICJmNThkZWJkNTlmNTA0MjIyOGY2MDIyMjExZDRjMTQwYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJ1bnZlbnRpdmV0YWxlbnQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjQxODJjNjk1MjM5NzQ4YzJjZjBiOGJmNjljNTQzMGI5OGZmMDYxMTQxY2I4ZGJiZjhmYWNjY2JiYjQ1ZmYyNyIKICAgIH0KICB9Cn0=",
           "x": -26.5,
-          "y": 122.0,
+          "y": 122,
           "z": -769.5
         },
         {
@@ -1509,7 +1509,7 @@
           "owner": "b83e6462-aa48-24ff-98d9-45d97d82b514",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NjA5MTg5NywKICAicHJvZmlsZUlkIiA6ICJiYzRlZGZiNWYzNmM0OGE3YWM5ZjFhMzlkYzIzZjRmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICI4YWNhNjgwYjIyNDYxMzQwIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzdhZWFlNzFlMzQ1ODA4ODdhMGI3ZTM4MTY0YjRhMjE1OWFiZTIxOWQ0Y2FiOTQ1NGQ5NzliMWM2MDNjYzBiNzYiCiAgICB9CiAgfQp9",
           "x": -139.1,
-          "y": 99.0,
+          "y": 99,
           "z": -816.3
         },
         {
@@ -1518,7 +1518,7 @@
           "owner": "2b3b01a8-814a-2eed-8b43-0a1a81aa50f7",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MzA0NTkwMjY5MywKICAicHJvZmlsZUlkIiA6ICJjNTBhZmE4YWJlYjk0ZTQ1OTRiZjFiNDI1YTk4MGYwMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdlBUaGlldmVzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVkMGMyNWZkOWQzMmUxMjA0YTFkMzJlNWQ5NWEyZjFjZmEwOTUyNWE4Zjk4ZTFkZWVmNWIyYTNjNzdmOThhOGMiCiAgICB9CiAgfQp9",
           "x": -78.5,
-          "y": 107.0,
+          "y": 107,
           "z": -788.5
         },
         {
@@ -1526,8 +1526,8 @@
           "wiki": "https://wiki.hypixel.net/Dean",
           "owner": "cd9d4711-261a-2b48-b34b-606b23706084",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NDI0NjAzODIwOSwKICAicHJvZmlsZUlkIiA6ICJiMGQ0YjI4YmMxZDc0ODg5YWYwZTg2NjFjZWU5NmFhYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5lU2tpbl9vcmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTI0MzliNzExMGU4YTFmYjlhNjNlMzkzOTFlZWZlNThhMmU3ZDA0ODExN2Y0MDgxZWJlYTMyNjY0NDYzN2EwIgogICAgfQogIH0KfQ==",
-          "x": -16.0,
-          "y": 123.0,
+          "x": -16,
+          "y": 123,
           "z": -882.5
         },
         {
@@ -1536,7 +1536,7 @@
           "owner": "40311cbe-7fa0-217a-9cad-20ed997480c4",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0MjM1NDA1MDAwNywKICAicHJvZmlsZUlkIiA6ICIwMGZiNTRiOWI4NDA0YTA0YTViMmJhMzBlYzBlYTAxMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJrbGxveWQ3MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMGNkNjI2YmFmMTYzY2ZkNGZlNzY4ZjQ3NTNmODBkNTBkZDExOTc3MDBlNGMzYTJkNTg1MGNmNzliZWIwOTQ3IgogICAgfQogIH0KfQ==",
           "x": -15.5,
-          "y": 114.0,
+          "y": 114,
           "z": -915.5
         }
       ]
@@ -1596,7 +1596,7 @@
           "owner": "ab243b4b-821d-28db-8c27-2db0393d9acf",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjQwODUzMTg2ODcsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc3ZjdiNTFjYTY5NjZiZTJkZWNmZWIzZDU4NWQyZDY1NDE5M2IwM2NiOGMxMzY1OGE0MzY5YjU5MTRkZmU4NmMifX19",
           "x": -504.5,
-          "y": 101.0,
+          "y": 101,
           "z": -284.5
         },
         {
@@ -1605,8 +1605,26 @@
           "owner": "ca43f5f8-d019-2498-8a9c-2ad97a572a1b",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjM1NjcyODU2ODAsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzhmY2M1M2E4NjBjNGQ2MjFiYjc1ZmM4NmI5N2IxMmNiM2Q2ZDk3N2Y4ZWI5ODNlNzQ1OGY1ZTI2MWIzZDEyNzkifX19",
           "x": -494.5,
-          "y": 121.0,
+          "y": 121,
           "z": -241.5
+        },
+        {
+          "name": "Lone Adventurer",
+          "wiki": "https://wiki.hypixel.net/Lone_Adventurer",
+          "owner": "bd64ef07-a4e2-21d3-be01-bb5adc3235b4",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NTkxMzU4MzE3MzksInByb2ZpbGVJZCI6ImIwZDRiMjhiYzFkNzQ4ODlhZjBlODY2MWNlZTk2YWFiIiwicHJvZmlsZU5hbWUiOiJ4RmFpaUxlUiIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQzNGYzOGMxYmIxMDZlMTE5MDhhZDNjYzkwMTYyYzE4Yjg2M2Q2NzgyNjVjODRhODRhMzU4OTAzZjhmN2ExYyJ9fX0=",
+          "x": -524.5,
+          "y": 101,
+          "z": -275.5
+        },
+        {
+          "name": "Dragon Ritualist",
+          "wiki": "https://wiki.hypixel.net/Dragon_Ritualist",
+          "owner": "3917c336-c160-26bc-848e-c7d18e02087b",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxOTM2MDM4MDc1NSwKICAicHJvZmlsZUlkIiA6ICI0ZjU2ZTg2ODk2OGU0ZWEwYmNjM2M2NzRlNzQ3ODdjOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJDVUNGTDE1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzYzYzRlZGQxYzI3ZGIzMTYyZTkyZjg3MDgxMGZjZTM2NDZkY2JmOGVmNWViYjQ2ZjJkZGFkNWQ4ODQyNWUyZWUiCiAgICB9CiAgfQp9",
+          "x": -597,
+          "y": 5,
+          "z": -272
         }
       ]
     },
@@ -1673,7 +1691,7 @@
           "owner": "676da122-579b-21da-a6ba-4365271e2123",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NTk1OTMyMDkzMzIsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM3Y2EwZmYxNzkzNmJlMzNlYWEzMTc2MjRkYjQ3NDRmYzNmMjkyZTYxMjM1Nzg1ODQ1MzI1OGU0ZjllN2NhNzkifX19",
           "x": -27.5,
-          "y": 74.0,
+          "y": 74,
           "z": -294.5
         },
         {
@@ -1682,7 +1700,7 @@
           "owner": "d7d8c412-e733-2968-9d6a-44c5127257ed",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NTk1OTU4NzUyNDgsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY2MWUxYTNhOTRiZjIyY2FmMjgyNWIyZjE2NzZjYWQzN2ExNjRlNDc3NGYyNzgzNzZmNzI5M2I0MzE0MzRmMTgifX19",
           "x": -1.5,
-          "y": 75.0,
+          "y": 75,
           "z": -307.5
         },
         {
@@ -1691,7 +1709,7 @@
           "owner": "34f2e729-db20-27e7-930f-576b42a9e42d",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjAxOTM2MzQxNTQsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q5M2Q5NjM2YWE5NTU2YWNmNGJlMmNjNThkOTNmZjBiNTMyZTY4MDk4ZjgwYTdkYzE1MWEwZjFkMTZiOGU1ZjgifX19",
           "x": -11.5,
-          "y": 78.0,
+          "y": 78,
           "z": -337.5
         }
       ]
@@ -1827,7 +1845,7 @@
           "owner": "1efb5950-a0ec-229c-9aba-098c6d8258f5",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NTQ1NzE2OTkxOTAsInByb2ZpbGVJZCI6IjNmYzdmZGY5Mzk2MzRjNDE5MTE5OWJhM2Y3Y2MzZmVkIiwicHJvZmlsZU5hbWUiOiJZZWxlaGEiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg2NTJhMDZmN2I5OWU0ODIyYjQ5NWJhOWI2MDg5ZDRkNTE1MWU4M2JlZDk1NmE3Y2NjYjg0N2VhNDZhMjU3MjUifX19",
           "x": 45.5,
-          "y": 150.0,
+          "y": 150,
           "z": 15.5
         },
         {
@@ -1836,7 +1854,7 @@
           "owner": "0fde99c9-73ef-2bee-b9f5-99ff10c9f6f3",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNDY5NDY2OSwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmIyMGIyM2MxYWEyYmUwMjcwZjAxNmI0YzkwZDZlZTZiODMzMGExN2NmZWY4Nzg2OWQ2YWQ2MGIyZmZiZjNiNSIKICAgIH0KICB9Cn0=",
           "x": 31.5,
-          "y": 12.0,
+          "y": 12,
           "z": 14.5
         },
         {
@@ -1844,9 +1862,9 @@
           "wiki": "https://wiki.hypixel.net/Walter",
           "owner": "10db2d70-4c55-247f-bf48-5d1de7e6b387",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwNzYxOTA1OTcsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQzYWMyMWI2NTNhMjc2MzJkYmM4MzczYzZlNmZiYTViOGM5N2I3ZWNiZmVmMmQ3OTM2MzBkMTQ5YjExNmJhODEifX19",
-          "x": 19.0,
-          "y": 156.0,
-          "z": -36.0
+          "x": 19,
+          "y": 156,
+          "z": -36
         },
         {
           "name": "Lapis Miner",
@@ -1854,7 +1872,7 @@
           "owner": "7a17c796-ad2b-2c58-85fa-d61a33a222e4",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjAxOTQ2OTg4MzMsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMzZTQyNzRjOTE3ZjRhMzhlZGYyNzYxZDdhODE0MGE0ZjQxMmI1ZjQ1M2NhN2ZjMmIyNDc0MWMzMGZjYTcwMGUifX19",
           "x": -55.5,
-          "y": 121.0,
+          "y": 121,
           "z": 41.5
         }
       ]
