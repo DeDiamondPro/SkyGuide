@@ -85,7 +85,7 @@ object AssetHandler {
             mapFile.parentFile.mkdirs()
             if ( // try to download and parse new data
                 Config.downloadAssets
-                && NetworkUtils.downloadFile("https://api.dediamondpro.dev/assets/polyblock/map.json", newMapFile)
+                && NetworkUtils.downloadFile("https://api.dediamondpro.dev/skyguide/map.json", newMapFile)
                 && SkyblockMap.initialize(newMapFile)
             ) {
                 Files.move(newMapFile.toPath(), mapFile.toPath(), StandardCopyOption.REPLACE_EXISTING)
