@@ -47,6 +47,7 @@ class MapGui : UScreen() {
         }
 
         UGraphics.GL.pushMatrix()
+        UGraphics.color4f(1f, 1f, 1f, 1f)
         UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 1.0)
         if (Mouse.isButtonDown(0)) {
             x += (Mouse.getDX() / scale / UResolution.scaleFactor).toFloat()

@@ -2232,49 +2232,67 @@
           "z": 167
         },
         {
-          "name": "Erren",
-          "wiki": "https://wiki.hypixel.net/Kings",
-          "owner": "198f31a5-1ff6-297c-89ef-88c790540309",
-          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTA1OTM1OSwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQxZjQxNjFhZjZkNGZkZmJhYzE3YWRjZjlkMGI2ZjFmZmI1MTdlN2I5MzZhYWQ5YzM3Yjc0N2NlNjRlYzRjNiIKICAgIH0KICB9Cn0=",
-          "x": 126,
-          "y": 195.5,
-          "z": 180.5
-        },
-        {
           "name": "Emmor",
           "wiki": "https://wiki.hypixel.net/Kings",
-          "owner": "ff5c85a6-fe6d-22ad-a4e7-a090ef5d0ae8",
-          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTE1MTYyOCwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzgzYzIxY2IxYjUxNGQ0ZDRlMzBlOWVhZjNiYzI3YzhjYThkZWQxOWMwNjI0YzAxZjc3ZGZkOTdmMDcyYzBkOSIKICAgIH0KICB9Cn0=",
-          "x": 133,
+          "owner": "3b2961a8-cd90-26a4-adad-3dda323d80a0",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTE4MDgzNywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNjMzFiZDYwNDQxMDIwYWYyYjE5MzliYmE0OWE5NmQ0Nzg4MGIwNTlkYjBlMjBkNWQ0MmNmYWE0MWExNjE4YiIKICAgIH0KICB9Cn0=",
+          "x": 129.5,
+          "y": 196.0,
+          "z": 196.5
+        },
+        {
+          "name": "Grandan",
+          "wiki": "https://wiki.hypixel.net/Kings",
+          "owner": "c3fd9aa5-81e8-23d8-97cc-72fa7218f85c",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTA1OTM1OSwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQxZjQxNjFhZjZkNGZkZmJhYzE3YWRjZjlkMGI2ZjFmZmI1MTdlN2I5MzZhYWQ5YzM3Yjc0N2NlNjRlYzRjNiIKICAgIH0KICB9Cn0=",
+          "x": 122.5,
           "y": 195.5,
-          "z": 180.5
+          "z": 191.0
         },
         {
           "name": "Brammor",
           "wiki": "https://wiki.hypixel.net/Kings",
-          "owner": "4e8032e2-2553-279e-b95e-cc9de85fe1ff",
-          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTE4MDgzNywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNjMzFiZDYwNDQxMDIwYWYyYjE5MzliYmE0OWE5NmQ0Nzg4MGIwNTlkYjBlMjBkNWQ0MmNmYWE0MWExNjE4YiIKICAgIH0KICB9Cn0=",
+          "owner": "d8b880ab-e51f-2db1-a3d5-c01bc375a47a",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTE1MTYyOCwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzgzYzIxY2IxYjUxNGQ0ZDRlMzBlOWVhZjNiYzI3YzhjYThkZWQxOWMwNjI0YzAxZjc3ZGZkOTdmMDcyYzBkOSIKICAgIH0KICB9Cn0=",
           "x": 122.5,
           "y": 195.5,
-          "z": 184
+          "z": 184.0
         },
         {
-          "name": "Thomyr",
+          "name": "Emkam",
           "wiki": "https://wiki.hypixel.net/Kings",
-          "owner": "1b9b20a6-3844-2881-9518-131b60c6b347",
-          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTIwNDM3MywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjYxZWRlNjIxMjkzZTFmZTVmNmNmNzJmZjEyNjc2OTFlYTYxZWFjYjZjY2UwZmQ5YmIyODQzNGJkN2VhNzc3YiIKICAgIH0KICB9Cn0=",
-          "x": 122.5,
+          "owner": "e805cea0-86d8-2f45-88ac-9372c72c6ee3",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTExODMxMywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRjMzI2OGQ0YjQ3NWU4ZDViMjI5OTIzNTdhZTMxNjg5ZmZlYjcwYzhmYjYzMTkxNGRjNjQzMDM1ZjcwYzA5ZiIKICAgIH0KICB9Cn0=",
+          "x": 126.0,
           "y": 195.5,
-          "z": 191
+          "z": 180.5
         },
         {
           "name": "Redros",
           "wiki": "https://wiki.hypixel.net/Kings",
-          "owner": "2d4006d2-8599-2d45-95b8-ce478c95c9f7",
+          "owner": "053c1095-aaf3-27dd-8940-9a99ec58ea0e",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTA4OTY4NiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjQzMzg3MTQ2NzU2ZTNmY2YwMjkxZTEwYTk0ZGQ5YjBkMDhiN2UwMTRjMDNmMjYwMDM5N2JjOGE3OGE4ZTEzMyIKICAgIH0KICB9Cn0=",
+          "x": 133.0,
+          "y": 195.5,
+          "z": 180.5
+        },
+        {
+          "name": "Erren",
+          "wiki": "https://wiki.hypixel.net/Kings",
+          "owner": "9db8217e-cc3c-267d-a06d-9d4da6a0c9dc",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTAyMDE0NiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWVjN2YxYjgzZTVhYTQ4ZjJhMjE0ZDhkMzY5YzQ3MDI1NzRiMDViYjg5N2ExZTIxZGQwYTM0MzdiODdjMDQxYSIKICAgIH0KICB9Cn0=",
           "x": 136.5,
           "y": 195.5,
-          "z": 191
+          "z": 184.0
+        },
+        {
+          "name": "Thormyr",
+          "wiki": "https://wiki.hypixel.net/Kings",
+          "owner": "d2287a29-95e7-2bab-a212-90383ba5830a",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTIwNDM3MywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjYxZWRlNjIxMjkzZTFmZTVmNmNmNzJmZjEyNjc2OTFlYTYxZWFjYjZjY2UwZmQ5YmIyODQzNGJkN2VhNzc3YiIKICAgIH0KICB9Cn0=",
+          "x": 136.5,
+          "y": 195.5,
+          "z": 191.0
         },
         {
           "name": "Puzzler",
