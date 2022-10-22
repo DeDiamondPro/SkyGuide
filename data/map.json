@@ -1902,5 +1902,30 @@
       "bottomX": 131,
       "bottomY": 131
     }
+  },
+  "dwarven_mines": {
+    "mining_3": {
+      "images": {
+        "255": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/dwarven_mines.png",
+            "sha256": "717ff07ea98631837d4671da8681f0edbe6bd2f283ab7528b11ac312589321d4"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/dwarven_mines.png",
+            "sha256": "9c960e3785dbe8e8c2aef16f126e9acf89794901ca06d3d71ff78b9c3f5443dc"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines.png",
+            "sha256": "3558da6629190d1db2c30dd18f0491d335f9b39506eec0a260e12d347960957a"
+          }
+        }
+      },
+      "name": "Dwarven Mines",
+      "topX": -250,
+      "topY": -186,
+      "bottomX": 249,
+      "bottomY": 313
+    }
   }
 }
