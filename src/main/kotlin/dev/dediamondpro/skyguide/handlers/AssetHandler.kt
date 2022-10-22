@@ -15,11 +15,12 @@ import java.io.IOException
 import java.net.URL
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
+import java.util.concurrent.ConcurrentHashMap
 import javax.imageio.ImageIO
 
 
 object AssetHandler {
-    private val loadedAssets = mutableMapOf<String, ReleasedDynamicTexture>()
+    private val loadedAssets = ConcurrentHashMap<String, ReleasedDynamicTexture>()
     private var currentPercent = 0f
     private var currentFile = 0
     private var totalFiles = 0
