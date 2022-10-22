@@ -2401,6 +2401,24 @@
           "x": -9,
           "y": 128,
           "z": 59
+        },
+        {
+          "name": "Emissary Carlton",
+          "wiki": "https://wiki.hypixel.net/Emissary_Carlton",
+          "owner": "396a7f50-f225-2c30-b7c0-22a6a137fbdb",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDIyNTA4NzI1OCwKICAicHJvZmlsZUlkIiA6ICJlYjIwYWVkYTRiYTM0NzVmOTczZGNmZjkzNTE2OGZhYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTa3lGYWxsZWVlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2M3NjVmZWU5N2JjZmFlN2MxMzZiNmE2YjhjYTk1MzgxYWY5NjRkNmFlYmMwOGJmZGQyMzUwYWY3OGUyY2Y1MWEiCiAgICB9CiAgfQp9",
+          "x": -72.5,
+          "y": 153.0,
+          "z": -10.5
+        },
+        {
+          "name": "Emissary Fraiser",
+          "wiki": "https://wiki.hypixel.net/Emissary_Fraiser",
+          "owner": "ddc624d3-5d02-2d6b-ada7-6de130dd0937",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDI0NzQ3MjczNCwKICAicHJvZmlsZUlkIiA6ICI3NDM3MGQ1Mjk5Mjk0ZThjODRlYjRlODlhYjc2MGY5MiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdXRZb3VySmFzT2ZmIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzlhNDMzMjI1MTFmNGJiYTcxMGJkNzhjOThjOTBlODNhYzkyYTJkYTBmMDVhMGE2OTUxMDg5YmFjZTBjZjIwM2EiCiAgICB9CiAgfQp9",
+          "x": -132.5,
+          "y": 174.0,
+          "z": -50.5
         }
       ]
     }
