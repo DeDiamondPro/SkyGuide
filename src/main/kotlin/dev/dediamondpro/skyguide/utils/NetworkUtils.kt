@@ -46,6 +46,18 @@ object NetworkUtils {
         }
     }
 
+    fun fetchString(url: String): String? {
+        return try {
+            val connection = setupConnection(URL(url))
+            connection.inputStream.use { input ->
+                input.bufferedReader().use { it.readText() }
+            }
+        } catch (e: IOException) {
+            e.printStackTrace()
+            null
+        }
+    }
+
     fun setupConnection(url: URL): HttpsURLConnection {
         val con = url.openConnection() as HttpsURLConnection
         if (sslContext != null) con.sslSocketFactory = sslContext!!.socketFactory
