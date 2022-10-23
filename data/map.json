@@ -1909,15 +1909,15 @@
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/dwarven_mines.png",
-            "sha256": "4ce6dc16603fd129edba50cbc570d90b78e842e1f7bb49de9e6ca57508464972"
+            "sha256": "a1b793d212a61295157d0e17ef15b366fad55fe8fff1dc65a6d5ad1b824d87a2"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/dwarven_mines.png",
-            "sha256": "a25fccaf1ac7115e80eea33e5d1bfed8b92d2e43e605950718c3b948bf606f23"
+            "sha256": "003329a18c464130fb69b1091abd45e9e73d69e0de91ce116520253420afffc6"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines.png",
-            "sha256": "aef21dff461fcf12d3a94ad9e3e40a5cd7e9e50e2247e7dc58480d2c9fd6c0ec"
+            "sha256": "7779d2f711c2498a70c4106b97ff7e19877b340865e68c5d470c4775220759e2"
           }
         }
       },
