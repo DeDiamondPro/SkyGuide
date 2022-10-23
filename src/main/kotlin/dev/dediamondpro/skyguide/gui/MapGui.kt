@@ -50,8 +50,8 @@ class MapGui : UScreen() {
         UGraphics.color4f(1f, 1f, 1f, 1f)
         UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 1.0)
         if (Mouse.isButtonDown(0)) {
-            x += (Mouse.getDX() / scale / UResolution.scaleFactor).toFloat()
-            y -= (Mouse.getDY() / scale / UResolution.scaleFactor).toFloat()
+            x += (GuiUtils.getMouseDX() / scale / UResolution.scaleFactor).toFloat()
+            y -= (GuiUtils.getMouseDY() / scale / UResolution.scaleFactor).toFloat()
         }
         UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
 
