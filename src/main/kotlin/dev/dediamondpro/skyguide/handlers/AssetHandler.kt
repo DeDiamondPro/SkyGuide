@@ -24,7 +24,6 @@ object AssetHandler {
     private var currentPercent = 0f
     private var currentFile = 0
     private var totalFiles = 0
-    private var ticks = 0
     var downloadedAssets = false
 
     private fun setupDownload(assets: Int) {
