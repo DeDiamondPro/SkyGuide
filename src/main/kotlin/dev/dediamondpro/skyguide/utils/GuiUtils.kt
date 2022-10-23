@@ -2,6 +2,7 @@ package dev.dediamondpro.skyguide.utils
 
 import gg.essential.universal.UMinecraft
 import net.minecraft.client.gui.GuiScreen
+import net.minecraftforge.client.event.GuiScreenEvent
 import net.minecraftforge.client.event.RenderGameOverlayEvent
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
@@ -21,18 +22,21 @@ class GuiUtils {
         val currentTime = UMinecraft.getTime()
         deltaTime += currentTime - time
         time = currentTime
+    }
 
+    @SubscribeEvent
+    fun onGuiRenderEven(event: GuiScreenEvent.DrawScreenEvent.Pre) {
         mouseDX = null
         mouseDY = null
 
         val leftClickedTemp = Mouse.isButtonDown(0)
-        leftClicked = wasLeftClicked && !leftClickedTemp && leftMoveDelta <= 5
+        leftClicked = wasLeftClicked && !leftClickedTemp && leftMoveDelta <= 15
         wasLeftClicked = leftClickedTemp
         if (leftClickedTemp) leftMoveDelta += getMouseDX().absoluteValue + getMouseDY().absoluteValue
         else leftMoveDelta = 0
 
         val rightClickedTemp = Mouse.isButtonDown(1)
-        rightClicked = wasRightClicked && !rightClickedTemp  && rightMoveDelta <= 5
+        rightClicked = wasRightClicked && !rightClickedTemp  && rightMoveDelta <= 15
         wasRightClicked = rightClickedTemp
         if (rightClickedTemp) rightMoveDelta += getMouseDX().absoluteValue + getMouseDY().absoluteValue
         else rightMoveDelta = 0
