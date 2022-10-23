@@ -2237,7 +2237,7 @@
           "owner": "3b2961a8-cd90-26a4-adad-3dda323d80a0",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTE4MDgzNywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNjMzFiZDYwNDQxMDIwYWYyYjE5MzliYmE0OWE5NmQ0Nzg4MGIwNTlkYjBlMjBkNWQ0MmNmYWE0MWExNjE4YiIKICAgIH0KICB9Cn0=",
           "x": 129.5,
-          "y": 196.0,
+          "y": 196,
           "z": 196.5
         },
         {
@@ -2247,7 +2247,7 @@
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTA1OTM1OSwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQxZjQxNjFhZjZkNGZkZmJhYzE3YWRjZjlkMGI2ZjFmZmI1MTdlN2I5MzZhYWQ5YzM3Yjc0N2NlNjRlYzRjNiIKICAgIH0KICB9Cn0=",
           "x": 122.5,
           "y": 195.5,
-          "z": 191.0
+          "z": 191
         },
         {
           "name": "Brammor",
@@ -2256,14 +2256,14 @@
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTE1MTYyOCwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzgzYzIxY2IxYjUxNGQ0ZDRlMzBlOWVhZjNiYzI3YzhjYThkZWQxOWMwNjI0YzAxZjc3ZGZkOTdmMDcyYzBkOSIKICAgIH0KICB9Cn0=",
           "x": 122.5,
           "y": 195.5,
-          "z": 184.0
+          "z": 184
         },
         {
           "name": "Emkam",
           "wiki": "https://wiki.hypixel.net/Kings",
           "owner": "e805cea0-86d8-2f45-88ac-9372c72c6ee3",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTExODMxMywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRjMzI2OGQ0YjQ3NWU4ZDViMjI5OTIzNTdhZTMxNjg5ZmZlYjcwYzhmYjYzMTkxNGRjNjQzMDM1ZjcwYzA5ZiIKICAgIH0KICB9Cn0=",
-          "x": 126.0,
+          "x": 126,
           "y": 195.5,
           "z": 180.5
         },
@@ -2272,7 +2272,7 @@
           "wiki": "https://wiki.hypixel.net/Kings",
           "owner": "053c1095-aaf3-27dd-8940-9a99ec58ea0e",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTA4OTY4NiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjQzMzg3MTQ2NzU2ZTNmY2YwMjkxZTEwYTk0ZGQ5YjBkMDhiN2UwMTRjMDNmMjYwMDM5N2JjOGE3OGE4ZTEzMyIKICAgIH0KICB9Cn0=",
-          "x": 133.0,
+          "x": 133,
           "y": 195.5,
           "z": 180.5
         },
@@ -2283,7 +2283,7 @@
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTAyMDE0NiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWVjN2YxYjgzZTVhYTQ4ZjJhMjE0ZDhkMzY5YzQ3MDI1NzRiMDViYjg5N2ExZTIxZGQwYTM0MzdiODdjMDQxYSIKICAgIH0KICB9Cn0=",
           "x": 136.5,
           "y": 195.5,
-          "z": 184.0
+          "z": 184
         },
         {
           "name": "Thormyr",
@@ -2292,7 +2292,7 @@
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxNTIwNDM3MywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjYxZWRlNjIxMjkzZTFmZTVmNmNmNzJmZjEyNjc2OTFlYTYxZWFjYjZjY2UwZmQ5YmIyODQzNGJkN2VhNzc3YiIKICAgIH0KICB9Cn0=",
           "x": 136.5,
           "y": 195.5,
-          "z": 191.0
+          "z": 191
         },
         {
           "name": "Puzzler",
@@ -2408,7 +2408,7 @@
           "owner": "396a7f50-f225-2c30-b7c0-22a6a137fbdb",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDIyNTA4NzI1OCwKICAicHJvZmlsZUlkIiA6ICJlYjIwYWVkYTRiYTM0NzVmOTczZGNmZjkzNTE2OGZhYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTa3lGYWxsZWVlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2M3NjVmZWU5N2JjZmFlN2MxMzZiNmE2YjhjYTk1MzgxYWY5NjRkNmFlYmMwOGJmZGQyMzUwYWY3OGUyY2Y1MWEiCiAgICB9CiAgfQp9",
           "x": -72.5,
-          "y": 153.0,
+          "y": 153,
           "z": -10.5
         },
         {
@@ -2417,7 +2417,7 @@
           "owner": "ddc624d3-5d02-2d6b-ada7-6de130dd0937",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDI0NzQ3MjczNCwKICAicHJvZmlsZUlkIiA6ICI3NDM3MGQ1Mjk5Mjk0ZThjODRlYjRlODlhYjc2MGY5MiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQdXRZb3VySmFzT2ZmIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzlhNDMzMjI1MTFmNGJiYTcxMGJkNzhjOThjOTBlODNhYzkyYTJkYTBmMDVhMGE2OTUxMDg5YmFjZTBjZjIwM2EiCiAgICB9CiAgfQp9",
           "x": -132.5,
-          "y": 174.0,
+          "y": 174,
           "z": -50.5
         }
       ]

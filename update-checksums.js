@@ -21,6 +21,7 @@ for (const world in data) {
 }
 
 if (changed) fs.writeFileSync('./data/map.json', JSON.stringify(data, null, 2));
+fs.writeFileSync('./data/map.json.sha256', getChecksum('./data/map.json'))
 
 function getChecksum(file) {
     const hash = crypto.createHash('sha256');
