@@ -1543,26 +1543,40 @@
     },
     "combat_3": {
       "images": {
+        "100": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/end_dragon_nest.png",
+            "sha256": "6fb91d2c71714f3c097b1f977d29be14785823de3695da71096c6fca6615f28a"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/end_dragon_nest.png",
+            "sha256": "6053b55b2ff5fd6462865382c24ea549b873a8b12e54ae7d8c68ea3acadc8bf4"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/end_dragon_nest.png",
+            "sha256": "4773c3be053a958afdce91f5815566912965297833b65d99ec774292e077fefb"
+          }
+        },
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/end.png",
-            "sha256": "211c9e62ed6e9f38a582dbd233030d92daf16dba5e087d74dfb823520d3724c9"
+            "sha256": "38ce5d0cf3e0410728a34e5d23ea4ec3818787561c3c29ef6af02d2cb414aedf"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/end.png",
-            "sha256": "6a4d8e3f6b9fd40501c5ee9e0bf1c012a339f2ad2f75086c5861a067b34b2151"
+            "sha256": "07eb067d43844ff1f976bb7a9dc38523af0b58a08e9beccf239d3f5f8797ea97"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end.png",
-            "sha256": "a5dcf21ea3ff126ae482e5075632567999d0b59b8373eab8337d06d444fa8229"
+            "sha256": "14ec598d90c00cc1a25223369c102242626463a0bcf404ac2dfd1f20d2e3c5e4"
           }
         }
       },
       "name": "the End",
-      "topX": -783,
-      "topY": -423,
-      "bottomX": -448,
-      "bottomY": -121,
+      "topX": -790,
+      "topY": -422,
+      "bottomX": -447,
+      "bottomY": -123,
       "portals": [
         {
           "x": -495,
