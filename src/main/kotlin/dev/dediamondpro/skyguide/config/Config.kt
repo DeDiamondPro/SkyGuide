@@ -97,7 +97,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         description = "Enable the mini-map.",
         category = "Mini-Map"
     )
-    var miniMapEnabled = false
+    var miniMapEnabled = true
 
     @Property(
         type = PropertyType.SELECTOR,
