@@ -26,19 +26,23 @@ class GuiUtils {
 
     @SubscribeEvent
     fun onGuiRenderEven(event: GuiScreenEvent.DrawScreenEvent.Pre) {
-        mouseDX = null
-        mouseDY = null
+        val mouseX = Mouse.getX()
+        val mouseY = Mouse.getY()
+        mouseDX =  mouseX - prevMouseX
+        mouseDY =  mouseY - prevMouseY
+        prevMouseX = mouseX
+        prevMouseY = mouseY
 
         val leftClickedTemp = Mouse.isButtonDown(0)
         leftClicked = wasLeftClicked && !leftClickedTemp && leftMoveDelta <= 15
         wasLeftClicked = leftClickedTemp
-        if (leftClickedTemp) leftMoveDelta += getMouseDX().absoluteValue + getMouseDY().absoluteValue
+        if (leftClickedTemp) leftMoveDelta += mouseDX.absoluteValue + mouseDY.absoluteValue
         else leftMoveDelta = 0
 
         val rightClickedTemp = Mouse.isButtonDown(1)
-        rightClicked = wasRightClicked && !rightClickedTemp  && rightMoveDelta <= 15
+        rightClicked = wasRightClicked && !rightClickedTemp && rightMoveDelta <= 15
         wasRightClicked = rightClickedTemp
-        if (rightClickedTemp) rightMoveDelta += getMouseDX().absoluteValue + getMouseDY().absoluteValue
+        if (rightClickedTemp) rightMoveDelta += mouseDX.absoluteValue + mouseDY.absoluteValue
         else rightMoveDelta = 0
     }
 
@@ -55,8 +59,12 @@ class GuiUtils {
         private var leftMoveDelta: Long = 0L
         private var wasRightClicked = false
         private var rightMoveDelta: Long = 0L
-        private var mouseDX: Int? = null
-        private var mouseDY: Int? = null
+        private var prevMouseX = 0
+        private var prevMouseY = 0
+        var mouseDX: Int = 0
+            private set
+        var mouseDY: Int = 0
+            private set
         var leftClicked = false
             private set
         var rightClicked = false
@@ -64,16 +72,6 @@ class GuiUtils {
 
         fun getDeltaTime(): Long {
             return deltaTime
-        }
-
-        fun getMouseDX(): Int {
-            if (mouseDX == null) mouseDX = Mouse.getDX()
-            return mouseDX!!
-        }
-
-        fun getMouseDY(): Int {
-            if (mouseDY == null) mouseDY = Mouse.getDY()
-            return mouseDY!!
         }
 
         fun displayScreen(gui: GuiScreen?) {
