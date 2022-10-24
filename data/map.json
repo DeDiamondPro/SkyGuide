@@ -1805,7 +1805,7 @@
         "72": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_slimehill.png",
-            "sha256": "32eebfb1983fedfb1df54e291e6ce8d113a7d1180b4517233db58f9db6413d06"
+            "sha256": "d7b2255a734420364e80768911360943c538accd7262c79ffcd95054fe3ddcb0"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_slimehill.png",
@@ -1850,15 +1850,15 @@
         "155": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_gunpowder_mines.png",
-            "sha256": "3bfc8fe0c3b9845a71e369eee6ecd65162f3d72fdabe528631f0ab6c8d25dd59"
+            "sha256": "c0adda3fb1bd6872269b696777fff0b49299d06b860a47f405faa6ebf305e0ea"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_gunpowder_mines.png",
-            "sha256": "30585890958d3334dc913ed5eac80e0ad2f598f15c3bab9db548b62c6f3c5631"
+            "sha256": "a71e75c04877f92ebc0abbbb1861ee21a252f86e76146a97c6c886860f3a5fb3"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_gunpowder_mines.png",
-            "sha256": "76f33544f6efb6d9c5c2a23dc1b0e93675af86889078ce81258429410b2be5c3"
+            "sha256": "b8bd0f66547071b58aba0e690c8e6643c258ee4611b7878bcdf5f669e40b0505"
           },
           "zoom": 2
         },
