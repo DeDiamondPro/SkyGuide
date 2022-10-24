@@ -495,11 +495,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/spiders_den_underground.png",
-            "sha256": "baad5bdaaeb7143c248fb05754380df26324e0f527d51a842c4ceffcc86364d4"
+            "sha256": "18a84b11e1df388ce50f7ab969d47ebcbc4a3d7b99e62fca5597e74caa2c1487"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den_underground.png",
-            "sha256": "f331c8c1ebf11dac89a357bd91bfcba03966b048e9da4843f2f52b84f7913764"
+            "sha256": "ca6793e139618e48e4cdec48209abbfd83be760035af1248577dbec2c514cb5e"
           }
         },
         "255": {
@@ -755,15 +755,15 @@
         "60": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands_underground.png",
-            "sha256": "9f89428e094dc75465bee2b132850d5ba97f52c5986a171f17b30369ab60dd4a"
+            "sha256": "a76a06b7011bad432d9fa0ede2ea5aa6fd68ccbee7b8b6dda786fb1a99b2bf93"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/farming_islands_underground.png",
-            "sha256": "42c2ca85bd9496aa695db3f88a5235bb693c89e74d1a3d286f329f64756a1f5a"
+            "sha256": "87b60427cff3de75791e8d6de74d1164c2682ecd9fab15a55abe4549949caf55"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands_underground.png",
-            "sha256": "4abe338b1d97ee2e94492c9f0f33353eac261fbbca869ac339bf4e87c336bbd1"
+            "sha256": "868177d8e0d0f64e8122ad6eb5c78ae0744324464549b0b755fc08cf2b759da6"
           }
         },
         "255": {
@@ -1578,11 +1578,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/end_dragon_nest.png",
-            "sha256": "6053b55b2ff5fd6462865382c24ea549b873a8b12e54ae7d8c68ea3acadc8bf4"
+            "sha256": "f6b1e18d614792239a9266c9da31cee6cdd8483ed06600522737c0ef35036ea0"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end_dragon_nest.png",
-            "sha256": "4773c3be053a958afdce91f5815566912965297833b65d99ec774292e077fefb"
+            "sha256": "53901763eeb958521d7d46eda9b5cbbed154a1202e0ba64ada43b7941a19cbd7"
           }
         },
         "255": {
@@ -1683,7 +1683,7 @@
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/gold_mine_underground.png",
-            "sha256": "9a7999976a5eab229d54b92eaaaae5255d8e7c3f7d6cda7ac4baef387b092a3a"
+            "sha256": "2a875a04130c685b0a39956092af72b53501cf4836f8ea78357eb8b6da880101"
           }
         },
         "255": {
