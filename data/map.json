@@ -488,6 +488,20 @@
     },
     "combat_1": {
       "images": {
+        "77": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/spiders_den_underground.png",
+            "sha256": "0e69b2be4eafde26182d347002bf87295e5d2c6217e9065bb33c26b53656208b"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/spiders_den_underground.png",
+            "sha256": "baad5bdaaeb7143c248fb05754380df26324e0f527d51a842c4ceffcc86364d4"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den_underground.png",
+            "sha256": "f331c8c1ebf11dac89a357bd91bfcba03966b048e9da4843f2f52b84f7913764"
+          }
+        },
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/spiders_den.png",
@@ -738,6 +752,20 @@
     },
     "farming_1": {
       "images": {
+        "60": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands_underground.png",
+            "sha256": "9f89428e094dc75465bee2b132850d5ba97f52c5986a171f17b30369ab60dd4a"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/farming_islands_underground.png",
+            "sha256": "42c2ca85bd9496aa695db3f88a5235bb693c89e74d1a3d286f329f64756a1f5a"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands_underground.png",
+            "sha256": "4abe338b1d97ee2e94492c9f0f33353eac261fbbca869ac339bf4e87c336bbd1"
+          }
+        },
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands.png",
@@ -1644,6 +1672,20 @@
     },
     "mining_1": {
       "images": {
+        "72": {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/gold_mine_underground.png",
+            "sha256": "6ede9ea06a39e7e9bf697e1b0fbd63cfa3d3a9037745c739e27cf8f2712154f6"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/gold_mine_underground.png",
+            "sha256": "7da012921774b6ba003376b9331448aa8ddd9e4b0dcf55e93e2f9cd5a11bc29b"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/gold_mine_underground.png",
+            "sha256": "9a7999976a5eab229d54b92eaaaae5255d8e7c3f7d6cda7ac4baef387b092a3a"
+          }
+        },
         "255": {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/gold_mine.png",
