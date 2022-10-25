@@ -46,7 +46,6 @@ data class Portal(
 
     override fun onLeftClick() {
         UMinecraft.getMinecraft().thePlayer.sendChatMessage("/$command")
-        GuiUtils.displayScreen(null)
     }
 
     override fun onRightClick() {
