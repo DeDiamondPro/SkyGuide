@@ -7,6 +7,7 @@ import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.handlers.KeyBindHandler
 import dev.dediamondpro.skyguide.hud.MiniMap
 import dev.dediamondpro.skyguide.listeners.MessageListener
+import dev.dediamondpro.skyguide.map.Condition
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.SBInfo
@@ -28,6 +29,8 @@ object SkyGuide {
 
     @Mod.EventHandler
     fun onInitialization(event: FMLInitializationEvent) {
+        Condition("x>5&&x<6")
+        Condition("x>5")
         Config.preload()
         if (Config.downloadAtLaunch) AssetHandler.initialize()
         KeyBindHandler.init()

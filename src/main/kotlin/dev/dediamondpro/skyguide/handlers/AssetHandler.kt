@@ -113,7 +113,7 @@ class AssetHandler {
             val imagesToUpdate = mutableMapOf<WebAsset, File>()
             for (world in SkyblockMap.worlds.values) {
                 for (island in world.values) {
-                    for (image in island.images.values) {
+                    for (image in island.images) {
                         val file = image.filePath.toFile()
                         if ((!file.exists() || image.getSha256() != IOUtils.getSha256(file)) && Config.downloadAssets) {
                             image.initialized = false

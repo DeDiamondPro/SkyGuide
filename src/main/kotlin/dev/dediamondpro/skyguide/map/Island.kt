@@ -20,7 +20,7 @@ import gg.essential.universal.UGraphics
  */
 @kotlinx.serialization.Serializable
 data class Island(
-    var images: MutableMap<Int, Textures>,
+    var images: MutableList<Textures>,
     val portals: MutableList<Portal> = mutableListOf(),
     val npcs: MutableList<Npc> = mutableListOf(),
     val name: String,
@@ -41,12 +41,16 @@ data class Island(
         }
 
     init {
-        images = images.toSortedMap()
         for (poi in getPointsOfInterest()) poi.island = this
     }
 
-    fun draw(y: Int) {
-        getImage(y).draw(topX + xOffset, topY + yOffset, width, height)
+    fun draw(x: Float?, y: Float?, z: Float?) {
+        (if (x == null || y == null || z == null) getDefaultImage() else getImage(x, y, z)).draw(
+            topX + xOffset,
+            topY + yOffset,
+            width,
+            height
+        )
     }
 
     fun drawLast(x: Float, y: Float, scale: Float, locations: MutableList<Pair<Float, Float>>) {
@@ -93,11 +97,14 @@ data class Island(
         return false
     }
 
-    fun getImage(y: Int): Textures {
-        for ((height, image) in images) {
-            if (height >= y) return image
-        }
-        return images[0]!!
+    fun getImage(x: Float, y: Float, z: Float): Textures {
+        for (image in images) if (image.parsedCondition.evaluate(x, y, z)) return image
+        return getDefaultImage()
+    }
+
+    fun getDefaultImage(): Textures {
+        for (image in images) if (image.parsedCondition.isEmpty()) return image
+        return images.first()
     }
 
     private fun getPointsOfInterest(): List<PointOfInterest> {

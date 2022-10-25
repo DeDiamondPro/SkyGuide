@@ -6,8 +6,15 @@ import dev.dediamondpro.skyguide.utils.RenderUtils
 import dev.dediamondpro.skyguide.utils.WebAsset
 
 @kotlinx.serialization.Serializable
-data class Textures(val low: ShaImage, val medium: ShaImage, val high: ShaImage, val zoom: Float = 1f) : WebAsset {
+data class Textures(
+    val low: ShaImage,
+    val medium: ShaImage,
+    val high: ShaImage,
+    val zoom: Float = 1f,
+    private val condition: String = ""
+) : WebAsset {
     val filePath: String = "config/${SkyGuide.ID}/assets/" + getUrl().split("/")[getUrl().split("/").size - 1]
+    val parsedCondition = Condition(condition)
     override var initialized: Boolean = false
 
     override fun getUrl(): String {

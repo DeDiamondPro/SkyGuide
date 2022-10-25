@@ -55,10 +55,13 @@ class MapGui : UScreen() {
         }
         UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
 
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.draw(
-            if (mapPart.zone == SBInfo.zone) UPlayer.getPosY().toInt()
-            else 255
-        )
+        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
+            if (mapPart.zone == SBInfo.zone) mapPart.draw(
+                UPlayer.getPosX().toFloat(),
+                UPlayer.getPosY().toFloat(),
+                UPlayer.getPosZ().toFloat()
+            ) else mapPart.draw(null, null, null)
+        }
         UGraphics.GL.translate(
             (UPlayer.getOffsetX() + Island.getXOffset()).toDouble(),
             (UPlayer.getOffsetY() + Island.getYOffset()).toDouble(),

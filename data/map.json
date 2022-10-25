@@ -1,8 +1,8 @@
 {
   "main": {
     "hub": {
-      "images": {
-        "255": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/hub.png",
             "sha256": "328c3b316c8210ce10556f2e3ef442494454696cf608f72ca4a37619a9efb75a"
@@ -16,7 +16,7 @@
             "sha256": "722f6c62c31257e406fccad5ff27ce9c8e5d89a3ce70fbea87fa610092d9bee8"
           }
         }
-      },
+      ],
       "name": "the Hub",
       "topX": -298,
       "topY": -258,
@@ -487,8 +487,8 @@
       ]
     },
     "combat_1": {
-      "images": {
-        "77": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/spiders_den_underground.png",
             "sha256": "0e69b2be4eafde26182d347002bf87295e5d2c6217e9065bb33c26b53656208b"
@@ -500,9 +500,10 @@
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den_underground.png",
             "sha256": "ca6793e139618e48e4cdec48209abbfd83be760035af1248577dbec2c514cb5e"
-          }
+          },
+          "condition": "y<77"
         },
-        "255": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/spiders_den.png",
             "sha256": "98bfba96246b6588fda5aea90d8b73366b466653dcf60d134318850c7ef28b65"
@@ -516,7 +517,7 @@
             "sha256": "8887589809d402085b047d0a012002def195143effe3dee1124e8d88cf53a3f4"
           }
         }
-      },
+      ],
       "name": "Spider's Den",
       "topX": -408,
       "topY": -408,
@@ -610,8 +611,8 @@
       ]
     },
     "foraging_1": {
-      "images": {
-        "255": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/park.png",
             "sha256": "ba70be86262e05cc6184f77c83abad3906e05f50bfffd2fa8d194238d201fb16"
@@ -625,7 +626,7 @@
             "sha256": "34c1aad60b04e1c95c516464898c1492ae64c06b80dda7f3fc10c2c5c43a3a22"
           }
         }
-      },
+      ],
       "name": "the Park",
       "topX": -500,
       "topY": -148,
@@ -751,8 +752,8 @@
       ]
     },
     "farming_1": {
-      "images": {
-        "60": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands_underground.png",
             "sha256": "a76a06b7011bad432d9fa0ede2ea5aa6fd68ccbee7b8b6dda786fb1a99b2bf93"
@@ -764,9 +765,10 @@
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands_underground.png",
             "sha256": "868177d8e0d0f64e8122ad6eb5c78ae0744324464549b0b755fc08cf2b759da6"
-          }
+          },
+          "condition": "y<60"
         },
-        "255": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands.png",
             "sha256": "c79cc61d5b70505f9f2e766b58f70b77863a5c09439233bfd624ac0f47df059e"
@@ -780,7 +782,7 @@
             "sha256": "6b113ee10ebaa5f7922ec6cdc25afc39411f867edf0b906397f2cfc3fd8045ed"
           }
         }
-      },
+      ],
       "name": "the Farming Islands",
       "topX": 70,
       "topY": -643,
@@ -933,8 +935,8 @@
       ]
     },
     "crimson_isle": {
-      "images": {
-        "255": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/crimson_isle.png",
             "sha256": "6712c03879d912eb7e07a9878e179d1b3d58f18406b3d61340ff8ae9b0d7a45f"
@@ -948,7 +950,7 @@
             "sha256": "bf2578344637117702a6ec09eabcde5802a2a21a56d8b6b32a807097f5193e0f"
           }
         }
-      },
+      ],
       "name": "Crimson Isle",
       "topX": -772,
       "topY": -1180,
@@ -1570,8 +1572,8 @@
       ]
     },
     "combat_3": {
-      "images": {
-        "100": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/end_dragon_nest.png",
             "sha256": "6fb91d2c71714f3c097b1f977d29be14785823de3695da71096c6fca6615f28a"
@@ -1583,9 +1585,10 @@
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end_dragon_nest.png",
             "sha256": "53901763eeb958521d7d46eda9b5cbbed154a1202e0ba64ada43b7941a19cbd7"
-          }
+          },
+          "condition": "y<100"
         },
-        "255": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/end.png",
             "sha256": "38ce5d0cf3e0410728a34e5d23ea4ec3818787561c3c29ef6af02d2cb414aedf"
@@ -1599,7 +1602,7 @@
             "sha256": "14ec598d90c00cc1a25223369c102242626463a0bcf404ac2dfd1f20d2e3c5e4"
           }
         }
-      },
+      ],
       "name": "the End",
       "topX": -790,
       "topY": -422,
@@ -1671,8 +1674,8 @@
       ]
     },
     "mining_1": {
-      "images": {
-        "72": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/gold_mine_underground.png",
             "sha256": "6ede9ea06a39e7e9bf697e1b0fbd63cfa3d3a9037745c739e27cf8f2712154f6"
@@ -1684,9 +1687,10 @@
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/gold_mine_underground.png",
             "sha256": "2a875a04130c685b0a39956092af72b53501cf4836f8ea78357eb8b6da880101"
-          }
+          },
+          "condition": "y<72"
         },
-        "255": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/gold_mine.png",
             "sha256": "649d28a40b5247e599afe736038c948e3e27794a0ef9f5845848658817aff9c7"
@@ -1700,7 +1704,7 @@
             "sha256": "96fd0dccefed069c15a0091b32c053dba58b6d947e5255b37444d0783d786c49"
           }
         }
-      },
+      ],
       "name": "the Gold Mine",
       "topX": -90,
       "topY": -401,
@@ -1771,8 +1775,8 @@
       ]
     },
     "mining_2": {
-      "images": {
-        "20": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_obsidian_sanctuary.png",
             "sha256": "d30a620de8ad74438cd0dd821fd356858c31004db3120fb29df396d8124c3afd"
@@ -1785,9 +1789,10 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_obsidian_sanctuary.png",
             "sha256": "642fd927183d562f3778a57d4c62cb0ef9164c1b9b243fda6cf1d2d0c3fd0be1"
           },
+          "condition": "y<20",
           "zoom": 2
         },
-        "42": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_diamond_reserve.png",
             "sha256": "1b691bf111ddff9b3bd63ca3e17ec43368e8dd0797ce9fe487b9bf9b76411876"
@@ -1800,9 +1805,10 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_diamond_reserve.png",
             "sha256": "7ef22433741a985fc463e5f8cadd89621731564c315d6512c734ad4201bc5f36"
           },
+          "condition": "y<42",
           "zoom": 2
         },
-        "72": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_slimehill.png",
             "sha256": "d7b2255a734420364e80768911360943c538accd7262c79ffcd95054fe3ddcb0"
@@ -1815,9 +1821,10 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_slimehill.png",
             "sha256": "8c4dec2662f3c3e0c9f60207bd5d9b5dc5e92fb61c7d7f089594a8b6084e2ea3"
           },
+          "condition": "y<72",
           "zoom": 2
         },
-        "109": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_pigmen_den.png",
             "sha256": "bc1438368c69ea76a1b0ad04c36262637077de52c18478055ab629ac3a85e4b2"
@@ -1830,9 +1837,10 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_pigmen_den.png",
             "sha256": "bf232d5112f96165e531e177616ced3d3b6b4b1122caf17383dc54d36077d2ab"
           },
+          "condition": "y<109",
           "zoom": 2
         },
-        "130": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_lapis_quarry.png",
             "sha256": "051eab93c338c9b17539b67dd1c8c8ba9b8df7c5025ba9fc4bffa61577ba8719"
@@ -1845,9 +1853,10 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_lapis_quarry.png",
             "sha256": "70235b1c691419972d5a051b77b45464f320a976502f5ae382d3a4614a9385c2"
           },
+          "condition": "y<130",
           "zoom": 2
         },
-        "155": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_gunpowder_mines.png",
             "sha256": "c0adda3fb1bd6872269b696777fff0b49299d06b860a47f405faa6ebf305e0ea"
@@ -1860,9 +1869,10 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_gunpowder_mines.png",
             "sha256": "b8bd0f66547071b58aba0e690c8e6643c258ee4611b7878bcdf5f669e40b0505"
           },
+          "condition": "y<155",
           "zoom": 2
         },
-        "255": {
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns.png",
             "sha256": "3c8104a9462b5f5fe7a9c2252a4f307bc1c3b18d80bd778c0756bd6171a58b62"
@@ -1876,7 +1886,7 @@
             "sha256": "5c36006c5c93c7cafdcd65f27062813596d343c0e409e245bd4f96b87d01a88f"
           }
         }
-      },
+      ],
       "name": "the Deep Caverns",
       "topX": -86,
       "topY": -68,
@@ -1936,8 +1946,8 @@
   },
   "jerry_workshop": {
     "winter": {
-      "images": {
-        "255": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/jerry_workshop.png",
             "sha256": "717ff07ea98631837d4671da8681f0edbe6bd2f283ab7528b11ac312589321d4"
@@ -1951,7 +1961,7 @@
             "sha256": "3558da6629190d1db2c30dd18f0491d335f9b39506eec0a260e12d347960957a"
           }
         }
-      },
+      ],
       "name": "Jerry's Workshop",
       "topX": -116,
       "topY": -116,
@@ -1961,8 +1971,8 @@
   },
   "dwarven_mines": {
     "mining_3": {
-      "images": {
-        "255": {
+      "images": [
+        {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/dwarven_mines.png",
             "sha256": "a1b793d212a61295157d0e17ef15b366fad55fe8fff1dc65a6d5ad1b824d87a2"
@@ -1976,7 +1986,7 @@
             "sha256": "7779d2f711c2498a70c4106b97ff7e19877b340865e68c5d470c4775220759e2"
           }
         }
-      },
+      ],
       "name": "Dwarven Mines",
       "topX": -250,
       "topY": -186,
