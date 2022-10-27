@@ -14,6 +14,7 @@ import gg.essential.universal.UResolution
 import gg.essential.universal.UScreen
 import gg.essential.universal.wrappers.UPlayer
 import org.lwjgl.input.Mouse
+import org.lwjgl.opengl.GL11
 
 class MapGui : UScreen() {
     private var scale = Config.defaultScale
@@ -63,12 +64,12 @@ class MapGui : UScreen() {
             ) else mapPart.draw(null, null, null)
         }
         UGraphics.GL.translate(
-            (UPlayer.getOffsetX() + Island.getXOffset()).toDouble(),
-            (UPlayer.getOffsetY() + Island.getYOffset()).toDouble(),
+            (UPlayer.getOffsetX(partialTicks) + Island.getXOffset()).toDouble(),
+            (UPlayer.getOffsetY(partialTicks) + Island.getYOffset()).toDouble(),
             0.0
         )
         UGraphics.GL.rotate(
-            180f + UMinecraft.getMinecraft().thePlayer.rotationYawHead,
+            180f + UPlayer.getHeadRotation(partialTicks),
             0.0f,
             0.0f,
             1.0f
@@ -78,7 +79,8 @@ class MapGui : UScreen() {
             -Config.mapPointerSize / 2f,
             -Config.mapPointerSize / 2f,
             Config.mapPointerSize,
-            Config.mapPointerSize
+            Config.mapPointerSize,
+            GL11.GL_NEAREST
         )
         UGraphics.GL.popMatrix()
         val locations = mutableListOf<Pair<Float, Float>>()

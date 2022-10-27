@@ -15,6 +15,7 @@ import net.minecraft.util.EnumChatFormatting
 import net.minecraft.util.MathHelper
 import net.minecraft.util.ResourceLocation
 import org.lwjgl.opengl.GL11
+import org.lwjgl.opengl.GL14
 import javax.vecmath.Vector3f
 import kotlin.math.cos
 import kotlin.math.roundToInt
@@ -198,21 +199,45 @@ object RenderUtils {
     }
 
     fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number) {
+        drawImage(fileName, x, y, width, height, GL11.GL_LINEAR)
+    }
+
+    fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number, filter: Int) {
         if (!AssetHandler.loadAsset(fileName)) return
         UGraphics.bindTexture(AssetHandler.getAsset(fileName))
-        val f: Float = 1.0f / width.toFloat()
-        val g: Float = 1.0f / height.toFloat()
+        UGraphics.enableTexture2D()
+        UGraphics.enableBlend()
+        UGraphics.tryBlendFuncSeparate(
+            GL11.GL_SRC_ALPHA,
+            GL11.GL_ONE_MINUS_SRC_ALPHA,
+            GL11.GL_ONE,
+            GL11.GL_ONE_MINUS_SRC_ALPHA
+        )
+
+        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, filter)
+        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, filter)
+
         val tessellator = Tessellator.getInstance()
-        val worldRenderer = tessellator.worldRenderer
-        worldRenderer.begin(7, DefaultVertexFormats.POSITION_TEX)
-        worldRenderer.pos(x.toDouble(), y.toDouble() + height.toDouble(), 0.0)
-            .tex(0.0, height.toDouble() * g).endVertex()
-        worldRenderer.pos(x.toDouble() + width.toDouble(), y.toDouble() + height.toDouble(), 0.0)
-            .tex(width.toDouble() * f, height.toDouble() * g).endVertex()
-        worldRenderer.pos(x.toDouble() + width.toDouble(), y.toDouble(), 0.0)
-            .tex(width.toDouble() * f, 0.0).endVertex()
-        worldRenderer.pos(x.toDouble(), y.toDouble(), 0.0).tex(0.0, 0.0).endVertex()
+        val worldrenderer = tessellator.worldRenderer
+        worldrenderer.begin(7, DefaultVertexFormats.POSITION_TEX)
+        worldrenderer
+            .pos(x.toDouble(), y.toDouble() + height.toDouble(), 0.0)
+            .tex(0.0, 1.0).endVertex()
+        worldrenderer
+            .pos(x.toDouble() + width.toDouble(), y.toDouble() + height.toDouble(), 0.0)
+            .tex(1.0, 1.0).endVertex()
+        worldrenderer
+            .pos(x.toDouble() + width.toDouble(), y.toDouble(), 0.0)
+            .tex(1.0, 0.0).endVertex()
+        worldrenderer
+            .pos(x.toDouble(), y.toDouble(), 0.0)
+            .tex(0.0, 0.0).endVertex()
         tessellator.draw()
+
+        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST)
+        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST)
+
+        UGraphics.disableBlend()
     }
 
     fun drawRect(x: Number, y: Number, width: Number, height: Number, color: Int) {
@@ -443,10 +468,22 @@ object RenderUtils {
     }
 
     fun drawRectBorder(x: Number, y: Number, width: Number, height: Number, color: Int, borderColor: Int) {
-        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(),  y.toInt() + height.toInt(), color)
-        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(),  y.toInt() + 1, borderColor)
-        Gui.drawRect(x.toInt(), y.toInt() + height.toInt() - 1, x.toInt() + width.toInt(),  y.toInt() + height.toInt(), borderColor)
-        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + 1,  y.toInt() + height.toInt(), borderColor)
-        Gui.drawRect(x.toInt() + width.toInt() - 1, y.toInt(), x.toInt() + width.toInt(),  y.toInt() + height.toInt(), borderColor)
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(), y.toInt() + height.toInt(), color)
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + width.toInt(), y.toInt() + 1, borderColor)
+        Gui.drawRect(
+            x.toInt(),
+            y.toInt() + height.toInt() - 1,
+            x.toInt() + width.toInt(),
+            y.toInt() + height.toInt(),
+            borderColor
+        )
+        Gui.drawRect(x.toInt(), y.toInt(), x.toInt() + 1, y.toInt() + height.toInt(), borderColor)
+        Gui.drawRect(
+            x.toInt() + width.toInt() - 1,
+            y.toInt(),
+            x.toInt() + width.toInt(),
+            y.toInt() + height.toInt(),
+            borderColor
+        )
     }
 }

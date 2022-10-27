@@ -5,10 +5,7 @@ import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.Textures
-import dev.dediamondpro.skyguide.utils.GuiUtils
-import dev.dediamondpro.skyguide.utils.RenderUtils
-import dev.dediamondpro.skyguide.utils.getOffsetX
-import dev.dediamondpro.skyguide.utils.getOffsetY
+import dev.dediamondpro.skyguide.utils.*
 import gg.essential.universal.UGraphics
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.UResolution
@@ -56,46 +53,47 @@ class MiniMap {
 
         UGraphics.GL.pushMatrix()
         GL11.glEnable(GL11.GL_SCISSOR_TEST)
-        UGraphics.enableBlend()
+        GL11.glEnable(GL11.GL_ALPHA_TEST)
         GL11.glScissor(
             (x * UResolution.scaleFactor).toInt(),
             ((UResolution.scaledHeight - y - 150 * scale) * UResolution.scaleFactor).toInt(),
             (150f * scale * UResolution.scaleFactor).toInt(),
             (150f * scale * UResolution.scaleFactor).toInt()
         )
+        if (Config.background) RenderUtils.drawRect(x, y, 150 * scale, 150 * scale, Config.backgroundColor.rgb)
         UGraphics.GL.translate(x + 75.0 * scale, y + 75.0 * scale, 0.0)
         if (Config.rotateWithPlayer) {
             UGraphics.GL.rotate(
-                180f - UMinecraft.getMinecraft().thePlayer.rotationYawHead,
+                180f - UPlayer.getHeadRotation(event.partialTicks),
                 0.0f,
                 0.0f,
                 1.0f
             )
         }
         if (fadeProgress != 1f && prevImage != null) {
+            UGraphics.color4f(1f, 1f, 1f, 1f - easeInOutQuad(fadeProgress))
             prevImage!!.draw(
-                ((island.topX - UPlayer.getOffsetX()) * totalScale).toInt(),
-                ((island.topY - UPlayer.getOffsetY()) * totalScale).toInt(),
+                ((island.topX - UPlayer.getOffsetX(event.partialTicks)) * totalScale).toInt(),
+                ((island.topY - UPlayer.getOffsetY(event.partialTicks)) * totalScale).toInt(),
                 island.width * totalScale,
                 island.height * totalScale
             )
         }
         UGraphics.color4f(1f, 1f, 1f, easeInOutQuad(fadeProgress))
         image.draw(
-            (island.topX - UPlayer.getOffsetX()) * totalScale,
-            (island.topY - UPlayer.getOffsetY()) * totalScale,
+            (island.topX - UPlayer.getOffsetX(event.partialTicks)) * totalScale,
+            (island.topY - UPlayer.getOffsetY(event.partialTicks)) * totalScale,
             island.width * totalScale,
             island.height * totalScale
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
         GL11.glDisable(GL11.GL_SCISSOR_TEST)
-        UGraphics.disableBlend()
         UGraphics.GL.popMatrix()
         UGraphics.GL.pushMatrix()
         UGraphics.GL.translate(x + 75.0 * scale, y + 75.0 * scale, 0.0)
         if (!Config.rotateWithPlayer) {
             UGraphics.GL.rotate(
-                180f + UMinecraft.getMinecraft().thePlayer.rotationYawHead,
+                180f + UPlayer.getHeadRotation(event.partialTicks),
                 0.0f,
                 0.0f,
                 1.0f
@@ -106,7 +104,8 @@ class MiniMap {
             -Config.miniMapPointerSize * scale / 2,
             -Config.miniMapPointerSize * scale / 2,
             Config.miniMapPointerSize * scale,
-            Config.miniMapPointerSize * scale
+            Config.miniMapPointerSize * scale,
+            GL11.GL_NEAREST
         )
         UGraphics.GL.popMatrix()
         if (fadeProgress == 1f) {
@@ -123,6 +122,6 @@ class MiniMap {
     }
 
     private fun easeInOutQuad(x: Float): Float {
-        return if (x < 0.5) 2 * x * x else (1 - (-2 * x + 2).toDouble().pow(2.0) / 2).toFloat()
+        return if (x < 0.5f) 2f * x * x else 1f - (-2f * x + 2f).pow(2f) / 2f
     }
 }

@@ -33,7 +33,7 @@ data class Portal(
     override fun drawIcon(x: Float, y: Float) {
         RenderUtils.drawImage(
             "/assets/skyguide/portal.png",
-            x - 6f ,
+            x - 6f,
             y - 9f,
             12f,
             18f

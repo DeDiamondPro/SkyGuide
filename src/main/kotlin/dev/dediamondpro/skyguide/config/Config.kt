@@ -6,6 +6,7 @@ import dev.dediamondpro.skyguide.utils.TickDelay
 import gg.essential.vigilance.Vigilant
 import gg.essential.vigilance.data.Property
 import gg.essential.vigilance.data.PropertyType
+import java.awt.Color
 import java.io.File
 
 private val configFile by lazy {
@@ -133,6 +134,22 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         category = "Mini-Map"
     )
     var mapZoom = 1f
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Background",
+        description = "Whether the map has a background",
+        category = "Mini-Map"
+    )
+    var background = true
+
+    @Property(
+        type = PropertyType.COLOR,
+        name = "Background Color",
+        description = "The color of the background",
+        category = "Mini-Map"
+    )
+    var backgroundColor = Color(0, 0, 0)
 
     @Property(
         type = PropertyType.DECIMAL_SLIDER,

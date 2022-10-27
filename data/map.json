@@ -501,7 +501,8 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den_underground.png",
             "sha256": "ca6793e139618e48e4cdec48209abbfd83be760035af1248577dbec2c514cb5e"
           },
-          "condition": "y<77"
+          "condition": "y<77",
+          "zoom": 2
         },
         {
           "low": {
@@ -766,7 +767,8 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands_underground.png",
             "sha256": "868177d8e0d0f64e8122ad6eb5c78ae0744324464549b0b755fc08cf2b759da6"
           },
-          "condition": "y<60"
+          "condition": "y<60",
+          "zoom": 2
         },
         {
           "low": {
@@ -1586,7 +1588,8 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/end_dragon_nest.png",
             "sha256": "53901763eeb958521d7d46eda9b5cbbed154a1202e0ba64ada43b7941a19cbd7"
           },
-          "condition": "y<100"
+          "condition": "y<100",
+          "zoom": 2
         },
         {
           "low": {
@@ -1688,7 +1691,8 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/gold_mine_underground.png",
             "sha256": "2a875a04130c685b0a39956092af72b53501cf4836f8ea78357eb8b6da880101"
           },
-          "condition": "y<72"
+          "condition": "y<72",
+          "zoom": 2
         },
         {
           "low": {
