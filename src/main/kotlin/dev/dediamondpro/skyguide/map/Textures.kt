@@ -10,7 +10,7 @@ data class Textures(
     val low: ShaImage,
     val medium: ShaImage,
     val high: ShaImage,
-    val zoom: Float = 1f,
+    val underground: Boolean = false,
     private val condition: String = ""
 ) : WebAsset {
     val filePath: String = "config/${SkyGuide.ID}/assets/" + getUrl().split("/")[getUrl().split("/").size - 1]

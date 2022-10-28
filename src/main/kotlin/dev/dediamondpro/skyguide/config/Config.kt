@@ -133,7 +133,16 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         minF = 0.25f, maxF = 5f,
         category = "Mini-Map"
     )
-    var mapZoom = 1f
+    var mapZoom = 1.5f
+
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
+        name = "Underground Zoom Multiplier",
+        description = "The zoom multiplier of the map when underground.",
+        minF = 0.25f, maxF = 5f,
+        category = "Mini-Map"
+    )
+    var undergroundMapZoom = 2f
 
     @Property(
         type = PropertyType.SWITCH,
@@ -158,7 +167,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         minF = 3.5f, maxF = 35f,
         category = "Mini-Map"
     )
-    var miniMapPointerSize = 7f
+    var miniMapPointerSize = 12f
 
     @Property(
         type = PropertyType.SWITCH,

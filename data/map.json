@@ -502,7 +502,7 @@
             "sha256": "ca6793e139618e48e4cdec48209abbfd83be760035af1248577dbec2c514cb5e"
           },
           "condition": "y<77",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -768,7 +768,7 @@
             "sha256": "868177d8e0d0f64e8122ad6eb5c78ae0744324464549b0b755fc08cf2b759da6"
           },
           "condition": "y<60",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1589,7 +1589,7 @@
             "sha256": "53901763eeb958521d7d46eda9b5cbbed154a1202e0ba64ada43b7941a19cbd7"
           },
           "condition": "y<100",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1692,7 +1692,7 @@
             "sha256": "2a875a04130c685b0a39956092af72b53501cf4836f8ea78357eb8b6da880101"
           },
           "condition": "y<72",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1794,7 +1794,7 @@
             "sha256": "642fd927183d562f3778a57d4c62cb0ef9164c1b9b243fda6cf1d2d0c3fd0be1"
           },
           "condition": "y<20",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1810,7 +1810,7 @@
             "sha256": "7ef22433741a985fc463e5f8cadd89621731564c315d6512c734ad4201bc5f36"
           },
           "condition": "y<42",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1826,7 +1826,7 @@
             "sha256": "8c4dec2662f3c3e0c9f60207bd5d9b5dc5e92fb61c7d7f089594a8b6084e2ea3"
           },
           "condition": "y<72",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1842,7 +1842,7 @@
             "sha256": "bf232d5112f96165e531e177616ced3d3b6b4b1122caf17383dc54d36077d2ab"
           },
           "condition": "y<109",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1858,7 +1858,7 @@
             "sha256": "70235b1c691419972d5a051b77b45464f320a976502f5ae382d3a4614a9385c2"
           },
           "condition": "y<130",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {
@@ -1874,7 +1874,7 @@
             "sha256": "b8bd0f66547071b58aba0e690c8e6643c258ee4611b7878bcdf5f669e40b0505"
           },
           "condition": "y<155",
-          "zoom": 2
+          "underground": true
         },
         {
           "low": {

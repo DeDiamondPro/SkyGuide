@@ -35,12 +35,13 @@ class MiniMap {
         val y = if (Config.miniMapLocation < 2) 0f else UResolution.scaledHeight - 150f * scale
         val image =
             island.getImage(UPlayer.getPosX().toFloat(), UPlayer.getPosY().toFloat(), UPlayer.getPosZ().toFloat())
-        if (prevIsland == island && image.zoom != zoomStart + zoomChange) {
+        val zoomTarget = if (image.underground) Config.undergroundMapZoom else 1f
+        if (prevIsland == island && zoomTarget != zoomStart + zoomChange) {
             zoomStart += zoomChange * easeInOutQuad(zoomProgress)
-            zoomChange = image.zoom - zoomStart
+            zoomChange = zoomTarget - zoomStart
             zoomProgress = 0f
-        } else if (image.zoom != zoomStart + zoomChange) {
-            zoomStart = image.zoom
+        } else if (zoomTarget != zoomStart + zoomChange) {
+            zoomStart = zoomTarget
             zoomChange = 0f
             zoomProgress = 1f
         }
