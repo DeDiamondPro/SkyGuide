@@ -119,8 +119,7 @@ class MapGui : UScreen() {
             -Config.mapPointerSize / 2f,
             -Config.mapPointerSize / 2f,
             Config.mapPointerSize,
-            Config.mapPointerSize,
-            GL11.GL_NEAREST
+            Config.mapPointerSize
         )
         UGraphics.GL.popMatrix()
         val locations = mutableListOf<Pair<Float, Float>>()

@@ -105,8 +105,7 @@ class MiniMap {
             -Config.miniMapPointerSize * scale / 2,
             -Config.miniMapPointerSize * scale / 2,
             Config.miniMapPointerSize * scale,
-            Config.miniMapPointerSize * scale,
-            GL11.GL_NEAREST
+            Config.miniMapPointerSize * scale
         )
         UGraphics.GL.popMatrix()
         if (fadeProgress == 1f) {
