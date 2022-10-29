@@ -9,11 +9,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/hub.png",
-            "sha256": "60787ddc52fc68b59d64cb333a091d4a4e0e6bcdf048a8bcedbbe894ffc39df4"
+            "sha256": "ffbec71c51b031a9d8512be22ab75f99e6ca1f6a6ebba65d57544b7236555ce1"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub.png",
-            "sha256": "07b42a4b3c08e3ab86e79be209262564f10b957b96ebcac0a3edd997657b1651"
+            "sha256": "baa2a70055059ba406b8f81b770880e3fe0141f72189303ab5b67b9961c083a0"
           }
         }
       ],
@@ -495,11 +495,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/spiders_den_underground.png",
-            "sha256": "659d40d6650ab1b03362232861f9cfd79fec4a79397d636854709d61df3660ba"
+            "sha256": "5c87a4073acd01e4ee2e4dce7435b4d4b0b0b4a22de9b520b250d8e1741b39df"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den_underground.png",
-            "sha256": "3975df3ea37bf59ffc8e8d105263e89b60be5cab9230ab0e46251469b6be6fd2"
+            "sha256": "2a8c6301abf63f925499af36d228dcfb1e21f416cb5d99548ee461009324740d"
           },
           "condition": "y<77",
           "underground": true
@@ -511,11 +511,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/spiders_den.png",
-            "sha256": "59e86cc6c9f608402be417f9a35843f43409213d904a150ad3bdad39aacfb8b1"
+            "sha256": "ef098215753562ae25c110b0e11da3c80f5082c339cfab7e1a851424dcf3d790"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den.png",
-            "sha256": "46d99d9ab48d1044936d8c7f6a41db3e9025fde3dbd2793e385feee75d784a54"
+            "sha256": "948fae8a8ff99bb5b1921c695221b53e464554917035a53767cea5e248047578"
           }
         }
       ],
@@ -945,11 +945,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/crimson_isle.png",
-            "sha256": "8f7549e5479d4af3f74c2c1407c56127886d2be8985ef517d5ddadeb1ef16623"
+            "sha256": "c9efb9788487554369503b7bc9137f81dac865bfa4d84c9c906b2f87e6169f72"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/crimson_isle.png",
-            "sha256": "089e27d39168b65a8da82dc6dd795af72dec3697d48287ab379d64d3c27d8fd6"
+            "sha256": "b9cbdb75b6d146a959d8e14517d916a4ea98f7945c923585f12bdb7fc28fd7db"
           }
         }
       ],
