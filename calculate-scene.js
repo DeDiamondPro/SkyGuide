@@ -11,7 +11,7 @@ function run() {
     const bottomX = Number.parseFloat(args[2])
     const bottomY = Number.parseFloat(args[3])
     console.log(`Camera position:  X: ${(topX + bottomX) / 2} Z: ${(topY + bottomY) / 2}`)
-    console.log(`Field of view: ${Math.max(Math.abs(topX - bottomX), Math.abs(topY - bottomY))}`)
+    console.log(`Field of view: ${Math.min(Math.abs(topX - bottomX), Math.abs(topY - bottomY))}`)
     console.log(`Low resolution: ${Math.abs(topX - bottomX)}x${Math.abs(topY - bottomY)}`)
     console.log(`Medium resolution: ${Math.abs(topX - bottomX) * 2}x${Math.abs(topY - bottomY) * 2}`)
     console.log(`High resolution: ${Math.abs(topX - bottomX) * 4}x${Math.abs(topY - bottomY) * 4}`)
