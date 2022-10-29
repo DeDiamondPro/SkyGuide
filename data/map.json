@@ -773,11 +773,11 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands.png",
-            "sha256": "c79cc61d5b70505f9f2e766b58f70b77863a5c09439233bfd624ac0f47df059e"
+            "sha256": "f2b7adec3febcfda7a5e11a21ea3083e0bd2c09055d0beaf0ffc623452c13a82"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/farming_islands.png",
-            "sha256": "753c974f1e9aff3e017637b475400d3bbb4a6ec9a82252c1d975452afb3bf7cf"
+            "sha256": "45f4ac9b40a65662b91226ab3bc2bc15522716730a5249c449b64f4d1a775e8d"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands.png",
@@ -786,10 +786,10 @@
         }
       ],
       "name": "the Farming Islands",
-      "topX": 70,
-      "topY": -643,
-      "bottomX": 409,
-      "bottomY": -183,
+      "topX": 82,
+      "topY": -618,
+      "bottomX": 400,
+      "bottomY": -194,
       "portals": [
         {
           "x": 112,
