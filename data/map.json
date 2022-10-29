@@ -5,15 +5,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/hub.png",
-            "sha256": "328c3b316c8210ce10556f2e3ef442494454696cf608f72ca4a37619a9efb75a"
+            "sha256": "aea401ebf7f14fdfe630476079a07580e76ec3feae5a3a378f65baf071d5b99d"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/hub.png",
-            "sha256": "72eed192274f0c3e4c5f7fa650d84268c8aadf40c76b9e8cf99247f9ac95f5cf"
+            "sha256": "60787ddc52fc68b59d64cb333a091d4a4e0e6bcdf048a8bcedbbe894ffc39df4"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub.png",
-            "sha256": "722f6c62c31257e406fccad5ff27ce9c8e5d89a3ce70fbea87fa610092d9bee8"
+            "sha256": "07b42a4b3c08e3ab86e79be209262564f10b957b96ebcac0a3edd997657b1651"
           }
         }
       ],
@@ -945,11 +945,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/crimson_isle.png",
-            "sha256": "205730e3262f19a7c7cf9c667ad9d147d501b3a689cf9a638fa76ab3e1ce8fb2"
+            "sha256": "8f7549e5479d4af3f74c2c1407c56127886d2be8985ef517d5ddadeb1ef16623"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/crimson_isle.png",
-            "sha256": "bf2578344637117702a6ec09eabcde5802a2a21a56d8b6b32a807097f5193e0f"
+            "sha256": "089e27d39168b65a8da82dc6dd795af72dec3697d48287ab379d64d3c27d8fd6"
           }
         }
       ],
@@ -1578,15 +1578,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/end_dragon_nest.png",
-            "sha256": "6fb91d2c71714f3c097b1f977d29be14785823de3695da71096c6fca6615f28a"
+            "sha256": "15d928bccba7510f4544fe05917029100987266f1487391c93172fe6e822ad53"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/end_dragon_nest.png",
-            "sha256": "f6b1e18d614792239a9266c9da31cee6cdd8483ed06600522737c0ef35036ea0"
+            "sha256": "8bf98a2b0cceacf6e6207a9ae5f2e9bad4fb30ac74e74d75dd7bf5f61f9acef2"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end_dragon_nest.png",
-            "sha256": "53901763eeb958521d7d46eda9b5cbbed154a1202e0ba64ada43b7941a19cbd7"
+            "sha256": "973cb850d873e0a28506b3627e31f3ad4340a10e087d36e8338e36ec2b47cf76"
           },
           "condition": "y<100",
           "underground": true
@@ -1594,15 +1594,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/end.png",
-            "sha256": "38ce5d0cf3e0410728a34e5d23ea4ec3818787561c3c29ef6af02d2cb414aedf"
+            "sha256": "7ba31361e1c02998f9cc1d433b6ee670b9873dd3c4e2eb5a42c5ba0e53121c0d"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/end.png",
-            "sha256": "07eb067d43844ff1f976bb7a9dc38523af0b58a08e9beccf239d3f5f8797ea97"
+            "sha256": "4d9894feecffa50675f8397287623c18de6c85e17294d995f137c499e8ae033c"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end.png",
-            "sha256": "14ec598d90c00cc1a25223369c102242626463a0bcf404ac2dfd1f20d2e3c5e4"
+            "sha256": "ecb5438a8ef9c4619fb6a283878f6d5fc3e585b55fe1d344d759490c31bdf459"
           }
         }
       ],
