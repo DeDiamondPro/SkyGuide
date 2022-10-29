@@ -6,30 +6,31 @@ import net.minecraftforge.client.event.GuiScreenEvent
 import net.minecraftforge.client.event.RenderGameOverlayEvent
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
-import net.minecraftforge.fml.common.gameevent.TickEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent.Phase
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
 import org.lwjgl.input.Mouse
 import kotlin.math.absoluteValue
 
 class GuiUtils {
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     fun onRenderEvent(event: RenderTickEvent) {
-        if (event.phase != TickEvent.Phase.START) return
+        if (event.phase != Phase.START) return
         if (time == -1L) {
             time = UMinecraft.getTime()
             return
         }
         val currentTime = UMinecraft.getTime()
-        deltaTime += currentTime - time
+        hudDeltaTime += currentTime - time
+        guiDeltaTime = currentTime - time
         time = currentTime
     }
 
     @SubscribeEvent
-    fun onGuiRenderEven(event: GuiScreenEvent.DrawScreenEvent.Pre) {
+    fun onGuiRenderEvent(event: GuiScreenEvent.DrawScreenEvent.Pre) {
         val mouseX = Mouse.getX()
         val mouseY = Mouse.getY()
-        mouseDX =  mouseX - prevMouseX
-        mouseDY =  mouseY - prevMouseY
+        mouseDX = mouseX - prevMouseX
+        mouseDY = mouseY - prevMouseY
         prevMouseX = mouseX
         prevMouseY = mouseY
 
@@ -47,13 +48,14 @@ class GuiUtils {
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
-    fun onHudRenderEvent(event: RenderGameOverlayEvent) {
+    fun onHudRenderEvent(event: RenderGameOverlayEvent.Pre) {
         if (event.type != RenderGameOverlayEvent.ElementType.ALL) return
-        deltaTime = 0L
+        hudDeltaTime = -1L
     }
 
     companion object {
-        private var deltaTime: Long = 0L
+        private var hudDeltaTime: Long = 0L
+        private var guiDeltaTime: Long = 0L
         private var time = -1L
         private var wasLeftClicked = false
         private var leftMoveDelta: Long = 0L
@@ -70,8 +72,12 @@ class GuiUtils {
         var rightClicked = false
             private set
 
-        fun getDeltaTime(): Long {
-            return deltaTime
+        fun getHudDeltaTime(): Long {
+            return hudDeltaTime
+        }
+
+        fun getGuiDeltaTime(): Long {
+            return guiDeltaTime
         }
 
         fun displayScreen(gui: GuiScreen?) {

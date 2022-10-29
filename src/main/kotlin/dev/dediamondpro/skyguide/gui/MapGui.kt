@@ -15,13 +15,16 @@ import gg.essential.universal.UScreen
 import gg.essential.universal.wrappers.UPlayer
 import org.lwjgl.input.Mouse
 import org.lwjgl.opengl.GL11
+import java.awt.Color
+import java.net.URLEncoder
 
 class MapGui : UScreen() {
+    private var world = SkyblockMap.getCurrentWorld()
+    private val buttons = mutableListOf<Button>()
+    private var buttonsWidth = 0f
     private var scale = Config.defaultScale
     private var x: Float = 0f
     private var y: Float = 0f
-    private var topX: Float = Float.MAX_VALUE
-    private var topY: Float = Float.MAX_VALUE
 
     init {
         x = (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
@@ -29,15 +32,52 @@ class MapGui : UScreen() {
         if (!SkyblockMap.currentWorldAvailable()) {
             displayScreen(null)
         } else {
-            for (island in SkyblockMap.getCurrentWorld()?.values!!) {
-                topX = topX.coerceAtMost(island.topX)
-                topY = topY.coerceAtMost(island.topY)
+            buttonsWidth = 0f
+            for (worldName in SkyblockMap.worlds.keys) {
+                val newButton = Button(worldName, 0f, 0f, 25f) {
+                    world = SkyblockMap.worlds[it.text]
+                    when (world) {
+                        null -> displayScreen(null)
+                        SkyblockMap.getCurrentWorld() -> {
+                            x =
+                                (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
+                            y =
+                                (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.scaledHeight / 2f) / scale).toFloat()
+                        }
+
+                        else -> {
+                            var bottomX = Float.MIN_VALUE
+                            var topX = Float.MAX_VALUE
+                            var bottomY = Float.MIN_VALUE
+                            var topY = Float.MAX_VALUE
+                            for (island in world!!.values) {
+                                bottomX = bottomX.coerceAtLeast(island.bottomX)
+                                topX = topX.coerceAtMost(island.topX)
+                                bottomY = bottomY.coerceAtLeast(island.bottomY)
+                                topY = topY.coerceAtMost(island.topY)
+                            }
+                            x = -(bottomX + topX) / 2f + (UResolution.scaledWidth / 2f) / scale
+                            y = -(bottomY + topY) / 2f + (UResolution.scaledHeight / 2f) / scale
+                        }
+                    }
+                }
+                buttonsWidth += newButton.width
+                buttons.add(newButton)
             }
         }
     }
 
+    override fun initScreen(width: Int, height: Int) {
+        var x = width / 2 - buttonsWidth / 2
+        for (button in buttons) {
+            button.x = x
+            button.y = height - 25f
+            x += button.width
+        }
+    }
+
     override fun onDrawScreen(matrixStack: UMatrixStack, mouseX: Int, mouseY: Int, partialTicks: Float) {
-        if (!SkyblockMap.currentWorldAvailable()) return
+        if (world == null) return
         val scrollWheel = Mouse.getDWheel()
         if (scrollWheel != 0) {
             val oldScale = scale
@@ -50,13 +90,13 @@ class MapGui : UScreen() {
         UGraphics.GL.pushMatrix()
         UGraphics.color4f(1f, 1f, 1f, 1f)
         UGraphics.GL.scale(scale.toDouble(), scale.toDouble(), 1.0)
-        if (Mouse.isButtonDown(0)) {
+        if (Mouse.isButtonDown(0) && mouseY <= UResolution.scaledHeight - 25) {
             x += (GuiUtils.mouseDX / scale / UResolution.scaleFactor).toFloat()
             y -= (GuiUtils.mouseDY / scale / UResolution.scaleFactor).toFloat()
         }
         UGraphics.GL.translate(x.toDouble(), y.toDouble(), 0.0)
 
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) {
+        for (mapPart in world!!.values) {
             if (mapPart.zone == SBInfo.zone) mapPart.draw(
                 UPlayer.getPosX().toFloat(),
                 UPlayer.getPosY().toFloat(),
@@ -74,7 +114,7 @@ class MapGui : UScreen() {
             0.0f,
             1.0f
         )
-        RenderUtils.drawImage(
+        if (world == SkyblockMap.getCurrentWorld()) RenderUtils.drawImage(
             "/assets/skyguide/player.png",
             -Config.mapPointerSize / 2f,
             -Config.mapPointerSize / 2f,
@@ -84,9 +124,24 @@ class MapGui : UScreen() {
         )
         UGraphics.GL.popMatrix()
         val locations = mutableListOf<Pair<Float, Float>>()
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) mapPart.drawLast(x, y, scale, locations)
+        UGraphics.GL.pushMatrix()
+        GL11.glEnable(GL11.GL_SCISSOR_TEST)
+        GL11.glScissor(
+            0,
+            (25 * UResolution.scaleFactor).toInt(),
+            UResolution.windowWidth,
+            UResolution.windowHeight - (25 * UResolution.scaleFactor).toInt()
+        )
+        for (mapPart in world!!.values) mapPart.drawLast(x, y, scale, locations)
+        GL11.glDisable(GL11.GL_SCISSOR_TEST)
+        UGraphics.GL.popMatrix()
+        RenderUtils.drawRect(0, UResolution.scaledHeight - 25, UResolution.scaledWidth, 25, Color(0, 0, 0, 180).rgb)
+        for (button in buttons) {
+            button.draw(matrixStack, mouseX, mouseY)
+        }
+        if (mouseY >= UResolution.scaledHeight - 25) return
         var hovering = false
-        for (mapPart in SkyblockMap.getCurrentWorld()?.values!!) if (mapPart.drawTooltips(
+        for (mapPart in world!!.values) if (mapPart.drawTooltips(
                 x,
                 y,
                 mouseX,
@@ -101,7 +156,7 @@ class MapGui : UScreen() {
         if (!hovering && GuiUtils.rightClicked) {
             val xScaled = mouseX / scale - x
             val yScaled = mouseY / scale - y
-            for (island in SkyblockMap.getCurrentWorld()!!.values) {
+            for (island in world!!.values) {
                 if (!island.isInIsland(xScaled, yScaled)) continue
                 NavigationHandler.navigateTo(
                     Destination(

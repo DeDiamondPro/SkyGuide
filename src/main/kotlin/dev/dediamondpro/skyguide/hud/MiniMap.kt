@@ -45,11 +45,11 @@ class MiniMap {
             zoomChange = 0f
             zoomProgress = 1f
         }
-        if (zoomProgress != 1f) zoomProgress += GuiUtils.getDeltaTime() / 350f
+        if (zoomProgress != 1f) zoomProgress += GuiUtils.getHudDeltaTime() / 350f
         zoomProgress = zoomProgress.coerceAtMost(1f)
         val totalScale = scale * Config.mapZoom * (zoomStart + zoomChange * easeInOutQuad(zoomProgress))
         if (island == prevIsland && prevImage != image && fadeProgress == 1f) fadeProgress = 0f
-        if (fadeProgress != 1f) fadeProgress += GuiUtils.getDeltaTime() / 350f
+        if (fadeProgress != 1f) fadeProgress += GuiUtils.getHudDeltaTime() / 350f
         fadeProgress = fadeProgress.coerceAtMost(1f)
 
         UGraphics.GL.pushMatrix()
