@@ -36,6 +36,7 @@ class MapGui : UScreen() {
             for (worldName in SkyblockMap.worlds.keys) {
                 val newButton = Button(worldName, 0f, 0f, 25f) {
                     world = SkyblockMap.worlds[it.text]
+                    scale = Config.defaultScale
                     when (world) {
                         null -> displayScreen(null)
                         SkyblockMap.getCurrentWorld() -> {

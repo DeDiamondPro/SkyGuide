@@ -150,7 +150,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         description = "Whether the map has a background",
         category = "Mini-Map"
     )
-    var background = true
+    var background = false
 
     @Property(
         type = PropertyType.COLOR,

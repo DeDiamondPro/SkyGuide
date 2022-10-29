@@ -7,6 +7,7 @@ import dev.dediamondpro.skyguide.map.poi.Portal
 import gg.essential.universal.UChat
 import net.minecraft.util.EnumChatFormatting
 import net.minecraftforge.client.event.RenderWorldLastEvent
+import net.minecraftforge.event.world.WorldEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 
 class NavigationHandler {
@@ -14,17 +15,24 @@ class NavigationHandler {
     @SubscribeEvent
     fun onRender(event: RenderWorldLastEvent) {
         val action = actions[SkyblockMap.getCurrentIsland() ?: return]
-        if (action == null && destinationPio.destination != null) navigateTo(destinationPio.destination!!)
+        if (!triedNavigation && action == null && destinationPio.destination != null) navigateTo(destinationPio.destination!!)
         if (action == null) return
         action.drawAction(event.partialTicks)
     }
 
+    @SubscribeEvent
+    fun onWorldSwap(event: WorldEvent.Load) {
+        triedNavigation = false
+    }
+
     companion object {
         private val actions = mutableMapOf<Island, NavigationAction>()
+        private var triedNavigation = false
         val destinationPio = DestinationPoi(null)
 
         fun navigateTo(destination: Destination) {
             clearNavigation()
+            destinationPio.destination = destination
             val currentIsland = SkyblockMap.getCurrentIsland() ?: return
             if (currentIsland != destination.island) {
                 val route = findRouteToIsland(
@@ -34,12 +42,12 @@ class NavigationHandler {
                 )
                 if (route == null) {
                     UChat.chat("${EnumChatFormatting.RED}Could not find a route!")
+                    triedNavigation = true
                     return
                 }
                 for (step in route) actions[step.key] = PortalAction(step.value, destination)
             }
             actions[destination.island] = DestinationAction(destination)
-            destinationPio.destination = destination
         }
 
         fun clearNavigation() {
