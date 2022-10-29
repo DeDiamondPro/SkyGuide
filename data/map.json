@@ -1783,15 +1783,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_obsidian_sanctuary.png",
-            "sha256": "d30a620de8ad74438cd0dd821fd356858c31004db3120fb29df396d8124c3afd"
+            "sha256": "5b91e0fcf9d6087ca18b0109fe1422ed063389a768e20f165944c55ce123923f"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_obsidian_sanctuary.png",
-            "sha256": "a8d493acff0e675c34288f8cbec26d1006178c0e862e2d610dc0171cfbf2b21b"
+            "sha256": "7817b38b0bb9f7d3b06c024227b29d38577d1f605247ce0c6de58c513ba5d432"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_obsidian_sanctuary.png",
-            "sha256": "642fd927183d562f3778a57d4c62cb0ef9164c1b9b243fda6cf1d2d0c3fd0be1"
+            "sha256": "af347e8ceb4c0f8c6fff8ab7ff558ce64cdedd2777e4d4ede62a76725fcc0254"
           },
           "condition": "y<20",
           "underground": true
@@ -1799,15 +1799,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_diamond_reserve.png",
-            "sha256": "1b691bf111ddff9b3bd63ca3e17ec43368e8dd0797ce9fe487b9bf9b76411876"
+            "sha256": "3dc060914d3566367deaeef67a677702e98754beadf872e15bcfd5c1c805e1f3"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_diamond_reserve.png",
-            "sha256": "39b64dbd9f6160293b775ae92e896351d4cba7e17f2f2259e59a6904cf32e5d9"
+            "sha256": "69987ee7dded940f468882499b08a8ef28bfedd0f27084260aa8620aec9af056"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_diamond_reserve.png",
-            "sha256": "7ef22433741a985fc463e5f8cadd89621731564c315d6512c734ad4201bc5f36"
+            "sha256": "452b5435a183904a606dad08c1ff9f1a19b1126533ad8647b5e9989118333c3b"
           },
           "condition": "y<42",
           "underground": true
@@ -1815,15 +1815,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_slimehill.png",
-            "sha256": "d7b2255a734420364e80768911360943c538accd7262c79ffcd95054fe3ddcb0"
+            "sha256": "6a4a7df70db035a556db4576fee7f8a96499a65c70f08f12b8ee9cec7b0fade3"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_slimehill.png",
-            "sha256": "60820c46af2924c387b106e917b6b8a774294ca6ce646fc726c38fecf5205641"
+            "sha256": "13d744d5ebb451319ba02bd3516882690fa359ea2405ffba5df8ded21a12386a"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_slimehill.png",
-            "sha256": "8c4dec2662f3c3e0c9f60207bd5d9b5dc5e92fb61c7d7f089594a8b6084e2ea3"
+            "sha256": "b057b2f6d92a3a5cb1e93ebecb4ab101121c30ea346ca8f665bf4f43062832a9"
           },
           "condition": "y<72",
           "underground": true
@@ -1831,15 +1831,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_pigmen_den.png",
-            "sha256": "bc1438368c69ea76a1b0ad04c36262637077de52c18478055ab629ac3a85e4b2"
+            "sha256": "00a1c804ea752b1613c82830ac054b4babb1a3e36074c6d9dcdafdf35724fbdd"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_pigmen_den.png",
-            "sha256": "24bde9500e23670c993540d11737b65211a839610b281f74e9187f2016a0e2ad"
+            "sha256": "9ba19fadb2a2b1321b00f3a99b0941a74024d30288d56728cce5a709c776c712"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_pigmen_den.png",
-            "sha256": "bf232d5112f96165e531e177616ced3d3b6b4b1122caf17383dc54d36077d2ab"
+            "sha256": "28050d9f3584f0fbc7fe99cbd9b1f8a0f7a1e3648c6a2d2872515538ec82e07c"
           },
           "condition": "y<109",
           "underground": true
@@ -1847,15 +1847,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_lapis_quarry.png",
-            "sha256": "051eab93c338c9b17539b67dd1c8c8ba9b8df7c5025ba9fc4bffa61577ba8719"
+            "sha256": "0b42b4c5b65b565e9f5614b5ea2caa1ce53e645a8c97a1c1493d4931e180bdd8"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_lapis_quarry.png",
-            "sha256": "6ee229096e3a87a3187e3c663fa17275516d3aec1c1afdcf641e86d283181435"
+            "sha256": "565cd075695045ae603f39c078b41f32c79dc58d4ccdb97dab207dd87c73bb06"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_lapis_quarry.png",
-            "sha256": "70235b1c691419972d5a051b77b45464f320a976502f5ae382d3a4614a9385c2"
+            "sha256": "2f04915f0b55ecdf40c6c785eca98ccd04c39be6d5bd7d3bb7d2576856ad74bb"
           },
           "condition": "y<130",
           "underground": true
@@ -1863,15 +1863,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns_gunpowder_mines.png",
-            "sha256": "c0adda3fb1bd6872269b696777fff0b49299d06b860a47f405faa6ebf305e0ea"
+            "sha256": "cf27c34f2cdc0a36e13ee3dbc90fdae995261988ae7fc039331dcf834be88e98"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns_gunpowder_mines.png",
-            "sha256": "a71e75c04877f92ebc0abbbb1861ee21a252f86e76146a97c6c886860f3a5fb3"
+            "sha256": "42385b00f5a1d47e82e7d019e62d71b6111255863ef5a775807353af127518d0"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_gunpowder_mines.png",
-            "sha256": "b8bd0f66547071b58aba0e690c8e6643c258ee4611b7878bcdf5f669e40b0505"
+            "sha256": "e1b439f9f4489945e6b193a8b7042c512fea21b8ab1f576ca805aee11ab58193"
           },
           "condition": "y<155",
           "underground": true
@@ -1879,15 +1879,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/deep_caverns.png",
-            "sha256": "3c8104a9462b5f5fe7a9c2252a4f307bc1c3b18d80bd778c0756bd6171a58b62"
+            "sha256": "28c9578c422c3d99d8ed906f4fbfb18b07c46251a0ac875a4625b8f5ce28926e"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/deep_caverns.png",
-            "sha256": "de271b46dc9c72eb0308a73a6b71e32d58e68ad2f250154816c7bbb32c81b14c"
+            "sha256": "447f760e67d8075c9d8b6b2fe37aeef23359d74610c12a773f7c9de86455ba37"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns.png",
-            "sha256": "5c36006c5c93c7cafdcd65f27062813596d343c0e409e245bd4f96b87d01a88f"
+            "sha256": "b0a103f583f506990d042f1008ac6d3d78349d139f8286c4cd57739eb0631342"
           }
         }
       ],
@@ -2474,15 +2474,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/jerry_workshop.png",
-            "sha256": "717ff07ea98631837d4671da8681f0edbe6bd2f283ab7528b11ac312589321d4"
+            "sha256": "307e7e3fc15eee1b04ff214821f29009e96c2f2d23faa9c19a5fde1c55681e23"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/jerry_workshop.png",
-            "sha256": "9c960e3785dbe8e8c2aef16f126e9acf89794901ca06d3d71ff78b9c3f5443dc"
+            "sha256": "3d88dcfad54756002009e039719d72651d547685ada3facf63eb3db990a14738"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/jerry_workshop.png",
-            "sha256": "3558da6629190d1db2c30dd18f0491d335f9b39506eec0a260e12d347960957a"
+            "sha256": "a60898777b303e449f0b8e5f3e4764658072e7605a1daa1277ca8191a5a1b29c"
           }
         }
       ],
