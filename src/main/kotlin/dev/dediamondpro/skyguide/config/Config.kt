@@ -193,6 +193,14 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     )
     var showInChat = true
 
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Smooth images",
+        description = "Smooth the images using linear scaling.\nCan reduce flicker of the mini-map on some monitors but might look worse.",
+        category = "Mini-Map"
+    )
+    var smoothImages = false
+
     // Hidden
 
     @Property(

@@ -85,7 +85,8 @@ class MiniMap {
             (island.topX - UPlayer.getOffsetX(event.partialTicks)) * totalScale,
             (island.topY - UPlayer.getOffsetY(event.partialTicks)) * totalScale,
             island.width * totalScale,
-            island.height * totalScale
+            island.height * totalScale,
+            if (Config.smoothImages) GL11.GL_LINEAR else GL11.GL_NEAREST
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
         GL11.glDisable(GL11.GL_SCISSOR_TEST)

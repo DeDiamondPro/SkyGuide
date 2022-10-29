@@ -4,6 +4,7 @@ import dev.dediamondpro.skyguide.SkyGuide
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import dev.dediamondpro.skyguide.utils.WebAsset
+import org.lwjgl.opengl.GL11
 
 @kotlinx.serialization.Serializable
 data class Textures(
@@ -35,8 +36,8 @@ data class Textures(
         }
     }
 
-    fun draw(x: Number, y: Number, width: Number, height: Number) {
+    fun draw(x: Number, y: Number, width: Number, height: Number, filter: Int = GL11.GL_NEAREST) {
         if (!initialized) return
-        RenderUtils.drawImage(filePath, x, y, width, height)
+        RenderUtils.drawImage(filePath, x, y, width, height, filter)
     }
 }
