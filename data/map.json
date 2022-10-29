@@ -616,15 +616,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/park.png",
-            "sha256": "ba70be86262e05cc6184f77c83abad3906e05f50bfffd2fa8d194238d201fb16"
+            "sha256": "5c12f04bbe2302165bbb4c7a608183911c19a8961a4e68fb07f62c24c7623cc2"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/park.png",
-            "sha256": "c0972c0c78bc4df808feabdb548a10f5743f4b353e95d78dc3639b059fcd1153"
+            "sha256": "3fb9fd3c841fd0b3bccd8c57a5173725ec70631270bc59f71560478436c7486e"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/park.png",
-            "sha256": "34c1aad60b04e1c95c516464898c1492ae64c06b80dda7f3fc10c2c5c43a3a22"
+            "sha256": "f54dd352d18fb0d9f42d995b91c0c32835cc6e42acc2ae11698da44c208f7b21"
           }
         }
       ],
@@ -757,15 +757,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/farming_islands_underground.png",
-            "sha256": "a76a06b7011bad432d9fa0ede2ea5aa6fd68ccbee7b8b6dda786fb1a99b2bf93"
+            "sha256": "23cc8578aa4e4cff6c28fc6c292e02067c9e0718944f3d77eea890d20b7ce9d7"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/farming_islands_underground.png",
-            "sha256": "87b60427cff3de75791e8d6de74d1164c2682ecd9fab15a55abe4549949caf55"
+            "sha256": "f86c4b0d7ab7bda16b6a0e4c403153ed75f9908e64b7e3a8d6f67a1003ab2d48"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands_underground.png",
-            "sha256": "868177d8e0d0f64e8122ad6eb5c78ae0744324464549b0b755fc08cf2b759da6"
+            "sha256": "d17cfa552fb0c42bbc21412eb49addbc14e05580b9df8af971cfb080c25e7c11"
           },
           "condition": "y<60",
           "underground": true
@@ -781,7 +781,7 @@
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/farming_islands.png",
-            "sha256": "6b113ee10ebaa5f7922ec6cdc25afc39411f867edf0b906397f2cfc3fd8045ed"
+            "sha256": "8ecdc3c389c6df05a8fdd18c0f307a7620952b36152716574dc22ee211737f92"
           }
         }
       ],
@@ -1681,15 +1681,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/gold_mine_underground.png",
-            "sha256": "6ede9ea06a39e7e9bf697e1b0fbd63cfa3d3a9037745c739e27cf8f2712154f6"
+            "sha256": "03fa782e21335f6cb8c77188d99da0341d2e804da7e6e945e63a80c1cce6b49b"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/gold_mine_underground.png",
-            "sha256": "7da012921774b6ba003376b9331448aa8ddd9e4b0dcf55e93e2f9cd5a11bc29b"
+            "sha256": "9a2825918cb7cfabfbc1f6cd5a5743b8d3204a4f3c353fbcf3786cb1dad374c5"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/gold_mine_underground.png",
-            "sha256": "2a875a04130c685b0a39956092af72b53501cf4836f8ea78357eb8b6da880101"
+            "sha256": "3acafa4873bdbfd890255abe89a9e119f7ae987b8e9e60abc7e9465ea74d1231"
           },
           "condition": "y<72",
           "underground": true
@@ -1697,15 +1697,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/gold_mine.png",
-            "sha256": "649d28a40b5247e599afe736038c948e3e27794a0ef9f5845848658817aff9c7"
+            "sha256": "f7c5e6b5ef8afa67dd06a8d7c109c50f9fcd9925ee9282683a2f2a6adb799b55"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/gold_mine.png",
-            "sha256": "14e6c1d0f9c0bda8491caf362db913ad6b9c81b7221005df1050683766c6448d"
+            "sha256": "a523ef521d3fc8e1b8c5a44ccb8757e15c08e3c6028b063cf82bc3bdf85d0a2f"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/gold_mine.png",
-            "sha256": "96fd0dccefed069c15a0091b32c053dba58b6d947e5255b37444d0783d786c49"
+            "sha256": "0c7224f68e5b7ee14b26bc4c043195230ad0bb258e8db3a19a4dcbb19b2475dd"
           }
         }
       ],
@@ -1954,15 +1954,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/dwarven_mines.png",
-            "sha256": "a1b793d212a61295157d0e17ef15b366fad55fe8fff1dc65a6d5ad1b824d87a2"
+            "sha256": "49fb7e7197267eb4acc54f9a9d67ad54fbd4d9fd5a30a72bb57b1c28347066c8"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/dwarven_mines.png",
-            "sha256": "003329a18c464130fb69b1091abd45e9e73d69e0de91ce116520253420afffc6"
+            "sha256": "c294966a488bd9d0986fce8d4317e3d5ec7e279deedd3fc5d3d1165036cea8ea"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines.png",
-            "sha256": "7779d2f711c2498a70c4106b97ff7e19877b340865e68c5d470c4775220759e2"
+            "sha256": "f4df22c3ff9a6bc65be1d023d5748a92d78bab9fba58d1ce8230354d2a32e63e"
           }
         }
       ],
