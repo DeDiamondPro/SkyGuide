@@ -35,15 +35,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/hub_crypts.png",
-            "sha256": "2c191c78a187fff51f81be1f23d83fdfcc615d1524d51abcfe5ae7702bf0ce8d"
+            "sha256": "ea4a5b395030a57d8c5484bf98b8b6f6d9cc9fb4fb4902a0cf1be605b6a79fab"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/hub_crypts.png",
-            "sha256": "12733ea0cc582c08b6bd411b914c0493edf8d9ca79e8e67dd9967c10f73776f2"
+            "sha256": "12358446458acab4dd92a13be1b806dcef85778ef273dc2b9c6d2602e85ac06e"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub_crypts.png",
-            "sha256": "31670e8ab02f468052e43aa1bc03cdd7e7cefc7d51acdaf00b2b9500b1d05787"
+            "sha256": "37d7303d3026dff165e1c4e9bcad559943e4671ab7509ed743b9cf961b92cdb2"
           },
           "condition": "y < 65 && x > -194 && x < -62 && z < -73 && z > -148 || y < 67 && z < -111 && z > -172 && x > -62 && x < -35 || y < 75 && x > -35 && x < -5 && z < -150 && z > -177 || y < 69 && x > -22 && x < 66 && z < -177 && z > -232",
           "underground": true
@@ -159,7 +159,7 @@
           "owner": "19be1263-3d85-2234-a57a-8047084fbed9",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYyNzQ0Mjk5OTI4OCwKICAicHJvZmlsZUlkIiA6ICIwYWFjMWRlZjUwZmI0N2RjODNmOGU2Njk3MTg1ODRkZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ0aGVhcGlpc2JhZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82NjMyYmRmMTE2MmI0YmZiMTU5ZGE5YzBkYzYxYjBkM2Y5OThhMGMxNTQwYzFiNDM1MTNkNmYwOWE2NDJlOGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": -29.5,
-          "y": 57.0,
+          "y": 57,
           "z": -90.5
         },
         {
@@ -530,6 +530,15 @@
           "x": -85.5,
           "y": 55,
           "z": -139.5
+        },
+        {
+          "name": "Carpenter",
+          "wiki": "https://wiki.hypixel.net/Carpenter",
+          "owner": "49d72186-4a90-2527-bf37-a22a19482c14",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NjM4MjIyNTY3OTQsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NjOGQyYTVhZjk3NWM1M2NmMDgxYjUzMTU2NjE0OGJhZTM2NjE0MTMxNGIzNWFhNTcyNmU5N2NjOTdlZjExOGIifX19",
+          "x": 15.5,
+          "y": 72,
+          "z": -21.5
         }
       ]
     },
@@ -2026,7 +2035,24 @@
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines.png",
             "sha256": "f4df22c3ff9a6bc65be1d023d5748a92d78bab9fba58d1ce8230354d2a32e63e"
-          }
+          },
+          "underground": true
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/dwarven_mines_underground.png",
+            "sha256": "49fb7e7197267eb4acc54f9a9d67ad54fbd4d9fd5a30a72bb57b1c28347066c8"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/dwarven_mines_underground.png",
+            "sha256": "c294966a488bd9d0986fce8d4317e3d5ec7e279deedd3fc5d3d1165036cea8ea"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines_underground.png",
+            "sha256": "f4df22c3ff9a6bc65be1d023d5748a92d78bab9fba58d1ce8230354d2a32e63e"
+          },
+          "condition": "y < 167",
+          "underground": true
         }
       ],
       "name": "Dwarven Mines",
