@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
 object KeyBindHandler {
     private val keybindings = mapOf(
         KeyBinding("Open Map", UKeyboard.KEY_M, SkyGuide.NAME) to {
-            if (SBInfo.inSkyblock && SkyblockMap.currentWorldAvailable()) GuiUtils.displayScreen(MapGui())
+            if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui())
         }
     )
 

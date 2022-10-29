@@ -19,7 +19,7 @@ import java.awt.Color
 import java.net.URLEncoder
 
 class MapGui : UScreen() {
-    private var world = SkyblockMap.getCurrentWorld()
+    private var world = SkyblockMap.getCurrentWorld() ?: SkyblockMap.worlds.values.firstOrNull()
     private val buttons = mutableListOf<Button>()
     private var buttonsWidth = 0f
     private var scale = Config.defaultScale
@@ -29,42 +29,37 @@ class MapGui : UScreen() {
     init {
         x = (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
         y = (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.scaledHeight / 2f) / scale).toFloat()
-        if (!SkyblockMap.currentWorldAvailable()) {
-            displayScreen(null)
-        } else {
-            buttonsWidth = 0f
-            for (worldName in SkyblockMap.worlds.keys) {
-                val newButton = Button(worldName, 0f, 0f, 25f) {
-                    world = SkyblockMap.worlds[it.text]
-                    scale = Config.defaultScale
-                    when (world) {
-                        null -> displayScreen(null)
-                        SkyblockMap.getCurrentWorld() -> {
-                            x =
-                                (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
-                            y =
-                                (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.scaledHeight / 2f) / scale).toFloat()
-                        }
+        for (worldName in SkyblockMap.worlds.keys) {
+            val newButton = Button(worldName, 0f, 0f, 25f) {
+                world = SkyblockMap.worlds[it.text]
+                scale = Config.defaultScale
+                when (world) {
+                    null -> displayScreen(null)
+                    SkyblockMap.getCurrentWorld() -> {
+                        x =
+                            (-(UPlayer.getPosX() + Island.getXOffset()) + (UResolution.scaledWidth / 2f) / scale).toFloat()
+                        y =
+                            (-(UPlayer.getPosZ() + Island.getYOffset()) + (UResolution.scaledHeight / 2f) / scale).toFloat()
+                    }
 
-                        else -> {
-                            var bottomX = Float.MIN_VALUE
-                            var topX = Float.MAX_VALUE
-                            var bottomY = Float.MIN_VALUE
-                            var topY = Float.MAX_VALUE
-                            for (island in world!!.values) {
-                                bottomX = bottomX.coerceAtLeast(island.bottomX)
-                                topX = topX.coerceAtMost(island.topX)
-                                bottomY = bottomY.coerceAtLeast(island.bottomY)
-                                topY = topY.coerceAtMost(island.topY)
-                            }
-                            x = -(bottomX + topX) / 2f + (UResolution.scaledWidth / 2f) / scale
-                            y = -(bottomY + topY) / 2f + (UResolution.scaledHeight / 2f) / scale
+                    else -> {
+                        var bottomX = Float.MIN_VALUE
+                        var topX = Float.MAX_VALUE
+                        var bottomY = Float.MIN_VALUE
+                        var topY = Float.MAX_VALUE
+                        for (island in world!!.values) {
+                            bottomX = bottomX.coerceAtLeast(island.bottomX)
+                            topX = topX.coerceAtMost(island.topX)
+                            bottomY = bottomY.coerceAtLeast(island.bottomY)
+                            topY = topY.coerceAtMost(island.topY)
                         }
+                        x = -(bottomX + topX) / 2f + (UResolution.scaledWidth / 2f) / scale
+                        y = -(bottomY + topY) / 2f + (UResolution.scaledHeight / 2f) / scale
                     }
                 }
-                buttonsWidth += newButton.width
-                buttons.add(newButton)
             }
+            buttonsWidth += newButton.width
+            buttons.add(newButton)
         }
     }
 

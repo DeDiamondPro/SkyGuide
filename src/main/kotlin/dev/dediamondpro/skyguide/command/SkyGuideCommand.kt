@@ -8,6 +8,7 @@ import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
+import dev.dediamondpro.skyguide.utils.SBInfo
 import gg.essential.universal.UChat
 import gg.essential.universal.UDesktop
 import gg.essential.universal.UMinecraft
@@ -41,7 +42,7 @@ class SkyGuideCommand : CommandBase() {
             return
         }
         when (args[0]) {
-            "map" -> GuiUtils.displayScreen(MapGui())
+            "map" -> if(SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui())
             "waypoint" -> {
                 if (args.size < 3) {
                     UChat.chat("${EnumChatFormatting.RED}Please specify the coordinates!")

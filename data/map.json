@@ -15,6 +15,38 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/hub.png",
             "sha256": "baa2a70055059ba406b8f81b770880e3fe0141f72189303ab5b67b9961c083a0"
           }
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/hub_museum.png",
+            "sha256": "2c191c78a187fff51f81be1f23d83fdfcc615d1524d51abcfe5ae7702bf0ce8d"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/hub_museum.png",
+            "sha256": "12733ea0cc582c08b6bd411b914c0493edf8d9ca79e8e67dd9967c10f73776f2"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/hub_museum.png",
+            "sha256": "31670e8ab02f468052e43aa1bc03cdd7e7cefc7d51acdaf00b2b9500b1d05787"
+          },
+          "condition": "x > -72 && x < -3 && y < 80 && z > 61 && z < 99 || y < 64 && x > -39 && x < 53 && z > 10 && z < 142",
+          "underground": true
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/hub_crypts.png",
+            "sha256": "ea4a5b395030a57d8c5484bf98b8b6f6d9cc9fb4fb4902a0cf1be605b6a79fab"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/hub_crypts.png",
+            "sha256": "12358446458acab4dd92a13be1b806dcef85778ef273dc2b9c6d2602e85ac06e"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/hub_crypts.png",
+            "sha256": "37d7303d3026dff165e1c4e9bcad559943e4671ab7509ed743b9cf961b92cdb2"
+          },
+          "condition": "y < 65 && x > -194 && x < -62 && z < -73 && z > -148 || y < 67 && z < -111 && z > -172 && x > -62 && x < -35 || y < 75 && x > -35 && x < -5 && z < -150 && z > -177 || y < 69 && x > -22 && x < 66 && z < -177 && z > -232",
+          "underground": true
         }
       ],
       "name": "the Hub",
@@ -89,7 +121,7 @@
         {
           "x": -44.5,
           "y": 88,
-          "z": -12.5,
+          "z": 12.5,
           "destination": "dungeon_hub"
         }
       ],
@@ -119,6 +151,15 @@
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5NzMwNTI3MzM5MiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzE5NzFkNzk2ZGM0ZGM5YWYzOGNjOTcwNjc5NjNkZTRlZDJiZjk5OTIyNDI1NzQxNmRmYjg0MTQ4OGZkOWUwZCIKICAgIH0KICB9Cn0=",
           "x": -46.5,
           "y": 73,
+          "z": -90.5
+        },
+        {
+          "name": "Damia",
+          "wiki": "https://wiki.hypixel.net/Damia",
+          "owner": "19be1263-3d85-2234-a57a-8047084fbed9",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYyNzQ0Mjk5OTI4OCwKICAicHJvZmlsZUlkIiA6ICIwYWFjMWRlZjUwZmI0N2RjODNmOGU2Njk3MTg1ODRkZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ0aGVhcGlpc2JhZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82NjMyYmRmMTE2MmI0YmZiMTU5ZGE5YzBkYzYxYjBkM2Y5OThhMGMxNTQwYzFiNDM1MTNkNmYwOWE2NDJlOGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
+          "x": -29.5,
+          "y": 57,
           "z": -90.5
         },
         {
@@ -489,6 +530,15 @@
           "x": -85.5,
           "y": 55,
           "z": -139.5
+        },
+        {
+          "name": "Carpenter",
+          "wiki": "https://wiki.hypixel.net/Carpenter",
+          "owner": "49d72186-4a90-2527-bf37-a22a19482c14",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NjM4MjIyNTY3OTQsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NjOGQyYTVhZjk3NWM1M2NmMDgxYjUzMTU2NjE0OGJhZTM2NjE0MTMxNGIzNWFhNTcyNmU5N2NjOTdlZjExOGIifX19",
+          "x": 15.5,
+          "y": 72,
+          "z": -21.5
         }
       ]
     },
@@ -1985,7 +2035,24 @@
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines.png",
             "sha256": "66953c3333b5ef6e47826359f41bb3823005c7873767a55d9a17f0968c05475b"
-          }
+          },
+          "underground": true
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/dwarven_mines_underground.png",
+            "sha256": "381eba2c8c9db3a7e5893c0588b9a0f64a7e89201735888b368ee294a3103420"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/dwarven_mines_underground.png",
+            "sha256": "92a91f26b541c9af13fe5c6d55f2554f3bbb9c04923f8e19f2cb778a4f422bc4"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines_underground.png",
+            "sha256": "e3c47dcf4ef76018ad2cf4881412049d11a757bd0c50af86c8fa64da596909c1"
+          },
+          "condition": "y < 167",
+          "underground": true
         }
       ],
       "name": "Dwarven Mines",
