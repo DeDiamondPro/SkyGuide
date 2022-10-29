@@ -199,7 +199,7 @@ object RenderUtils {
     }
 
     fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number) {
-        drawImage(fileName, x, y, width, height, GL11.GL_LINEAR)
+        drawImage(fileName, x, y, width, height, GL11.GL_NEAREST)
     }
 
     fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number, filter: Int) {
