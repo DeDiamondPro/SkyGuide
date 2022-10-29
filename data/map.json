@@ -31,6 +31,22 @@
           },
           "condition": "x > -72 && x < -3 && y < 80 && z > 61 && z < 99 || y < 64 && x > -39 && x < 53 && z > 10 && z < 142",
           "underground": true
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/hub_crypts.png",
+            "sha256": "2c191c78a187fff51f81be1f23d83fdfcc615d1524d51abcfe5ae7702bf0ce8d"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/hub_crypts.png",
+            "sha256": "12733ea0cc582c08b6bd411b914c0493edf8d9ca79e8e67dd9967c10f73776f2"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/hub_crypts.png",
+            "sha256": "31670e8ab02f468052e43aa1bc03cdd7e7cefc7d51acdaf00b2b9500b1d05787"
+          },
+          "condition": "y < 65 && x > -194 && x < -62 && z < -73 && z > -148 || y < 67 && z < -111 && z > -172 && x > -62 && x < -35 || y < 75 && x > -35 && x < -5 && z < -150 && z > -177 || y < 69 && x > -22 && x < 66 && z < -177 && z > -232",
+          "underground": true
         }
       ],
       "name": "the Hub",
@@ -135,6 +151,15 @@
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5NzMwNTI3MzM5MiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzE5NzFkNzk2ZGM0ZGM5YWYzOGNjOTcwNjc5NjNkZTRlZDJiZjk5OTIyNDI1NzQxNmRmYjg0MTQ4OGZkOWUwZCIKICAgIH0KICB9Cn0=",
           "x": -46.5,
           "y": 73,
+          "z": -90.5
+        },
+        {
+          "name": "Damia",
+          "wiki": "https://wiki.hypixel.net/Damia",
+          "owner": "19be1263-3d85-2234-a57a-8047084fbed9",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYyNzQ0Mjk5OTI4OCwKICAicHJvZmlsZUlkIiA6ICIwYWFjMWRlZjUwZmI0N2RjODNmOGU2Njk3MTg1ODRkZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ0aGVhcGlpc2JhZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82NjMyYmRmMTE2MmI0YmZiMTU5ZGE5YzBkYzYxYjBkM2Y5OThhMGMxNTQwYzFiNDM1MTNkNmYwOWE2NDJlOGMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
+          "x": -29.5,
+          "y": 57.0,
           "z": -90.5
         },
         {
