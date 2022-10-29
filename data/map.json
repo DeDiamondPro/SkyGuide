@@ -511,7 +511,7 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/spiders_den.png",
-            "sha256": "ef098215753562ae25c110b0e11da3c80f5082c339cfab7e1a851424dcf3d790"
+            "sha256": "061455d9d8c4dc57db10a42d14220c1d9f128e466d72c3b24c5bdbe725a09bf9"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/spiders_den.png",
