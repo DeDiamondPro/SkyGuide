@@ -626,6 +626,22 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/park.png",
             "sha256": "f54dd352d18fb0d9f42d995b91c0c32835cc6e42acc2ae11698da44c208f7b21"
           }
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/park_howling_cave.png",
+            "sha256": "65c8275b52a38caee79d3bc8caef1dab4e1695295c2ba81c11f03d30c4a2853c"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/park_howling_cave.png",
+            "sha256": "7da1f7381a392c30ef86d41489efabc7b7987e0d1a48fbd192adaee00aaa067a"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/park_howling_cave.png",
+            "sha256": "81dcb061265dfbbd1bb65f5895abce990e8e4a55f7d86dfccd5ac0001f4fa452"
+          },
+          "condition": "x < -336 && x > -402 && y < 80 || x < -320 && x > -351 && y < 92 && z < -50 && z > -65",
+          "underground": true
         }
       ],
       "name": "the Park",
