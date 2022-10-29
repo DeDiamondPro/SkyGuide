@@ -60,7 +60,7 @@ class SBInfo {
     }
 
     @SubscribeEvent
-    fun onWorldChange(event: WorldEvent.Load) {
+    fun onWorldChange(event: WorldEvent.Unload) {
         if (!onHypixel()) {
             inSkyblock = false
             return

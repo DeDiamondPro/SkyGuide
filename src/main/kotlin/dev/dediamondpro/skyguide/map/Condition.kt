@@ -32,7 +32,11 @@ class Condition(private val condition: String) {
         val conditions = condition.lowercase(Locale.getDefault()).replace(" ", "").split("||")
         if (conditions.isEmpty()) return
         for (i in 1 until conditions.size) orConditions.add(Condition(conditions[i]))
-        val match = regex.matchEntire(conditions[0]) ?: return
+        val match = regex.matchEntire(conditions[0])
+        if (match == null) {
+            if (conditions[0].isNotEmpty()) println("Unable to parse condition ${conditions[0]}")
+            return
+        }
         val (variable, operator, value, chain, next) = match.destructured
         this.variable = if (variable == "x") Variable.X else if (variable == "y") Variable.Y else Variable.Z
         smallerThen = operator == "<"

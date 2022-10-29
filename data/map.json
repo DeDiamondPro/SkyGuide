@@ -15,6 +15,22 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/hub.png",
             "sha256": "baa2a70055059ba406b8f81b770880e3fe0141f72189303ab5b67b9961c083a0"
           }
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/hub_museum.png",
+            "sha256": "2c191c78a187fff51f81be1f23d83fdfcc615d1524d51abcfe5ae7702bf0ce8d"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/hub_museum.png",
+            "sha256": "12733ea0cc582c08b6bd411b914c0493edf8d9ca79e8e67dd9967c10f73776f2"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/hub_museum.png",
+            "sha256": "31670e8ab02f468052e43aa1bc03cdd7e7cefc7d51acdaf00b2b9500b1d05787"
+          },
+          "condition": "x > -72 && x < -3 && y < 80 && z > 61 && z < 99 || y < 64 && x > -39 && x < 53 && z > 10 && z < 142",
+          "underground": true
         }
       ],
       "name": "the Hub",
@@ -89,7 +105,7 @@
         {
           "x": -44.5,
           "y": 88,
-          "z": -12.5,
+          "z": 12.5,
           "destination": "dungeon_hub"
         }
       ],
@@ -2545,7 +2561,7 @@
           "owner": "f368b5fe-f75e-2d8e-80e2-4716ac7c8fdd",
           "texture": "eyJ0aW1lc3RhbXAiOjE1Nzg0MDkwNTYzODYsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FkMjY1YjAwNGI0MTAwNTJmZjE1YmMwOWFjOGM0OGU4ZWYwY2E5YWE2NmYzN2I0NDY0NDE3NTY2N2YxNGY2MDYifX19",
           "x": -63.5,
-          "y": 121.0,
+          "y": 121,
           "z": 5.5
         },
         {
@@ -2554,7 +2570,7 @@
           "owner": "40b695a2-2270-2434-953a-e2a79133f97d",
           "texture": "eyJ0aW1lc3RhbXAiOjE1Nzg0MDk0MTMxNjksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzliNTY4OTViOTY1OTg5NmFkNjQ3ZjU4NTk5MjM4YWY1MzJkNDZkYjljMWIwMzg5YjhiYmViNzA5OTlkYWIzM2QiLCJtZXRhZGF0YSI6eyJtb2RlbCI6InNsaW0ifX19fQ==",
           "x": -68.5,
-          "y": 123.0,
+          "y": 123,
           "z": 0.5
         },
         {
@@ -2563,7 +2579,7 @@
           "owner": "6a30fdc9-f19a-2374-ab2a-2955e091233d",
           "texture": "eyJ0aW1lc3RhbXAiOjE1Nzg0MDgwNzIwNzIsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZjNTdlMzM5OGRhZWIzMmQ4ZDgyYTMzOTRmOTM4MWRlMmE1N2Y2NDM4OTZlZGUwZGI5YTY1NmE3MDY4Yzc4OSIsIm1ldGFkYXRhIjp7Im1vZGVsIjoic2xpbSJ9fX19",
           "x": -63.5,
-          "y": 121.0,
+          "y": 121,
           "z": -6.5
         },
         {
@@ -2572,7 +2588,7 @@
           "owner": "93715243-b737-2154-99ce-b722d5cdedd5",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5MDA1NTExMzA1NywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM5YTA0YTJlMTZkMDliYzgzNjY1Zjc2Yzc4MDA4YzNkNzRjYmRhMTgxOGU4MDFlMTNiZTZlN2M0YmMyZjgyNCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
           "x": -36.5,
-          "y": 119.0,
+          "y": 119,
           "z": 10.5
         },
         {
@@ -2581,7 +2597,7 @@
           "owner": "d3731588-3896-2d66-b92e-f2c18afd1038",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NjcyMzQyODEyNjksInByb2ZpbGVJZCI6ImJlY2RkYjI4YTJjODQ5YjRhOWIwOTIyYTU4MDUxNDIwIiwicHJvZmlsZU5hbWUiOiJTdFR2Iiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83ZWY0NWUxYzcwNTE3YzExNDdhMDliNjNlNGRlYTdlY2JlMmRjNzhlOWE2MmVlNzc4M2Y3ZDkxYTVjYWVjMmNlIn19fQ==",
           "x": -18.5,
-          "y": 86.0,
+          "y": 86,
           "z": 4.5
         },
         {
@@ -2590,7 +2606,7 @@
           "owner": "abac3ef5-5f6f-2e30-a670-8361751149f6",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYzMjUwNDg0MDA3NSwKICAicHJvZmlsZUlkIiA6ICJjMGYzYjI3YTUwMDE0YzVhYjIxZDc5ZGRlMTAxZGZlMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJDVUNGTDEzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FiOGU2M2FiYzBlYzJkMDI4OTAwMjg3YWM3ZTcxZGJmNDQ3ZWU3MDkxYzlmZjA3ODVmYTE5ZTg4MGIzMDgxNSIKICAgIH0KICB9Cn0=",
           "x": -20.6,
-          "y": 120.0,
+          "y": 120,
           "z": -13.5
         }
       ]
