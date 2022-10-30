@@ -2628,6 +2628,12 @@
           "z": 0.5,
           "command": "warp dungeon_hub",
           "name": "Dungeon Hub"
+        },
+        {
+          "x": 20.5,
+          "y": 125,
+          "z": 0.5,
+          "destination": "hub"
         }
       ],
       "npcs": [
