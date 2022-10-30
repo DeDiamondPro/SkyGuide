@@ -93,9 +93,9 @@ class AssetHandler {
                 mapFile.parentFile.mkdirs()
                 if ( // try to download and parse new data
                     Config.downloadAssets
-                    && NetworkUtils.fetchString("https://api.dediamondpro.dev/skyguide/map.json.sha256") != IOUtils.getSha256(
+                    && (!mapFile.exists() || NetworkUtils.fetchString("https://api.dediamondpro.dev/skyguide/map.json.sha256") != IOUtils.getSha256(
                         mapFile
-                    )
+                    ))
                     && NetworkUtils.downloadGzipFile("https://api.dediamondpro.dev/skyguide/map.json.gz", newMapFile)
                     && SkyblockMap.initialize(newMapFile)
                 ) {
