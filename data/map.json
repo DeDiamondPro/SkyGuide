@@ -1649,18 +1649,34 @@
       "images": [
         {
           "low": {
-            "url": "https://api.dediamondpro.dev/skyguide/low/end_dragon_nest.png",
-            "sha256": "15d928bccba7510f4544fe05917029100987266f1487391c93172fe6e822ad53"
+            "url": "https://api.dediamondpro.dev/skyguide/low/end_underground-2.png",
+            "sha256": "46f38beadb0973c767032cf8490fc4eb754d5a8ce283b7f02255d1686f610cfd"
           },
           "medium": {
-            "url": "https://api.dediamondpro.dev/skyguide/medium/end_dragon_nest.png",
-            "sha256": "8bf98a2b0cceacf6e6207a9ae5f2e9bad4fb30ac74e74d75dd7bf5f61f9acef2"
+            "url": "https://api.dediamondpro.dev/skyguide/medium/end_underground-2.png",
+            "sha256": "9941813333ad1820a34293dfeb608acba4feefdec2abe8850c8a1edc1b376f6d"
           },
           "high": {
-            "url": "https://api.dediamondpro.dev/skyguide/high/end_dragon_nest.png",
-            "sha256": "973cb850d873e0a28506b3627e31f3ad4340a10e087d36e8338e36ec2b47cf76"
+            "url": "https://api.dediamondpro.dev/skyguide/high/end_underground-2.png",
+            "sha256": "5b8d63d8c39f8c5e9a065fc81a69780bd83178cf63acfedc7514af11cc19054a"
           },
-          "condition": "y<100",
+          "condition": "y < 60",
+          "underground": true
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/end_underground-1.png",
+            "sha256": "c3109cde205007b2a2121d119b3c3ca0da585eb190959c996864387d8396b24d"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/end_underground-1.png",
+            "sha256": "6efaf7dce68de97021025bbf5b6accad020cc117bdf1bdaee14f5bcdab470b21"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/end_underground-1.png",
+            "sha256": "53b258b5ca38a79cac1ba331ce710bcd63fcb334ca04ca8d00ba34940d0fa23e"
+          },
+          "condition": "y < 115 && x < -512",
           "underground": true
         },
         {
@@ -1945,7 +1961,7 @@
             "url": "https://api.dediamondpro.dev/skyguide/high/deep_caverns_gunpowder_mines.png",
             "sha256": "28baebd4b8b6ae58c5c0048cb7c1859ecd586605207d499bd4d3088f053b52f3"
           },
-          "condition": "y<155",
+          "condition": "y < 170 && z < 54",
           "underground": true
         },
         {
@@ -2560,7 +2576,7 @@
           "owner": "8e4cae74-9b79-23d4-9fd4-a356af875d66",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDIyNTE2ODgzMSwKICAicHJvZmlsZUlkIiA6ICJmNThkZWJkNTlmNTA0MjIyOGY2MDIyMjExZDRjMTQwYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJ1bnZlbnRpdmV0YWxlbnQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2FmNjEzZTRkODExMGFlM2RmNjFlMWRlZTBjMDhjMzVkN2I5MDJmYTVkZjJhYWUwMjc3OWM5MTJkMzFlMzkxNCIKICAgIH0KICB9Cn0=",
           "x": -37.5,
-          "y": 200.0,
+          "y": 200,
           "z": -131.5
         }
       ]
