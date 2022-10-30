@@ -27,7 +27,7 @@ class MiniMap {
     private var prevImage: Textures? = null
 
     @SubscribeEvent
-    fun draw(event: RenderGameOverlayEvent) {
+    fun draw(event: RenderGameOverlayEvent.Post) {
         if (event.type != RenderGameOverlayEvent.ElementType.ALL || !shouldShow()) return
         val island = SkyblockMap.getCurrentIsland() ?: return
         val scale = Config.miniMapScale
@@ -90,9 +90,14 @@ class MiniMap {
             if (Config.smoothImages) GL11.GL_LINEAR else GL11.GL_NEAREST
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
-        GL11.glDisable(GL11.GL_SCISSOR_TEST)
         UGraphics.GL.popMatrix()
         UGraphics.GL.pushMatrix()
+        GL11.glScissor(
+            (x * UResolution.scaleFactor).toInt(),
+            ((UResolution.scaledHeight - y - 150 * scale) * UResolution.scaleFactor).toInt(),
+            (150f * scale * UResolution.scaleFactor).toInt(),
+            (150f * scale * UResolution.scaleFactor).toInt()
+        )
         UGraphics.GL.translate(x + 75.0 * scale, y + 75.0 * scale, 0.0)
         if (!Config.rotateWithPlayer) {
             UGraphics.GL.rotate(
@@ -109,6 +114,7 @@ class MiniMap {
             Config.miniMapPointerSize * scale,
             Config.miniMapPointerSize * scale
         )
+        GL11.glDisable(GL11.GL_SCISSOR_TEST)
         UGraphics.GL.popMatrix()
         if (fadeProgress == 1f) {
             if (island != prevIsland) prevIsland = island

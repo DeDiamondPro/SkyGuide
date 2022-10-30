@@ -4,8 +4,10 @@ import gg.essential.universal.UMinecraft
 import net.minecraft.client.gui.GuiScreen
 import net.minecraftforge.client.event.GuiScreenEvent
 import net.minecraftforge.client.event.RenderGameOverlayEvent
+import net.minecraftforge.client.event.RenderWorldEvent
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+import net.minecraftforge.fml.common.gameevent.TickEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
 import org.lwjgl.input.Mouse
@@ -14,7 +16,7 @@ import kotlin.math.absoluteValue
 class GuiUtils {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     fun onRenderEvent(event: RenderTickEvent) {
-        if (event.phase != Phase.START) return
+        if (event.phase != Phase.START || event.type != TickEvent.Type.RENDER) return
         if (time == -1L) {
             time = UMinecraft.getTime()
             return
@@ -48,9 +50,9 @@ class GuiUtils {
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
-    fun onHudRenderEvent(event: RenderGameOverlayEvent.Pre) {
+    fun onHudRenderEvent(event: RenderGameOverlayEvent.Post) {
         if (event.type != RenderGameOverlayEvent.ElementType.ALL) return
-        hudDeltaTime = -1L
+        hudDeltaTime = 0L
     }
 
     companion object {
