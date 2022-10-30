@@ -64,8 +64,7 @@ class NavigationHandler {
             for (portal in currentIsland.portals) {
                 if (portal.destination == null || visitedIslands.contains(portal.destination)) continue
                 if (portal.destination == destination) return mutableMapOf(currentIsland to portal)
-                val currentWorld = SkyblockMap.getCurrentWorld() ?: continue
-                val destinationIsland = currentWorld[portal.destination] ?: continue
+                val destinationIsland = SkyblockMap.getIslandByZone(portal.destination) ?: continue
                 val path = findRouteToIsland(destination, destinationIsland, visitedIslands) ?: continue
                 path[currentIsland] = portal
                 return path
