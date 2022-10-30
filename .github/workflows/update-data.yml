@@ -1,4 +1,4 @@
-name: Update Checksums
+name: Update Data
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 16
       - name: update checksums
-        run: node update-checksums.js
+        run: node update-data.js
       - name: Get last commit message
         id: last-commit-message
         run: |

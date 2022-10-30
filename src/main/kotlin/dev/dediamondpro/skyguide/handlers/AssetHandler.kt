@@ -96,7 +96,7 @@ class AssetHandler {
                     && NetworkUtils.fetchString("https://api.dediamondpro.dev/skyguide/map.json.sha256") != IOUtils.getSha256(
                         mapFile
                     )
-                    && NetworkUtils.downloadFile("https://api.dediamondpro.dev/skyguide/map.json", newMapFile)
+                    && NetworkUtils.downloadGzipFile("https://api.dediamondpro.dev/skyguide/map.json.gz", newMapFile)
                     && SkyblockMap.initialize(newMapFile)
                 ) {
                     Files.move(newMapFile.toPath(), mapFile.toPath(), StandardCopyOption.REPLACE_EXISTING)

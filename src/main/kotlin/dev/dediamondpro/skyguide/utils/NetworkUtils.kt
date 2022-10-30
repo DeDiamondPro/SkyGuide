@@ -4,6 +4,7 @@ import java.io.File
 import java.io.IOException
 import java.net.URL
 import java.security.KeyStore
+import java.util.zip.GZIPInputStream
 import javax.net.ssl.HttpsURLConnection
 import javax.net.ssl.KeyManagerFactory
 import javax.net.ssl.SSLContext
@@ -35,6 +36,21 @@ object NetworkUtils {
         return try {
             val connection = setupConnection(URL(url))
             connection.inputStream.use { input ->
+                file.outputStream().use { output ->
+                    input.copyTo(output)
+                }
+            }
+            true
+        } catch (e: IOException) {
+            e.printStackTrace()
+            false
+        }
+    }
+
+    fun downloadGzipFile(url: String, file: File): Boolean {
+        return try {
+            val connection = setupConnection(URL(url))
+            GZIPInputStream(connection.inputStream).use { input ->
                 file.outputStream().use { output ->
                     input.copyTo(output)
                 }
