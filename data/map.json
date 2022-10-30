@@ -27,7 +27,7 @@
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub_museum.png",
-            "sha256": "31670e8ab02f468052e43aa1bc03cdd7e7cefc7d51acdaf00b2b9500b1d05787"
+            "sha256": "183d726c29706cf7b52457abc19e830ee6dd3dcb59b268d2bc83c7f0f2f1e072"
           },
           "condition": "x > -72 && x < -3 && y < 80 && z > 61 && z < 99 || y < 64 && x > -39 && x < 53 && z > 10 && z < 142",
           "underground": true
@@ -39,11 +39,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/hub_crypts.png",
-            "sha256": "12358446458acab4dd92a13be1b806dcef85778ef273dc2b9c6d2602e85ac06e"
+            "sha256": "b6f58e1c1651575da6d09a71e9dae541fd3e1f8f40324cb43272b419509674ac"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub_crypts.png",
-            "sha256": "37d7303d3026dff165e1c4e9bcad559943e4671ab7509ed743b9cf961b92cdb2"
+            "sha256": "3b07f34e076ce7f405f1ccdd221cacad530c409b087723aa87eb1854e5abc696"
           },
           "condition": "y < 65 && x > -194 && x < -62 && z < -73 && z > -148 || y < 67 && z < -111 && z > -172 && x > -62 && x < -35 || y < 75 && x > -35 && x < -5 && z < -150 && z > -177 || y < 69 && x > -22 && x < 66 && z < -177 && z > -232",
           "underground": true
@@ -2045,11 +2045,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/dwarven_mines_underground.png",
-            "sha256": "92a91f26b541c9af13fe5c6d55f2554f3bbb9c04923f8e19f2cb778a4f422bc4"
+            "sha256": "3fac9a6f69a9f90c47d7289553b3ed76493c404343c5a8f8df2e7e5e3c8c0b18"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/dwarven_mines_underground.png",
-            "sha256": "e3c47dcf4ef76018ad2cf4881412049d11a757bd0c50af86c8fa64da596909c1"
+            "sha256": "3c109134a75eb30702992c1d8471d2d23dee5a12e88ecbd65f4b50e2a36575a1"
           },
           "condition": "y < 167",
           "underground": true
