@@ -1654,11 +1654,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/end_underground-2.png",
-            "sha256": "9941813333ad1820a34293dfeb608acba4feefdec2abe8850c8a1edc1b376f6d"
+            "sha256": "782b9a5e2f3ba8f33665596bad50bdf761436107feb302012eefd2afaa6725e0"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end_underground-2.png",
-            "sha256": "5b8d63d8c39f8c5e9a065fc81a69780bd83178cf63acfedc7514af11cc19054a"
+            "sha256": "1137663391d2635b396f5cc28e598c3c2fab99c7be47d750475e0c75040e1b0a"
           },
           "condition": "y < 60",
           "underground": true
@@ -1670,11 +1670,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/end_underground-1.png",
-            "sha256": "6efaf7dce68de97021025bbf5b6accad020cc117bdf1bdaee14f5bcdab470b21"
+            "sha256": "7666182cb97cf7f487f115fd58e0c2affd66e15ae95a065c802dc517a800ba76"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/end_underground-1.png",
-            "sha256": "53b258b5ca38a79cac1ba331ce710bcd63fcb334ca04ca8d00ba34940d0fa23e"
+            "sha256": "3375baa20634c6c97a582203acbc1efe41fd2b413aaf3f1abdbc0ed36c83252a"
           },
           "condition": "y < 115 && x < -512",
           "underground": true
