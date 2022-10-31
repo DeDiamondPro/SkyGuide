@@ -29,7 +29,7 @@ warp.
 <details>
     <summary>Is SkyGuide bannable on Hypixel?</summary>
 
-**No**, it should not be bannable in it's current state. __Though with all mods, it is and always will be "use at your own risk"!__
+**No**, it should not be bannable in its current state. __Though with all mods, it is and always will be "use at your own risk"!__
 
 </details>
 
@@ -48,6 +48,11 @@ has an entity radar. SkyGuide's mini-map uses pre rendered images and hence does
 SkyBlock. So SkyGuide's mini-map cannot provide an unfair advantage anywhere on the Hypixel network.
 
 </details>
+
+## License
+SkyGuide is licensed under LGPL unless explicitly noted.
+
+All of SkyGuide's images in the `data` subdirectory are licensed under CC-BY-NC-SA-4.0
 
 ## Dev stuff
 
