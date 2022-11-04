@@ -7,7 +7,6 @@ import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.handlers.KeyBindHandler
 import dev.dediamondpro.skyguide.hud.MiniMap
 import dev.dediamondpro.skyguide.listeners.MessageListener
-import dev.dediamondpro.skyguide.map.Condition
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.SBInfo

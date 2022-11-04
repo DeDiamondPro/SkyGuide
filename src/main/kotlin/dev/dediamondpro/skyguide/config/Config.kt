@@ -205,7 +205,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
 
     @Property(
         type = PropertyType.SWITCH,
-        category = "General",
+        category = "Hidden",
         name = "Download Assets",
         hidden = true
     )

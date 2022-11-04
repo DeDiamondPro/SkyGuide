@@ -162,11 +162,7 @@ class AssetHandler {
                     currentPercent = 0f
                     currentFile++
                 }
-                if (!Config.lazyLoading && Config.keepAssetsLoaded) {
-                    TickDelay(0) {
-                        for (file in assets.values) loadAsset(file.path)
-                    }
-                }
+                if (!Config.lazyLoading && Config.keepAssetsLoaded) for (file in assets.values) loadAsset(file.path)
             }
         }
     }
