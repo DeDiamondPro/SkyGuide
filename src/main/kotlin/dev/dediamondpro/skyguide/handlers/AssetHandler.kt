@@ -151,6 +151,7 @@ class AssetHandler {
                                 )
                             }
                             if (file.exists()) asset.initialized = true
+                            if (!Config.lazyLoading && Config.keepAssetsLoaded) loadAsset(file.path)
                         } catch (e: IOException) {
                             e.printStackTrace()
                         }
@@ -162,7 +163,6 @@ class AssetHandler {
                     currentPercent = 0f
                     currentFile++
                 }
-                if (!Config.lazyLoading && Config.keepAssetsLoaded) for (file in assets.values) loadAsset(file.path)
             }
         }
     }

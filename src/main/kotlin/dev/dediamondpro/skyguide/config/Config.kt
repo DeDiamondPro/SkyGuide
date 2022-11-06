@@ -211,6 +211,14 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     )
     var downloadAssets = true
 
+    @Property(
+        type = PropertyType.NUMBER,
+        category = "Hidden",
+        name = "First Launch Version",
+        hidden = true
+    )
+    var firstLaunchVersion = 0
+
     init {
         initialize()
         registerListener("textureQuality") { _: Any ->
