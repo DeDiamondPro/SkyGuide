@@ -5,15 +5,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/hub.png",
-            "sha256": "aea401ebf7f14fdfe630476079a07580e76ec3feae5a3a378f65baf071d5b99d"
+            "sha256": "b128d35243bcb7361192fa59ec1e889eb54c4d8031b6d48561a6278cde837882"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/hub.png",
-            "sha256": "ffbec71c51b031a9d8512be22ab75f99e6ca1f6a6ebba65d57544b7236555ce1"
+            "sha256": "8007d6ecc947d6443341df9f2bcdc9c84ee6dfe6be1aa838c12f42ccaa8b6ab0"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub.png",
-            "sha256": "baa2a70055059ba406b8f81b770880e3fe0141f72189303ab5b67b9961c083a0"
+            "sha256": "2eaa959f28813b4508aaa51cb29514a2edc049d1b897f12d218e2769a9aebbfe"
           }
         },
         {
@@ -664,6 +664,15 @@
           "x": -250.5,
           "y": 70,
           "z": -324.5
+        },
+        {
+          "name": "Spider Tamer",
+          "wiki": "https://wiki.hypixel.net/Spider_Tamer",
+          "owner": "d31ceebd-0924-244b-bcfc-d36712afde06",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY2ODAwNDQ4MzAyMiwKICAicHJvZmlsZUlkIiA6ICJkYmQyYjU4N2VjMWY0ZTgxYTNkOGFlODM5OWJiMDFjMCIsCiAgInByb2ZpbGVOYW1lIiA6ICJjYXRzaW5zcGFjZWUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVmNDBhMzg3NDJkMThkMzMwNDFmYWUwZTQzYmIzNDA1YzIxZTU3NmY2MzIxYmJlZTA2MzZlNzIxNGQ2ZWZmMiIKICAgIH0KICB9Cn0=",
+          "x": -298.5,
+          "y": 62,
+          "z": -194.5
         }
       ]
     },
