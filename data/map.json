@@ -9,11 +9,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/hub.png",
-            "sha256": "8007d6ecc947d6443341df9f2bcdc9c84ee6dfe6be1aa838c12f42ccaa8b6ab0"
+            "sha256": "e757f19c031d3c677c5414894c25f68d1eefd498cf6e35092a826c28078ad9f9"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/hub.png",
-            "sha256": "2eaa959f28813b4508aaa51cb29514a2edc049d1b897f12d218e2769a9aebbfe"
+            "sha256": "c2b70330894acdfe34952bd07ce1e1408346fa81188ad6dab4f37d3ef2e49bf1"
           }
         },
         {
