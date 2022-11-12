@@ -2591,6 +2591,167 @@
       ]
     }
   },
+  "Crystal Hollows": {
+    "crystal_hollows": {
+      "images": [
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/crystal_hollows.png",
+            "sha256": "66b50734e297ac6315fb51fce5631a4aab29a041b6c9b7620bf4077947c19209"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/crystal_hollows.png",
+            "sha256": "41bd20ed34961fa8449e1210d755151745e93764110edb9ea0c642855137525b"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/crystal_hollows.png",
+            "sha256": "ca1e5cc01782bac7bb05d151ab9346da8093cb2262049791cb3ad5a669360615"
+          },
+          "underground": true
+        },
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/crystal_hollows_magma_fields.png",
+            "sha256": "b12fc2983a52b733346cbcd1ffe55a4eefa07726c7cce1799f7a316c499c5360"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/crystal_hollows_magma_fields.png",
+            "sha256": "df5707b81ff82da5f90082b90229324deb82450ab9bd10377167d04396cae35b"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/crystal_hollows_magma_fields.png",
+            "sha256": "07fb413bcf02bbe359ab6bd6b38fd80b20ddc385f78f08b15b234882e1cc4f16"
+          },
+          "underground": true,
+          "condition": "y < 64"
+        }
+      ],
+      "name": "Crystal Hollows",
+      "topX": 200,
+      "topY": 200,
+      "bottomX": 824,
+      "bottomY": 824,
+      "portals": [
+        {
+          "x": 513.5,
+          "y": 106,
+          "z": 513.5,
+          "command": "warp nucleus",
+          "name": "Crystal Nucleus"
+        }
+      ],
+      "npcs": [
+        {
+          "name": "Geonathan Greatforge",
+          "wiki": "https://wiki.hypixel.net/Geonathan_Greatforge",
+          "owner": "2d690ca1-054d-28b0-9636-c6769d48d667",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxMzQ0NjA5MiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEzY2YwY2E3OWEzNjExYjhlMDVmZTllMjY0ZmIyYmY4ZDI3ZTQ2NGRjMTJkYzZlOTVkZDBhZTBjMzM1YTU2MSIKICAgIH0KICB9Cn0=",
+          "x": 530.5,
+          "y": 106.0,
+          "z": 556.5
+        },
+        {
+          "name": "Emissary Sisko",
+          "wiki": "https://wiki.hypixel.net/Emissary_Sisko",
+          "owner": "d71ac1c3-a502-2a4a-80ea-7c82f44aec00",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDIyNTExNDI0MiwKICAicHJvZmlsZUlkIiA6ICI2MTZiODhkNDMwNzM0ZTM3OWM3NDc1ODdlZTJkNzlmZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJfX25vdGFodW1hbl9fIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UxMTcyYjE3ZWIzMzE4Yjg0MWZhOTRiZTBiOGZiZDBiN2NkZGI1YWRkMWQyYjM1YWQ1ZTZhZGM4YWI3ZDUyMDYiCiAgICB9CiAgfQp9",
+          "x": 495.5,
+          "y": 106.0,
+          "z": 556.5
+        }
+      ]
+    }
+  },
+  "Jerry's Workshop": {
+    "winter": {
+      "images": [
+        {
+          "low": {
+            "url": "https://api.dediamondpro.dev/skyguide/low/jerry_workshop.png",
+            "sha256": "307e7e3fc15eee1b04ff214821f29009e96c2f2d23faa9c19a5fde1c55681e23"
+          },
+          "medium": {
+            "url": "https://api.dediamondpro.dev/skyguide/medium/jerry_workshop.png",
+            "sha256": "3d88dcfad54756002009e039719d72651d547685ada3facf63eb3db990a14738"
+          },
+          "high": {
+            "url": "https://api.dediamondpro.dev/skyguide/high/jerry_workshop.png",
+            "sha256": "3e251429eb6443d1801957bf51770b61a6a83e91efb486f18a15d5c92648c927"
+          }
+        }
+      ],
+      "name": "Jerry's Workshop",
+      "topX": -116,
+      "topY": -116,
+      "bottomX": 131,
+      "bottomY": 131,
+      "portals": [
+        {
+          "x": -4.5,
+          "y": 76,
+          "z": 100.5,
+          "command": "savethejerrys",
+          "name": "Jerry's Workshop"
+        }
+      ],
+      "npcs": [
+        {
+          "name": "St. Jerry",
+          "wiki": "https://wiki.hypixel.net/St._Jerry",
+          "owner": "2e476159-c2f2-2745-b189-12a1672a9035",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzYyNzA0NTU2ODUsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE2OTJlNjJiNDExMTRjNWIxYTVlOWUzNmMwNjc5ODI3OGViNmE1MTI2ZGMyNmRkYjE2NmQyMDIxZmUwZmEwMGUifX19",
+          "x": -22.5,
+          "y": 76.0,
+          "z": 92.5
+        },
+        {
+          "name": "Frosty",
+          "wiki": "https://wiki.hypixel.net/Frosty",
+          "owner": "e6c312b7-c4b3-23e3-96ce-a3bd081c8f69",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzQ4NzQ2OTcyMzMsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UxNmY5NmM3NTZkZWZlZTYzOTA4OWI3MDI5MDE0MzEwNzI0ZGYwZWYzMGM3NTEwZjJkNzJhYzllMGRhY2Y3ZDMifX19",
+          "x": -1.5,
+          "y": 76.0,
+          "z": 92.5
+        },
+        {
+          "name": "Banker Barry",
+          "wiki": "https://wiki.hypixel.net/Banker_Barry",
+          "owner": "4f92c145-7b6c-20e6-a26d-9ae36b02693f",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzU1ODMyNjU0NTksInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU5MzY0NzgxMjFmYjc0OTRkNGQwZTRkZmZmMWI1NGZhODg4N2Q1MWJiODk3MjNhODNlYjA5MmQ0ODZmOWViNCJ9fX0=",
+          "x": 20.5,
+          "y": 77.0,
+          "z": 44.5
+        },
+        {
+          "name": "Gulliver",
+          "wiki": "https://wiki.hypixel.net/Gulliver",
+          "owner": "b075616f-4909-2612-9d2f-fe3b9555f095",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzYwODU1ODkzMjgsInByb2ZpbGVJZCI6ImRhNDk4YWM0ZTkzNzRlNWNiNjEyN2IzODA4NTU3OTgzIiwicHJvZmlsZU5hbWUiOiJOaXRyb2hvbGljXzIiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg3NzkxYWNkNDg2OGI1ZjJiMmMxNzU2YWY5M2I1M2RlMTIwYmRmNzMyYjA1NmJhZDYwMjcyNjVkYmIxMTM1ZjUifX19",
+          "x": 68.5,
+          "y": 105.0,
+          "z": 33.5
+        },
+        {
+          "name": "Gary",
+          "wiki": "https://wiki.hypixel.net/Gary",
+          "owner": "7f86e0bf-5caa-26f4-a70d-eb308c029000",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzU1MDExMjE1ODEsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IwZTJlZjhiNDdkNjNkYmEzNzU1ODgxMTgxOGQxY2I2MjkzYWQwZTMyODRjMDIwNTFjY2ZjNGQ5MTE4MzliYmYifX19",
+          "x": 53.5,
+          "y": 103.0,
+          "z": 56.5
+        },
+        {
+          "name": "Sherry",
+          "wiki": "https://wiki.hypixel.net/Sherry",
+          "owner": "41df20e6-06d4-41c2-8bc7-fad7c550f00b",
+          "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZlMjJiMTUwZTI1YzUwYzZiYmIzMzI1ZThjZjM1YjY0MzVjNzFjODMzNmFlYTZhYmRlMjViMTllMzY1ZGU3ZiJ9fX0=",
+          "x": 9.5,
+          "y": 76.0,
+          "z": 99.5
+        }
+      ]
+    }
+  },
   "Dungeon Hub": {
     "dungeon_hub": {
       "images": [
@@ -2701,31 +2862,6 @@
           "z": -13.5
         }
       ]
-    }
-  },
-  "Jerry's Workshop": {
-    "winter": {
-      "images": [
-        {
-          "low": {
-            "url": "https://api.dediamondpro.dev/skyguide/low/jerry_workshop.png",
-            "sha256": "307e7e3fc15eee1b04ff214821f29009e96c2f2d23faa9c19a5fde1c55681e23"
-          },
-          "medium": {
-            "url": "https://api.dediamondpro.dev/skyguide/medium/jerry_workshop.png",
-            "sha256": "3d88dcfad54756002009e039719d72651d547685ada3facf63eb3db990a14738"
-          },
-          "high": {
-            "url": "https://api.dediamondpro.dev/skyguide/high/jerry_workshop.png",
-            "sha256": "3e251429eb6443d1801957bf51770b61a6a83e91efb486f18a15d5c92648c927"
-          }
-        }
-      ],
-      "name": "Jerry's Workshop",
-      "topX": -116,
-      "topY": -116,
-      "bottomX": 131,
-      "bottomY": 131
     }
   }
 }
