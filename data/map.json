@@ -2647,7 +2647,7 @@
           "owner": "2d690ca1-054d-28b0-9636-c6769d48d667",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxMzQ0NjA5MiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEzY2YwY2E3OWEzNjExYjhlMDVmZTllMjY0ZmIyYmY4ZDI3ZTQ2NGRjMTJkYzZlOTVkZDBhZTBjMzM1YTU2MSIKICAgIH0KICB9Cn0=",
           "x": 530.5,
-          "y": 106.0,
+          "y": 106,
           "z": 556.5
         },
         {
@@ -2656,7 +2656,7 @@
           "owner": "d71ac1c3-a502-2a4a-80ea-7c82f44aec00",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDIyNTExNDI0MiwKICAicHJvZmlsZUlkIiA6ICI2MTZiODhkNDMwNzM0ZTM3OWM3NDc1ODdlZTJkNzlmZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJfX25vdGFodW1hbl9fIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UxMTcyYjE3ZWIzMzE4Yjg0MWZhOTRiZTBiOGZiZDBiN2NkZGI1YWRkMWQyYjM1YWQ1ZTZhZGM4YWI3ZDUyMDYiCiAgICB9CiAgfQp9",
           "x": 495.5,
-          "y": 106.0,
+          "y": 106,
           "z": 556.5
         }
       ]
@@ -2668,23 +2668,23 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/jerry_workshop.png",
-            "sha256": "307e7e3fc15eee1b04ff214821f29009e96c2f2d23faa9c19a5fde1c55681e23"
+            "sha256": "67ea8b154dd99fc59625fb9b11d08ab9964134c4e485f0fb9c244f5957a28435"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/jerry_workshop.png",
-            "sha256": "3d88dcfad54756002009e039719d72651d547685ada3facf63eb3db990a14738"
+            "sha256": "0431fd9ad605ff5c7a7688eefe1dad79f2475a18a734c5376494151b9aac026a"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/jerry_workshop.png",
-            "sha256": "3e251429eb6443d1801957bf51770b61a6a83e91efb486f18a15d5c92648c927"
+            "sha256": "12d9b32e591e93c3379c71540bda4cd8fc22ea88b15a4718f17c15409f25b440"
           }
         }
       ],
       "name": "Jerry's Workshop",
-      "topX": -116,
-      "topY": -116,
-      "bottomX": 131,
-      "bottomY": 131,
+      "topX": -130,
+      "topY": -104,
+      "bottomX": 116,
+      "bottomY": 124,
       "portals": [
         {
           "x": -4.5,
@@ -2701,7 +2701,7 @@
           "owner": "2e476159-c2f2-2745-b189-12a1672a9035",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzYyNzA0NTU2ODUsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE2OTJlNjJiNDExMTRjNWIxYTVlOWUzNmMwNjc5ODI3OGViNmE1MTI2ZGMyNmRkYjE2NmQyMDIxZmUwZmEwMGUifX19",
           "x": -22.5,
-          "y": 76.0,
+          "y": 76,
           "z": 92.5
         },
         {
@@ -2710,7 +2710,7 @@
           "owner": "e6c312b7-c4b3-23e3-96ce-a3bd081c8f69",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzQ4NzQ2OTcyMzMsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UxNmY5NmM3NTZkZWZlZTYzOTA4OWI3MDI5MDE0MzEwNzI0ZGYwZWYzMGM3NTEwZjJkNzJhYzllMGRhY2Y3ZDMifX19",
           "x": -1.5,
-          "y": 76.0,
+          "y": 76,
           "z": 92.5
         },
         {
@@ -2719,7 +2719,7 @@
           "owner": "4f92c145-7b6c-20e6-a26d-9ae36b02693f",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzU1ODMyNjU0NTksInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU5MzY0NzgxMjFmYjc0OTRkNGQwZTRkZmZmMWI1NGZhODg4N2Q1MWJiODk3MjNhODNlYjA5MmQ0ODZmOWViNCJ9fX0=",
           "x": 20.5,
-          "y": 77.0,
+          "y": 77,
           "z": 44.5
         },
         {
@@ -2728,7 +2728,7 @@
           "owner": "b075616f-4909-2612-9d2f-fe3b9555f095",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzYwODU1ODkzMjgsInByb2ZpbGVJZCI6ImRhNDk4YWM0ZTkzNzRlNWNiNjEyN2IzODA4NTU3OTgzIiwicHJvZmlsZU5hbWUiOiJOaXRyb2hvbGljXzIiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg3NzkxYWNkNDg2OGI1ZjJiMmMxNzU2YWY5M2I1M2RlMTIwYmRmNzMyYjA1NmJhZDYwMjcyNjVkYmIxMTM1ZjUifX19",
           "x": 68.5,
-          "y": 105.0,
+          "y": 105,
           "z": 33.5
         },
         {
@@ -2737,7 +2737,7 @@
           "owner": "7f86e0bf-5caa-26f4-a70d-eb308c029000",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzU1MDExMjE1ODEsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2IwZTJlZjhiNDdkNjNkYmEzNzU1ODgxMTgxOGQxY2I2MjkzYWQwZTMyODRjMDIwNTFjY2ZjNGQ5MTE4MzliYmYifX19",
           "x": 53.5,
-          "y": 103.0,
+          "y": 103,
           "z": 56.5
         },
         {
@@ -2745,9 +2745,63 @@
           "wiki": "https://wiki.hypixel.net/Sherry",
           "owner": "41df20e6-06d4-41c2-8bc7-fad7c550f00b",
           "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZlMjJiMTUwZTI1YzUwYzZiYmIzMzI1ZThjZjM1YjY0MzVjNzFjODMzNmFlYTZhYmRlMjViMTllMzY1ZGU3ZiJ9fX0=",
-          "x": 9.5,
-          "y": 76.0,
-          "z": 99.5
+          "x": 6.5,
+          "y": 76,
+          "z": 95.5
+        },
+        {
+          "name": "Maaike",
+          "wiki": "https://wiki.hypixel.net/Maaike",
+          "owner": "c6c5830e-4636-2b26-9e2d-da28a3c621b6",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzY4NjIzMzY4MjAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZlYTg2NDdhNjFkYTI1MDkxZTcxNzdlYWQ4ODI5OWQ3ZDdiOTRiYjQzOTI0MDQwMWIyZTdhMmRlODNkNjkzODUifX19",
+          "x": 49.5,
+          "y": 81,
+          "z": 50.5
+        },
+        {
+          "name": "Mees",
+          "wiki": "https://wiki.hypixel.net/Mees",
+          "owner": "a5af9ae5-8d31-251f-bd16-81d11efb9600",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzY4NjIzMzY4MjAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZlYTg2NDdhNjFkYTI1MDkxZTcxNzdlYWQ4ODI5OWQ3ZDdiOTRiYjQzOTI0MDQwMWIyZTdhMmRlODNkNjkzODUifX19",
+          "x": 80.5,
+          "y": 79,
+          "z": 72.5
+        },
+        {
+          "name": "Daan",
+          "wiki": "https://wiki.hypixel.net/Daan",
+          "owner": "2f2113c5-35ba-27cd-8b27-22452b058a79",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzY4NjIzMzY4MjAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZlYTg2NDdhNjFkYTI1MDkxZTcxNzdlYWQ4ODI5OWQ3ZDdiOTRiYjQzOTI0MDQwMWIyZTdhMmRlODNkNjkzODUifX19",
+          "x": 80.5,
+          "y": 78.5,
+          "z": 110.5
+        },
+        {
+          "name": "Helena",
+          "wiki": "https://wiki.hypixel.net/Helena",
+          "owner": "91981c76-5db1-26f5-be1a-f822234c9f83",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzY4NjIzMzY4MjAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZlYTg2NDdhNjFkYTI1MDkxZTcxNzdlYWQ4ODI5OWQ3ZDdiOTRiYjQzOTI0MDQwMWIyZTdhMmRlODNkNjkzODUifX19",
+          "x": 36.5,
+          "y": 79,
+          "z": 75.5
+        },
+        {
+          "name": "Terry",
+          "wiki": "https://wiki.hypixel.net/Terry",
+          "owner": "65c88646-397d-21f3-8d58-94e10ff19f9f",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzQ3ODY4NTg1MTEsInByb2ZpbGVJZCI6ImEyZjgzNDU5NWM4OTRhMjdhZGQzMDQ5NzE2Y2E5MTBjIiwicHJvZmlsZU5hbWUiOiJiUHVuY2giLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzljM2I3MjI0MmYzOGIxNWMxMzEyZmFjODRlN2NjNzMzMjkyMzZkMjAyMThlMGFiNzhkMDhlMmFjNDc4MDZhNDgifX19",
+          "x": -92.5,
+          "y": 78,
+          "z": 25.5
+        },
+        {
+          "name": "Dirk",
+          "wiki": "https://wiki.hypixel.net/Dirk",
+          "owner": "befac56d-ce1e-2540-ac8a-46a3e6271b1e",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NzY4NjIzMzY4MjAsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZlYTg2NDdhNjFkYTI1MDkxZTcxNzdlYWQ4ODI5OWQ3ZDdiOTRiYjQzOTI0MDQwMWIyZTdhMmRlODNkNjkzODUifX19",
+          "x": 79.5,
+          "y": 80.5,
+          "z": 55.5
         }
       ]
     }
