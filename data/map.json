@@ -2601,11 +2601,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/crystal_hollows.png",
-            "sha256": "41bd20ed34961fa8449e1210d755151745e93764110edb9ea0c642855137525b"
+            "sha256": "8ae9a25e13a4b9e896b8404758aaa4f6347f3e3a3f5abf578842ae619353df25"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/crystal_hollows.png",
-            "sha256": "ca1e5cc01782bac7bb05d151ab9346da8093cb2262049791cb3ad5a669360615"
+            "sha256": "08808b264920f1339e722a4e5579f67bbe4314c7b2a50d7ebf098b958d0ce4a3"
           },
           "underground": true
         },
