@@ -2681,10 +2681,10 @@
         }
       ],
       "name": "Jerry's Workshop",
-      "topX": -130,
-      "topY": -104,
-      "bottomX": 116,
-      "bottomY": 124,
+      "topX": -140,
+      "topY": -114,
+      "bottomX": 125,
+      "bottomY": 132,
       "portals": [
         {
           "x": -4.5,
