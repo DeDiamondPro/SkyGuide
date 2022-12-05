@@ -2668,15 +2668,15 @@
         {
           "low": {
             "url": "https://api.dediamondpro.dev/skyguide/low/jerry_workshop.png",
-            "sha256": "67ea8b154dd99fc59625fb9b11d08ab9964134c4e485f0fb9c244f5957a28435"
+            "sha256": "a0abc5adc20ce2b55ebbc4da6fdc8444810e0cd0621ba7fe9f57e88c36548a23"
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/jerry_workshop.png",
-            "sha256": "0431fd9ad605ff5c7a7688eefe1dad79f2475a18a734c5376494151b9aac026a"
+            "sha256": "e41915a0ef1700f894145b764bceacf221f648eabc8782926be0b484078cd2cb"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/jerry_workshop.png",
-            "sha256": "12d9b32e591e93c3379c71540bda4cd8fc22ea88b15a4718f17c15409f25b440"
+            "sha256": "b43ca67270f8530bcfb1e07020c9cdd6064a39cf7892ccefbf20ea2de3268699"
           }
         }
       ],
