@@ -1,6 +1,6 @@
 package dev.dediamondpro.skyguide.utils
 
-import gg.essential.universal.wrappers.UPlayer
+import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 
 fun UPlayer.getOffsetX(partialTicks: Float): Float {
     return (getPrevPosX() + (getPosX() - getPrevPosX()) * partialTicks).toFloat()

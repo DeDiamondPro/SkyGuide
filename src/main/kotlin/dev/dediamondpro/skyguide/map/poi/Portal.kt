@@ -1,10 +1,9 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.navigation.*
-import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
-import gg.essential.universal.UMinecraft
 import kotlinx.serialization.Serializable
 
 /**

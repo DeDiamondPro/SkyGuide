@@ -1,14 +1,14 @@
 package dev.dediamondpro.skyguide.handlers
 
+import cc.polyfrost.oneconfig.libs.universal.UChat
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
+import cc.polyfrost.oneconfig.libs.universal.utils.ReleasedDynamicTexture
+import cc.polyfrost.oneconfig.utils.Multithreading
 import dev.dediamondpro.skyguide.SkyGuide
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.utils.*
-import gg.essential.api.utils.Multithreading
-import gg.essential.universal.UChat
-import gg.essential.universal.UGraphics
-import gg.essential.universal.UMinecraft
-import gg.essential.universal.utils.ReleasedDynamicTexture
 import net.minecraft.util.EnumChatFormatting
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent

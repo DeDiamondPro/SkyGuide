@@ -1,8 +1,8 @@
 package dev.dediamondpro.skyguide.utils
 
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.handlers.AssetHandler
-import gg.essential.universal.UMinecraft
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json

@@ -1,10 +1,9 @@
 package dev.dediamondpro.skyguide.utils
 
-import gg.essential.universal.UMinecraft
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import net.minecraft.client.gui.GuiScreen
 import net.minecraftforge.client.event.GuiScreenEvent
 import net.minecraftforge.client.event.RenderGameOverlayEvent
-import net.minecraftforge.client.event.RenderWorldEvent
 import net.minecraftforge.fml.common.eventhandler.EventPriority
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent

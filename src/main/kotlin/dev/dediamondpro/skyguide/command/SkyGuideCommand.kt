@@ -1,5 +1,9 @@
 package dev.dediamondpro.skyguide.command
 
+import cc.polyfrost.oneconfig.libs.universal.UChat
+import cc.polyfrost.oneconfig.libs.universal.UDesktop
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
+import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.gui.MapGui
 import dev.dediamondpro.skyguide.gui.NpcGui
@@ -9,10 +13,6 @@ import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.SBInfo
-import gg.essential.universal.UChat
-import gg.essential.universal.UDesktop
-import gg.essential.universal.UMinecraft
-import gg.essential.universal.wrappers.UPlayer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
 import net.minecraft.client.entity.AbstractClientPlayer
@@ -38,11 +38,11 @@ class SkyGuideCommand : CommandBase() {
 
     override fun processCommand(sender: ICommandSender, args: Array<String>) {
         if (args.isEmpty()) {
-            GuiUtils.displayScreen(Config.gui()!!)
+            Config.openGui()
             return
         }
         when (args[0]) {
-            "map" -> if(SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui())
+            "map" -> if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui())
             "waypoint" -> {
                 if (args.size < 3) {
                     UChat.chat("${EnumChatFormatting.RED}Please specify the coordinates!")

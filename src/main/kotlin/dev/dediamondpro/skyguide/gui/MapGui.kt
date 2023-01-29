@@ -1,5 +1,10 @@
 package dev.dediamondpro.skyguide.gui
 
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
+import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
+import cc.polyfrost.oneconfig.libs.universal.UResolution
+import cc.polyfrost.oneconfig.libs.universal.UScreen
+import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.map.Island
@@ -7,16 +12,9 @@ import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.*
-import gg.essential.universal.UGraphics
-import gg.essential.universal.UMatrixStack
-import gg.essential.universal.UMinecraft
-import gg.essential.universal.UResolution
-import gg.essential.universal.UScreen
-import gg.essential.universal.wrappers.UPlayer
 import org.lwjgl.input.Mouse
 import org.lwjgl.opengl.GL11
 import java.awt.Color
-import java.net.URLEncoder
 
 class MapGui : UScreen() {
     private var world = SkyblockMap.getCurrentWorld() ?: SkyblockMap.worlds.values.firstOrNull()

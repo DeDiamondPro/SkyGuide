@@ -1,9 +1,9 @@
 package dev.dediamondpro.skyguide.gui
 
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
+import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
-import gg.essential.universal.UGraphics
-import gg.essential.universal.UMatrixStack
 import java.awt.Color
 import java.util.function.Consumer
 import kotlin.math.pow

@@ -1,225 +1,123 @@
 package dev.dediamondpro.skyguide.config
 
-import dev.dediamondpro.skyguide.SkyGuide
+import cc.polyfrost.oneconfig.config.Config
+import cc.polyfrost.oneconfig.config.annotations.Dropdown
+import cc.polyfrost.oneconfig.config.annotations.HUD
+import cc.polyfrost.oneconfig.config.annotations.KeyBind
+import cc.polyfrost.oneconfig.config.annotations.NonProfileSpecific
+import cc.polyfrost.oneconfig.config.annotations.Slider
+import cc.polyfrost.oneconfig.config.annotations.Switch
+import cc.polyfrost.oneconfig.config.core.OneColor
+import cc.polyfrost.oneconfig.config.core.OneKeyBind
+import cc.polyfrost.oneconfig.config.data.Mod
+import cc.polyfrost.oneconfig.config.data.ModType
+import cc.polyfrost.oneconfig.config.migration.VigilanceMigrator
+import cc.polyfrost.oneconfig.libs.universal.UKeyboard
+import dev.dediamondpro.skyguide.gui.MapGui
 import dev.dediamondpro.skyguide.handlers.AssetHandler
+import dev.dediamondpro.skyguide.hud.MiniMap
+import dev.dediamondpro.skyguide.utils.GuiUtils
+import dev.dediamondpro.skyguide.utils.SBInfo
 import dev.dediamondpro.skyguide.utils.TickDelay
-import gg.essential.vigilance.Vigilant
-import gg.essential.vigilance.data.Property
-import gg.essential.vigilance.data.PropertyType
 import java.awt.Color
-import java.io.File
 
-private val configFile by lazy {
-    val parent = File("config", "skyguide")
-    if (!parent.exists() && !parent.mkdirs())
-        throw IllegalStateException("Could not create config directory.")
-    File(parent, "skyguide.toml")
-}
-
-object Config : Vigilant(configFile, SkyGuide.NAME) {
+object Config : Config(
+    Mod("SkyGuide", ModType.SKYBLOCK, VigilanceMigrator("config/skyguide/skyguide.toml")),
+    "SkyGuide.json"
+) {
     // General
 
-    @Property(
-        type = PropertyType.SELECTOR,
+    @Dropdown(
         name = "Texture Quality",
         description = "The quality of the textures.",
         options = ["low", "medium", "high"],
         category = "General"
     )
+    @NonProfileSpecific
     var textureQuality = 1
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Keep In Memory",
         description = "Keep all assets in memory.",
         category = "General"
     )
+    @NonProfileSpecific
     var keepAssetsLoaded = true
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Download at launch",
         description = "Download all assets at launch.",
         category = "General"
     )
+    @NonProfileSpecific
     var downloadAtLaunch = false
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Lazy Loading",
         description = "Load assets as they are needed.",
         category = "General"
     )
+    @NonProfileSpecific
     var lazyLoading = true
 
     // Map
 
-    @Property(
-        type = PropertyType.DECIMAL_SLIDER,
+    @KeyBind(
+        name = "Map Keybind",
+        description = "The keybind to open the map.",
+        category = "Map"
+    )
+    var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)
+
+    @Slider(
         name = "Default Scale",
         description = "The default scale of the map.",
         category = "Map",
-        minF = 0.25f, maxF = 5f
+        min = 0.25f, max = 5f
     )
     var defaultScale = 2f
 
-    @Property(
-        type = PropertyType.DECIMAL_SLIDER,
+    @Slider(
         name = "Player Pointer Size",
         description = "The size of the player pointer.",
         category = "Map",
-        minF = 7f, maxF = 49f
+        min = 7f, max = 49f
     )
     var mapPointerSize = 14f
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Show MVP Warps",
         description = "Show MVP warps on the map.",
         category = "Map",
     )
     var showMVPWarps = true
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Show NPCs",
         description = "Show npcs on the map.",
         category = "Map",
     )
     var showNpcs = true
 
-    @Property(
-        type = PropertyType.COLOR,
+    @cc.polyfrost.oneconfig.config.annotations.Color(
         allowAlpha = false,
         name = "Pin Color",
         description = "The color of the destination pin.",
         category = "Map"
     )
-    var pinColor = Color.RED
+    var pinColor = OneColor(Color.RED)
 
     // Mini-Map
 
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Enable Mini-Map",
-        description = "Enable the mini-map.",
+    @HUD(
+        name = "Mini-Map",
         category = "Mini-Map"
     )
-    var miniMapEnabled = true
-
-    @Property(
-        type = PropertyType.SELECTOR,
-        name = "Mini-Map Location",
-        description = "The location of the mini-map.",
-        options = ["Top Left", "Top Right", "Bottom Left", "Bottom Right"],
-        category = "Mini-Map"
-    )
-    var miniMapLocation = 1
-
-    @Property(
-        type = PropertyType.DECIMAL_SLIDER,
-        name = "Scale",
-        description = "The scale of the mini-map.",
-        category = "Mini-Map",
-        minF = 0.25f, maxF = 5f
-    )
-    var miniMapScale = 0.70f
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Rotate With Player",
-        description = "Rotate the map with the player.",
-        category = "Mini-Map"
-    )
-    var rotateWithPlayer = true
-
-    @Property(
-        type = PropertyType.DECIMAL_SLIDER,
-        name = "Zoom Factor",
-        description = "The zoom factor of the map.",
-        minF = 0.25f, maxF = 5f,
-        category = "Mini-Map"
-    )
-    var mapZoom = 1.5f
-
-    @Property(
-        type = PropertyType.DECIMAL_SLIDER,
-        name = "Underground Zoom Multiplier",
-        description = "The zoom multiplier of the map when underground.",
-        minF = 0.25f, maxF = 5f,
-        category = "Mini-Map"
-    )
-    var undergroundMapZoom = 2f
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Background",
-        description = "Whether the map has a background",
-        category = "Mini-Map"
-    )
-    var background = false
-
-    @Property(
-        type = PropertyType.COLOR,
-        name = "Background Color",
-        description = "The color of the background",
-        category = "Mini-Map"
-    )
-    var backgroundColor = Color(0, 0, 0)
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Show PIOs",
-        description = "Whether to show points of interests (npcs, portals, ...) on the mini-map.",
-        category = "Mini-Map"
-    )
-    var showPIOs = true
-
-    @Property(
-        type = PropertyType.DECIMAL_SLIDER,
-        name = "Player Pointer Size",
-        description = "The size of the player pointer.",
-        minF = 3.5f, maxF = 35f,
-        category = "Mini-Map"
-    )
-    var miniMapPointerSize = 12f
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Show in GUIs",
-        description = "Show the mini-map in GUIs.",
-        category = "Mini-Map"
-    )
-    var showInGUIs = false
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Show in F3",
-        description = "Show the mini-map in the F3 screen.",
-        category = "Mini-Map"
-    )
-    var showInF3 = false
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Show in Chat",
-        description = "Show the mini-map while the chat is opened.",
-        category = "Mini-Map"
-    )
-    var showInChat = true
-
-    @Property(
-        type = PropertyType.SWITCH,
-        name = "Smooth images",
-        description = "Smooth the images using linear scaling.\nCan reduce flicker of the mini-map on some monitors but might look worse.",
-        category = "Mini-Map"
-    )
-    var smoothImages = false
+    val miniMap = MiniMap()
 
     // Integration
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Show Skytils Waypoints",
         description = "Show Skytils waypoints on the map.",
         category = "Integration",
@@ -227,8 +125,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     )
     var skytilsWaypoints = true
 
-    @Property(
-        type = PropertyType.SWITCH,
+    @Switch(
         name = "Show Disabled Skytils Waypoints",
         description = "Whether to show disabled Skytils waypoints on the map.",
         category = "Integration",
@@ -238,25 +135,12 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
 
     // Hidden
 
-    @Property(
-        type = PropertyType.SWITCH,
-        category = "Hidden",
-        name = "Download Assets",
-        hidden = true
-    )
     var downloadAssets = true
-
-    @Property(
-        type = PropertyType.SLIDER,
-        name = "First Launch Version",
-        category = "Hidden",
-        hidden = true
-    )
     var firstLaunchVersion = 0
 
     init {
         initialize()
-        registerListener("textureQuality") { _: Any ->
+        addListener("textureQuality") {
             TickDelay(1) {
                 if (AssetHandler.downloadedAssets) {
                     AssetHandler.updateTextures()
@@ -264,5 +148,8 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
             }
         }
         addDependency("lazyLoading", "keepAssetsLoaded")
+        registerKeyBind(mapKeyBind) {
+            if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui())
+        }
     }
 }

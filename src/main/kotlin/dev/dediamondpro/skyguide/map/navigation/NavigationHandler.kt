@@ -1,10 +1,9 @@
 package dev.dediamondpro.skyguide.map.navigation
 
+import cc.polyfrost.oneconfig.libs.universal.UChat
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.poi.DestinationPoi
-import dev.dediamondpro.skyguide.map.poi.Portal
-import gg.essential.universal.UChat
 import net.minecraft.util.EnumChatFormatting
 import net.minecraftforge.client.event.RenderWorldLastEvent
 import net.minecraftforge.event.world.WorldEvent

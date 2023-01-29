@@ -1,11 +1,11 @@
 package dev.dediamondpro.skyguide.gui
 
+import cc.polyfrost.oneconfig.libs.universal.*
 import dev.dediamondpro.skyguide.map.poi.Npc
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.ItemUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import dev.dediamondpro.skyguide.utils.roundTo
-import gg.essential.universal.*
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
 import net.minecraft.client.gui.Gui

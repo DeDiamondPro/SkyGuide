@@ -1,11 +1,11 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.RenderUtils
-import gg.essential.universal.UGraphics
 import java.awt.Color
 
 class SkytilsWaypoint(

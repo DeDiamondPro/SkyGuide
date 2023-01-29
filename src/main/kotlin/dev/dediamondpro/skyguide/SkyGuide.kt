@@ -5,8 +5,6 @@ import dev.dediamondpro.skyguide.compat.SkytilsCompat
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.gui.NpcGui
 import dev.dediamondpro.skyguide.handlers.AssetHandler
-import dev.dediamondpro.skyguide.handlers.KeyBindHandler
-import dev.dediamondpro.skyguide.hud.MiniMap
 import dev.dediamondpro.skyguide.handlers.FirstLaunchHandler
 import dev.dediamondpro.skyguide.listeners.MessageListener
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
@@ -21,7 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
     modid = SkyGuide.ID,
     name = SkyGuide.NAME,
     version = SkyGuide.VER,
-    modLanguageAdapter = "gg.essential.api.utils.KotlinAdapter"
+    modLanguageAdapter = "cc.polyfrost.oneconfig.utils.KotlinLanguageAdapter"
 )
 object SkyGuide {
     const val NAME = "@NAME@"
@@ -30,13 +28,12 @@ object SkyGuide {
 
     @Mod.EventHandler
     fun postInitialization(event: FMLPostInitializationEvent) {
-        Config.preload()
+        Config
         if (Config.downloadAtLaunch) AssetHandler.initialize()
-        KeyBindHandler.init()
         MinecraftForge.EVENT_BUS.register(SBInfo())
-        MinecraftForge.EVENT_BUS.register(MiniMap())
         MinecraftForge.EVENT_BUS.register(GuiUtils())
         MinecraftForge.EVENT_BUS.register(AssetHandler())
+        MinecraftForge.EVENT_BUS.register(Config.miniMap)
         MinecraftForge.EVENT_BUS.register(SkytilsCompat())
         MinecraftForge.EVENT_BUS.register(MessageListener())
         MinecraftForge.EVENT_BUS.register(NavigationHandler())

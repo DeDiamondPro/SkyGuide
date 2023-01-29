@@ -1,12 +1,12 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import cc.polyfrost.oneconfig.libs.universal.UChat
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
-import gg.essential.universal.UChat
-import gg.essential.universal.UGraphics
 import net.minecraft.util.EnumChatFormatting
 import kotlin.math.pow
 import kotlin.math.sqrt

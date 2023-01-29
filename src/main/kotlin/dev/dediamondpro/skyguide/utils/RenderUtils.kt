@@ -1,7 +1,7 @@
 package dev.dediamondpro.skyguide.utils
 
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import dev.dediamondpro.skyguide.handlers.AssetHandler
-import gg.essential.universal.UGraphics
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.FontRenderer
 import net.minecraft.client.gui.Gui
@@ -15,7 +15,6 @@ import net.minecraft.util.EnumChatFormatting
 import net.minecraft.util.MathHelper
 import net.minecraft.util.ResourceLocation
 import org.lwjgl.opengl.GL11
-import org.lwjgl.opengl.GL14
 import javax.vecmath.Vector3f
 import kotlin.math.cos
 import kotlin.math.roundToInt

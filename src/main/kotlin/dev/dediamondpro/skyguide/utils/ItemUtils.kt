@@ -1,6 +1,6 @@
 package dev.dediamondpro.skyguide.utils
 
-import gg.essential.universal.UMinecraft
+import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import net.minecraft.client.renderer.RenderHelper
 import net.minecraft.init.Items
 import net.minecraft.item.ItemStack

@@ -1,10 +1,10 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import cc.polyfrost.oneconfig.libs.universal.UDesktop
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.navigation.*
 import dev.dediamondpro.skyguide.utils.ItemUtils
-import gg.essential.universal.UDesktop
-import gg.essential.universal.UGraphics
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
 import java.net.URI

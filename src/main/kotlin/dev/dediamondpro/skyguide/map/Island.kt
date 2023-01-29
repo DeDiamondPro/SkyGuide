@@ -1,10 +1,10 @@
 package dev.dediamondpro.skyguide.map
 
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import dev.dediamondpro.skyguide.compat.SkytilsCompat
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
-import gg.essential.universal.UGraphics
 import kotlin.math.cos
 import kotlin.math.sin
 

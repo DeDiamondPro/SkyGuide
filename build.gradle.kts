@@ -62,21 +62,22 @@ repositories {
 
 dependencies {
     modRuntimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.0")
+    //modRuntimeOnly("com.github.romangraef:notenoughupdates:30f7cf9e:all")
 
-    shade("gg.essential:loader-launchwrapper:1.1.3")
-    modCompileOnly("gg.essential:essential-1.8.9-forge:4804+g97db1f45b")
+    // Basic OneConfig dependencies for legacy versions. See OneConfig example mod for more info
+    compileOnly("cc.polyfrost:oneconfig-1.8.9-forge:0.2.0-alpha171") // Should not be included in jar
+    // include should be replaced with a configuration that includes this in the jar
+    shade("cc.polyfrost:oneconfig-wrapper-launchwrapper:1.0.0-alpha8") // Should be included in jar
 
     annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     compileOnly("org.spongepowered:mixin:0.8.5")
-
-    modCompileOnly(runtimeMod("com.github.romangraef:notenoughupdates:30f7cf9e:all")!!)
 }
 
 loom {
     noServerRunConfigs()
     if (project.platform.isForge) {
         launchConfigs.named("client") {
-            arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
+            arg("--tweakClass", "cc.polyfrost.oneconfigwrapper.OneConfigWrapper")
             property("mixin.debug.export", "true")
             val modFiles = runtimeMod.files
             arg("--mods", modFiles.joinToString(",") { it.relativeTo(file("run")).path })
@@ -154,7 +155,7 @@ tasks {
             attributes(mapOf(
                 "ModSide" to "CLIENT",
                 "TweakOrder" to "0",
-                "TweakClass" to "gg.essential.loader.stage0.EssentialSetupTweaker",
+                "TweakClass" to "cc.polyfrost.oneconfigwrapper.OneConfigWrapper",
                 "ForceLoadAsMod" to true
             ))
         }

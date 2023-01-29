@@ -1,8 +1,8 @@
 package dev.dediamondpro.skyguide.handlers
 
+import cc.polyfrost.oneconfig.libs.universal.UChat
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.utils.SBInfo
-import gg.essential.universal.UChat
 import net.minecraft.util.EnumChatFormatting
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
@@ -18,8 +18,7 @@ class FirstLaunchHandler {
                         "${EnumChatFormatting.YELLOW}To configure SkyGuide please do /skyguide!"
             )
             Config.firstLaunchVersion = 1
-            Config.markDirty()
-            Config.writeData()
+            Config.save()
         }
     }
 }
