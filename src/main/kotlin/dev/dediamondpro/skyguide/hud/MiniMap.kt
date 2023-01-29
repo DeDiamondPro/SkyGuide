@@ -96,7 +96,7 @@ class MiniMap {
             x + 75.0 * scale,
             y + 75.0 * scale,
             totalScale,
-            Math.toRadians(180.0 + UPlayer.getHeadRotation(event.partialTicks))
+            if (Config.rotateWithPlayer) Math.toRadians(180.0 + UPlayer.getHeadRotation(event.partialTicks)) else 0.0
         )
         UGraphics.GL.pushMatrix()
         GL11.glScissor(
