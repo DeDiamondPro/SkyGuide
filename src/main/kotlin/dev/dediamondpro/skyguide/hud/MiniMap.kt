@@ -35,7 +35,6 @@ class MiniMap {
         val y = if (Config.miniMapLocation < 2) 0f else UResolution.scaledHeight - 150f * scale
         val image =
             island.getImage(UPlayer.getPosX().toFloat(), UPlayer.getPosY().toFloat(), UPlayer.getPosZ().toFloat())
-        //println(image.parsedCondition)
         val zoomTarget = if (image.underground) Config.undergroundMapZoom else 1f
         if (prevIsland == island && zoomTarget != zoomStart + zoomChange) {
             zoomStart += zoomChange * easeInOutQuad(zoomProgress)
@@ -75,8 +74,8 @@ class MiniMap {
         if (fadeProgress != 1f && prevImage != null) {
             UGraphics.color4f(1f, 1f, 1f, 1f - easeInOutQuad(fadeProgress))
             prevImage!!.draw(
-                ((island.topX - UPlayer.getOffsetX(event.partialTicks)) * totalScale).toInt(),
-                ((island.topY - UPlayer.getOffsetY(event.partialTicks)) * totalScale).toInt(),
+                (island.topX - UPlayer.getOffsetX(event.partialTicks)) * totalScale,
+                (island.topY - UPlayer.getOffsetY(event.partialTicks)) * totalScale,
                 island.width * totalScale,
                 island.height * totalScale
             )
@@ -91,6 +90,14 @@ class MiniMap {
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
         UGraphics.GL.popMatrix()
+        if (Config.showPIOs) island.drawPioMiniMap(
+            x + 75 * scale - UPlayer.getOffsetX(event.partialTicks) * totalScale,
+            y + 75 * scale - UPlayer.getOffsetY(event.partialTicks) * totalScale,
+            x + 75.0 * scale,
+            y + 75.0 * scale,
+            totalScale,
+            Math.toRadians(180.0 + UPlayer.getHeadRotation(event.partialTicks))
+        )
         UGraphics.GL.pushMatrix()
         GL11.glScissor(
             (x * UResolution.scaleFactor).toInt(),
@@ -99,6 +106,7 @@ class MiniMap {
             (150f * scale * UResolution.scaleFactor).toInt()
         )
         UGraphics.GL.translate(x + 75.0 * scale, y + 75.0 * scale, 0.0)
+        UGraphics.disableDepth()
         if (!Config.rotateWithPlayer) {
             UGraphics.GL.rotate(
                 180f + UPlayer.getHeadRotation(event.partialTicks),
@@ -114,6 +122,7 @@ class MiniMap {
             Config.miniMapPointerSize * scale,
             Config.miniMapPointerSize * scale
         )
+        UGraphics.enableDepth()
         GL11.glDisable(GL11.GL_SCISSOR_TEST)
         UGraphics.GL.popMatrix()
         if (fadeProgress == 1f) {

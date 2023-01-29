@@ -7,6 +7,7 @@ import dev.dediamondpro.skyguide.gui.NpcGui
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.handlers.KeyBindHandler
 import dev.dediamondpro.skyguide.hud.MiniMap
+import dev.dediamondpro.skyguide.handlers.FirstLaunchHandler
 import dev.dediamondpro.skyguide.listeners.MessageListener
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
@@ -40,6 +41,7 @@ object SkyGuide {
         MinecraftForge.EVENT_BUS.register(MessageListener())
         MinecraftForge.EVENT_BUS.register(NavigationHandler())
         MinecraftForge.EVENT_BUS.register(NpcGui.NpcCollector())
+        MinecraftForge.EVENT_BUS.register(FirstLaunchHandler())
         ClientCommandHandler.instance.registerCommand(SkyGuideCommand())
     }
 }

@@ -5,6 +5,8 @@ import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import gg.essential.universal.UGraphics
+import kotlin.math.cos
+import kotlin.math.sin
 
 /**
  * @param images The images of the map
@@ -65,6 +67,30 @@ data class Island(
         // draw destination last since it always has to be on top
         UGraphics.disableDepth()
         lastPoi?.draw(x, y, xOffset, yOffset, scale)
+        UGraphics.enableDepth()
+    }
+
+    fun drawPioMiniMap(x: Float, y: Float, originX: Double, originY: Double, scale: Float, rotation: Double) {
+        val locations = mutableListOf<Pair<Float, Float>>()
+        var lastPoi: PointOfInterest? = null
+        for (poi in getPointsOfInterest()) {
+            if (poi is DestinationPoi) {
+                lastPoi = poi
+                continue
+            }
+            if (!poi.shouldDraw(locations, scale)) continue
+            poi.drawRaw(
+                (cos(rotation) * (x + poi.x * scale - originX) + sin(rotation) * (y + poi.z * scale - originY) + originX).toFloat(),
+                (-sin(rotation) * (x + poi.x * scale - originX) + cos(rotation) * (y + poi.z * scale - originY) + originY).toFloat(),
+            )
+            locations.add(poi.x to poi.z)
+        }
+        // draw destination last since it always has to be on top
+        UGraphics.disableDepth()
+        lastPoi?.drawRaw(
+            (cos(rotation) * (x + lastPoi.x * scale - originX) + sin(rotation) * (y + lastPoi.z * scale - originY) + originX).toFloat(),
+            (-sin(rotation) * (x + lastPoi.x * scale - originX) + cos(rotation) * (y + lastPoi.z * scale - originY) + originY).toFloat(),
+        )
         UGraphics.enableDepth()
     }
 

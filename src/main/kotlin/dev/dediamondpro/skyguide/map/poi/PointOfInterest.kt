@@ -36,6 +36,11 @@ abstract class PointOfInterest {
         drawIcon((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale)
     }
 
+    fun drawRaw(x: Float, y: Float) {
+        drawBackground(x, y)
+        drawIcon(x, y)
+    }
+
     protected open fun drawBackground(x: Float, y: Float) {
         RenderUtils.drawImage(
             "/assets/skyguide/map_location.png",

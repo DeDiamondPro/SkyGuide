@@ -13,12 +13,10 @@ private val configFile by lazy {
     val parent = File("config", "skyguide")
     if (!parent.exists() && !parent.mkdirs())
         throw IllegalStateException("Could not create config directory.")
-
     File(parent, "skyguide.toml")
 }
 
 object Config : Vigilant(configFile, SkyGuide.NAME) {
-
     // General
 
     @Property(
@@ -170,6 +168,14 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     var backgroundColor = Color(0, 0, 0)
 
     @Property(
+        type = PropertyType.SWITCH,
+        name = "Show PIOs",
+        description = "Whether to show points of interests (npcs, portals, ...) on the mini-map.",
+        category = "Mini-Map"
+    )
+    var showPIOs = true
+
+    @Property(
         type = PropertyType.DECIMAL_SLIDER,
         name = "Player Pointer Size",
         description = "The size of the player pointer.",
@@ -239,6 +245,14 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         hidden = true
     )
     var downloadAssets = true
+
+    @Property(
+        type = PropertyType.SLIDER,
+        name = "First Launch Version",
+        category = "Hidden",
+        hidden = true
+    )
+    var firstLaunchVersion = 0
 
     init {
         initialize()
