@@ -45,7 +45,7 @@ class NavigationHandler {
                     triedNavigation = true
                     return
                 }
-                for (step in route) actions[step.key] = PortalAction(step.value, destination)
+                for (step in route) actions[step.key] = step.value.getAction(destination)
             }
             actions[destination.island] = DestinationAction(destination)
         }
@@ -59,17 +59,23 @@ class NavigationHandler {
             destination: String,
             currentIsland: Island,
             visitedIslands: MutableList<String>
-        ): MutableMap<Island, Portal>? {
+        ): MutableMap<Island, NavigationProvider>? {
             visitedIslands.add(currentIsland.zone!!)
-            for (portal in currentIsland.portals) {
-                if (portal.destination == null || visitedIslands.contains(portal.destination)) continue
-                if (portal.destination == destination) return mutableMapOf(currentIsland to portal)
-                val destinationIsland = SkyblockMap.getIslandByZone(portal.destination) ?: continue
-                val path = findRouteToIsland(destination, destinationIsland, visitedIslands) ?: continue
-                path[currentIsland] = portal
-                return path
+            for (provider in getProviders(currentIsland)) {
+                for (dest in provider.destinations) {
+                    if (visitedIslands.contains(dest)) continue
+                    if (dest == destination) return mutableMapOf(currentIsland to provider)
+                    val destinationIsland = SkyblockMap.getIslandByZone(dest) ?: continue
+                    val path = findRouteToIsland(destination, destinationIsland, visitedIslands) ?: continue
+                    path[currentIsland] = provider
+                    return path
+                }
             }
             return null
+        }
+
+        private fun getProviders(currentIsland: Island): List<NavigationProvider> {
+            return currentIsland.portals + currentIsland.npcs
         }
     }
 }

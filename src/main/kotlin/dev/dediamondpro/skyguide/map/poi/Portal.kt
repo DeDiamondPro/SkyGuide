@@ -1,8 +1,7 @@
 package dev.dediamondpro.skyguide.map.poi
 
 import dev.dediamondpro.skyguide.config.Config
-import dev.dediamondpro.skyguide.map.navigation.Destination
-import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
+import dev.dediamondpro.skyguide.map.navigation.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UMinecraft
@@ -25,7 +24,9 @@ data class Portal(
     override val x: Float,
     override val y: Float,
     override val z: Float,
-) : PointOfInterest() {
+) : PointOfInterest(), NavigationProvider {
+    override val destinations = if (destination == null) listOf() else listOf(destination)
+
     override fun shouldDraw(): Boolean {
         return command != null && (!mvp || Config.showMVPWarps)
     }
@@ -51,4 +52,6 @@ data class Portal(
     override fun onRightClick() {
         NavigationHandler.navigateTo(Destination(island!!, x, y, z, name))
     }
+
+    override fun getAction(destination: Destination): NavigationAction = PortalAction(this, destination)
 }

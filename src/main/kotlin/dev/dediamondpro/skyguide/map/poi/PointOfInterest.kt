@@ -16,7 +16,7 @@ abstract class PointOfInterest {
     abstract val z: Float
 
     @Transient
-    var island: Island? = null
+    open var island: Island? = null
 
     protected abstract fun shouldDraw(): Boolean
 

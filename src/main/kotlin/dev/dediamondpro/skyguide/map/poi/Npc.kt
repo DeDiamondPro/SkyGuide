@@ -1,8 +1,7 @@
 package dev.dediamondpro.skyguide.map.poi
 
 import dev.dediamondpro.skyguide.config.Config
-import dev.dediamondpro.skyguide.map.navigation.Destination
-import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
+import dev.dediamondpro.skyguide.map.navigation.*
 import dev.dediamondpro.skyguide.utils.ItemUtils
 import gg.essential.universal.UDesktop
 import gg.essential.universal.UGraphics
@@ -18,8 +17,9 @@ class Npc(
     val texture: String,
     override val x: Float,
     override val y: Float,
-    override val z: Float
-) : PointOfInterest() {
+    override val z: Float,
+    override val destinations: List<String> = listOf()
+) : PointOfInterest(), NavigationProvider {
     @Transient
     private val skull = ItemUtils.createSkull(owner, texture)
 
@@ -49,4 +49,6 @@ class Npc(
     override fun onRightClick() {
         NavigationHandler.navigateTo(Destination(island!!, x, y, z, name))
     }
+
+    override fun getAction(destination: Destination): NavigationAction = NpcAction(this, destination)
 }

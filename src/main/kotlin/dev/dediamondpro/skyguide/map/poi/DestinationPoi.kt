@@ -6,7 +6,7 @@ import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import gg.essential.universal.UChat
-import gg.essential.universal.wrappers.UPlayer
+import gg.essential.universal.UGraphics
 import net.minecraft.util.EnumChatFormatting
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -24,6 +24,12 @@ class DestinationPoi(var destination: Destination?) : PointOfInterest() {
     }
 
     override fun drawIcon(x: Float, y: Float) {
+        UGraphics.color4f(
+            Config.pinColor.red / 255f,
+            Config.pinColor.green / 255f,
+            Config.pinColor.blue / 255f,
+            Config.pinColor.alpha / 255f
+        )
         RenderUtils.drawImage(
             "/assets/skyguide/pin.png",
             x - 8f,
@@ -31,6 +37,7 @@ class DestinationPoi(var destination: Destination?) : PointOfInterest() {
             16f,
             16f
         )
+        UGraphics.color4f(1f, 1f, 1f, 1f)
     }
 
     override fun getTooltip(): List<String> {

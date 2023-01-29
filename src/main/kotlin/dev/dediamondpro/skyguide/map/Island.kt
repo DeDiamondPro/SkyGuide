@@ -1,10 +1,8 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.compat.SkytilsCompat
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
-import dev.dediamondpro.skyguide.map.poi.DestinationPoi
-import dev.dediamondpro.skyguide.map.poi.Npc
-import dev.dediamondpro.skyguide.map.poi.PointOfInterest
-import dev.dediamondpro.skyguide.map.poi.Portal
+import dev.dediamondpro.skyguide.map.poi.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import gg.essential.universal.UGraphics
 
@@ -111,6 +109,7 @@ data class Island(
         val list = mutableListOf<PointOfInterest>()
         list.addAll(portals)
         list.addAll(npcs)
+        if (SkytilsCompat.waypoints.containsKey(this)) list.addAll(SkytilsCompat.waypoints[this]!!)
         val dest = NavigationHandler.destinationPio
         if (dest.destination != null && dest.destination!!.island == this) list.add(
             0, NavigationHandler.destinationPio

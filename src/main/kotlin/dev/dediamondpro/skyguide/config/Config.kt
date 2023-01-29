@@ -76,7 +76,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
 
     @Property(
         type = PropertyType.SWITCH,
-        name = "Show MVP warps",
+        name = "Show MVP Warps",
         description = "Show MVP warps on the map.",
         category = "Map",
     )
@@ -84,11 +84,20 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
 
     @Property(
         type = PropertyType.SWITCH,
-        name = "Show npcs",
+        name = "Show NPCs",
         description = "Show npcs on the map.",
         category = "Map",
     )
     var showNpcs = true
+
+    @Property(
+        type = PropertyType.COLOR,
+        allowAlpha = false,
+        name = "Pin Color",
+        description = "The color of the destination pin.",
+        category = "Map"
+    )
+    var pinColor = Color.RED
 
     // Mini-Map
 
@@ -116,7 +125,7 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         category = "Mini-Map",
         minF = 0.25f, maxF = 5f
     )
-    var miniMapScale = 1f
+    var miniMapScale = 0.70f
 
     @Property(
         type = PropertyType.SWITCH,
@@ -201,6 +210,26 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     )
     var smoothImages = false
 
+    // Integration
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show Skytils Waypoints",
+        description = "Show Skytils waypoints on the map.",
+        category = "Integration",
+        subcategory = "Skytils"
+    )
+    var skytilsWaypoints = true
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show Disabled Skytils Waypoints",
+        description = "Whether to show disabled Skytils waypoints on the map.",
+        category = "Integration",
+        subcategory = "Skytils"
+    )
+    var disabledSkytilsWaypoints = false
+
     // Hidden
 
     @Property(
@@ -210,14 +239,6 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         hidden = true
     )
     var downloadAssets = true
-
-    @Property(
-        type = PropertyType.NUMBER,
-        category = "Hidden",
-        name = "First Launch Version",
-        hidden = true
-    )
-    var firstLaunchVersion = 0
 
     init {
         initialize()

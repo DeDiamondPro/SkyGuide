@@ -198,11 +198,7 @@ object RenderUtils {
         GlStateManager.popMatrix()
     }
 
-    fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number) {
-        drawImage(fileName, x, y, width, height, GL11.GL_NEAREST)
-    }
-
-    fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number, filter: Int) {
+    fun drawImage(fileName: String, x: Number, y: Number, width: Number, height: Number, filter: Int = GL11.GL_NEAREST) {
         if (!AssetHandler.loadAsset(fileName)) return
         UGraphics.bindTexture(AssetHandler.getAsset(fileName))
         UGraphics.enableTexture2D()
