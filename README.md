@@ -8,11 +8,11 @@ A mod that aims to improve the Hypixel SkyBlock experience in a vanilla-like way
 ## Current features
 Map of SkyBlock, including portals and NPCs. *(not available on all islands since some renders aren't done yet)*
 
-![Image of map](https://i.ascella.host/HewzvqHG.png)
+![map](https://user-images.githubusercontent.com/67508414/215343618-6c0f6818-df33-4d21-a63d-1927f8e4ec4d.png)
 
 Customizable Mini-Map. *(not available on all islands since some renders aren't done yet)*
 
-![Image of mini-map](https://i.ascella.host/3oUBsq8F.png)
+![mini-map](https://user-images.githubusercontent.com/67508414/215343639-fd39c6f8-244f-469c-857a-72816dda9815.png)
 
 Intelligent waypoint system that can guide you to portals in order to get to your destination or warp to the nearest
 warp.
