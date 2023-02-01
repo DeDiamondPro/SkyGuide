@@ -163,7 +163,7 @@ object Config : Config(
         }
         addDependency("lazyLoading", "keepAssetsLoaded")
         registerKeyBind(mapKeyBind) {
-            if (SBInfo.inSkyblock) GuiUtils.displayScreen(MapGui())
+            if (SBInfo.inSkyblock && enabled) GuiUtils.displayScreen(MapGui())
         }
     }
 }

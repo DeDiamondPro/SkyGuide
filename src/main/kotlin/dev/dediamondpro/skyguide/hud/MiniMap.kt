@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import org.lwjgl.opengl.GL11
 import kotlin.math.pow
 
-class MiniMap : Hud(true, 0f, 1815f, 0.7f) {
+class MiniMap : Hud(true, 1815f, 0f, 0.7f) {
     @Switch(
         name = "Rotate With Player",
         description = "Rotate the map with the player.",
