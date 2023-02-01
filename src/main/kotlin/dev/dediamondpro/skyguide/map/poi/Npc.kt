@@ -28,6 +28,7 @@ class Npc(
     }
 
     override fun drawIcon(x: Float, y: Float) {
+        UGraphics.enableDepth()
         UGraphics.GL.pushMatrix()
         UGraphics.GL.translate(x - 16, y - 16, 0f)
         UGraphics.GL.scale(2.0, 2.0, 1.0)

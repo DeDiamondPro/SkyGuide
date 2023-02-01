@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.map.navigation
 
+import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import net.minecraft.util.BlockPos
 import net.minecraft.util.EnumChatFormatting
@@ -13,7 +14,7 @@ class DestinationAction(private val destination: Destination) : NavigationAction
                 destination.x.toDouble(),
                 destination.y?.toDouble() ?: 0.0,
                 destination.z.toDouble()
-            ), Color.RED.rgb, partialTicks
+            ), Config.pinColor.rgb, partialTicks
         )
         if (destination.y != null) RenderUtils.renderWayPoint(
             mutableListOf("${EnumChatFormatting.BLUE}${destination.name.replaceFirstChar { it.uppercase() }}"),

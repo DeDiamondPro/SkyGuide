@@ -12,6 +12,7 @@ import cc.polyfrost.oneconfig.config.core.OneKeyBind
 import cc.polyfrost.oneconfig.config.data.Mod
 import cc.polyfrost.oneconfig.config.data.ModType
 import cc.polyfrost.oneconfig.config.migration.VigilanceMigrator
+import cc.polyfrost.oneconfig.config.migration.VigilanceName
 import cc.polyfrost.oneconfig.libs.universal.UKeyboard
 import dev.dediamondpro.skyguide.gui.MapGui
 import dev.dediamondpro.skyguide.handlers.AssetHandler
@@ -37,26 +38,29 @@ object Config : Config(
     var textureQuality = 1
 
     @Switch(
-        name = "Keep In Memory",
-        description = "Keep all assets in memory.",
-        category = "General"
-    )
-    @NonProfileSpecific
-    var keepAssetsLoaded = true
-
-    @Switch(
-        name = "Download at launch",
+        name = "Download Assets at launch",
         description = "Download all assets at launch.",
         category = "General"
     )
+    @VigilanceName( name = "Download at Launch", category = "General", subcategory = "")
     @NonProfileSpecific
     var downloadAtLaunch = false
 
     @Switch(
-        name = "Lazy Loading",
+        name = "Keep Assets In Memory",
+        description = "Keep all assets in memory.",
+        category = "General"
+    )
+    @VigilanceName( name = "Keep In Memory", category = "General", subcategory = "")
+    @NonProfileSpecific
+    var keepAssetsLoaded = true
+
+    @Switch(
+        name = "Lazy Asset Loading",
         description = "Load assets as they are needed.",
         category = "General"
     )
+    @VigilanceName( name = "Lazy Loading", category = "General", subcategory = "")
     @NonProfileSpecific
     var lazyLoading = true
 
@@ -65,9 +69,36 @@ object Config : Config(
     @KeyBind(
         name = "Map Keybind",
         description = "The keybind to open the map.",
-        category = "Map"
+        category = "Map",
+        size = 2
     )
     var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)
+
+    @Switch(
+        name = "Show NPCs",
+        description = "Show npcs on the map.",
+        category = "Map",
+        size = 2
+    )
+    var showNpcs = true
+
+
+    @Switch(
+        name = "Show MVP Warps",
+        description = "Show MVP warps on the map.",
+        category = "Map",
+        size = 2
+    )
+    var showMVPWarps = true
+
+    @cc.polyfrost.oneconfig.config.annotations.Color(
+        allowAlpha = false,
+        name = "Pin Color",
+        description = "The color of the destination pin.",
+        category = "Map",
+        size = 2
+    )
+    var pinColor = OneColor(Color.RED)
 
     @Slider(
         name = "Default Scale",
@@ -85,28 +116,6 @@ object Config : Config(
     )
     var mapPointerSize = 14f
 
-    @Switch(
-        name = "Show MVP Warps",
-        description = "Show MVP warps on the map.",
-        category = "Map",
-    )
-    var showMVPWarps = true
-
-    @Switch(
-        name = "Show NPCs",
-        description = "Show npcs on the map.",
-        category = "Map",
-    )
-    var showNpcs = true
-
-    @cc.polyfrost.oneconfig.config.annotations.Color(
-        allowAlpha = false,
-        name = "Pin Color",
-        description = "The color of the destination pin.",
-        category = "Map"
-    )
-    var pinColor = OneColor(Color.RED)
-
     // Mini-Map
 
     @HUD(
@@ -121,7 +130,8 @@ object Config : Config(
         name = "Show Skytils Waypoints",
         description = "Show Skytils waypoints on the map.",
         category = "Integration",
-        subcategory = "Skytils"
+        subcategory = "Skytils",
+        size = 2
     )
     var skytilsWaypoints = true
 
@@ -129,13 +139,17 @@ object Config : Config(
         name = "Show Disabled Skytils Waypoints",
         description = "Whether to show disabled Skytils waypoints on the map.",
         category = "Integration",
-        subcategory = "Skytils"
+        subcategory = "Skytils",
+        size = 2
     )
     var disabledSkytilsWaypoints = false
 
     // Hidden
 
+    @NonProfileSpecific
     var downloadAssets = true
+
+    @NonProfileSpecific
     var firstLaunchVersion = 0
 
     init {

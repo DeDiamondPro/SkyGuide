@@ -1,15 +1,18 @@
 package dev.dediamondpro.skyguide.handlers
 
-import cc.polyfrost.oneconfig.libs.universal.UChat
 import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import cc.polyfrost.oneconfig.libs.universal.utils.ReleasedDynamicTexture
+import cc.polyfrost.oneconfig.renderer.asset.Icon
 import cc.polyfrost.oneconfig.utils.Multithreading
+import cc.polyfrost.oneconfig.utils.Notifications
 import dev.dediamondpro.skyguide.SkyGuide
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.SkyblockMap
-import dev.dediamondpro.skyguide.utils.*
-import net.minecraft.util.EnumChatFormatting
+import dev.dediamondpro.skyguide.utils.IOUtils
+import dev.dediamondpro.skyguide.utils.NetworkUtils
+import dev.dediamondpro.skyguide.utils.WebAsset
+import dev.dediamondpro.skyguide.utils.toFile
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
@@ -18,6 +21,7 @@ import java.io.IOException
 import java.net.URL
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
+import java.util.concurrent.Callable
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.ConcurrentHashMap
 import javax.imageio.ImageIO
@@ -37,18 +41,11 @@ class AssetHandler {
             currentFile = 0
             currentPercent = 0f
             if (UMinecraft.getWorld() == null) return
-            postMessage()
-        }
-
-        private fun postMessage() {
-            val percent = (currentFile.toFloat() + currentPercent) / totalFiles.toFloat()
-            if (percent == 1f) {
-                UChat.chat("${EnumChatFormatting.DARK_AQUA}${SkyGuide.NAME} > ${EnumChatFormatting.YELLOW}Finished downloading assets!")
-                downloadedAssets = true
-            } else {
-                UChat.chat("${EnumChatFormatting.DARK_AQUA}${SkyGuide.NAME} > ${EnumChatFormatting.YELLOW}Downloading assets... ${(percent * 100).toInt()}% ($currentFile/$totalFiles)")
-                TickDelay(20, AssetHandler::postMessage)
-            }
+            Notifications.INSTANCE.send(
+                "Downloading Assets",
+                "SkyGuide by DeDiamondPro",
+                Icon("/assets/skyguide/downloading.svg"),
+                Callable { (currentFile.toFloat() + currentPercent) / totalFiles.toFloat() })
         }
 
         fun loadAsset(fileName: String): Boolean {

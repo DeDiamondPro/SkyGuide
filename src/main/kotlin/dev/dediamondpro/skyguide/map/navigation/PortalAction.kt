@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.map.navigation
 
+import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.poi.Portal
 import dev.dediamondpro.skyguide.utils.RenderUtils
@@ -12,7 +13,7 @@ class PortalAction(private val portal: Portal, private val destination: Destinat
     override fun drawAction(partialTicks: Float) {
         RenderUtils.renderBeaconBeam(
             BlockPos(portal.x.toDouble(), portal.y.toDouble(), portal.z.toDouble()),
-            Color.RED.rgb,
+            Config.pinColor.rgb,
             partialTicks
         )
         RenderUtils.renderWayPoint(

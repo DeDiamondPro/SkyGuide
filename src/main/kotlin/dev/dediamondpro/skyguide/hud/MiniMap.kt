@@ -9,7 +9,9 @@ import cc.polyfrost.oneconfig.hud.Hud
 import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
 import cc.polyfrost.oneconfig.libs.universal.UResolution
+import cc.polyfrost.oneconfig.libs.universal.UScreen
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
+import dev.dediamondpro.skyguide.gui.MapGui
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.Textures
@@ -20,13 +22,34 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import org.lwjgl.opengl.GL11
 import kotlin.math.pow
 
-class MiniMap : Hud(true, 0f, 0f, 0.7f) {
+class MiniMap : Hud(true, 0f, 1815f, 0.7f) {
     @Switch(
         name = "Rotate With Player",
         description = "Rotate the map with the player.",
         category = "Mini-Map"
     )
     var rotateWithPlayer = true
+
+    @Switch(
+        name = "Show PIOs",
+        description = "Whether to show points of interests (npcs, portals, ...) on the mini-map.",
+        category = "Mini-Map"
+    )
+    var showPIOs = true
+
+    @Switch(
+        name = "Background",
+        description = "Whether the map has a background",
+        category = "Mini-Map"
+    )
+    var background = false
+
+    @cc.polyfrost.oneconfig.config.annotations.Color(
+        name = "Background Color",
+        description = "The color of the background",
+        category = "Mini-Map"
+    )
+    var backgroundColor = OneColor(0, 0, 0)
 
     @Slider(
         name = "Zoom Factor",
@@ -43,27 +66,6 @@ class MiniMap : Hud(true, 0f, 0f, 0.7f) {
         category = "Mini-Map"
     )
     var undergroundMapZoom = 2f
-
-    @Switch(
-        name = "Background",
-        description = "Whether the map has a background",
-        category = "Mini-Map"
-    )
-    var background = false
-
-    @cc.polyfrost.oneconfig.config.annotations.Color(
-        name = "Background Color",
-        description = "The color of the background",
-        category = "Mini-Map"
-    )
-    var backgroundColor = OneColor(0, 0, 0)
-
-    @Switch(
-        name = "Show PIOs",
-        description = "Whether to show points of interests (npcs, portals, ...) on the mini-map.",
-        category = "Mini-Map"
-    )
-    var showPIOs = true
 
     @Slider(
         name = "Player Pointer Size",
@@ -220,6 +222,6 @@ class MiniMap : Hud(true, 0f, 0f, 0.7f) {
     }
 
     override fun shouldShow(): Boolean {
-        return super.shouldShow() && SBInfo.inSkyblock && SkyblockMap.currentIslandAvailable()
+        return super.shouldShow() && SBInfo.inSkyblock && SkyblockMap.currentIslandAvailable() && UScreen.currentScreen !is MapGui
     }
 }

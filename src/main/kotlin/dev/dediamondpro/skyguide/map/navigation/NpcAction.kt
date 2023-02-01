@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.map.navigation
 
+import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.poi.Npc
 import dev.dediamondpro.skyguide.utils.RenderUtils
 import net.minecraft.util.BlockPos
@@ -11,7 +12,7 @@ class NpcAction(private val npc: Npc, private val destination: Destination) : Na
     override fun drawAction(partialTicks: Float) {
         RenderUtils.renderBeaconBeam(
             BlockPos(npc.x.toDouble(), npc.y.toDouble(), npc.z.toDouble()),
-            Color.RED.rgb,
+            Config.pinColor.rgb,
             partialTicks
         )
         RenderUtils.renderWayPoint(

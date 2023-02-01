@@ -51,10 +51,12 @@ class GuiUtils {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     fun onHudRenderEvent(event: RenderGameOverlayEvent.Post) {
         if (event.type != RenderGameOverlayEvent.ElementType.ALL) return
+        prevHudDeltaTime = hudDeltaTime
         hudDeltaTime = 0L
     }
 
     companion object {
+        private var prevHudDeltaTime: Long = 0L
         private var hudDeltaTime: Long = 0L
         private var guiDeltaTime: Long = 0L
         private var time = -1L
@@ -74,7 +76,7 @@ class GuiUtils {
             private set
 
         fun getHudDeltaTime(): Long {
-            return hudDeltaTime
+            return if (hudDeltaTime == 0L) prevHudDeltaTime else hudDeltaTime
         }
 
         fun getGuiDeltaTime(): Long {
