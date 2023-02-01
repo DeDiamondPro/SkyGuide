@@ -1754,9 +1754,9 @@
           "name": "the End"
         },
         {
-          "x": -605.5,
+          "x": -606.5,
           "y": 22,
-          "z": -285,
+          "z": -275,
           "command": "warp drag",
           "name": "Dragon's Nest",
           "mvp": true
