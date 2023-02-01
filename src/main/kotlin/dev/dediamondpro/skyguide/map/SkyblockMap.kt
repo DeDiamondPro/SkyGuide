@@ -59,6 +59,7 @@ object SkyblockMap {
                         zoneToWorld[zone] = world
                     }
                 }
+                println("done loading")
                 return true
             }
         } catch (e: Exception) {

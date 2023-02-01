@@ -113,7 +113,7 @@ object Config : Config(
         name = "Mini-Map",
         category = "Mini-Map"
     )
-    val miniMap = MiniMap()
+    var miniMap = MiniMap()
 
     // Integration
 

@@ -1,16 +1,15 @@
 package dev.dediamondpro.skyguide.hud
 
 
-import cc.polyfrost.oneconfig.config.annotations.Dropdown
 import cc.polyfrost.oneconfig.config.annotations.Exclude
 import cc.polyfrost.oneconfig.config.annotations.Slider
 import cc.polyfrost.oneconfig.config.annotations.Switch
 import cc.polyfrost.oneconfig.config.core.OneColor
-import cc.polyfrost.oneconfig.hud.BasicHud
 import cc.polyfrost.oneconfig.hud.Hud
-import cc.polyfrost.oneconfig.libs.universal.*
+import cc.polyfrost.oneconfig.libs.universal.UGraphics
+import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
+import cc.polyfrost.oneconfig.libs.universal.UResolution
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
-import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.SkyblockMap
 import dev.dediamondpro.skyguide.map.Textures
@@ -109,8 +108,7 @@ class MiniMap : Hud(true, 0f, 0f, 0.7f) {
     }
 
     override fun draw(matrices: UMatrixStack?, x: Float, y: Float, scale: Float, example: Boolean) {
-        val island = SkyblockMap.getCurrentIsland()
-            ?: if (example) SkyblockMap.getIslandByZone("hub") ?: return else return
+        val island = SkyblockMap.getCurrentIsland() ?: return
         val image =
             island.getImage(UPlayer.getPosX().toFloat(), UPlayer.getPosY().toFloat(), UPlayer.getPosZ().toFloat())
         val zoomTarget = if (image.underground) undergroundMapZoom else 1f
@@ -219,5 +217,9 @@ class MiniMap : Hud(true, 0f, 0f, 0.7f) {
 
     private fun easeInOutQuad(x: Float): Float {
         return if (x < 0.5f) 2f * x * x else 1f - (-2f * x + 2f).pow(2f) / 2f
+    }
+
+    override fun shouldShow(): Boolean {
+        return super.shouldShow() && SBInfo.inSkyblock && SkyblockMap.currentIslandAvailable()
     }
 }

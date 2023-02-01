@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide
 
+import cc.polyfrost.oneconfig.events.EventManager
 import dev.dediamondpro.skyguide.command.SkyGuideCommand
 import dev.dediamondpro.skyguide.compat.SkytilsCompat
 import dev.dediamondpro.skyguide.config.Config
@@ -30,7 +31,7 @@ object SkyGuide {
     fun postInitialization(event: FMLPostInitializationEvent) {
         Config
         if (Config.downloadAtLaunch) AssetHandler.initialize()
-        MinecraftForge.EVENT_BUS.register(SBInfo())
+        EventManager.INSTANCE.register(SBInfo)
         MinecraftForge.EVENT_BUS.register(GuiUtils())
         MinecraftForge.EVENT_BUS.register(AssetHandler())
         MinecraftForge.EVENT_BUS.register(Config.miniMap)
