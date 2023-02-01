@@ -172,7 +172,7 @@ class MiniMap : Hud(true, 0f, 0f, 0.7f) {
             x + 75.0 * scale,
             y + 75.0 * scale,
             totalScale,
-            Math.toRadians(180.0 + UPlayer.getHeadRotation(partialTicks))
+            if (rotateWithPlayer) Math.toRadians(180.0 + UPlayer.getHeadRotation(partialTicks)) else 0.0
         )
         UGraphics.GL.pushMatrix()
         GL11.glScissor(
