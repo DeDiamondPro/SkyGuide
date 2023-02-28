@@ -5,6 +5,7 @@ import cc.polyfrost.oneconfig.libs.universal.UMatrixStack
 import cc.polyfrost.oneconfig.libs.universal.UResolution
 import cc.polyfrost.oneconfig.libs.universal.UScreen
 import cc.polyfrost.oneconfig.libs.universal.wrappers.UPlayer
+import cc.polyfrost.oneconfig.utils.gui.BlurScreen
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.handlers.AssetHandler
 import dev.dediamondpro.skyguide.map.Island
@@ -16,7 +17,7 @@ import org.lwjgl.input.Mouse
 import org.lwjgl.opengl.GL11
 import java.awt.Color
 
-class MapGui : UScreen() {
+class MapGui : UScreen(), BlurScreen {
     private var world = SkyblockMap.getCurrentWorld() ?: SkyblockMap.worlds.values.firstOrNull()
     private val buttons = mutableListOf<Button>()
     private var buttonsWidth = 0f
@@ -166,4 +167,6 @@ class MapGui : UScreen() {
     override fun onScreenClose() {
         if (!Config.keepAssetsLoaded) AssetHandler.unloadAssets()
     }
+
+    override fun hasBackgroundBlur() = Config.mapBlur
 }

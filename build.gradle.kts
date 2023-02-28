@@ -65,7 +65,7 @@ dependencies {
     //modRuntimeOnly("com.github.romangraef:notenoughupdates:30f7cf9e:all")
 
     // Basic OneConfig dependencies for legacy versions. See OneConfig example mod for more info
-    compileOnly("cc.polyfrost:oneconfig-1.8.9-forge:0.2.0-alpha171") // Should not be included in jar
+    compileOnly("cc.polyfrost:oneconfig-1.8.9-forge:0.2.0-alpha179") // Should not be included in jar
     // include should be replaced with a configuration that includes this in the jar
     shade("cc.polyfrost:oneconfig-wrapper-launchwrapper:1.0.0-alpha8") // Should be included in jar
 

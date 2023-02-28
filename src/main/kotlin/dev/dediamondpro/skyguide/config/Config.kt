@@ -100,6 +100,12 @@ object Config : Config(
     )
     var pinColor = OneColor(Color.RED)
 
+    @Switch(
+        name = "Background Blur",
+        description = "Background blur behind the map. Could cause lag when map is open"
+    )
+    var mapBlur = true
+
     @Slider(
         name = "Default Scale",
         description = "The default scale of the map.",
