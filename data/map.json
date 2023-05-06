@@ -2807,6 +2807,474 @@
           "x": -137.5,
           "y": 119.3,
           "z": 115.5
+        },
+        {
+          "name": "Wizard",
+          "wiki": "https://wiki.hypixel.net/Wizard",
+          "owner": "2a282ef4-bf63-291e-b6e5-133ccdd5f99f",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODg5NDkyNTMxNSwKICAicHJvZmlsZUlkIiA6ICIwNDNkZWIzOGIyNjE0MTg1YTIzYzU4ZmI2YTc5ZWZkYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJWaXRhbFNpZ256MiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84Mzg1NjRlMjhhYmE5ODMwMWRiZGE1ZmFmZDg2ZDFkYTRlMmVhZWVmMTJlYTk0ZGNmNDQwYjg4M2U1NTkzMTFjIgogICAgfQogIH0KfQ==",
+          "x": -47.5,
+          "y": 122.5,
+          "z": 77.5
+        },
+        {
+          "name": "Alatar",
+          "wiki": "https://wiki.hypixel.net/Alatar",
+          "owner": "75fbc98d-232f-2e0a-bcf1-58ae13bbb1b4",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0ODM5OTgyNjI4NSwKICAicHJvZmlsZUlkIiA6ICI5MGQ1NDY0OGEzNWE0YmExYTI2Yjg1YTg4NTU4OGJlOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJFdW4wbWlhIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JkNmFiNjk5ZjZhYjNiNTAwODEzNTdiMjM3ZTg5NDY4OTFlYTVmNGViMzczZTI2NmM3ZWU0ZjJiYTJmYTEwZGEiCiAgICB9CiAgfQp9",
+          "x": -46.6,
+          "y": 116,
+          "z": 70.2
+        },
+        {
+          "name": "Wizardman",
+          "wiki": "https://wiki.hypixel.net/Wizardman",
+          "owner": "e87b809b-4def-2f60-a8b1-5257ac6e9de4",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3OTU1NDg4NzMzMiwKICAicHJvZmlsZUlkIiA6ICJkNzU2OTc4MWUyYjY0OWIyYjVlMjVlYTJhNDZkOGQxOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJEckthcGRvciIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80M2I3OTdhZTAxM2QyYjg4MmRiMzE2MzQ2NWI5MTJmMDNkNTdjODJkNDRkZjA0ODZkZjAzMmU3YmFiODY0NzlhIgogICAgfQogIH0KfQ==",
+          "x": -45.5,
+          "y": 90,
+          "z": 69.5
+        },
+        {
+          "name": "Enigma",
+          "wiki": "https://wiki.hypixel.net/Enigma",
+          "owner": "5ebf8885-ddde-2a93-bbcf-324ae845cd4b",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
+          "x": -49,
+          "y": 71,
+          "z": 85
+        },
+        {
+          "name": "Elise XXIX",
+          "wiki": "https://wiki.hypixel.net/Elise_XXIX",
+          "owner": "7a5bcff0-eafc-24df-ad72-9b764936aedc",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwMTI1NjQyMjU2MSwKICAicHJvZmlsZUlkIiA6ICJiMGQ0YjI4YmMxZDc0ODg5YWYwZTg2NjFjZWU5NmFhYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5lU2tpbl9vcmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWEyYWM2MTRlNTMzMzI4YzA3YTI1Y2ViY2IwMmE0MGQzYmM0MWMxY2MyYzI0YTY1MDY1ZjgzMGIwNTk1MmM0ZiIKICAgIH0KICB9Cn0=",
+          "x": 9.9,
+          "y": 55,
+          "z": 76
+        },
+        {
+          "name": "Enigma",
+          "wiki": "https://wiki.hypixel.net/Enigma",
+          "owner": "39acd38e-1c69-251b-b4be-6539699cb9b4",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
+          "x": -39,
+          "y": 71,
+          "z": 78
+        },
+        {
+          "name": "Hound",
+          "wiki": "https://wiki.hypixel.net/Hound",
+          "owner": "5ced5142-82ce-2bc5-b1fa-96f52f311b05",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODU3MjgyMTk4NiwKICAicHJvZmlsZUlkIiA6ICI3MmNiMDYyMWU1MTA0MDdjOWRlMDA1OTRmNjAxNTIyZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNb3M5OTAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzM1OWY2NWM5MDhhOTUyZWZhYmMxMDMyNzhhZWJkYmZjODQ2YzIwNDQ4YThmZTM1MTcxNzBkOWY1MzUyYjc3ZiIKICAgIH0KICB9Cn0=",
+          "x": -70,
+          "y": 66,
+          "z": 147.5
+        },
+        {
+          "name": "Motes Grubber",
+          "wiki": "https://wiki.hypixel.net/Motes_Grubber",
+          "owner": "051a9c4e-92b3-2e3f-aace-15d9810c113c",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0OTA3OTYwMjEyNiwKICAicHJvZmlsZUlkIiA6ICJiNTM5NTkyMjMwY2I0MmE0OWY5YTRlYmYxNmRlOTYwYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJtYXJpYW5hZmFnIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2YTZiZTA1YmJlNmZlZTFlNGEwNDgxNDg0MzcwNmE0YTVjOTA3ZWUyNTdhNGMxMTlkNTdiNjVkYjVhNzkxOCIKICAgIH0KICB9Cn0=",
+          "x": -92.3,
+          "y": 65,
+          "z": 156.9
+        },
+        {
+          "name": "Argofay Trailblazer",
+          "wiki": "https://wiki.hypixel.net/Argofay_Trailblazer",
+          "owner": "7d02b79e-9600-2ede-ad96-d33a7599c7de",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDk3MTYwMSwKICAicHJvZmlsZUlkIiA6ICJmY2JkZTVlNDAwMjc0NjE4OTE3NjE2MTY4ZTliYjdkZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJteXNuYXBweU5UMDk4MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mY2JlNzBjMmQxYzY4ZmZhYmQyZmJiYmUzZmZmMTc0NmY0MjIyOTM3ODY1NjA0NzZlY2RmZWM1YWEyOTNkN2ZhIgogICAgfQogIH0KfQ==",
+          "x": -97.5,
+          "y": 66,
+          "z": 147.5
+        },
+        {
+          "name": "Argofay Sonfather",
+          "wiki": "https://wiki.hypixel.net/Argofay_Sonfather",
+          "owner": "90e4767c-d010-2738-8844-7d0885587107",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDk3MTYwMSwKICAicHJvZmlsZUlkIiA6ICJmY2JkZTVlNDAwMjc0NjE4OTE3NjE2MTY4ZTliYjdkZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJteXNuYXBweU5UMDk4MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mY2JlNzBjMmQxYzY4ZmZhYmQyZmJiYmUzZmZmMTc0NmY0MjIyOTM3ODY1NjA0NzZlY2RmZWM1YWEyOTNkN2ZhIgogICAgfQogIH0KfQ==",
+          "x": -96,
+          "y": 100,
+          "z": 156.2
+        },
+        {
+          "name": "Sad Jacquelle",
+          "wiki": "https://wiki.hypixel.net/Sad_Jacquelle",
+          "owner": "9b841d86-ae27-2cec-89a8-8c0c2ed32a3e",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0ODA5OTM2NTM4NywKICAicHJvZmlsZUlkIiA6ICJkOGNkMTNjZGRmNGU0Y2IzODJmYWZiYWIwOGIyNzQ4OSIsCiAgInByb2ZpbGVOYW1lIiA6ICJaYWNoeVphY2giLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGViZDNmOTY2YWVkZjc0NzYxODNkZmRhOTY2ZTMzYzliZmM0OWVhNzRlMTBkOTliZTg4ZTNlMWQzZDBjMjk4NSIKICAgIH0KICB9Cn0=",
+          "x": -121.8,
+          "y": 119.3,
+          "z": 137
+        },
+        {
+          "name": "Argofay Treemerger",
+          "wiki": "https://wiki.hypixel.net/Argofay_Treemerger",
+          "owner": "a124a821-75a4-2a9b-bd4e-8103453d9626",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYyMzIyMzU2MTg1NCwKICAicHJvZmlsZUlkIiA6ICJmMTA0NzMxZjljYTU0NmI0OTkzNjM4NTlkZWY5N2NjNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJ6aWFkODciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDkwYmRjZjM5ZjllM2Q0ODJlNDU5ODU4MTVkN2M3MmE0MDAyNDY2MzQ5NzVjMDE0ZmFjZWQyMjNmOGZkYjNhMiIKICAgIH0KICB9Cn0=",
+          "x": -145,
+          "y": 93.1,
+          "z": 140
+        },
+        {
+          "name": "Argofay Trafficker",
+          "wiki": "https://wiki.hypixel.net/Argofay_Trafficker",
+          "owner": "1c1c2879-bd86-2197-b6be-c5a70cde66c7",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMTAwNTgzOSwKICAicHJvZmlsZUlkIiA6ICJkYjJmMTJhMmU5MTI0ZThiODZjZmQyNzU2MDk1N2JhNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJDYWxpYnJlcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83MDI1ODI5ZWExZWIwNTA0OWNjMjgxZDhjNTI2NjhkYjczYmVjMDZmMTRmMDI0NWM4YzVlOWYzMDhiYTk3M2Q0IgogICAgfQogIH0KfQ==",
+          "x": -137.6,
+          "y": 97,
+          "z": 112.5
+        },
+        {
+          "name": "Argofay Trafficker",
+          "wiki": "https://wiki.hypixel.net/Argofay_Trafficker",
+          "owner": "45e95ba1-d761-2e52-a61a-cf304b5b310a",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDkzNzI1MywKICAicHJvZmlsZUlkIiA6ICJiMTRiMjY2NzgxOTU0ZGM1OTUzYTRkYWQ5MjRiZGRjNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJHdWk5bCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMWZkOGI3MzRhZjE2MGRjYTM1YTg4ZjE1ZGFlZWI5NGUwOWNkNDZmMTI0YjcxNmQwYzNiZGI2NzFlMDJiYjI2IgogICAgfQogIH0KfQ==",
+          "x": -150.7,
+          "y": 112,
+          "z": 114.5
+        },
+        {
+          "name": "Argofay Threebrother",
+          "wiki": "https://wiki.hypixel.net/Argofay_Threebrother",
+          "owner": "536f8a8f-7b3d-29d9-bc11-9f1b25d218f8",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDk3MTYwMSwKICAicHJvZmlsZUlkIiA6ICJmY2JkZTVlNDAwMjc0NjE4OTE3NjE2MTY4ZTliYjdkZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJteXNuYXBweU5UMDk4MCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mY2JlNzBjMmQxYzY4ZmZhYmQyZmJiYmUzZmZmMTc0NmY0MjIyOTM3ODY1NjA0NzZlY2RmZWM1YWEyOTNkN2ZhIgogICAgfQogIH0KfQ==",
+          "x": -136,
+          "y": 75,
+          "z": 113.1
+        },
+        {
+          "name": "Argofay Bugshopper",
+          "wiki": "https://wiki.hypixel.net/Argofay_Bugshopper",
+          "owner": "e25a635c-3d51-2fc3-8487-3c039a431eff",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDkzNzI1MywKICAicHJvZmlsZUlkIiA6ICJiMTRiMjY2NzgxOTU0ZGM1OTUzYTRkYWQ5MjRiZGRjNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJHdWk5bCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMWZkOGI3MzRhZjE2MGRjYTM1YTg4ZjE1ZGFlZWI5NGUwOWNkNDZmMTI0YjcxNmQwYzNiZGI2NzFlMDJiYjI2IgogICAgfQogIH0KfQ==",
+          "x": -95,
+          "y": 110,
+          "z": 95.3
+        },
+        {
+          "name": "Argofay Tencounter",
+          "wiki": "https://wiki.hypixel.net/Argofay_Tencounter",
+          "owner": "95d6e5d5-06fc-20bb-ade6-3272a0bafcf2",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDk1NDE5MCwKICAicHJvZmlsZUlkIiA6ICJkZDNjZGJiOTE2M2Q0NzgyOGQ0YmZkODZmYWE4NGY5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJFTFdhbEtlUkpBSkEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjdmYmZmNWRlNzYwMGMyMTExZmI2YmJlM2JhZTZkYmViOTVlNDQxMTBmYWRkMDNmMWI2OTMzNTVjYTVkMWQzIgogICAgfQogIH0KfQ==",
+          "x": -93,
+          "y": 99.1,
+          "z": 95.2
+        },
+        {
+          "name": "Argofay Threebrother",
+          "wiki": "https://wiki.hypixel.net/Argofay_Threebrother",
+          "owner": "b894223d-f504-2292-981c-f690a022c4a6",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODcxMDkxOTI5MCwKICAicHJvZmlsZUlkIiA6ICJhMDEyZDkwYWZjMGI0OGE4OTk5ODAwNzE5NDA5NzM2NiIsCiAgInByb2ZpbGVOYW1lIiA6ICJFbmVyZ3lpbnRha2UiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjVmZTU5NWUwODVjNzQxNTA0ZDZkYzhkODJiMzNlZjI0Yjk3NDYxNzQ4ZTg0NTA3MGVhNDllMDc5MTY1YWZmNSIKICAgIH0KICB9Cn0=",
+          "x": -92.8,
+          "y": 76,
+          "z": 108.7
+        },
+        {
+          "name": "Ribbit",
+          "wiki": "https://wiki.hypixel.net/Ribbit",
+          "owner": "318a7a6a-3107-205c-88ac-fa6240c47b4f",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5MDcwOTQ5OTU1MSwKICAicHJvZmlsZUlkIiA6ICIzZmM3ZmRmOTM5NjM0YzQxOTExOTliYTNmN2NjM2ZlZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJZZWxlaGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODViMjhmODMyMDc5NTk5NTI2MWE2YjM4NGI4YjRiNDZmMWE5OWM4YmUwNjU0NDkyMTdiYTEyOGUzODY0NDYzMiIKICAgIH0KICB9Cn0=",
+          "x": -136.5,
+          "y": 67,
+          "z": 158.5
+        },
+        {
+          "name": "Porhtal",
+          "wiki": "https://wiki.hypixel.net/Porhtal",
+          "owner": "9c4b73de-81c5-224e-a3a4-8433a53bb26e",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1ODY0NDA5MzU0MDMsInByb2ZpbGVJZCI6ImRkZWQ1NmUxZWY4YjQwZmU4YWQxNjI5MjBmN2FlY2RhIiwicHJvZmlsZU5hbWUiOiJEaXNjb3JkQXBwIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81ZWU4NThmY2Y4NWM5MTQ4MGVlOWE5MTI5MWQ0NTJhM2FlYzc2N2Y1ZjljMGM5NzBmN2U0ZTljMzg1YjlkZDAifX19",
+          "x": -157.5,
+          "y": 70.5,
+          "z": 162
+        },
+        {
+          "name": "Kiermet",
+          "wiki": "https://wiki.hypixel.net/Kiermet",
+          "owner": "e3737816-d387-245a-af4a-548a7aa29104",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5MDcwOTQ5OTU1MSwKICAicHJvZmlsZUlkIiA6ICIzZmM3ZmRmOTM5NjM0YzQxOTExOTliYTNmN2NjM2ZlZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJZZWxlaGEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODViMjhmODMyMDc5NTk5NTI2MWE2YjM4NGI4YjRiNDZmMWE5OWM4YmUwNjU0NDkyMTdiYTEyOGUzODY0NDYzMiIKICAgIH0KICB9Cn0=",
+          "x": -134.5,
+          "y": 67,
+          "z": 157.5
+        },
+        {
+          "name": "Seskel",
+          "wiki": "https://wiki.hypixel.net/Seskel",
+          "owner": "4961b9dc-d520-273d-91aa-f77f2602e74a",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1ODU3NTg0NTQyMzYsInByb2ZpbGVJZCI6ImMxYWYxODI5MDYwZTQ0OGRhNjYwOWRmZGM2OGEzOWE4IiwicHJvZmlsZU5hbWUiOiJCQVJLeDQiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JhNDc5MzVkNmI1NjJlMzU1MTQ1NzEwNmFkZGYzMjI2NGNkYzkxMmIxNWRmMDFlMDcyOGI0NzJjMzAwZmVjMTkifX19",
+          "x": -128.6,
+          "y": 73,
+          "z": 164.3
+        },
+        {
+          "name": "Alabaster",
+          "wiki": "https://wiki.hypixel.net/Alabaster",
+          "owner": "3622717d-39b3-2dbb-b0c7-303b06d15f14",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzgzMDUwMTQ3OCwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTMzOTM4MzhmOTQyNjU0OGY4NjBlYjUzYjkyODczZGU2ZWUwMDdjOGFhYmVlZTEwZGFmNjNjZWIxN2U4NzliZSIKICAgIH0KICB9Cn0=",
+          "x": -130.3,
+          "y": 73,
+          "z": 166.5
+        },
+        {
+          "name": "Lazarus",
+          "wiki": "https://wiki.hypixel.net/Lazarus",
+          "owner": "196bdff8-8a09-26a8-9047-86751085d8a3",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzgzMDU1MTM1MiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjE4MzAzYzgwOTJiYmVhOGY2MGM5ODMwMzU4MzE2NjI5ODlkODhlMGJkMDMxZTUzYzJjMmJiMmY2ZTcxZGZhZSIKICAgIH0KICB9Cn0=",
+          "x": -127.6,
+          "y": 79,
+          "z": 166.3
+        },
+        {
+          "name": "Arora",
+          "wiki": "https://wiki.hypixel.net/Arora",
+          "owner": "7d033b7f-4f54-2e66-adc9-e25582afd351",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzgzMDQ2ODMxNywKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQ3ZmRmNDljMjgzMWJjMjg3ZDVlOGI0YzAzNGIwOTQzNDE4NTlkZmYwMTM4YTRjNTRhNThkODM4MjZkYWYzNiIKICAgIH0KICB9Cn0=",
+          "x": -128.6,
+          "y": 73,
+          "z": 168.7
+        },
+        {
+          "name": "Ashera",
+          "wiki": "https://wiki.hypixel.net/Ashera",
+          "owner": "b739141a-7d9f-218c-88d1-d6e0b223775e",
+          "texture": "eyJ0aW1lc3RhbXAiOjE1NjgwMzUwOTgwMzMsInByb2ZpbGVJZCI6Ijc1MTQ0NDgxOTFlNjQ1NDY4Yzk3MzlhNmUzOTU3YmViIiwicHJvZmlsZU5hbWUiOiJUaGFua3NNb2phbmciLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2MyMGYyZGIzZjA0YmRjYTc2ZjYzMmQ0NmM2Mjk1NjA5Y2Q2OWY5YjFjZmRmMDUwN2I5MGFiNzM3ZGQ2MDE4OGEifX19",
+          "x": -130.6,
+          "y": 73,
+          "z": 169.7
+        },
+        {
+          "name": "Chester",
+          "wiki": "https://wiki.hypixel.net/Chester",
+          "owner": "e397e384-9ee7-21e3-b5da-3d76f265984e",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODI5MDI4MDE2OSwKICAicHJvZmlsZUlkIiA6ICI0NzY2ZGEzOTNlOGQ0YTRmYWZhMjE2OWM2YWJhZDI0YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJzYWx0ZWRDYXNoZXdzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ2OWY5ZTNiMzljNzYzMzllNTQ5YTY0ZWU1MDUxNWRiNGUyZDFmM2I1M2VkZmM5Mzg3ZDdmMzQxOTJiYjQyNTkiCiAgICB9CiAgfQp9",
+          "x": -130.6,
+          "y": 73,
+          "z": 173.3
+        },
+        {
+          "name": "Tybalt",
+          "wiki": "https://wiki.hypixel.net/Tybalt",
+          "owner": "71ed2381-3788-2183-91d3-c9b5a49084e0",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzgzMDU4MTQxMCwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE1NGI4YjI0NTcyZmJhMGZjZmJlNzc0NzdjMDY1NzYwZWMxNWZhYmVhYzcyYmY5ZDk5Y2ZkOGMzMDNjNWM3ZCIKICAgIH0KICB9Cn0=",
+          "x": -129.3,
+          "y": 79,
+          "z": 168.5
+        },
+        {
+          "name": "Fafnir",
+          "wiki": "https://wiki.hypixel.net/Fafnir",
+          "owner": "06fe6c86-cbc4-262b-b718-1987ca050bdc",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYyNjg3NDYzNzIxNiwKICAicHJvZmlsZUlkIiA6ICJmNThkZWJkNTlmNTA0MjIyOGY2MDIyMjExZDRjMTQwYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJ1bnZlbnRpdmV0YWxlbnQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjBiNTdiYTRkZTFlNzkzOTZlOWVjMDE0YmE3MTI4YTM2OTg0ODU2ZDg5ZDQ5ZWE1NmY4ODE1NzdjMjQ4ODg3NiIKICAgIH0KICB9Cn0=",
+          "x": -127.6,
+          "y": 73,
+          "z": 172.7
+        },
+        {
+          "name": "Garlacius",
+          "wiki": "https://wiki.hypixel.net/Garlacius",
+          "owner": "0a753ca8-08f7-2628-80ce-20f58dc60653",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzgzMDQyNjM4NiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWVmOTA0YzY2ZjRjZDM1N2ViODBhMWU0MDU3ODNmNTIxZDI4NDUwMzQzNWFlZGU2MDNjODlkYjE1ZTY4NTcwOSIKICAgIH0KICB9Cn0=",
+          "x": -128.6,
+          "y": 79,
+          "z": 170.7
+        },
+        {
+          "name": "Vreike",
+          "wiki": "https://wiki.hypixel.net/Vreike",
+          "owner": "b1accb3f-17c5-2af7-af7c-fb34809f5422",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzgzMDYwNDgyNiwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGY5YzA4YTEwODE2NmFlMGRiODQ3Njk5ZWVhMzc3M2JhYTM1YWU4ZDhhNjYyZGVmMmQzYmE2Y2FlYjBiYzZlYSIKICAgIH0KICB9Cn0=",
+          "x": -124.3,
+          "y": 73,
+          "z": 172.5
+        },
+        {
+          "name": "Dackinoru",
+          "wiki": "https://wiki.hypixel.net/Dackinoru",
+          "owner": "ab11eb47-4d9e-2dc6-8b5a-f709bffb2609",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5NDgzNTIzODU0NywKICAicHJvZmlsZUlkIiA6ICI1OTgzZjkxY2UzY2M0MzdjYjc0ZTZlMTJmNWY0YzNlZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJOaW5nYV9LaXR0eSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iYTkzN2UyZGY0YTg0ZjJiZmE4Njc1ZTllMTBlZjQ4Y2NhYjFkYjYyNzA2YzZiYmFkYzczZDUzOGE5OTBmODU4IgogICAgfQogIH0KfQ==",
+          "x": -118.3,
+          "y": 73,
+          "z": 172.5
+        },
+        {
+          "name": "Inverted Sirius",
+          "wiki": "https://wiki.hypixel.net/Inverted_Sirius",
+          "owner": "c963a0da-3951-26b7-ba7d-c3a2e91d106e",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0Nzg0NDY5NDIwNSwKICAicHJvZmlsZUlkIiA6ICJlM2I0NDVjODQ3ZjU0OGZiOGM4ZmEzZjFmN2VmYmE4ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5pRGlnZ2VyVGVzdCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81MTUzZTM1YjU2OWQ3NTBkOWVkOTY3MmRhZmRlMWEzNjJiOGFkZTg2MzIyMjE0YmMwMDZkNWQxYWYxYzM0MWIwIgogICAgfQogIH0KfQ==",
+          "x": -96.5,
+          "y": 75,
+          "z": 190.5
+        },
+        {
+          "name": "Tel Kar",
+          "wiki": "https://wiki.hypixel.net/Tel_Kar",
+          "owner": "f4a3395f-4a32-2a8d-b3cd-8192b345c8e4",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYwODMxMzQwOTk1NSwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTdiMzU1MmM1YWYyYWIyZGM0ZTFmODRkNzhjYTRjNGQ2NzZkZWMwNjgxNTcyMjVhM2MyNjc0ZTU1NzRkMjM0OCIKICAgIH0KICB9Cn0=",
+          "x": -113.3,
+          "y": 69,
+          "z": 62.3
+        },
+        {
+          "name": "Dr. Edwin",
+          "wiki": "https://wiki.hypixel.net/Dr._Edwin",
+          "owner": "56c5d93c-fd27-2ee4-aecc-56df4b014580",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0ODQ3NjM3MTE1MywKICAicHJvZmlsZUlkIiA6ICIzYTE3NmIzMGZlY2M0Nzc4OGY4ZTg1OThmODFhN2YyZiIsCiAgInByb2ZpbGVOYW1lIiA6ICIxX0JJR1pfMSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iMDQzMDMyNTUxMTNkMjRkNzFhMTUzZmFmMTBlMzMyZjcyYjNlNjZhMzA5Y2I2NTRhOGJjMzdhMjdiOWNkMDRmIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
+          "x": -79.5,
+          "y": 73,
+          "z": 9.5
+        },
+        {
+          "name": "Dr. Phear",
+          "wiki": "https://wiki.hypixel.net/Dr._Phear",
+          "owner": "9b7b96ca-950f-2a8f-a3de-1adb0c0aef11",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0ODk2MjcxNTM0NiwKICAicHJvZmlsZUlkIiA6ICJjNjEwOTExMDhlOTQ0MWRhODQyZDA5MDVmMDAyOWVhOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJkZVlvbm8iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTY1NjJmMmU4ZDVlZDJkYjA0MDk2NDlmMjZiODhmY2NkMzc5MmNmZDg3ZTA4MmRiZGEyNmM3OGQyMzNjN2RlMCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
+          "x": -146.3,
+          "y": 36,
+          "z": 27.5
+        },
+        {
+          "name": "Mushroom Guy",
+          "wiki": "https://wiki.hypixel.net/Mushroom_Guy",
+          "owner": "400208f5-c836-28ba-b52d-b207e7c6caa2",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODEzMDA4MzAxMCwKICAicHJvZmlsZUlkIiA6ICI1OTgzZjkxY2UzY2M0MzdjYjc0ZTZlMTJmNWY0YzNlZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJOaW5nYV9LaXR0eSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80OTM2ZDc5ZTRmZGE4NTlkNjA4Yzg1M2MxMGVkNDI3NjFiOTM3OTkyMGIwMGIxNTU0MzNjODI5M2Y5MWIzZTZmIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
+          "x": -178.3,
+          "y": 75,
+          "z": 12.5
+        },
+        {
+          "name": "Grandma",
+          "wiki": "https://wiki.hypixel.net/Grandma",
+          "owner": "1723b97a-8094-293b-a9ce-0dcd159d13be",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU4ODE2ODg2NTc1OCwKICAicHJvZmlsZUlkIiA6ICI3NTE0NDQ4MTkxZTY0NTQ2OGM5NzM5YTZlMzk1N2JlYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGFua3NNb2phbmciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODI2OGJhMjU5NWQyYjdmNTA4MGU3NjEwZjdhZTYyZDk1YTJiOGE3MmQ3OWQyZDM4YzdkMGQxN2QzZTEzOTFjZSIKICAgIH0KICB9Cn0=",
+          "x": -70.5,
+          "y": 64.2,
+          "z": -60
+        },
+        {
+          "name": "Gunther",
+          "wiki": "https://wiki.hypixel.net/Gunther",
+          "owner": "ca89c9f5-6f60-299b-93a6-e28f17f98dd8",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYyMDI5NDcxNTE4OSwKICAicHJvZmlsZUlkIiA6ICI4OTQzMDlkMTY0YWM0ZGYyOTlkYWI0OTE0YmQ3MmMxNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJYeFBzeWNvTWFudGlzeFgiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE4NjQ3M2U4MGJiMzU3YjM1M2RhMjIwNDhiZmVmMTNiMGIzODEyNzA3Nzk4YWJhYWI1MDgxMmVhZmMzMWM3ZCIKICAgIH0KICB9Cn0=",
+          "x": -68.7,
+          "y": 71.1,
+          "z": -61.5
+        },
+        {
+          "name": "Motes Grubber",
+          "wiki": "https://wiki.hypixel.net/Motes_Grubber",
+          "owner": "bb0c95d6-af27-27dd-898d-11089bf5eb7f",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0OTA3OTYwMjEyNiwKICAicHJvZmlsZUlkIiA6ICJiNTM5NTkyMjMwY2I0MmE0OWY5YTRlYmYxNmRlOTYwYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJtYXJpYW5hZmFnIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2YTZiZTA1YmJlNmZlZTFlNGEwNDgxNDg0MzcwNmE0YTVjOTA3ZWUyNTdhNGMxMTlkNTdiNjVkYjVhNzkxOCIKICAgIH0KICB9Cn0=",
+          "x": -93,
+          "y": 70.2,
+          "z": -73
+        },
+        {
+          "name": "Finplex",
+          "wiki": "https://wiki.hypixel.net/Finplex",
+          "owner": "72153f0a-993e-271e-b973-5c096607c19f",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxMDc0MTc0MjAxMywKICAicHJvZmlsZUlkIiA6ICI5MzZmMTA3MTEzOGM0YjMyYTg0OGY2NmE5Nzc2NDJhMiIsCiAgInByb2ZpbGVOYW1lIiA6ICIwMDAwMDAwMDAwMDAwMDB4IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzJiYWE0OTliMzQ4MzhiNDAxOWE0ZDEyMTc0NTRlNjk1MGZmNDAyYzU3ZTAzNWEzN2FiZTdlMTA3NjdkOGVkNDIiCiAgICB9CiAgfQp9",
+          "x": -57.5,
+          "y": 68,
+          "z": -82.5
+        },
+        {
+          "name": "Cosmo",
+          "wiki": "https://wiki.hypixel.net/Cosmo",
+          "owner": "2d7ad926-534b-20d4-bb49-7e11bc88724d",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODExMjIwMjI3NiwKICAicHJvZmlsZUlkIiA6ICIzNmMxODk4ZjlhZGE0NjZlYjk0ZDFmZWFmMjQ0MTkxMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJMdW5haWFuIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FjZjExMzJkMWRhZGJlYzQzYTQ3M2JkYjRkMTA3NGZjNjkxZTg5NjdkZTZhYzdkYjA0MDAxNGFkOTEwN2JmZDgiCiAgICB9CiAgfQp9",
+          "x": -66.5,
+          "y": 70,
+          "z": -92.3
+        },
+        {
+          "name": "ttemmE .rD",
+          "wiki": "https://wiki.hypixel.net/ttemmE_.rD",
+          "owner": "8436a5e7-d5b4-231a-bf8f-56d1dca19b66",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5NTU0NzExOTEzMCwKICAicHJvZmlsZUlkIiA6ICJmMzA1ZjA5NDI0NTg0ZjU4YmEyYjY0ZjAyZDcyNDYyYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJqcm9ja2EzMyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82Yjk1ZGMwMGJlNDE5MjE4ZGEzZWMxNjY4NWNmMDk5MDJjMTkzZjAwNGEwOWY0ZjczZWFhMmI5ZGQxMDgwYzVlIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
+          "x": -82.5,
+          "y": 52,
+          "z": -95.5
+        },
+        {
+          "name": "Sorcerer Okron",
+          "wiki": "https://wiki.hypixel.net/Sorcerer_Okron",
+          "owner": "a33ae596-ad82-20af-9a95-b99b7a1785fa",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU4OTAxMTIxMjA2NCwKICAicHJvZmlsZUlkIiA6ICI5MWYwNGZlOTBmMzY0M2I1OGYyMGUzMzc1Zjg2ZDM5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdG9ybVN0b3JteSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85YWZhODBlNjA0NTExNmEyMDhjNTBiOTllZGM0MWE0Yjg4MTZlODgxNjAxMWMxY2Q0MGYyMmY3YThkOTZlODUyIgogICAgfQogIH0KfQ==",
+          "x": -70.5,
+          "y": 81,
+          "z": -110.5
+        },
+        {
+          "name": "Skylark",
+          "wiki": "https://wiki.hypixel.net/Skylark",
+          "owner": "130aba71-f9a3-20b4-ac67-6a6c4d11574d",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY2MTQ3NzI1MTQ1NiwKICAicHJvZmlsZUlkIiA6ICIxMzdmMjg3MjUwOTE0ZmI4YjA0ZTYwYjg4MWUwZWE2YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZXphR0ciLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzIzMGYzMmMwNTVlYTlkYjVjNjFjODZlYWJhMDdiMzI4NzcwMzEzMGY4MGM0OGM1MTUyZjc0N2U4NzIwMzllNyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
+          "x": -71.5,
+          "y": 71.2,
+          "z": -115
+        },
+        {
+          "name": "Yoshua",
+          "wiki": "https://wiki.hypixel.net/Yoshua",
+          "owner": "275fef47-d906-21bb-827f-78ad3041568c",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY2ODY2MTgyNDM2MCwKICAicHJvZmlsZUlkIiA6ICJmODY0ZjY3ZGJlN2Y0OTBlYTZlODQzMjg2M2NkZWMxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJCb3lmcmllbmQ1MDY1IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIyMjRmYTM4OTgxYTUyZDFlY2NjODAzNzVlMDMyNDE2MjhhZDMzYzJjNTRiYjlkMDRhMjJlNWZiOGIwYmI4YjUiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
+          "x": -69,
+          "y": 71.2,
+          "z": -117.5
+        },
+        {
+          "name": "ttemmE .rD",
+          "wiki": "https://wiki.hypixel.net/ttemmE_.rD",
+          "owner": "790846f1-aee9-2fc4-ba56-a57457f880e7",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5NTU0NzExOTEzMCwKICAicHJvZmlsZUlkIiA6ICJmMzA1ZjA5NDI0NTg0ZjU4YmEyYjY0ZjAyZDcyNDYyYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJqcm9ja2EzMyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82Yjk1ZGMwMGJlNDE5MjE4ZGEzZWMxNjY4NWNmMDk5MDJjMTkzZjAwNGEwOWY0ZjczZWFhMmI5ZGQxMDgwYzVlIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
+          "x": -90,
+          "y": 64,
+          "z": -114
+        },
+        {
+          "name": "Joey McPizza",
+          "wiki": "https://wiki.hypixel.net/Joey_McPizza",
+          "owner": "322d9f1a-bfd7-2ad2-b598-6bd0c1eaf9aa",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY1NTc1Mjk3ODg0OCwKICAicHJvZmlsZUlkIiA6ICIxZjEyNTNhYTVkYTQ0ZjU5YWU1YWI1NmFhZjRlNTYxNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJOb3RNaWt5IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2JkODgyODhkZmU4NjYxZmZiZWM2NmQzYTk1YzM3ODMzNTY1OWM0MGU5M2Y4MTEwZDkxMGE1YTA1ZjA0NGE2ZTMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
+          "x": -105.5,
+          "y": 72,
+          "z": -102.5
+        },
+        {
+          "name": "Chef",
+          "wiki": "https://wiki.hypixel.net/Chef",
+          "owner": "93256001-8156-2c9a-b4ad-a5a18b8df9b7",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4MjIxMTI2MzUwMiwKICAicHJvZmlsZUlkIiA6ICI0ODI1MmJmMjE0Yzk0Y2JjODZiMWRkNjgxNDA5NmYxNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWNoYW5pY2FsX2hpdmUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDMwNjIwNmNlOWIzYmNmODkyYzRmODI1MTNjYTg3MzU4OTU3MzYyNzJmNzg2NjMxY2RmOThiOGU3NTM5YTM3MSIKICAgIH0KICB9Cn0=",
+          "x": -103,
+          "y": 72.1,
+          "z": -104
+        },
+        {
+          "name": "Chief Prime Minister",
+          "wiki": "https://wiki.hypixel.net/Chief_Prime_Minister",
+          "owner": "fae61cf3-bcd5-20be-aca1-7c74196ac937",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5Nzc4MDg1NjQ5NCwKICAicHJvZmlsZUlkIiA6ICI0MWQzYWJjMmQ3NDk0MDBjOTA5MGQ1NDM0ZDAzODMxYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNZWdha2xvb24iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjA0YzU5MWIxNjQ3NDZlODQ4ZjNkNmE0NTFlZTg3YTYyZGQxOTNlNWM0NWU5NGVkNzhlNzJkZjExOWFjYTQyNiIKICAgIH0KICB9Cn0=",
+          "x": -45.5,
+          "y": 54,
+          "z": -142.5
+        },
+        {
+          "name": "☣ Sick Farmer ☣",
+          "wiki": "https://wiki.hypixel.net/Sick_Farmer",
+          "owner": "ae8da6ba-d8bc-2d27-8471-a06f5801ce0d",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNjg2MDg1NDQwMSwKICAicHJvZmlsZUlkIiA6ICI5MWYwNGZlOTBmMzY0M2I1OGYyMGUzMzc1Zjg2ZDM5ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdG9ybVN0b3JteSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lYWQ1MGQyNTI4MzRlZDEyM2UzMTA2ZjllNzQ5ZDIzYjQ5ODk0OWMwNDFmOWU0NzZhMDE5YmM1YWY2MDg1MjdjIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
+          "x": -43,
+          "y": 72,
+          "z": -160
+        },
+        {
+          "name": "Enigma",
+          "wiki": "https://wiki.hypixel.net/Enigma",
+          "owner": "abaeb307-aa6f-28dc-9939-0ede9a83d90b",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
+          "x": -35,
+          "y": 71,
+          "z": 77
         }
       ]
     }
