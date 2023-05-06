@@ -2836,15 +2836,6 @@
           "z": 69.5
         },
         {
-          "name": "Enigma",
-          "wiki": "https://wiki.hypixel.net/Enigma",
-          "owner": "5ebf8885-ddde-2a93-bbcf-324ae845cd4b",
-          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
-          "x": -49,
-          "y": 71,
-          "z": 85
-        },
-        {
           "name": "Elise XXIX",
           "wiki": "https://wiki.hypixel.net/Elise_XXIX",
           "owner": "7a5bcff0-eafc-24df-ad72-9b764936aedc",
@@ -2852,15 +2843,6 @@
           "x": 9.9,
           "y": 55,
           "z": 76
-        },
-        {
-          "name": "Enigma",
-          "wiki": "https://wiki.hypixel.net/Enigma",
-          "owner": "39acd38e-1c69-251b-b4be-6539699cb9b4",
-          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
-          "x": -39,
-          "y": 71,
-          "z": 78
         },
         {
           "name": "Hound",
@@ -3270,11 +3252,11 @@
         {
           "name": "Enigma",
           "wiki": "https://wiki.hypixel.net/Enigma",
-          "owner": "abaeb307-aa6f-28dc-9939-0ede9a83d90b",
+          "owner": "b53fca92-7125-2471-bd2d-ffd0961e43f4",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
-          "x": -35,
-          "y": 71,
-          "z": 77
+          "x": -35.0,
+          "y": 71.0,
+          "z": 97.0
         }
       ]
     }
