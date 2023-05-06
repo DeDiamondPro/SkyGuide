@@ -19,6 +19,17 @@ for (const world in data) {
                 }
             }
         }
+        // Remove duplicate npcs
+        data[world][island].npcs = data[world][island].npcs.filter((value, index, self) => {
+            const result = index === self.findIndex((t) => (
+                t.name === value.name && t.x === value.x && t.y === value.y && t.z === value.z
+            ))
+            if (!result) {
+                console.log(`Removed duplicate npc "${value.name}"`)
+                changed = true
+            }
+            return result
+        })
     }
 }
 
