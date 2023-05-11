@@ -2723,11 +2723,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/rift.png",
-            "sha256": "b5af89f0e3a0a2342992fd786bf4b971bf941626c5f007bc1d4a97aeeffcb762"
+            "sha256": "d4640fc86c40fb84d653f62007916227e8cec766e158fa79247026d5c227eb78"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/rift.png",
-            "sha256": "0c728d45676f1f7eda1a153b5f223299e55a403078b4c591206c763386d1cd9f"
+            "sha256": "f01119b9180f6f09943856cf206c6e80e7aa2802bc176909facf4562583aac72"
           }
         }
       ],
@@ -3254,9 +3254,9 @@
           "wiki": "https://wiki.hypixel.net/Enigma",
           "owner": "b53fca92-7125-2471-bd2d-ffd0961e43f4",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTU5ODM4MzQ2OTAyMywKICAicHJvZmlsZUlkIiA6ICI5Y2MzODY4ZjM5YzA0YmFiOWNlYzI5M2RhZWZjZjIzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJMb3JkTWlsY28iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY2NjIxMDJhMWIxOWViNWY3NWE5YmJiYTU0MDMzMTNiZDlkMTU5OTU2MzE0YzgyMzU2MjBkMGFmOWNhZmJhNCIKICAgIH0KICB9Cn0=",
-          "x": -35.0,
-          "y": 71.0,
-          "z": 97.0
+          "x": -35,
+          "y": 71,
+          "z": 97
         }
       ]
     }
