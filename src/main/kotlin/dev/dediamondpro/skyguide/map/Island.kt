@@ -1,5 +1,7 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.compat.INEUCompat
+import dev.dediamondpro.skyguide.compat.NEUCompat
 import dev.dediamondpro.skyguide.compat.SkytilsCompat
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.*
@@ -134,6 +136,10 @@ data class Island(
     private fun getPointsOfInterest(): List<PointOfInterest> {
         val list = mutableListOf<PointOfInterest>()
         list.addAll(portals)
+        val neuWaypoint = INEUCompat.instance?.getCurrentlyTrackedWaypoint()
+        if (neuWaypoint != null && neuWaypoint.island == this) {
+            list.add(neuWaypoint)
+        }
         list.addAll(npcs)
         if (SkytilsCompat.waypoints.containsKey(this)) list.addAll(SkytilsCompat.waypoints[this]!!)
         val dest = NavigationHandler.destinationPio
