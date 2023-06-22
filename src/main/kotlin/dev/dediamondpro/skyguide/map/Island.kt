@@ -1,14 +1,16 @@
 package dev.dediamondpro.skyguide.map
 
 import dev.dediamondpro.skyguide.compat.INEUCompat
-import dev.dediamondpro.skyguide.compat.NEUCompat
 import dev.dediamondpro.skyguide.compat.SkytilsCompat
+import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import gg.essential.universal.UGraphics
 import kotlin.math.cos
+import kotlin.math.pow
 import kotlin.math.sin
+import kotlin.math.sqrt
 
 /**
  * @param images The images of the map
@@ -136,12 +138,9 @@ data class Island(
     private fun getPointsOfInterest(): List<PointOfInterest> {
         val list = mutableListOf<PointOfInterest>()
         list.addAll(portals)
-        val neuWaypoint = INEUCompat.instance?.getCurrentlyTrackedWaypoint()
-        if (neuWaypoint != null && neuWaypoint.island == this) {
-            list.add(neuWaypoint)
-        }
-        list.addAll(npcs)
+        INEUCompat.instance?.getCurrentlyTrackedWaypoint()?.let { if (it.island == this) list.add(it) }
         if (SkytilsCompat.waypoints.containsKey(this)) list.addAll(SkytilsCompat.waypoints[this]!!)
+        list.addAll(npcs)
         val dest = NavigationHandler.destinationPio
         if (dest.destination != null && dest.destination!!.island == this) list.add(
             0, NavigationHandler.destinationPio
@@ -152,6 +151,24 @@ data class Island(
     fun isInIsland(x: Float, y: Float): Boolean {
         return x >= topX + xOffset && y >= topY + yOffset
                 && x <= bottomX + xOffset && y <= bottomY + yOffset
+    }
+
+    fun findClosestPortal(x: Float, y: Float?, z: Float): Portal? {
+        var lowestDist = Float.MAX_VALUE
+        var closestPortal: Portal? = null
+        for (portal in portals) {
+            if (portal.command == null || (portal.mvp && !Config.showMVPWarps)) continue
+            val distance = sqrt(
+                (x - portal.x).pow(2f) + (if (y == null) 0f else (y - portal.y).pow(
+                    2f
+                )) + (z - portal.z).pow(2f)
+            )
+            if (distance < lowestDist) {
+                lowestDist = distance
+                closestPortal = portal
+            }
+        }
+        return closestPortal
     }
 
     companion object {

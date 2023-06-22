@@ -20,7 +20,7 @@ data class NEUWaypoint(
     }
 
     override fun drawIcon(x: Float, y: Float) {
-        UGraphics.color4f(1f, 1f, 1f, 1f)
+        UGraphics.color4f(1f, 0f, 0f, 1f)
         RenderUtils.drawImage(
             "/assets/skyguide/pin.png",
             x - 8f,
@@ -48,4 +48,5 @@ data class NEUWaypoint(
         neuCompat.untrackWaypoint()
     }
 
+    override fun drawBackground(x: Float, y: Float) {}
 }

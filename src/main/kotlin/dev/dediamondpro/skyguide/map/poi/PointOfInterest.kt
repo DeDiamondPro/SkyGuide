@@ -2,6 +2,7 @@ package dev.dediamondpro.skyguide.map.poi
 
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.utils.RenderUtils
+import gg.essential.universal.UGraphics
 import gg.essential.universal.UMinecraft
 import gg.essential.universal.UResolution
 import kotlinx.serialization.Serializable
@@ -42,6 +43,7 @@ abstract class PointOfInterest {
     }
 
     protected open fun drawBackground(x: Float, y: Float) {
+        UGraphics.color4f(1f, 1f, 1f, 1f)
         RenderUtils.drawImage(
             "/assets/skyguide/map_location.png",
             x - 16f,

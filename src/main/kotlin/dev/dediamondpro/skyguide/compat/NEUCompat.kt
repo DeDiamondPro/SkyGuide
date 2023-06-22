@@ -25,7 +25,7 @@ class NEUCompat : INEUCompat {
 
 
     @SubscribeEvent
-    fun onTick(event: TickEvent.WorldTickEvent) {
+    fun onTick(event: TickEvent.ClientTickEvent) {
         if ((tick++) % 40 == 0)
             recalculateWaypoint()
     }
