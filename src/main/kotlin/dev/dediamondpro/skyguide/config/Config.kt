@@ -236,6 +236,15 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     )
     var disabledSkytilsWaypoints = false
 
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show NEU Waypoints",
+        description = "Show NEU waypoints on the map.",
+        category = "Integration",
+        subcategory = "NEU"
+    )
+    var neuWaypoints = true
+
     // Hidden
 
     @Property(

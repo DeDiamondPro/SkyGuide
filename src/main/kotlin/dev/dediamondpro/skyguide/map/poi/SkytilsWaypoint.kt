@@ -4,8 +4,11 @@ import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
+import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
+import gg.essential.universal.UChat
 import gg.essential.universal.UGraphics
+import net.minecraft.util.EnumChatFormatting
 import java.awt.Color
 
 class SkytilsWaypoint(
@@ -42,12 +45,18 @@ class SkytilsWaypoint(
     override fun getTooltip(): List<String> {
         return listOf(
             name,
-            "Waypoint imported from Skytils",
-            "Right click set destination"
+            "Left click to teleport to nearest warp",
+            "Right click to set destination",
+            "Waypoint imported from Skytils"
         )
     }
 
     override fun onLeftClick() {
+        if (island == null) return
+        val closestPortal = island?.findClosestPortal(x, y, z)
+        if (closestPortal != null) UChat.say("/${closestPortal.command}")
+        else UChat.chat("${EnumChatFormatting.RED}Could not find a warp!")
+        GuiUtils.displayScreen(null)
     }
 
     override fun onRightClick() {

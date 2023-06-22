@@ -51,20 +51,7 @@ class DestinationPoi(var destination: Destination?) : PointOfInterest() {
 
     override fun onLeftClick() {
         if (destination == null) return
-        var lowestDist = Float.MAX_VALUE
-        var closestPortal: Portal? = null
-        for (portal in destination!!.island.portals) {
-            if (portal.command == null || (portal.mvp && !Config.showMVPWarps)) continue
-            val distance = sqrt(
-                (x - portal.x).pow(2f) + (if (destination!!.y == null) 0f else (y - portal.y).pow(
-                    2f
-                )) + (z - portal.z).pow(2f)
-            )
-            if (distance < lowestDist) {
-                lowestDist = distance
-                closestPortal = portal
-            }
-        }
+        val closestPortal = destination!!.island.findClosestPortal(x, destination?.y, z)
         if (closestPortal != null) UChat.say("/${closestPortal.command}")
         else UChat.chat("${EnumChatFormatting.RED}Could not find a warp!")
         GuiUtils.displayScreen(null)

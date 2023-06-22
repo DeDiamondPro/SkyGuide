@@ -68,8 +68,8 @@ dependencies {
 
     annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     compileOnly("org.spongepowered:mixin:0.8.5")
-
-    modCompileOnly(runtimeMod("com.github.romangraef:notenoughupdates:30f7cf9e:all")!!)
+    modCompileOnly("com.github.notenoughupdates:notenoughupdates:v2.1.0:all")
+    runtimeMod("com.github.notenoughupdates:notenoughupdates:v2.1.1-alpha16:all")
 }
 
 loom {
