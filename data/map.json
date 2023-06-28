@@ -2723,11 +2723,11 @@
           },
           "medium": {
             "url": "https://api.dediamondpro.dev/skyguide/medium/rift.png",
-            "sha256": "b0b922e1dda18c696b8cb9a59a5f429166a84a55d0dea4ca31c8cf8ee4e29721"
+            "sha256": "bee046ada1f6b727c7072efb4b1c994ac57f1c38b3c43032174bb529056e3f88"
           },
           "high": {
             "url": "https://api.dediamondpro.dev/skyguide/high/rift.png",
-            "sha256": "4d5f579ba1cc55a4798bc9082f84e03584ce5ca6062d8aa69c752978e82af864"
+            "sha256": "28fa3606dacd86c7541c1fda082fee04c730e0d1fbf2a8a8d71fa6729c62160c"
           }
         }
       ],
@@ -3264,7 +3264,7 @@
           "owner": "973be9c9-1c35-2481-8f28-6d760a619725",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3MzM3ODA1MjAwOSwKICAicHJvZmlsZUlkIiA6ICI3ZjU2ZjY1MDI2NjY0ZmM1OWFjNWYyYjVjMTNlZGY3NyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNYXhBbnRvbnkiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VjMDE3MGVkMGUxODUyOWFmNGZlMjhjOGMwMmIwYzQ4MTllOTRkOTE3YzcyMWFkODg5MGZjODY0ZDhlMTU2YiIKICAgIH0KICB9Cn0=",
           "x": 2.5,
-          "y": 71.0,
+          "y": 71,
           "z": -10.5
         },
         {
@@ -3273,7 +3273,7 @@
           "owner": "64f1c91d-a05e-2325-abfe-b6b90521d6a8",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4MjU4MjM3MjAzNiwKICAicHJvZmlsZUlkIiA6ICI1MDBmZWZlMWUzZjU0NTA4OTc1YzZmMTE5ZGIyZDY1NiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUZWNoU2VlZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80ZTA2ZDdlNDIyMTdiZWMxNjViYjA0MDZjMjI4MDViMjIxZTI4MDY4Mzk2YTg3Y2RjMDRmNDE1ZWE1NWRkY2U3IgogICAgfQogIH0KfQ==",
           "x": -159.5,
-          "y": 97.0,
+          "y": 97,
           "z": -75.5
         },
         {
@@ -3281,8 +3281,8 @@
           "wiki": "https://wiki.hypixel.net/Cowboy_Nick",
           "owner": "8d44c2b5-61fd-2369-8bef-15294cab445e",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzcyMjc2MTQxOTcsInByb2ZpbGVJZCI6ImIwZDczMmZlMDBmNzQwN2U5ZTdmNzQ2MzAxY2Q5OGNhIiwicHJvZmlsZU5hbWUiOiJPUHBscyIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2YmUzMjBkNTI1N2ExNjJjMGI4ZGQ0MzhkMjM1NTg2NzQ5MGIwNjFjNGUyMDAyOTNiM2Y5OGZlMzk1MjQ5MyJ9fX0=",
-          "x": -13.0,
-          "y": 70.0,
+          "x": -13,
+          "y": 70,
           "z": -7.1
         },
         {
@@ -3291,7 +3291,7 @@
           "owner": "68d7f395-e757-23e4-8204-1f782fe4d14e",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4MTkxMjM5OTYxNCwKICAicHJvZmlsZUlkIiA6ICJkMTJiOTk3ZWI2YTQ0ODQ5ODJmNDE1ZTI1NzFlNmY4NCIsCiAgInByb2ZpbGVOYW1lIiA6ICJUd2lybGJlbGwiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI2MTkyNjA5ZDZjNDZhZGU3M2U4MDdmYzQwZGJjM2ExYTFhZmJiNDU2YWUxNjU3ODViMGZlODM0ZGQxY2I1NyIKICAgIH0KICB9Cn0=",
           "x": -2.5,
-          "y": 70.0,
+          "y": 70,
           "z": -43.5
         },
         {
@@ -3299,8 +3299,8 @@
           "wiki": "https://wiki.hypixel.net/Seymour_(Rift)",
           "owner": "f9bcee02-a19a-205d-b211-8a581f2e404a",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwNTQ2Njg5NzUsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2M4YWFjNGU2MzEzOThjMGY0N2ZlODU2MTVlN2Y0OTIxNTUwMDA0MGJiOTA4MTlkNTY4ZTgyNGFjZjk0YmZhNGUifX19",
-          "x": -27.0,
-          "y": 71.0,
+          "x": -27,
+          "y": 71,
           "z": -44.5
         },
         {
@@ -3309,7 +3309,7 @@
           "owner": "c3a5aa23-d980-2dbb-a6ad-89f2fcf7caa6",
           "texture": "eyJ0aW1lc3RhbXAiOjE1NzMwNTQyNjQwODgsInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE4Y2EwYzg5YmVmOGM0ZTdlNTIxYjExMzgyMWZmZGYwMGU3YjVlYjU1MmEzNzhmOTAzN2NiZWM2NTVkZDI3YzgiLCJtZXRhZGF0YSI6eyJtb2RlbCI6InNsaW0ifX19fQ==",
           "x": -32.4,
-          "y": 71.0,
+          "y": 71,
           "z": -38.5
         },
         {
@@ -3327,7 +3327,7 @@
           "owner": "e5859599-cccc-2672-ad8f-de9c12212d15",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3MzI2Njg3MjQyOSwKICAicHJvZmlsZUlkIiA6ICIwNTVhOTk2NTk2M2E0YjRmOGMwMjRmMTJmNDFkMmNmMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJUaGVWb3hlbGxlIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ExM2U1OWI1MGI1ZGM3M2I2YmQ5MjZkNWY2ZTVhOWNhZWIyMGMxNjA5NWFkYmEyNzVmYWI2Yzc2YTIxOTk1ZTMiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": -51.1,
-          "y": 68.0,
+          "y": 68,
           "z": -40.7
         },
         {
@@ -3336,7 +3336,7 @@
           "owner": "8075c210-f00f-2840-89be-673215c75eb1",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0OTMxMDgxMjg1OCwKICAicHJvZmlsZUlkIiA6ICJmODJmNTQ1MDIzZDA0MTFkYmVlYzU4YWI4Y2JlMTNjNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZXNwb25kZW50cyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82MzQ0OTdjOGQ5YjEyYjJhNzg5YmJlMGM3NDRhYjJlZTkwODJhNGFkNjBlOTYxZGUyN2ViZTJlZmVhMjY2NWZlIgogICAgfQogIH0KfQ==",
           "x": -56.5,
-          "y": 79.0,
+          "y": 79,
           "z": -13.7
         },
         {
@@ -3354,7 +3354,7 @@
           "owner": "cbc40a50-68f4-21d8-b5d2-5c5258d32745",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4MDIwOTg5MTIzOCwKICAicHJvZmlsZUlkIiA6ICI4YTg3NGJhNmFiZDM0ZTc5OTljOWM1ODMwYWYyY2NmNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZXphMTExIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2M3MGFkODMwODBmZTBjODEwMTk1NzkyMjg4ZWU3YTlhNTYwNTM0OGMyYmQ5M2E2YzZiMmI1NTNiNjk2MGYxODQiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
           "x": 30.5,
-          "y": 72.0,
+          "y": 72,
           "z": -94.5
         },
         {
@@ -3363,7 +3363,7 @@
           "owner": "5d17c9f9-c60c-2e81-a60b-27428ce8aa53",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4MjkyODAzOTE4NSwKICAicHJvZmlsZUlkIiA6ICIwNDNkZWIzOGIyNjE0MTg1YTIzYzU4ZmI2YTc5ZWZkYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJWaXRhbFNpZ256MiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84NzM0YmI5Nzg3ZWJjNjlkYmZjMjlmN2ZiNzk4MDAzOWU3Y2Q2MTNjMDI5NjMzMTliNWNjYWY5YTdhZDg4NDRkIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
           "x": 59.7,
-          "y": 70.0,
+          "y": 70,
           "z": -88.5
         },
         {
@@ -3371,9 +3371,9 @@
           "wiki": "https://wiki.hypixel.net/Deer",
           "owner": "c3eee028-38a1-2613-b1ba-125352a7a231",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4Mjk0MjcyOTE3MCwKICAicHJvZmlsZUlkIiA6ICJmZDYwZjM2ZjU4NjE0ZjEyYjNjZDQ3YzJkODU1Mjk5YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZWFkIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzliZTAzZjk3NTJiNDNhYmM2YzY1YTc1MDQ5ODkyYWY1OGQ0ZjU1ZjM3YzNiZmZhMTM0NjJiM2M0YmIwZjgwN2IiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==",
-          "x": 139.0,
-          "y": 70.0,
-          "z": -12.0
+          "x": 139,
+          "y": 70,
+          "z": -12
         },
         {
           "name": "Maddox the Slayer",
@@ -3381,8 +3381,8 @@
           "owner": "ff23f391-024c-2136-bdad-cfd10767c8a7",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3Njk2Njc2NDgwNywKICAicHJvZmlsZUlkIiA6ICI2ZTIyNjYxZmNlMTI0MGE0YWE4OTA0NDA0NTFiYjBiNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJncnZleWFyZCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lMDQwMTI0ZjIyYTg0Mjk2NmJlYjU1YzllNjk4ZmUzYTJjOGI3MTMxOTBjMjZlMDNkMzdmNDA3NGJkNTAzMDMxIgogICAgfQogIH0KfQ==",
           "x": 204.5,
-          "y": 77.0,
-          "z": 45.0
+          "y": 77,
+          "z": 45
         },
         {
           "name": "Motes Grubber",
@@ -3390,7 +3390,7 @@
           "owner": "3ac4b84f-d975-2f8f-adec-8900fe825c2b",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY0OTA3OTYwMjEyNiwKICAicHJvZmlsZUlkIiA6ICJiNTM5NTkyMjMwY2I0MmE0OWY5YTRlYmYxNmRlOTYwYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJtYXJpYW5hZmFnIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E2YTZiZTA1YmJlNmZlZTFlNGEwNDgxNDg0MzcwNmE0YTVjOTA3ZWUyNTdhNGMxMTlkNTdiNjVkYjVhNzkxOCIKICAgIH0KICB9Cn0=",
           "x": 164.5,
-          "y": 77.0,
+          "y": 77,
           "z": 125.5
         },
         {
@@ -3399,7 +3399,7 @@
           "owner": "f9178990-8f97-28d5-824c-75833994d407",
           "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY4MzYzMzMxMjIyNSwKICAicHJvZmlsZUlkIiA6ICJiNTAwOGEyMGJkY2U0YjJlOTU5NWZlNzY2MDlmYjUzNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNT1JJU3hTVE9QQkFOIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2VlZDY2NDdkZmQ0YmI1MjUyMWEzZTM0OGM4YzU2NmM5NzMxMDA3NWZiN2I4ZTM2ZThhN2IzY2MwYTlkMGQ2YjEiCiAgICB9CiAgfQp9",
           "x": 252.4,
-          "y": 106.0,
+          "y": 106,
           "z": 76.7
         },
         {
@@ -3408,7 +3408,7 @@
           "owner": "7f92b3d6-5ee0-4ab6-afae-2206b9514a63",
           "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBlMTNkMTg0NzRmYzk0ZWQ1NWFlYjcwNjk1NjZlNDY4N2Q3NzNkYWMxNmY0YzNmODcyMmZjOTViZjlmMmRmYSJ9fX0=",
           "x": -49.5,
-          "y": 70.0,
+          "y": 70,
           "z": -65.5
         }
       ]
