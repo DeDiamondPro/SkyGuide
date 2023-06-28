@@ -39,11 +39,11 @@ object SkyGuide {
         MinecraftForge.EVENT_BUS.register(GuiUtils())
         MinecraftForge.EVENT_BUS.register(AssetHandler())
         MinecraftForge.EVENT_BUS.register(SkytilsCompat())
-        INEUCompat.instance?.let(MinecraftForge.EVENT_BUS::register)
         MinecraftForge.EVENT_BUS.register(MessageListener())
         MinecraftForge.EVENT_BUS.register(NavigationHandler())
-        MinecraftForge.EVENT_BUS.register(NpcGui.NpcCollector())
         MinecraftForge.EVENT_BUS.register(FirstLaunchHandler())
+        MinecraftForge.EVENT_BUS.register(NpcGui.NpcCollector())
+        INEUCompat.instance?.let(MinecraftForge.EVENT_BUS::register)
         ClientCommandHandler.instance.registerCommand(SkyGuideCommand())
     }
 }
