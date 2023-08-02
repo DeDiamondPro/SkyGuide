@@ -19,9 +19,18 @@ class Npc(
     override val y: Float,
     override val z: Float,
     override val destinations: List<String> = listOf()
-) : PointOfInterest(), NavigationProvider {
+) : PointOfInterest(), NavigationProvider, Searchable {
     @Transient
-    private val skull = ItemUtils.createSkull(owner, texture)
+    override val searchString = name
+
+    @Transient
+    override val searchDescription by lazy { "An NPC in ${island?.name}" }
+
+    @Transient
+    override val scale: Float = 5f
+
+    @Transient
+    override val skull = ItemUtils.createSkull(owner, texture)
 
     override fun shouldDraw(): Boolean {
         return Config.showNpcs

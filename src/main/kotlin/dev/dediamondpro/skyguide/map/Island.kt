@@ -6,7 +6,10 @@ import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
+import dev.dediamondpro.skyguide.utils.ItemUtils
 import gg.essential.universal.UGraphics
+import kotlinx.serialization.Transient
+import net.minecraft.item.ItemStack
 import kotlin.math.cos
 import kotlin.math.pow
 import kotlin.math.sin
@@ -34,7 +37,28 @@ data class Island(
     val bottomY: Float,
     val xOffset: Float = 0f,
     val yOffset: Float = 0f
-) {
+) : Searchable {
+    @Transient
+    override val searchString = name.replaceFirstChar { it.titlecase() }
+
+    @Transient
+    override val searchDescription = "A Skyblock Island"
+
+    @Transient
+    override var island: Island? = this
+
+    @Transient
+    override val x: Float = (topX + bottomX) / 2
+
+    @Transient
+    override val z: Float = (topY + bottomY) / 2
+
+    @Transient
+    override val scale: Float = 1f
+
+    @Transient
+    override val skull: ItemStack = islandSkull
+
     val width = bottomX - topX
     val height = bottomY - topY
     var zone: String? = null
@@ -172,6 +196,11 @@ data class Island(
     }
 
     companion object {
+        private val islandSkull = ItemUtils.createSkull(
+            "cc9258c4-76d8-2dee-a648-510538c15581",
+            "eyJ0aW1lc3RhbXAiOjE1NTkyMTU0MTY5MDksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q3Y2M2Njg3NDIzZDA1NzBkNTU2YWM1M2UwNjc2Y2I1NjNiYmRkOTcxN2NkODI2OWJkZWJlZDZmNmQ0ZTdiZjgifX19"
+        )
+
         fun getXOffset(): Float {
             return SkyblockMap.getCurrentIsland()?.xOffset ?: 0f
         }
