@@ -1,5 +1,6 @@
 package dev.dediamondpro.skyguide.map
 
+import dev.dediamondpro.skyguide.map.poi.Searchable
 import dev.dediamondpro.skyguide.utils.SBInfo
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
@@ -9,11 +10,22 @@ import java.nio.file.Files
 object SkyblockMap {
     /**
      * format : <world id, <zone id, island data>>
-     * Example of separate worlds: main (hub, ect...), winter (jerry's workshop)
+     * Example of separate worlds: main (hub, ect...), winter (Jerry's workshop)
      */
     private val json = Json { ignoreUnknownKeys = true }
     var worlds = mutableMapOf<String, MutableMap<String, Island>>()
-    var zoneToWorld = mutableMapOf<String, MutableMap<String, Island>>()
+    private var zoneToWorld = mutableMapOf<String, MutableMap<String, Island>>()
+    val searchables by lazy {
+        val list = mutableListOf<Searchable>()
+        for ((_, world) in worlds) {
+            for ((_, island) in world) {
+                list.add(island)
+                list.addAll(island.npcs)
+                list.addAll(island.portals.filter { it.command != null && it.name.isNotBlank() })
+            }
+        }
+        return@lazy list
+    }
 
     fun getCurrentIsland(): Island? {
         return zoneToWorld[SBInfo.zone]?.get(SBInfo.zone)
@@ -33,6 +45,10 @@ object SkyblockMap {
 
     fun isZoneInWorld(zone: String): Boolean {
         return currentWorldAvailable() && getCurrentWorld()!!.containsKey(zone)
+    }
+
+    fun getWorldByIsland(island: Island): MutableMap<String, Island>? {
+        return worlds.values.firstOrNull { it.values.contains(island) }
     }
 
     fun getZoneByIsland(island: Island): String? {

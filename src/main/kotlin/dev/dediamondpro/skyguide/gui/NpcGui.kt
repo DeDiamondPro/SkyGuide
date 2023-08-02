@@ -83,7 +83,9 @@ class NpcGui(private val npcs: MutableList<Npc> = collectedNpcs.toMutableList())
             finishedNpcs.add(
                 Npc(
                     nameTextBox.text,
-                    wikiTextBox.text,
+                    wikiTextBox.text.ifBlank {
+                        "https://wiki.hypixel.net/${nameTextBox.text.replace(' ', '_')}"
+                    },
                     npc!!.owner,
                     npc!!.texture,
                     npc!!.x,
@@ -137,6 +139,7 @@ class NpcGui(private val npcs: MutableList<Npc> = collectedNpcs.toMutableList())
                 val npc = getNpc(entity, true) ?: continue
                 doneEntities.add(entity)
                 collectedNpcs.add(npc)
+                UChat.chat("Saved ${npc.name}")
             }
         }
     }
@@ -151,12 +154,14 @@ class NpcGui(private val npcs: MutableList<Npc> = collectedNpcs.toMutableList())
                 for (property in npc.gameProfile.properties.get(string)) {
                     if (property.name == "textures") {
                         val armorStand = UMinecraft.getWorld()!!.loadedEntityList.firstOrNull {
-                            EntityArmorStand::class.java.isAssignableFrom(it.javaClass) && it.posX == npc.posX && it.posZ == npc.posZ && it.name.split(
-                                '§'
-                            ).size <= 2
+                            EntityArmorStand::class.java.isAssignableFrom(it.javaClass) && it.posX.roundTo(1) == npc.posX.roundTo(
+                                1
+                            ) && it.posZ.roundTo(1) == npc.posZ.roundTo(1) && !it.name.startsWith(
+                                "§e§l"
+                            )
                         }
                         if (checkNameTag && armorStand?.alwaysRenderNameTag == false) return null
-                        val name = armorStand?.name?.replace(Regex("§[a-z0-9]"), "")
+                        val name = armorStand?.name?.replace(Regex("§[a-z0-9]"), "")?.trim()
                         return Npc(
                             name ?: "",
                             if (name == null) null else "https://wiki.hypixel.net/${

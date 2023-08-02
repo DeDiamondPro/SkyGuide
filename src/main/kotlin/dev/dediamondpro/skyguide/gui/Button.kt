@@ -9,24 +9,31 @@ import java.util.function.Consumer
 import kotlin.math.pow
 
 class Button(
-    val text: String,
+    val text: String?,
     var x: Float,
     var y: Float,
     private val height: Float,
+    private val icon: String? = null,
     private val clickAction: Consumer<Button>
 ) {
-    val width = UGraphics.getStringWidth(text).toFloat() + 16f
+    val width = if (text != null) UGraphics.getStringWidth(text).toFloat() + 16f else height
     private var whitePercent = 0f
 
-    fun draw(matrixStack: UMatrixStack, mouseX: Int, mouseY: Int): Boolean {
-        val hovering = mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height
+    fun draw(matrixStack: UMatrixStack, mouseX: Int, mouseY: Int, canPress: Boolean): Boolean {
+        val hovering = mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height && canPress
         val clicked = hovering && GuiUtils.leftClicked
         if (clicked) clickAction.accept(this)
         if (whitePercent != 1f && hovering) whitePercent += GuiUtils.getGuiDeltaTime() / 100f
         else if (whitePercent != 0f) whitePercent -= GuiUtils.getGuiDeltaTime() / 100f
         whitePercent = whitePercent.coerceAtLeast(0f).coerceAtMost(1f)
         RenderUtils.drawRect(x, y, width, height, Color(1f, 1f, 1f, 0.6f * easeInOutQuad(whitePercent)).rgb)
-        UGraphics.drawString(matrixStack, text, x + 8f, y + height / 2f - 3f, Color(255, 255, 255).rgb, true)
+        if (text != null) {
+            UGraphics.drawString(matrixStack, text, x + 8f, y + height / 2f - 3f, Color(255, 255, 255).rgb, true)
+        }
+        if (icon != null) {
+            UGraphics.color4f(1f, 1f, 1f, 1f)
+            RenderUtils.drawImage(icon, x + width / 2f - 8f, y + height / 2f - 8f, 16f, 16f)
+        }
         return false
     }
 

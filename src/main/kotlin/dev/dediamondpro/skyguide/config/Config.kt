@@ -75,28 +75,33 @@ object Config : Config(
     var mapKeyBind = OneKeyBind(UKeyboard.KEY_M)
 
     @Switch(
-        name = "Show NPCs",
-        description = "Show npcs on the map.",
+        name = "Show Warps",
+        description = "Show warps on the map.",
         category = "Map",
-        size = 2
     )
-    var showNpcs = true
-
+    var showWarps = true
 
     @Switch(
         name = "Show MVP Warps",
         description = "Show MVP warps on the map.",
         category = "Map",
-        size = 2
     )
     var showMVPWarps = true
+
+    @Switch(
+        name = "Show NPCs",
+        description = "Show npcs on the map.",
+        category = "Map",
+        size = 1
+    )
+    var showNpcs = true
 
     @cc.polyfrost.oneconfig.config.annotations.Color(
         allowAlpha = false,
         name = "Pin Color",
         description = "The color of the destination pin.",
         category = "Map",
-        size = 2
+        size = 1
     )
     var pinColor = OneColor(Color.RED)
 
@@ -113,6 +118,14 @@ object Config : Config(
         min = 0.25f, max = 5f
     )
     var defaultScale = 2f
+
+    @Slider(
+        name = "POI Scale",
+        description = "The scale of POIs on the map.",
+        category = "Map",
+        min = 0.25f, max = 4f
+    )
+    var POIScale = 1f
 
     @Slider(
         name = "Player Pointer Size",
@@ -150,6 +163,14 @@ object Config : Config(
     )
     var disabledSkytilsWaypoints = false
 
+    @Switch(
+        name = "Show NEU Waypoints",
+        description = "Show NEU waypoints on the map.",
+        category = "Integration",
+        subcategory = "NEU"
+    )
+    var neuWaypoints = true
+
     // Hidden
 
     @NonProfileSpecific
@@ -168,6 +189,7 @@ object Config : Config(
             }
         }
         addDependency("lazyLoading", "keepAssetsLoaded")
+        addDependency("showMVPWarps", "showWarps")
         registerKeyBind(mapKeyBind) {
             if (SBInfo.inSkyblock && enabled) GuiUtils.displayScreen(MapGui())
         }

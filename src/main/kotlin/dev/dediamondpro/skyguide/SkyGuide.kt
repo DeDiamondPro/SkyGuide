@@ -2,6 +2,7 @@ package dev.dediamondpro.skyguide
 
 import cc.polyfrost.oneconfig.events.EventManager
 import dev.dediamondpro.skyguide.command.SkyGuideCommand
+import dev.dediamondpro.skyguide.compat.INEUCompat
 import dev.dediamondpro.skyguide.compat.SkytilsCompat
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.gui.NpcGui
@@ -38,8 +39,9 @@ object SkyGuide {
         MinecraftForge.EVENT_BUS.register(SkytilsCompat())
         MinecraftForge.EVENT_BUS.register(MessageListener())
         MinecraftForge.EVENT_BUS.register(NavigationHandler())
-        MinecraftForge.EVENT_BUS.register(NpcGui.NpcCollector())
         MinecraftForge.EVENT_BUS.register(FirstLaunchHandler())
+        MinecraftForge.EVENT_BUS.register(NpcGui.NpcCollector())
+        INEUCompat.instance?.let(MinecraftForge.EVENT_BUS::register)
         ClientCommandHandler.instance.registerCommand(SkyGuideCommand())
     }
 }

@@ -24,20 +24,6 @@ import kotlin.math.pow
 
 class MiniMap : Hud(true, 1815f, 0f, 0.7f) {
     @Switch(
-        name = "Rotate With Player",
-        description = "Rotate the map with the player.",
-        category = "Mini-Map"
-    )
-    var rotateWithPlayer = true
-
-    @Switch(
-        name = "Show PIOs",
-        description = "Whether to show points of interests (npcs, portals, ...) on the mini-map.",
-        category = "Mini-Map"
-    )
-    var showPIOs = true
-
-    @Switch(
         name = "Background",
         description = "Whether the map has a background",
         category = "Mini-Map"
@@ -50,6 +36,27 @@ class MiniMap : Hud(true, 1815f, 0f, 0.7f) {
         category = "Mini-Map"
     )
     var backgroundColor = OneColor(0, 0, 0)
+
+    @Switch(
+        name = "Rotate With Player",
+        description = "Rotate the map with the player.",
+        category = "Mini-Map"
+    )
+    var rotateWithPlayer = true
+
+    @Switch(
+        name = "Show Warps",
+        description = "Show warps on the mini-map.",
+        category = "Mini-Map",
+    )
+    var showWarpsMiniMap = true
+
+    @Switch(
+        name = "Show NPCs",
+        description = "Show npcs on the mini-map.",
+        category = "Mini-Map",
+    )
+    var showNpcsMiniMap = true
 
     @Slider(
         name = "Zoom Factor",
@@ -66,6 +73,14 @@ class MiniMap : Hud(true, 1815f, 0f, 0.7f) {
         category = "Mini-Map"
     )
     var undergroundMapZoom = 2f
+
+    @Slider(
+        name = "POI Scale",
+        description = "The scale of POIs on the mini-map.",
+        category = "Mini-Map",
+        min = 0.25f, max = 4f
+    )
+    var POIScaleMiniMap = 1f
 
     @Slider(
         name = "Player Pointer Size",
@@ -168,7 +183,7 @@ class MiniMap : Hud(true, 1815f, 0f, 0.7f) {
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
         UGraphics.GL.popMatrix()
-        if (showPIOs) island.drawPioMiniMap(
+        island.drawPioMiniMap(
             x + 75 * scale - UPlayer.getOffsetX(partialTicks) * totalScale,
             y + 75 * scale - UPlayer.getOffsetY(partialTicks) * totalScale,
             x + 75.0 * scale,

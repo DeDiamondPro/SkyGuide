@@ -19,19 +19,25 @@ class Npc(
     override val y: Float,
     override val z: Float,
     override val destinations: List<String> = listOf()
-) : PointOfInterest(), NavigationProvider {
+) : PointOfInterest(), NavigationProvider, Searchable {
     @Transient
-    private val skull = ItemUtils.createSkull(owner, texture)
+    override val searchString = name
 
-    override fun shouldDraw(): Boolean {
-        return Config.showNpcs
-    }
+    @Transient
+    override val searchDescription by lazy { "An NPC in ${island?.name}" }
 
-    override fun drawIcon(x: Float, y: Float) {
-        UGraphics.enableDepth()
+    @Transient
+    override val scale: Float = 5f
+
+    @Transient
+    override val skull = ItemUtils.createSkull(owner, texture)
+
+    override fun shouldDraw(): Boolean = true
+
+    override fun drawIcon(x: Float, y: Float, scale: Float) {
         UGraphics.GL.pushMatrix()
-        UGraphics.GL.translate(x - 16, y - 16, 0f)
-        UGraphics.GL.scale(2.0, 2.0, 1.0)
+        UGraphics.GL.translate(x - 16 * scale, y - 16 * scale, 0f)
+        UGraphics.GL.scale(2.0 * scale, 2.0 * scale, 1.0)
         ItemUtils.drawItemStack(skull, 0, 0)
         UGraphics.GL.popMatrix()
     }

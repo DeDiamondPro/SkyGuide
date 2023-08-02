@@ -1,12 +1,19 @@
 package dev.dediamondpro.skyguide.map
 
 import cc.polyfrost.oneconfig.libs.universal.UGraphics
+import dev.dediamondpro.skyguide.compat.INEUCompat
 import dev.dediamondpro.skyguide.compat.SkytilsCompat
+import dev.dediamondpro.skyguide.config.Config
+import dev.dediamondpro.skyguide.hud.MiniMap
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
 import dev.dediamondpro.skyguide.map.poi.*
 import dev.dediamondpro.skyguide.utils.GuiUtils
 import kotlin.math.cos
 import kotlin.math.sin
+import dev.dediamondpro.skyguide.utils.ItemUtils
+import kotlinx.serialization.Transient
+import net.minecraft.item.ItemStack
+import kotlin.math.*
 
 /**
  * @param images The images of the map
@@ -30,7 +37,28 @@ data class Island(
     val bottomY: Float,
     val xOffset: Float = 0f,
     val yOffset: Float = 0f
-) {
+) : Searchable {
+    @Transient
+    override val searchString = name.replaceFirstChar { it.titlecase() }
+
+    @Transient
+    override val searchDescription = "A Skyblock Island"
+
+    @Transient
+    override var island: Island? = this
+
+    @Transient
+    override val x: Float = (topX + bottomX) / 2
+
+    @Transient
+    override val z: Float = (topY + bottomY) / 2
+
+    @Transient
+    override val scale: Float = 1f
+
+    @Transient
+    override val skull: ItemStack = islandSkull
+
     val width = bottomX - topX
     val height = bottomY - topY
     var zone: String? = null
@@ -60,28 +88,29 @@ data class Island(
                 lastPoi = poi
                 continue
             }
-            if (!poi.shouldDraw(locations, scale)) continue
-            poi.draw(x, y, xOffset, yOffset, scale)
+            if (!poi.shouldDraw(locations, scale, Config.POIScale)) continue
+            poi.draw(x, y, xOffset, yOffset, scale, Config.POIScale)
             locations.add(poi.x to poi.z)
         }
         // draw destination last since it always has to be on top
         UGraphics.disableDepth()
-        lastPoi?.draw(x, y, xOffset, yOffset, scale)
+        lastPoi?.draw(x, y, xOffset, yOffset, scale, Config.POIScale)
         UGraphics.enableDepth()
     }
 
     fun drawPioMiniMap(x: Float, y: Float, originX: Double, originY: Double, scale: Float, rotation: Double) {
         val locations = mutableListOf<Pair<Float, Float>>()
         var lastPoi: PointOfInterest? = null
-        for (poi in getPointsOfInterest()) {
+        for (poi in getPointsOfInterest(true)) {
             if (poi is DestinationPoi) {
                 lastPoi = poi
                 continue
             }
-            if (!poi.shouldDraw(locations, scale)) continue
+            if (!poi.shouldDraw(locations, scale, Config.miniMap.POIScaleMiniMap)) continue
             poi.drawRaw(
                 (cos(rotation) * (x + poi.x * scale - originX) + sin(rotation) * (y + poi.z * scale - originY) + originX).toFloat(),
                 (-sin(rotation) * (x + poi.x * scale - originX) + cos(rotation) * (y + poi.z * scale - originY) + originY).toFloat(),
+                Config.miniMap.POIScaleMiniMap
             )
             locations.add(poi.x to poi.z)
         }
@@ -90,6 +119,7 @@ data class Island(
         lastPoi?.drawRaw(
             (cos(rotation) * (x + lastPoi.x * scale - originX) + sin(rotation) * (y + lastPoi.z * scale - originY) + originX).toFloat(),
             (-sin(rotation) * (x + lastPoi.x * scale - originX) + cos(rotation) * (y + lastPoi.z * scale - originY) + originY).toFloat(),
+            Config.miniMap.POIScaleMiniMap
         )
         UGraphics.enableDepth()
     }
@@ -106,11 +136,9 @@ data class Island(
         val yScaled = mouseY / scale - y
         for (poi in getPointsOfInterest()) {
             if ((!locations.contains(poi.x to poi.z) && poi !is DestinationPoi) || !poi.shouldDrawTooltip(
-                    xScaled,
-                    yScaled,
-                    xOffset,
-                    yOffset,
-                    scale
+                    xScaled, yScaled,
+                    xOffset, yOffset,
+                    scale, Config.POIScale
                 )
             ) continue
             poi.drawTooltip(mouseX, mouseY)
@@ -131,11 +159,12 @@ data class Island(
         return images.first()
     }
 
-    private fun getPointsOfInterest(): List<PointOfInterest> {
+    private fun getPointsOfInterest(miniMap: Boolean = false): List<PointOfInterest> {
         val list = mutableListOf<PointOfInterest>()
-        list.addAll(portals)
-        list.addAll(npcs)
+        if (Config.showWarps && !miniMap || Config.miniMap.showWarpsMiniMap && miniMap) list.addAll(portals)
+        INEUCompat.instance?.getCurrentlyTrackedWaypoint()?.let { if (it.island == this) list.add(it) }
         if (SkytilsCompat.waypoints.containsKey(this)) list.addAll(SkytilsCompat.waypoints[this]!!)
+        if (Config.showNpcs && !miniMap || Config.miniMap.showNpcsMiniMap && miniMap) list.addAll(npcs)
         val dest = NavigationHandler.destinationPio
         if (dest.destination != null && dest.destination!!.island == this) list.add(
             0, NavigationHandler.destinationPio
@@ -148,7 +177,30 @@ data class Island(
                 && x <= bottomX + xOffset && y <= bottomY + yOffset
     }
 
+    fun findClosestPortal(x: Float, y: Float?, z: Float): Portal? {
+        var lowestDist = Float.MAX_VALUE
+        var closestPortal: Portal? = null
+        for (portal in portals) {
+            if (portal.command == null || (portal.mvp && !Config.showMVPWarps)) continue
+            val distance = sqrt(
+                (x - portal.x).pow(2f) + (if (y == null) 0f else (y - portal.y).pow(
+                    2f
+                )) + (z - portal.z).pow(2f)
+            )
+            if (distance < lowestDist) {
+                lowestDist = distance
+                closestPortal = portal
+            }
+        }
+        return closestPortal
+    }
+
     companion object {
+        private val islandSkull = ItemUtils.createSkull(
+            "cc9258c4-76d8-2dee-a648-510538c15581",
+            "eyJ0aW1lc3RhbXAiOjE1NTkyMTU0MTY5MDksInByb2ZpbGVJZCI6IjQxZDNhYmMyZDc0OTQwMGM5MDkwZDU0MzRkMDM4MzFiIiwicHJvZmlsZU5hbWUiOiJNZWdha2xvb24iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Q3Y2M2Njg3NDIzZDA1NzBkNTU2YWM1M2UwNjc2Y2I1NjNiYmRkOTcxN2NkODI2OWJkZWJlZDZmNmQ0ZTdiZjgifX19"
+        )
+
         fun getXOffset(): Float {
             return SkyblockMap.getCurrentIsland()?.xOffset ?: 0f
         }

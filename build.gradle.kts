@@ -51,6 +51,7 @@ sourceSets {
 }
 
 repositories {
+    mavenCentral()
     maven("https://repo.polyfrost.cc/releases")
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
     maven("https://jitpack.io") {
@@ -71,6 +72,9 @@ dependencies {
 
     annotationProcessor("org.spongepowered:mixin:0.8.5:processor")
     compileOnly("org.spongepowered:mixin:0.8.5")
+    modCompileOnly("com.github.notenoughupdates:notenoughupdates:v2.1.0:all")
+    //runtimeMod("com.github.notenoughupdates:notenoughupdates:v2.1.1-alpha16:all")
+    shade("me.xdrop:fuzzywuzzy:1.4.0")
 }
 
 loom {
@@ -145,6 +149,7 @@ tasks {
         archiveClassifier.set("dev")
         configurations = listOf(shade)
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        relocate("me.xdrop", "dev.dediamondpro.skyguide.libs")
     }
     remapJar {
         input.set(shadowJar.get().archiveFile)

@@ -1,5 +1,7 @@
 package dev.dediamondpro.skyguide.utils
 
+import cc.polyfrost.oneconfig.libs.universal.UMouse
+
 import cc.polyfrost.oneconfig.libs.universal.UMinecraft
 import net.minecraft.client.gui.GuiScreen
 import net.minecraftforge.client.event.GuiScreenEvent
@@ -87,6 +89,11 @@ class GuiUtils {
             TickDelay(0) {
                 UMinecraft.getMinecraft().displayGuiScreen(gui)
             }
+        }
+
+        fun mouseInArea(x: Number, y: Number, width: Number, height: Number): Boolean {
+            return UMouse.Scaled.x >= x.toDouble() && UMouse.Scaled.x <= x.toDouble() + width.toDouble()
+                    && UMouse.Scaled.y >= y.toDouble() && UMouse.Scaled.y <= y.toDouble() + height.toDouble()
         }
     }
 }

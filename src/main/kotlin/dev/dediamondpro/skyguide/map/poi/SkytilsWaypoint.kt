@@ -1,11 +1,14 @@
 package dev.dediamondpro.skyguide.map.poi
 
+import cc.polyfrost.oneconfig.libs.universal.UChat
 import cc.polyfrost.oneconfig.libs.universal.UGraphics
 import dev.dediamondpro.skyguide.config.Config
 import dev.dediamondpro.skyguide.map.Island
 import dev.dediamondpro.skyguide.map.navigation.Destination
 import dev.dediamondpro.skyguide.map.navigation.NavigationHandler
+import dev.dediamondpro.skyguide.utils.GuiUtils
 import dev.dediamondpro.skyguide.utils.RenderUtils
+import net.minecraft.util.EnumChatFormatting
 import java.awt.Color
 
 class SkytilsWaypoint(
@@ -22,7 +25,7 @@ class SkytilsWaypoint(
         return Config.skytilsWaypoints && (enabled || Config.disabledSkytilsWaypoints)
     }
 
-    override fun drawIcon(x: Float, y: Float) {
+    override fun drawIcon(x: Float, y: Float, scale: Float) {
         UGraphics.color4f(
             color.red / 255f,
             color.green / 255f,
@@ -31,10 +34,10 @@ class SkytilsWaypoint(
         )
         RenderUtils.drawImage(
             "/assets/skyguide/pin.png",
-            x - 8f,
-            y - 8f,
-            16f,
-            16f
+            x - 8f * scale,
+            y - 8f * scale,
+            16f * scale,
+            16f * scale
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
     }
@@ -42,12 +45,18 @@ class SkytilsWaypoint(
     override fun getTooltip(): List<String> {
         return listOf(
             name,
-            "Waypoint imported from Skytils",
-            "Right click set destination"
+            "Left click to teleport to nearest warp",
+            "Right click to set destination",
+            "Waypoint imported from Skytils"
         )
     }
 
     override fun onLeftClick() {
+        if (island == null) return
+        val closestPortal = island?.findClosestPortal(x, y, z)
+        if (closestPortal != null) UChat.say("/${closestPortal.command}")
+        else UChat.chat("${EnumChatFormatting.RED}Could not find a warp!")
+        GuiUtils.displayScreen(null)
     }
 
     override fun onRightClick() {
@@ -55,5 +64,5 @@ class SkytilsWaypoint(
         NavigationHandler.navigateTo(Destination(island!!, x, y, z, name))
     }
 
-    override fun drawBackground(x: Float, y: Float) {}
+    override fun drawBackground(x: Float, y: Float, scale: Float) {}
 }
