@@ -25,7 +25,7 @@ class SkytilsWaypoint(
         return Config.skytilsWaypoints && (enabled || Config.disabledSkytilsWaypoints)
     }
 
-    override fun drawIcon(x: Float, y: Float) {
+    override fun drawIcon(x: Float, y: Float, scale: Float) {
         UGraphics.color4f(
             color.red / 255f,
             color.green / 255f,
@@ -34,10 +34,10 @@ class SkytilsWaypoint(
         )
         RenderUtils.drawImage(
             "/assets/skyguide/pin.png",
-            x - 8f,
-            y - 8f,
-            16f,
-            16f
+            x - 8f * scale,
+            y - 8f * scale,
+            16f * scale,
+            16f * scale
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
     }
@@ -64,5 +64,5 @@ class SkytilsWaypoint(
         NavigationHandler.navigateTo(Destination(island!!, x, y, z, name))
     }
 
-    override fun drawBackground(x: Float, y: Float) {}
+    override fun drawBackground(x: Float, y: Float, scale: Float) {}
 }

@@ -74,6 +74,14 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
 
     @Property(
         type = PropertyType.SWITCH,
+        name = "Show Warps",
+        description = "Show warps on the map.",
+        category = "Map",
+    )
+    var showWarps = true
+
+    @Property(
+        type = PropertyType.SWITCH,
         name = "Show MVP Warps",
         description = "Show MVP warps on the map.",
         category = "Map",
@@ -87,6 +95,15 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         category = "Map",
     )
     var showNpcs = true
+
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
+        name = "POI Scale",
+        description = "The scale of POIs on the map.",
+        category = "Map",
+        minF = 0.25f, maxF = 4f
+    )
+    var POIScale = 1f
 
     @Property(
         type = PropertyType.COLOR,
@@ -168,14 +185,6 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
     var backgroundColor = Color(0, 0, 0)
 
     @Property(
-        type = PropertyType.SWITCH,
-        name = "Show PIOs",
-        description = "Whether to show points of interests (npcs, portals, ...) on the mini-map.",
-        category = "Mini-Map"
-    )
-    var showPIOs = true
-
-    @Property(
         type = PropertyType.DECIMAL_SLIDER,
         name = "Player Pointer Size",
         description = "The size of the player pointer.",
@@ -183,6 +192,31 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
         category = "Mini-Map"
     )
     var miniMapPointerSize = 12f
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show Warps",
+        description = "Show warps on the mini-map.",
+        category = "Mini-Map",
+    )
+    var showWarpsMiniMap = true
+
+    @Property(
+        type = PropertyType.SWITCH,
+        name = "Show NPCs",
+        description = "Show npcs on the mini-map.",
+        category = "Mini-Map",
+    )
+    var showNpcsMiniMap = true
+
+    @Property(
+        type = PropertyType.DECIMAL_SLIDER,
+        name = "POI Scale",
+        description = "The scale of POIs on the mini-map.",
+        category = "Mini-Map",
+        minF = 0.25f, maxF = 4f
+    )
+    var POIScaleMiniMap = 1f
 
     @Property(
         type = PropertyType.SWITCH,
@@ -273,5 +307,6 @@ object Config : Vigilant(configFile, SkyGuide.NAME) {
             }
         }
         addDependency("lazyLoading", "keepAssetsLoaded")
+        addDependency("showMVPWarps", "showWarps")
     }
 }

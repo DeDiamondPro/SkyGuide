@@ -90,7 +90,7 @@ class MiniMap {
         )
         UGraphics.color4f(1f, 1f, 1f, 1f)
         UGraphics.GL.popMatrix()
-        if (Config.showPIOs) island.drawPioMiniMap(
+        island.drawPioMiniMap(
             x + 75 * scale - UPlayer.getOffsetX(event.partialTicks) * totalScale,
             y + 75 * scale - UPlayer.getOffsetY(event.partialTicks) * totalScale,
             x + 75.0 * scale,

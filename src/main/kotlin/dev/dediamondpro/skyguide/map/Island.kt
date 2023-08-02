@@ -10,10 +10,7 @@ import dev.dediamondpro.skyguide.utils.ItemUtils
 import gg.essential.universal.UGraphics
 import kotlinx.serialization.Transient
 import net.minecraft.item.ItemStack
-import kotlin.math.cos
-import kotlin.math.pow
-import kotlin.math.sin
-import kotlin.math.sqrt
+import kotlin.math.*
 
 /**
  * @param images The images of the map
@@ -88,28 +85,29 @@ data class Island(
                 lastPoi = poi
                 continue
             }
-            if (!poi.shouldDraw(locations, scale)) continue
-            poi.draw(x, y, xOffset, yOffset, scale)
+            if (!poi.shouldDraw(locations, scale, Config.POIScale)) continue
+            poi.draw(x, y, xOffset, yOffset, scale, Config.POIScale)
             locations.add(poi.x to poi.z)
         }
         // draw destination last since it always has to be on top
         UGraphics.disableDepth()
-        lastPoi?.draw(x, y, xOffset, yOffset, scale)
+        lastPoi?.draw(x, y, xOffset, yOffset, scale, Config.POIScale)
         UGraphics.enableDepth()
     }
 
     fun drawPioMiniMap(x: Float, y: Float, originX: Double, originY: Double, scale: Float, rotation: Double) {
         val locations = mutableListOf<Pair<Float, Float>>()
         var lastPoi: PointOfInterest? = null
-        for (poi in getPointsOfInterest()) {
+        for (poi in getPointsOfInterest(true)) {
             if (poi is DestinationPoi) {
                 lastPoi = poi
                 continue
             }
-            if (!poi.shouldDraw(locations, scale)) continue
+            if (!poi.shouldDraw(locations, scale, Config.POIScaleMiniMap)) continue
             poi.drawRaw(
                 (cos(rotation) * (x + poi.x * scale - originX) + sin(rotation) * (y + poi.z * scale - originY) + originX).toFloat(),
                 (-sin(rotation) * (x + poi.x * scale - originX) + cos(rotation) * (y + poi.z * scale - originY) + originY).toFloat(),
+                Config.POIScaleMiniMap
             )
             locations.add(poi.x to poi.z)
         }
@@ -118,6 +116,7 @@ data class Island(
         lastPoi?.drawRaw(
             (cos(rotation) * (x + lastPoi.x * scale - originX) + sin(rotation) * (y + lastPoi.z * scale - originY) + originX).toFloat(),
             (-sin(rotation) * (x + lastPoi.x * scale - originX) + cos(rotation) * (y + lastPoi.z * scale - originY) + originY).toFloat(),
+            Config.POIScaleMiniMap
         )
         UGraphics.enableDepth()
     }
@@ -134,11 +133,9 @@ data class Island(
         val yScaled = mouseY / scale - y
         for (poi in getPointsOfInterest()) {
             if ((!locations.contains(poi.x to poi.z) && poi !is DestinationPoi) || !poi.shouldDrawTooltip(
-                    xScaled,
-                    yScaled,
-                    xOffset,
-                    yOffset,
-                    scale
+                    xScaled, yScaled,
+                    xOffset, yOffset,
+                    scale, Config.POIScale
                 )
             ) continue
             poi.drawTooltip(mouseX, mouseY)
@@ -159,12 +156,12 @@ data class Island(
         return images.first()
     }
 
-    private fun getPointsOfInterest(): List<PointOfInterest> {
+    private fun getPointsOfInterest(miniMap: Boolean = false): List<PointOfInterest> {
         val list = mutableListOf<PointOfInterest>()
-        list.addAll(portals)
+        if (Config.showWarps && !miniMap || Config.showWarpsMiniMap && miniMap) list.addAll(portals)
         INEUCompat.instance?.getCurrentlyTrackedWaypoint()?.let { if (it.island == this) list.add(it) }
         if (SkytilsCompat.waypoints.containsKey(this)) list.addAll(SkytilsCompat.waypoints[this]!!)
-        list.addAll(npcs)
+        if (Config.showNpcs && !miniMap || Config.showNpcsMiniMap && miniMap) list.addAll(npcs)
         val dest = NavigationHandler.destinationPio
         if (dest.destination != null && dest.destination!!.island == this) list.add(
             0, NavigationHandler.destinationPio

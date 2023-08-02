@@ -32,14 +32,12 @@ class Npc(
     @Transient
     override val skull = ItemUtils.createSkull(owner, texture)
 
-    override fun shouldDraw(): Boolean {
-        return Config.showNpcs
-    }
+    override fun shouldDraw(): Boolean = true
 
-    override fun drawIcon(x: Float, y: Float) {
+    override fun drawIcon(x: Float, y: Float, scale: Float) {
         UGraphics.GL.pushMatrix()
-        UGraphics.GL.translate(x - 16, y - 16, 0f)
-        UGraphics.GL.scale(2.0, 2.0, 1.0)
+        UGraphics.GL.translate(x - 16 * scale, y - 16 * scale, 0f)
+        UGraphics.GL.scale(2.0 * scale, 2.0 * scale, 1.0)
         ItemUtils.drawItemStack(skull, 0, 0)
         UGraphics.GL.popMatrix()
     }

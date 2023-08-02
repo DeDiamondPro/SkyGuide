@@ -45,13 +45,13 @@ data class Portal(
         return command != null && (!mvp || Config.showMVPWarps)
     }
 
-    override fun drawIcon(x: Float, y: Float) {
+    override fun drawIcon(x: Float, y: Float, scale: Float) {
         RenderUtils.drawImage(
             "/assets/skyguide/portal.png",
-            x - 6f,
-            y - 9f,
-            12f,
-            18f
+            x - 6f * scale,
+            y - 9f * scale,
+            12f * scale,
+            18f * scale
         )
     }
 

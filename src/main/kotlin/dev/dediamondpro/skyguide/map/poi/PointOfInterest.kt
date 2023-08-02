@@ -21,50 +21,51 @@ abstract class PointOfInterest {
 
     protected abstract fun shouldDraw(): Boolean
 
-    fun shouldDraw(locations: MutableList<Pair<Float, Float>>, scale: Float): Boolean {
+    fun shouldDraw(locations: MutableList<Pair<Float, Float>>, scale: Float, poiScale: Float): Boolean {
         for (location in locations) {
             val dist = sqrt(
                 (location.first * scale - x * scale).toDouble()
                     .pow(2.0) + (location.second * scale - z * scale).toDouble().pow(2.0)
             )
-            if (dist < 32) return false
+            if (dist < 32 * poiScale) return false
         }
         return shouldDraw()
     }
 
-    fun draw(xMove: Float, yMove: Float, xOffset: Float, yOffset: Float, scale: Float) {
-        drawBackground((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale)
-        drawIcon((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale)
+    fun draw(xMove: Float, yMove: Float, xOffset: Float, yOffset: Float, scale: Float, poiScale: Float) {
+        drawBackground((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale, poiScale)
+        drawIcon((x + xOffset + xMove) * scale, (z + yOffset + yMove) * scale, poiScale)
     }
 
-    fun drawRaw(x: Float, y: Float) {
-        drawBackground(x, y)
-        drawIcon(x, y)
+    fun drawRaw(x: Float, y: Float, poiScale: Float) {
+        drawBackground(x, y, poiScale)
+        drawIcon(x, y, poiScale)
     }
 
-    protected open fun drawBackground(x: Float, y: Float) {
+    protected open fun drawBackground(x: Float, y: Float, scale: Float) {
         UGraphics.color4f(1f, 1f, 1f, 1f)
         RenderUtils.drawImage(
             "/assets/skyguide/map_location.png",
-            x - 16f,
-            y - 16,
-            32f,
-            32f
+            x - 16f * scale,
+            y - 16 * scale,
+            32f * scale,
+            32f * scale
         )
     }
 
-    protected abstract fun drawIcon(x: Float, y: Float)
+    protected abstract fun drawIcon(x: Float, y: Float, scale: Float)
 
     fun shouldDrawTooltip(
         mouseXScaled: Float,
         mouseYScaled: Float,
         xOffset: Float,
         yOffset: Float,
-        scale: Float
+        scale: Float,
+        poiScale: Float
     ): Boolean {
         return shouldDraw()
-                && mouseXScaled >= (x + xOffset - 16f / scale) && mouseXScaled <= (x + xOffset + 16f / scale)
-                && mouseYScaled >= (z + yOffset - 16f / scale) && mouseYScaled <= (z + yOffset + 16f / scale)
+                && mouseXScaled >= (x + xOffset - (16f * poiScale) / scale) && mouseXScaled <= (x + xOffset + (16f * poiScale) / scale)
+                && mouseYScaled >= (z + yOffset - (16f * poiScale) / scale) && mouseYScaled <= (z + yOffset + (16f * poiScale) / scale)
     }
 
     fun drawTooltip(mouseX: Int, mouseY: Int) {
